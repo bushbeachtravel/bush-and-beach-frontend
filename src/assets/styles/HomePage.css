@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Poppins&display=swap');
+
+.slide > img {
+  height: 100vh;
+}
+
+.carousel-btn {
+  background-color: #1b6ccf;
+}
+
+.carousel {
+  position: absolute;
+}
+
+.navbar {
+  position: absolute;
+  z-index: 1;
+  width: 100vw;
+  background: transparent;
+}
