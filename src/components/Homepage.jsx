@@ -1,4 +1,5 @@
 import { Carousel, Typography, Button } from "@material-tailwind/react";
+import NavigationMenu from "./NavigationMenu";
 import accomodation from '../assets/accomodation.jpg'
 import airpotTransfer from '../assets/airpotTransfer.jpg'
 import airTravel from '../assets/airTravel.jpg'
@@ -62,96 +63,57 @@ const slides = [
     Our dedicated team has taken time to know the country and 
     the world thus able to provide well selected safari and game drive packages.`,
   },
-
 ]
-
 
 export const HomePage = () => {
 
   return (
-    <Carousel
-      className="carousel"
-      transition={{ duration: 2 }}
-      autoplay={true}
-      autoplayInterval={5000}
-      loop={true}
-    >
-      {slides.map((carousel, index) => (
-        <div 
-        key={index}
-        className="relative h-full w-full slide"
-        >
-        <img
-          src={carousel.image}
-          alt="image 1"
-          className="h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
-          <div className="w-3/4 text-center md:w-2/4">
-            <Typography
-              variant="h1"
-              color="white"
-              className="mb-4 text-3xl md:text-4xl lg:text-5xl font-poppins"
-            >
-              {carousel.title}
-            </Typography>
-            <Typography
-              variant="lead"
-              color="white"
-              className="mb-12 opacity-80 font-poppins"
-            >
-              {carousel.para}
-            </Typography>
-            <div className="flex justify-center gap-2">
-              <Button size="lg" className="carousel-btn font-poppins">
-                Explore
-              </Button>
+    <>
+    <NavigationMenu />
+      <Carousel
+        className="carousel"
+        transition={{ duration: 2 }}
+        autoplay={true}
+        autoplayInterval={5000}
+        loop={true}
+      >
+        {slides.map((carousel, index) => (
+          <div
+            key={index}
+            className="relative h-full w-full slide"
+          >
+            <img
+              src={carousel.image}
+              alt="image 1"
+              className="h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
+              <div className="w-3/4 text-center md:w-2/4">
+                <Typography
+                  variant="h1"
+                  color="white"
+                  className="mb-4 text-3xl md:text-4xl lg:text-5xl font-poppins"
+                >
+                  {carousel.title}
+                </Typography>
+                <Typography
+                  variant="lead"
+                  color="white"
+                  className="mb-12 opacity-80 font-poppins"
+                >
+                  {carousel.para}
+                </Typography>
+                <div className="flex justify-center gap-2">
+                  <Button size="lg" className="carousel-btn font-poppins">
+                    Explore
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      ))}
-    </Carousel>
-    // <Carousel
-    //   className="carousel"
-    //   transition={{ duration: 2 }}
-    //   autoplay={true}
-    //   autoplayInterval={5000}
-    //   loop={true}
-    // >
-    //   {slides.map((carousel, index) => (
-    //     <div className="" key={index}>
-    //         <img
-    //           src={carousel.image}
-    //           alt={carousel.title}
-    //           className=""
-    //         />
-    //       <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
-    //         <div className="w-3/4 text-center md:w-2/4">
-    //           <Typography
-    //             variant="h1"
-    //             color="white"
-    //             className="mb-4 text-3xl md:text-4xl lg:text-5xl"
-    //           >
-    //             {carousel.title}
-    //           </Typography>
-    //           <Typography
-    //             variant="lead"
-    //             color="white"
-    //             className="mb-12 opacity-80"
-    //           >
-    //             {carousel.para}
-    //           </Typography>
-    //           <div className="flex justify-center gap-2">
-    //             <Button size="lg" className="carousel-btn">
-    //               Explore
-    //             </Button>
-    //           </div>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   ))}
-    // </Carousel>
+        ))}
+      </Carousel>
+    </>
   )
 };
 export default HomePage;

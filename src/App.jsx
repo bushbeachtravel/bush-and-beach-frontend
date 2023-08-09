@@ -1,9 +1,13 @@
 import Homepage from './components/Homepage';
+// import NavigationMenu from './components/NavigationMenu';
 
 const App = () => {
 
   return (
-    <Homepage />
+    <div>
+      <Homepage />
+    </div>
+    
   );
 }
 

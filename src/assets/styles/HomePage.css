@@ -7,3 +7,14 @@
 .carousel-btn {
   background-color: #1b6ccf;
 }
+
+.carousel {
+  position: absolute;
+}
+
+.navbar {
+  position: absolute;
+  z-index: 1;
+  width: 100vw;
+  background: transparent;
+}
