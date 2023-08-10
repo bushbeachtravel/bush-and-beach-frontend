@@ -1,10 +1,11 @@
 import React from "react";
 import {
   Navbar,
-  MobileNav,
   Typography,
   IconButton,
+  Collapse
 } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 import '../assets/styles/HomePage.css';
 
 const NavigationMenu = () => {
@@ -25,9 +26,9 @@ const NavigationMenu = () => {
         color="blue-gray"
         className="p-1 font-normal font-poppins text-blue-50 font-semibold"
       >
-        <a href="#" className="flex items-center font-poppins">
+        <Link to="/about" className="flex items-center font-poppins">
           About us
-        </a>
+        </Link>
       </Typography>
       <Typography
         as="li"
@@ -35,9 +36,9 @@ const NavigationMenu = () => {
         color="blue-gray"
         className="p-1 font-poppins text-blue-50 font-semibold"
       >
-        <a href="#" className="flex items-center">
+        <Link to="/gallery" className="flex items-center">
           Gallery
-        </a>
+        </Link>
       </Typography>
       <Typography
         as="li"
@@ -45,9 +46,9 @@ const NavigationMenu = () => {
         color="blue-gray"
         className="p-1 font-poppins text-blue-50 font-semibold"
       >
-        <a href="#" className="flex items-center">
+        <Link to="/blog" className="flex items-center">
           Blog
-        </a>
+        </Link>
       </Typography>
       <Typography
         as="li"
@@ -55,9 +56,9 @@ const NavigationMenu = () => {
         color="blue-gray"
         className="p-1 font-poppins text-blue-50 font-semibold"
       >
-        <a href="#" className="flex items-center">
+        <Link to="contact" className="flex items-center">
           Contact us
-        </a>
+        </Link>
       </Typography>
     </ul>
   );
@@ -71,7 +72,9 @@ const NavigationMenu = () => {
             href="#"
             className="mr-4 cursor-pointer py-1.5 font-poppins text-blue-50 font-semibold"
           >
-            Bush & Beach
+            <Link to="/">
+              Bush & Beach
+            </Link>
           </Typography>
           <div className="hidden lg:block">{navList}</div>
           <IconButton
@@ -112,11 +115,11 @@ const NavigationMenu = () => {
             )}
           </IconButton>
         </div>
-        <MobileNav open={openNav}>
+        <Collapse open={openNav}>
           <div className="container mx-auto">
             {navList}
           </div>
-        </MobileNav>
+        </Collapse>
       </Navbar>
     </div>
   );
