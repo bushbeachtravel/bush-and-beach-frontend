@@ -1,5 +1,7 @@
 import { Typography } from "@material-tailwind/react";
-import HotelModalWindow from "./HotelModal";
+import HotelModalWindow from "./modals/HotelModal";
+import LukenyaModalWindow from "./modals/LukenyaModal";
+import ZanzibarModalWindow from "./modals/ZanzibarModal";
 import '../assets/styles/HomePage.css';
 import image from '../assets/hotel.jpg'
 const HotelBooking = () => (
@@ -46,7 +48,7 @@ const HotelBooking = () => (
             convenient and enjoyable for corporate groups, tourists, church groups,
             families, and individuals seeking relaxation & rejuvenation
           </Typography>
-          <HotelModalWindow />
+          <LukenyaModalWindow />
         </div>
       </div>
       <div className="content-container">
@@ -75,7 +77,7 @@ const HotelBooking = () => (
             but different experience with the aim of meeting the increasingly
             demanding needs for unique holidays.
           </Typography>
-          <HotelModalWindow />
+          <ZanzibarModalWindow />
         </div>
       </div>
     </div>

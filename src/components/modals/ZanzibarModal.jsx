@@ -5,8 +5,9 @@ import {
   Button,
   Typography,
 } from "@material-tailwind/react";
+import { FaCheck } from "react-icons/fa6"
 
-const HotelModalWindow = () => {
+const ZanzibarModalWindow = () => {
   return (
     <Popover>
       <PopoverHandler>
@@ -16,20 +17,18 @@ const HotelModalWindow = () => {
       </PopoverHandler>
       <PopoverContent className="z-[999] flex w-[28rem] overflow-hidden p-0">
         <div className="p-4">
-          <Typography color="blue-gray" className="mb-2 font-medium">
-            Material Tailwind
+          <Typography color="blue-gray" variant="h5" className="mb-2 font-poppins">
+            Full Board Charges
           </Typography>
-          <Typography variant="small" color="gray" className="mb-4 font-normal font-poppins">
-            Material Tailwind is an easy to use components library for Tailwind
-            CSS and Material Design. It features multiple React and HTML
-            components, all written with Tailwind CSS classes and Material
-            Design guidelines.
-          </Typography>
+          <ul className="mb-2">
+            <li className="flex items-acenter mb-2 font-poppins"><FaCheck />Double Room $250</li>
+            <li className="flex items-center mb-2 font-poppins"><FaCheck />Single Room $150</li>
+          </ul>
           <a href="#" className="inline-block">
             <Button
               size="sm"
               variant="text"
-              className="flex items-center gap-1 capitalize"
+              className="flex items-center gap-1 capitalize font-poppins"
             >
               Book Now
               <svg
@@ -49,13 +48,8 @@ const HotelModalWindow = () => {
             </Button>
           </a>
         </div>
-        <img
-          src="https://images.unsplash.com/photo-1544928147-79a2dbc1f389?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dGVhbSUyMGJ1aWxkaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
-          alt="image"
-          className="h-full w-1/2 object-cover"
-        />
       </PopoverContent>
     </Popover>
   );
 }
-export default HotelModalWindow;
+export default ZanzibarModalWindow;
