@@ -1,4 +1,5 @@
 import { Typography } from "@material-tailwind/react";
+import HotelModalWindow from "./HotelModal";
 import '../assets/styles/HomePage.css';
 import image from '../assets/hotel.jpg'
 const HotelBooking = () => (
@@ -24,9 +25,7 @@ const HotelBooking = () => (
             consulates and embassies.Sharaf DG Metro Station as well as
             Al Ghubaiba Metro and Bus Stations are 500 meters walk away.
           </Typography>
-          <button className="hotel-buttons font-poppins">
-            See Details
-          </button>
+          <HotelModalWindow />
         </div>
       </div>
     </div>
@@ -47,9 +46,7 @@ const HotelBooking = () => (
             convenient and enjoyable for corporate groups, tourists, church groups,
             families, and individuals seeking relaxation & rejuvenation
           </Typography>
-          <button className="hotel-buttons font-poppins">
-            See Details
-          </button>
+          <HotelModalWindow />
         </div>
       </div>
       <div className="content-container">
@@ -78,9 +75,7 @@ const HotelBooking = () => (
             but different experience with the aim of meeting the increasingly
             demanding needs for unique holidays.
           </Typography>
-          <button className="hotel-buttons font-poppins">
-            See Details
-          </button>
+          <HotelModalWindow />
         </div>
       </div>
     </div>
