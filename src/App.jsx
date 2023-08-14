@@ -8,6 +8,7 @@ import About from './components/About';
 import Conference from './components/Conference';
 import NotFound from './components/NotFound';
 import BlogPosts from './components/Blog';
+import BlogDetailView from './components/BlogDetail';
 
 const App = () => {
 
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="safari" element={<SafariPackage />} />
           <Route path="conference" element={<Conference />} />
           <Route path="blog" element={<BlogPosts />} />
+          <Route path="detail" element={<BlogDetailView />} />
           <Route element={<NotFound />} />
         </Routes>
       </BrowserRouter>

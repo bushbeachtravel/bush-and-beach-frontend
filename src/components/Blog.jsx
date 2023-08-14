@@ -7,7 +7,7 @@ import {
   Avatar,
   Tooltip,
 } from "@material-tailwind/react";
-
+import { Link } from "react-router-dom";
 import wild from '../assets/wild.jpg';
 import accomodation from '../assets/accomodation.jpg';
 import hotel from '../assets/hotel.jpg';
@@ -58,7 +58,9 @@ const BlogPost = () => {
           </div>
           <div className="card-title p-2">
             <Typography variant="lead" className="font-poppins font-bold">
-              {blog.title}
+              <Link to='/detail'>
+                {blog.title}
+              </Link>
             </Typography>
           </div>
           <div className="blog-details p-2">
