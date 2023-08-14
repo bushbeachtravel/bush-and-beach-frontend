@@ -7,6 +7,7 @@ import HotelBooking from './components/HotelBooking';
 import About from './components/About';
 import Conference from './components/Conference';
 import NotFound from './components/NotFound';
+import BlogPosts from './components/Blog';
 
 const App = () => {
 
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="hotels" element={<HotelBooking />} />
           <Route path="safari" element={<SafariPackage />} />
           <Route path="conference" element={<Conference />} />
+          <Route path="blog" element={<BlogPosts />} />
           <Route element={<NotFound />} />
         </Routes>
       </BrowserRouter>
