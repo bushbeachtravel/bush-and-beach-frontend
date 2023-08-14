@@ -21,6 +21,7 @@ const HotelModalWindow = () => {
             $380 Per Person On a Double Occupancy.
           </Typography>
           <ul className="mb-2">
+            <Typography color="blue-gray" className="mb-3">Package includes the following</Typography>
             <li className="flex items-acenter mb-2 font-poppins"><FaCheck />Meet up & assist at the Dubai airport</li>
             <li className="flex items-center mb-2 font-poppins"><FaCheck /> Daily breakfast at the hotel</li>
             <li className="flex items-center mb-2 font-poppins"><FaCheck />Return Dubai airport transfer</li>

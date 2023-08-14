@@ -27,7 +27,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .service-container {
@@ -60,7 +59,24 @@
   border: none;
 }
 
+/*Mobile*/
+@media only screen and (max-width: 600px) {
+  .service-container {
+    display: block;
+  }
+}
 
-/* .package-elements {
-  display: flex;
-} */
+@media only screen and (min-width: 600px) {
+}
+
+@media only screen and (min-width: 768px) {
+  .service-container {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .service-container {
+    display: flex;
+  }
+}
