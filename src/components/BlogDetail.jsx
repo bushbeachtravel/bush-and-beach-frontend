@@ -5,10 +5,12 @@ import {
   ListItemPrefix,
   Avatar,
   Card,
+  IconButton
 } from '@material-tailwind/react';
 import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa6";
 import '../assets/styles/Blog.css';
 import wild from '../assets/wild.jpg';
+
 const BlogDetailView = () => (
   <section className="blog-detail-section">
     <div className="right p-5">
@@ -40,19 +42,25 @@ const BlogDetailView = () => (
           </Typography>
         </div>
         <div className="sharing-icons">
-          <FaFacebook size={30} className="facebook-icon" />
-          <FaTwitter size={30} className="twitter-icon" />
-          <FaLinkedin size={30} className="linkedin-icon" />
+          <IconButton className="rounded bg-[#2b90ec] hover:shadow-[#2b90ec]/20 focus:shadow-[#2b90ec]/20 active:shadow-[#2b90ec]/10">
+            <FaFacebook size={30} />
+          </IconButton>
+          <IconButton className="rounded bg-[#1DA1F2] hover:shadow-[#1DA1F2]/20 focus:shadow-[#1DA1F2]/20 active:shadow-[#1DA1F2]/10">
+            <FaTwitter size={30} />
+          </IconButton>
+          <IconButton className="rounded bg-[#2e72d7] hover:shadow-[#2e72d7]/20 focus:shadow-[#2e72d7]/20 active:shadow-[#2e72d7]/10">
+            <FaLinkedin size={30} />
+          </IconButton>
         </div>
       </div>
     </div>
     <div className="left">
       <div className="left-container">
-        <Typography variant="lead" className="font-poppins font-bold">
+        <Typography variant="lead" className="font-poppins font-bold blog-heading">
           Popular posts
         </Typography>
         <br />
-        <Card className="w-96">
+        <Card className="blog-list">
           <List>
             <ListItem>
               <ListItemPrefix>
