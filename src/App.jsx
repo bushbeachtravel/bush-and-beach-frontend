@@ -10,6 +10,7 @@ import NotFound from './components/NotFound';
 import BlogPosts from './components/Blog';
 import BlogDetailView from './components/BlogDetail';
 import Gallery from './components/GalleryComponent';
+import ContactPage from './components/Contact';
 
 const App = () => {
 
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="blog" element={<BlogPosts />} />
           <Route path="detail" element={<BlogDetailView />} />
           <Route path="gallery" element={<Gallery />} />
+          <Route path="contact" element={<ContactPage />} />
           <Route element={<NotFound />} />
         </Routes>
       </BrowserRouter>
