@@ -9,6 +9,7 @@ import Conference from './components/Conference';
 import NotFound from './components/NotFound';
 import BlogPosts from './components/Blog';
 import BlogDetailView from './components/BlogDetail';
+import Gallery from './components/GalleryComponent';
 
 const App = () => {
 
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="conference" element={<Conference />} />
           <Route path="blog" element={<BlogPosts />} />
           <Route path="detail" element={<BlogDetailView />} />
+          <Route path="gallery" element={<Gallery />} />
           <Route element={<NotFound />} />
         </Routes>
       </BrowserRouter>

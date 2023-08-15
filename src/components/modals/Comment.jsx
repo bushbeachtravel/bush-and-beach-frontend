@@ -2,8 +2,8 @@ import { Textarea, Button, IconButton } from "@material-tailwind/react";
  
 const Comment = () => {
   return (
-    <div className="relative w-[32rem]">
-      <Textarea variant="static" placeholder="Your Comment" rows={8} />
+    <div className="relative">
+      <Textarea variant="static" placeholder="Your Comment" rows={8} className="font-poppins" />
       <div className="flex w-full justify-between py-1.5">
         <IconButton variant="text" color="blue-gray" size="sm">
           <svg
