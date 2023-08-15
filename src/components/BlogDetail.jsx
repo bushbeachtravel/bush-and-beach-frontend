@@ -8,6 +8,7 @@ import {
   IconButton
 } from '@material-tailwind/react';
 import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa6";
+import Comment from './modals/Comment';
 import '../assets/styles/Blog.css';
 import wild from '../assets/wild.jpg';
 
@@ -51,6 +52,12 @@ const BlogDetailView = () => (
           <IconButton className="rounded bg-[#2e72d7] hover:shadow-[#2e72d7]/20 focus:shadow-[#2e72d7]/20 active:shadow-[#2e72d7]/10">
             <FaLinkedin size={30} />
           </IconButton>
+        </div>
+        <div className="comment-section">
+          <Typography variant="small" className="font-poppins font-bold">
+            Leave a comment
+          </Typography>
+          <Comment />
         </div>
       </div>
     </div>
