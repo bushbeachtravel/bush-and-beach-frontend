@@ -11,6 +11,8 @@ import BlogPosts from './components/Blog';
 import BlogDetailView from './components/BlogDetail';
 import Gallery from './components/GalleryComponent';
 import ContactPage from './components/Contact';
+import CheckoutForm from './components/Payment';
+import ServicesPage from './components/Services';
 
 const App = () => {
 
@@ -28,6 +30,8 @@ const App = () => {
           <Route path="detail" element={<BlogDetailView />} />
           <Route path="gallery" element={<Gallery />} />
           <Route path="contact" element={<ContactPage />} />
+          <Route path="payment" element={<CheckoutForm />} />
+          <Route path="services" element={<ServicesPage />} />
           <Route element={<NotFound />} />
         </Routes>
       </BrowserRouter>

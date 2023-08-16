@@ -25,7 +25,7 @@ const slides = [
     para: `Bush and Beach have partnered with various hotels 
     and conference centers to offer the best 
     conference packages across East Africa.`,
-    urlPath: 'conference',
+    urlPath: 'hotels',
   },
   {
     image: airTravel,
@@ -35,7 +35,7 @@ const slides = [
     We work closely with all the airlines providing us 
     with a chance to advice and give our clients 
     the best available rates from different airlines..`,
-    urlPath: 'airtickets',
+    urlPath: 'services',
   },
   {
     image: airpotTransfer,
@@ -45,7 +45,7 @@ const slides = [
     We at Bush and Beach have partnered with different travel 
     agents across the globe to facilitate smooth and reliable 
     transfers from the airport to the hotels`,
-    urlPath: 'airtickets'
+    urlPath: 'services'
   },
   {
     image: travelling,
@@ -53,13 +53,13 @@ const slides = [
     para: `We listen, evaluate and undertand the needs of our clients 
     and advice with the best of our knowledge to meet all our 
     customer’s expectations and requirements.`,
-    urlPath: 'airtickets'
+    urlPath: 'services'
   },
   {
     image: wild,
     title: 'Visa processing',
     para: `Get help with your visa processing`,
-    urlPath: 'airtickets',
+    urlPath: 'services',
   },
   {
     image: safariPackage,
@@ -68,7 +68,7 @@ const slides = [
     groups or individual that are fun packed and memorable. 
     Our dedicated team has taken time to know the country and 
     the world thus able to provide well selected safari and game drive packages.`,
-    urlPath: 'safari'
+    urlPath: 'hotels'
   },
 ]
 

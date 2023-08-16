@@ -6,6 +6,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { FaCheck } from "react-icons/fa6"
+import { Link } from "react-router-dom";
 
 const LukenyaModalWindow = () => {
   return (
@@ -56,7 +57,9 @@ const LukenyaModalWindow = () => {
               variant="text"
               className="flex items-center gap-1 capitalize font-poppins"
             >
-              Book Now
+             <Link to="/payment">
+                Book Now
+              </Link>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
