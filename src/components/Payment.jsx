@@ -68,26 +68,27 @@ export default function CheckoutForm() {
             floated={false}
             shadow={false}
             className="m-0 grid place-items-center rounded-b-none py-8 px-4 text-center"
+            id="pay-card"
           >
             <div className="mb-4 rounded-full border border-white/10 bg-white/10 p-6 text-white">
               <BanknotesIcon className="h-10 w-10" />
             </div>
-            <Typography variant="h4" color="white">
+            <Typography variant="h4" color="white" className="font-poppins">
               Bush & Beach
             </Typography>
           </CardHeader>
           <CardBody>
             <Tabs value={type} className="overflow-visible">
               <TabsHeader className="relative z-0 ">
-                <Tab value="card" onClick={() => setType("card")}>
+                <Tab value="card" onClick={() => setType("card")} className="font-poppins">
                   Card
                 </Tab>
-                <Tab value="paypal" onClick={() => setType("paypal")}>
+                <Tab value="paypal" onClick={() => setType("paypal")} className="font-poppins">
                   PayPal
                 </Tab>
               </TabsHeader>
               <TabsBody
-                className="!overflow-x-hidden !overflow-y-visible"
+                className="!overflow-x-hidden !overflow-y-visible font-poppins"
                 animate={{
                   initial: {
                     x: type === "card" ? 400 : -400,
@@ -106,7 +107,7 @@ export default function CheckoutForm() {
                       <Typography
                         variant="small"
                         color="blue-gray"
-                        className="mb-4 font-medium"
+                        className="mb-4 font-medium font-poppins"
                       >
                         Personal Details
                       </Typography>
@@ -117,7 +118,7 @@ export default function CheckoutForm() {
                       <Typography
                         variant="small"
                         color="blue-gray"
-                        className="mb-4 font-medium"
+                        className="mb-4 font-medium font-poppins"
                       >
                         Card Details
                       </Typography>
@@ -147,13 +148,13 @@ export default function CheckoutForm() {
                       </div>
                       <Input label="Holder Name" />
                     </div>
-                    <Button size="lg">Pay Now</Button>
+                    <Button size="lg" className="font-poppins">Pay Now</Button>
                     <Typography
                       variant="small"
                       color="gray"
                       className="mt-2 flex items-center justify-center gap-2 font-normal opacity-60"
                     >
-                      <LockClosedIcon className="-mt-0.5 h-4 w-4" /> Payments are
+                      <LockClosedIcon className="-mt-0.5 h-4 w-4 font-poppins" /> Payments are
                       secure and encrypted
                     </Typography>
                   </form>
@@ -164,7 +165,7 @@ export default function CheckoutForm() {
                       <Typography
                         variant="small"
                         color="blue-gray"
-                        className="mb-4 font-medium"
+                        className="mb-4 font-medium font-poppins"
                       >
                         Personal Details
                       </Typography>
@@ -175,7 +176,7 @@ export default function CheckoutForm() {
                       <Typography
                         variant="small"
                         color="blue-gray"
-                        className="mb-4 font-medium"
+                        className="mb-4 font-medium font-poppins"
                       >
                         Billing Address
                       </Typography>
@@ -192,7 +193,7 @@ export default function CheckoutForm() {
                         containerProps={{ className: "mt-4" }}
                       />
                     </div>
-                    <Button size="lg" color="amber" className="relative h-12">
+                    <Button size="lg" color="amber" className="relative h-12 font-poppins">
                       <img
                         alt="paypal "
                         className="absolute top-2/4 left-2/4 w-16 -translate-x-2/4 -translate-y-2/4"
@@ -204,7 +205,7 @@ export default function CheckoutForm() {
                       color="gray"
                       className="mt-2 flex items-center justify-center gap-2 font-normal opacity-60"
                     >
-                      <LockClosedIcon className="-mt-0.5 h-4 w-4" /> Payments are
+                      <LockClosedIcon className="-mt-0.5 h-4 w-4 font-poppins" /> Payments are
                       secure and encrypted
                     </Typography>
                   </form>

@@ -1,12 +1,11 @@
 
-import accomodation from '../../assets/accomodation.jpg'
-import airpotTransfer from '../../assets/airpotTransfer.jpg'
-import airTravel from '../../assets/airTravel.jpg'
-import conference from '../../assets/conference.jpg'
-import safariPackage from '../../assets/safariPackage.jpg'
-import wild from '../../assets/wild.jpg'
-import travelling from '../../assets/travelling.jpg'
-
+import accomodation from '../assets/images/accomodation.jpg'
+import airpotTransfer from '../assets/images/airpotTransfer.jpg'
+import airTravel from '../assets/images/airTravel.jpg'
+import conference from '../assets/images/conference.jpg'
+import safariPackage from '../assets/images/safariPackage.jpg'
+import wild from '../assets/images/wild.jpg'
+import travelling from '../assets/images/travelling.jpg'
 
 const photos = [
   {

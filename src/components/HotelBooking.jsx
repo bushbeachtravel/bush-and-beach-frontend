@@ -6,7 +6,8 @@ import Footer from "./Footer";
 import NavigationMenu from "./NavigationMenu";
 
 import '../assets/styles/HomePage.css';
-import image from '../assets/hotel.jpg'
+import image from '../assets/images/hotel.jpg'
+
 const HotelBooking = () => (
   <>
     <NavigationMenu />

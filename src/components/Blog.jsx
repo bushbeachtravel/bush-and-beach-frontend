@@ -2,48 +2,11 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
-import wild from '../assets/wild.jpg';
-import accomodation from '../assets/accomodation.jpg';
-import hotel from '../assets/hotel.jpg';
-import travel from '../assets/airpotTransfer.jpg';
 import '../assets/styles/HomePage.css';
 import NavigationMenu from "./NavigationMenu";
 import Footer from "./Footer";
+import blogs from "../data/blogPostData";
 
-const blogs = [
-  {
-    image: accomodation,
-    title: 'The Masaai Mara',
-    body: `We at Bush and Beach tours and safaris beleive a tour is more than just seeing the scenery. 
-    It’s all about the whole experience and this business is driven by our mission statement.`,
-    author: 'kennankole',
-    date: 'July 12, 2023'
-  },
-  {
-    image: hotel,
-    title: 'The Masaai Mara',
-    body: `We at Bush and Beach tours and safaris beleive a tour is more than just seeing the scenery. 
-    It’s all about the whole experience and this business is driven by our mission statement.`,
-    author: 'kennankole',
-    date: 'July 22, 2023'
-  },
-  {
-    image: wild,
-    title: 'Serengeti',
-    body: `We at Bush and Beach tours and safaris beleive a tour is more than just seeing the scenery. 
-    It’s all about the whole experience and this business is driven by our mission statement.`,
-    author: 'kennankole',
-    date: 'July 18, 2023'
-  },
-  {
-    image: travel,
-    title: 'Nairobi National Park',
-    body: `We at Bush and Beach tours and safaris beleive a tour is more than just seeing the scenery. 
-    It’s all about the whole experience and this business is driven by our mission statement.`,
-    author: 'kennankole',
-    date: 'July 28, 2023'
-  },
-]
 const BlogPost = () => {
   return (
     <>

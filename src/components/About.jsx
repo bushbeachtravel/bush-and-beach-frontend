@@ -78,8 +78,8 @@ const About = () => {
               </div>
             </div>
             <div className="our-mission flex flex-col items-center justify-center">
-              <div className="mission-container flex">
-                <div className="mission-upper p-10">
+              <div className="mission-container flex p-3">
+                <div className="mission-upper w-1/2">
                   <Typography variant="h3" className="font-poppins text-center mt-10">
                     Our Mission
                   </Typography>
@@ -89,7 +89,7 @@ const About = () => {
                     for our customers through delivery of quality service that exceeds their expectations.
                   </Typography>
                 </div>
-                <div className="mission-upper p-10 ">
+                <div className="mission-upper w-1/2">
                   <Typography variant="h3" className="font-poppins text-center mt-10">
                     Our Vision
                   </Typography>

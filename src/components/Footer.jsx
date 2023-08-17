@@ -1,21 +1,7 @@
 import { Typography } from "@material-tailwind/react";
 import { FaTwitter, FaFacebook, FaInstagramSquare, FaLinkedin } from 'react-icons/fa'
 import '../assets/styles/Blog.css';
-
-const LINKS = [
-  {
-    title: "Our Services",
-    items: ["Air Ticketing", "Travel Adisory", "Airport Transfers", "Visa Processing", "Hotel Booking & Accomodation", "Conference Packages", "Safari, Game Drives"],
-  },
-  {
-    title: "Company",
-    items: ["About us", "Careers"],
-  },
-  {
-    title: "Resource",
-    items: ["Blog", "Gallery"],
-  },
-];
+import LINKS from "../data/footerData";
 
 const currentYear = new Date().getFullYear();
 
@@ -37,15 +23,15 @@ const Footer = () => {
                 >
                   {title}
                 </Typography>
-                {items.map((link) => (
-                  <li key={link}>
+                {items.map((item) => (
+                  <li key={item.title}>
                     <Typography
                       as="a"
-                      href="#"
+                      href={`/${item.url}`}
                       color="gray"
                       className="py-1.5 font-normal transition-colors hover:text-blue-gray-900 font-poppins"
                     >
-                      {link}
+                      {item.title}
                     </Typography>
                   </li>
                 ))}

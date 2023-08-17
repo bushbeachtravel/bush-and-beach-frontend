@@ -6,7 +6,7 @@ import '../assets/styles/Blog.css';
 import "yet-another-react-lightbox/styles.css";
 import Footer from "./Footer";
 import NavigationMenu from "./NavigationMenu";
-import photos from "./modals/photos";
+import photos from '../data/photos.js';
 
 export default function Gallery() {
   const [open, setOpen] = useState(false);

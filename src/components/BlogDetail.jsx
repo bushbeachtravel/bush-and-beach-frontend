@@ -13,7 +13,7 @@ import Footer from './Footer';
 import NavigationMenu from './NavigationMenu';
 
 import '../assets/styles/Blog.css';
-import wild from '../assets/wild.jpg';
+import wild from '../assets/images/wild.jpg';
 
 const BlogDetailView = () => (
   <>
