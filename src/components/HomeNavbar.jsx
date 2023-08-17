@@ -7,7 +7,7 @@ import {
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 import '../assets/styles/HomePage.css';
-import '../assets/styles/Navbar.css';
+import '../assets/styles/HomeNav.css';
 
 const NavigationMenu = () => {
   const [openNav, setOpenNav] = React.useState(false);
@@ -27,17 +27,17 @@ const NavigationMenu = () => {
         color="blue-gray"
         className="p-1 font-poppins text-blue-50 font-semibold"
       >
-        <Link to="/hotels" className="color flex items-center">
+        <Link to="/hotels" className="flex items-center">
           Safari Packages
         </Link>
       </Typography>
       <Typography
         as="li"
         variant="small"
-        color="black"
+        color="blue-gray"
         className="p-1 font-normal font-poppins text-blue-50 font-semibold"
       >
-        <Link to="/about" className="color flex items-center font-poppins">
+        <Link to="/about" className="flex items-center font-poppins">
           About us
         </Link>
       </Typography>
@@ -47,7 +47,7 @@ const NavigationMenu = () => {
         color="blue-gray"
         className="p-1 font-poppins text-blue-50 font-semibold"
       >
-        <Link to="/gallery" className="color flex items-center">
+        <Link to="/gallery" className="flex items-center">
           Gallery
         </Link>
       </Typography>
@@ -57,7 +57,7 @@ const NavigationMenu = () => {
         color="blue-gray"
         className="p-1 font-poppins text-blue-50 font-semibold"
       >
-        <Link to="/blog" className="color flex items-center">
+        <Link to="/blog" className="flex items-center">
           Blog
         </Link>
       </Typography>
@@ -67,7 +67,7 @@ const NavigationMenu = () => {
         color="blue-gray"
         className="p-1 font-poppins text-blue-50 font-semibold"
       >
-        <Link to="/contact" className="color flex items-center">
+        <Link to="/contact" className="flex items-center">
           Contact us
         </Link>
       </Typography>
@@ -75,7 +75,7 @@ const NavigationMenu = () => {
   );
 
   return (
-    <div className="navbar">
+    <div className="nav">
       <Navbar className="h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4 bg-transparent border-none">
         <div className="container mx-auto flex items-center justify-between text-blue-50">
           <Typography
@@ -83,7 +83,7 @@ const NavigationMenu = () => {
             href="#"
             className="mr-4 cursor-pointer py-1.5 font-poppins text-blue-50 font-semibold"
           >
-            <Link to="/" className="color">
+            <Link to="/">
               Bush & Beach
             </Link>
           </Typography>
