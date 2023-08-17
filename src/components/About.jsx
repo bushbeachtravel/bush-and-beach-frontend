@@ -1,10 +1,8 @@
 import {
-  Card,
-  CardBody,
-  CardFooter,
   Typography,
   Button,
 } from "@material-tailwind/react";
+import Footer from "./Footer";
 import '../assets/styles/Blog.css';
 
 const About = () => {
@@ -13,23 +11,23 @@ const About = () => {
       <div className="flex p-5 about-background"></div>
       <div className="about-container ">
         <div className="about-us-header p-20">
-          <div className="p-5 m-3 about-desc p-10">
+          <div className="about-desc p-10">
             <div className="dot"></div>
-            <Typography variant="lead" className="font-poppins text-5xl py-">
+            <Typography variant="h3" className="font-poppins py-">
               Bush & Beach
               <br />
               Safaris.
             </Typography>
             <div className="py-3 about-para">
-              <Typography variant="" className="py-3">
-                We offer you Extra Ordinary Packages
+              <Typography variant="" className="py-3 font-poppins">
+                We offer you Extra Ordinary Packages <br />
                 Air Ticketing | Hotel Booking | Game Drives
               </Typography>
               <Button color="blue" type="submit" className="py-3">Contact Us</Button>
             </div>
           </div>
         </div>
-        <div className="flex justify-center flex-col items-center py-20">
+        <div className="flex justify-center flex-col items-center">
           <Typography variant="h4" color="white" className="text-center font-poppins m-4 p-8 values">
             Our Values.
           </Typography>
@@ -95,13 +93,13 @@ const About = () => {
               </div>
             </div>
             <div className="mission-lower">
-              <Typography variant="h3" color="white" className="font-poppins font-bold text-center">
+              <Typography variant="h3" color="white" className="mt-10 font-poppins font-bold text-center">
                 Our Story
               </Typography>
               <Typography className="font-poppins p-5 text-center" color="white">
                 Bush and Beach Travel & Safaris Ltd is a fully integrated tour and travels
                 company with a proven track record that provides customised luxury
-                journeys to inspiring destinations.We are a trusted company, passionate travel 
+                journeys to inspiring destinations.We are a trusted company, passionate travel
                 specialists who strive to ensure that we are and remain the perfect solution to transport
                 and tour requirements in East Africa.
                 <br />
@@ -119,7 +117,7 @@ const About = () => {
           </div>
         </div>
       </div>
-
+      <Footer />
     </section>
   );
 };
