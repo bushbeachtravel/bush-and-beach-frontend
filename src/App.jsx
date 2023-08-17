@@ -13,7 +13,6 @@ import Gallery from './components/GalleryComponent';
 import ContactPage from './components/Contact';
 import CheckoutForm from './components/Payment';
 import ServicesPage from './components/Services';
-
 const App = () => {
 
   return (

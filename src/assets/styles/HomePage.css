@@ -8,16 +8,9 @@
   background-color: #1b6ccf;
 }
 
-.navbar {
-  position: absolute;
-  z-index: 1;
-  width: 100vw;
-  background: transparent;
-}
-
 .hotel-book-section {
   height: 100%;
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;

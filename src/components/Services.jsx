@@ -8,6 +8,8 @@ import {
   Button,
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
+import NavigationMenu from "./NavigationMenu";
 import '../assets/styles/Blog.css';
 
 
@@ -51,45 +53,47 @@ const ServicesPage = () => {
   ];
 
   return (
-    <section className="services-page">
-      <div className="services-background"></div>
-      <div className="services">
-        <Tabs id="custom-animation" value="html" className="services-tab font-poppins px-3 m-2">
-          <TabsHeader>
-            {data.map(({ label, value }) => (
-              <Tab key={value} value={value}>
-                <Typography variant="lead" className="font-poppins font-bold">
-                  {label}
-                </Typography>
-              </Tab>
-            ))}
-          </TabsHeader>
-          <TabsBody
-            animate={{
-              initial: { y: 250 },
-              mount: { y: 0 },
-              unmount: { y: 250 },
-            }}
-            className="font-poppins tabs-body"
-          >
-            {data.map(({ value, desc }) => (
-              <TabPanel key={value} value={value}>
-                <Typography className="font-poppins p-3">
-                  {desc}
-                </Typography>
-                <br />
-                <div className="px-3">
-                  <Button type="submit" className="font-poppins">
-                    <Link to="/contact">Get In Touch</Link>
-                  </Button>
-                </div>
+    <>
+      <NavigationMenu />
+      <section className="services-page">
+        <div className="services-background"></div>
+        <div className="services">
+          <Tabs id="custom-animation" value="html" className="services-tab font-poppins px-3 m-2">
+            <TabsHeader>
+              {data.map(({ label, value }) => (
+                <Tab key={value} value={value}>
+                  <Typography variant="lead" className="font-poppins font-bold">
+                    {label}
+                  </Typography>
+                </Tab>
+              ))}
+            </TabsHeader>
+            <TabsBody
+              animate={{
+                initial: { y: 250 },
+                mount: { y: 0 },
+                unmount: { y: 250 },
+              }}
+              className="font-poppins tabs-body"
+            >
+              {data.map(({ value, desc }) => (
+                <TabPanel key={value} value={value}>
+                  <Typography className="font-poppins p-3">
+                    {desc}
+                  </Typography>
+                  <br />
+                  <div className="px-3">
+                    <Button type="submit" className="font-poppins">
+                      <Link to="/contact">Get In Touch</Link>
+                    </Button>
+                  </div>
 
-              </TabPanel>
-            ))}
-          </TabsBody>
-        </Tabs>
-      </div>
-    </section>
+                </TabPanel>
+              ))}
+            </TabsBody>
+          </Tabs>
+        </div>
+      </section><Footer /></>
   );
 }
 export default ServicesPage;

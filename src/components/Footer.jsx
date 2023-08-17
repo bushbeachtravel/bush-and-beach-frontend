@@ -16,13 +16,13 @@ const LINKS = [
     items: ["Blog", "Gallery"],
   },
 ];
- 
+
 const currentYear = new Date().getFullYear();
- 
+
 const Footer = () => {
   return (
-    <footer className="relative w-full">
-      <div className="mx-auto w-full max-w-7xl px-8">
+    <footer className="relative w-full mt-auto">
+      <div className="footer-line mx-auto w-full max-w-7xl px-8">
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
           <Typography variant="h5" className="p-5 mb-6 font-poppins">
             Bush & Beach
@@ -66,7 +66,7 @@ const Footer = () => {
               <FaFacebook />
             </Typography>
             <Typography as="a" href="#" className="opacity-80 transition-opacity hover:opacity-100">
-             <FaTwitter />
+              <FaTwitter />
             </Typography>
             <Typography as="a" href="#" className="opacity-80 transition-opacity hover:opacity-100">
               <FaInstagramSquare />

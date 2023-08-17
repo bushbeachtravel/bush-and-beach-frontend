@@ -1,6 +1,6 @@
 import { Carousel, Typography, Button } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
-import NavigationMenu from "./NavigationMenu";
+import NavigationMenu from "./HomeNavbar";
 import accomodation from '../assets/accomodation.jpg'
 import airpotTransfer from '../assets/airpotTransfer.jpg'
 import airTravel from '../assets/airTravel.jpg'
@@ -8,7 +8,6 @@ import conference from '../assets/conference.jpg'
 import safariPackage from '../assets/safariPackage.jpg'
 import wild from '../assets/wild.jpg'
 import travelling from '../assets/travelling.jpg'
-
 import '../assets/styles/HomePage.css';
 
 const slides = [

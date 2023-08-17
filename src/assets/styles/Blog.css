@@ -1,3 +1,6 @@
+/*************************************************************
+                          BLOG COMPONENT
+**************************************************************/
 .blog-detail-section {
   display: flex;
   justify-content: space-between;
@@ -65,7 +68,9 @@
   }
 }
 
-/* +++++++++++++Gallery App+++++++++++++ */
+/*************************************************************
+                        GALLERY COMPONENT
+**************************************************************/
 .gallery-container {
   display: flex;
   justify-content: center;
@@ -94,8 +99,9 @@
   z-index: 10;
 }
 
-
-/* ++++++++++++Contact us section+++++++++++++++++++ */
+/*************************************************************
+                          CONTACT COMPONENT
+**************************************************************/
 .contact-section {
   display: flex;
   justify-content: center;
@@ -179,13 +185,12 @@
 
 
 /*************************************************************
-  SERVICES PAGE
+                           SERVICES PAGE
 **************************************************************/
 .services-page {
   position: relative;
   overflow: hidden;
   height: 100vh;
-  /* Set the height as needed */
 }
 
 .services-background {
@@ -260,7 +265,8 @@
 }
 
 .core-values-container {
-  width: 80%;
+  width: 70%;
+  border-bottom: 1px solid;
 }
 
 .values {
@@ -270,6 +276,7 @@
 .mission-container {
   background-color: #ffff;
   height: 100%;
+  width: 90%;
 }
 
 .mission-lower{
@@ -279,8 +286,12 @@
 }
 
 /*************************************************************
-                        ABOUT US PAGE
+                        FOOTER COMPONENT
 **************************************************************/
 footer {
   background-color: #ffff;
+}
+
+.footer-line {
+  padding-top: 6%;
 }
