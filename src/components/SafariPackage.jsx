@@ -5,7 +5,7 @@ import {
   Typography,
   Button,
 } from "@material-tailwind/react";
-import wild from '../assets/wild.jpg'
+import wild from '../assets/images/wild.jpg'
 const SafariPackage = () => {
   return (
     <Card className="w-full max-w-[48rem] flex-row">

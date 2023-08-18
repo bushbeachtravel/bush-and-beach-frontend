@@ -296,3 +296,7 @@ footer {
 #pay-card {
   background-color: rgba(0, 133, 255, 1);
 }
+
+.link-color {
+  color: grey;
+}

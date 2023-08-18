@@ -1,5 +1,6 @@
 import { Typography } from "@material-tailwind/react";
 import { FaTwitter, FaFacebook, FaInstagramSquare, FaLinkedin } from 'react-icons/fa'
+import { Link } from "react-router-dom";
 import '../assets/styles/Blog.css';
 import LINKS from "../data/footerData";
 
@@ -25,14 +26,13 @@ const Footer = () => {
                 </Typography>
                 {items.map((item) => (
                   <li key={item.title}>
-                    <Typography
-                      as="a"
-                      href={`/${item.url}`}
-                      color="gray"
-                      className="py-1.5 font-normal transition-colors hover:text-blue-gray-900 font-poppins"
+
+                    <Link
+                      to={`/${item.url}`}
+                      className="py-1.5 font-normal transition-colors hover:text-blue-gray-900 font-poppins link-color"
                     >
                       {item.title}
-                    </Typography>
+                    </Link>
                   </li>
                 ))}
               </ul>
