@@ -6,12 +6,11 @@ import { Link } from "react-router-dom";
 import Footer from "./Footer";
 import NavigationMenu from "./NavigationMenu";
 import '../assets/styles/Blog.css';
-import styles from '../assets/styles/Navbar.css';
 
 const About = () => {
   return (
     <>
-      <NavigationMenu navbarStyles={styles.navbar} />
+      <NavigationMenu />
       <section className="about-section">
         <div className="flex p-5 about-background"></div>
         <div className="about-container ">
