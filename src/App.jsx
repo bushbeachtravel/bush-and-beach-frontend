@@ -17,38 +17,41 @@ const router = createBrowserRouter([
     path: "/",
     element: <HomePage />,
     errorElement: <NotFound />,
+    children: [
+      {
+        path: "/hotels",
+        element: <HotelBooking />,
+      },
+      {
+        path: "/payment",
+        element: <CheckoutForm />
+      },
+      {
+        path: "/services",
+        element: <Services />,
+      },
+      {
+        path: "/blog",
+        element: <BlogPosts />,
+      },
+      {
+        path: "/detail",
+        element: <BlogDetailView />,
+      },
+      {
+        path: "/contact",
+        element: <ContactPage />,
+      },
+      {
+        path: "/gallery",
+        element: <Gallery />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      }
+    ]
   },
-  {
-    path: "/hotels",
-    element: <HotelBooking />,
-  },
-  {
-    path: "/payment",
-    element: <CheckoutForm />
-  },
-  {
-    path: "/services",
-    element: <Services />,
-  },
-  {
-    path: "/blog",
-    element: <BlogPosts />,
-  },
-  {
-    path: "/detail",
-    element: <BlogDetailView />,
-  },
-  {
-    path: "/contact",
-    element: <ContactPage />,
-  },
-  {
-    path: "/gallery",
-    element: <Gallery />,
-  },
-  {
-    path: "/about",
-    element: <About />,
-  }
+  
 ]);
 export default router;
