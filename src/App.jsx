@@ -19,35 +19,35 @@ const router = createBrowserRouter([
     errorElement: <NotFound />,
   },
   {
-    path: "hotels",
+    path: "/hotels",
     element: <HotelBooking />,
   },
   {
-    path: "payment",
+    path: "/payment",
     element: <CheckoutForm />
   },
   {
-    path: "services",
+    path: "/services",
     element: <Services />,
   },
   {
-    path: "blog",
+    path: "/blog",
     element: <BlogPosts />,
   },
   {
-    path: "detail",
+    path: "/detail",
     element: <BlogDetailView />,
   },
   {
-    path: "contact",
+    path: "/contact",
     element: <ContactPage />,
   },
   {
-    path: "gallery",
+    path: "/gallery",
     element: <Gallery />,
   },
   {
-    path: "about",
+    path: "/about",
     element: <About />,
   }
 ]);
