@@ -10,11 +10,11 @@ const Footer = () => {
   return (
     <footer className="relative w-full mt-auto">
       <div className="footer-line mx-auto w-full max-w-7xl px-8">
-        <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
-          <Typography variant="h5" className="p-5 mb-6 font-poppins">
+        <div className="flex justify-between gap-3 flex-wrap">
+          <Typography variant="h5" className="mb-6 font-poppins">
             Bush & Beach
           </Typography>
-          <div className="grid grid-cols-3 justify-between gap-4">
+          <div className="grid grid-cols-3 justify-between gap-6">
             {LINKS.map(({ title, items }) => (
               <ul key={title}>
                 <Typography
@@ -29,11 +29,13 @@ const Footer = () => {
 
                     <Link
                       to={`/${item.url}`}
-                      className="py-1.5 font-normal transition-colors hover:text-blue-gray-900 font-poppins link-color"
+                      className="py-1.5 mt-3 font-normal transition-colors hover:text-blue-gray-900 font-poppins link-color"
                     >
                       {item.title}
                     </Link>
+                    <br />
                   </li>
+
                 ))}
               </ul>
             ))}
