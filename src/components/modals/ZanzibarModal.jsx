@@ -13,7 +13,7 @@ const ZanzibarModalWindow = () => {
     <Popover>
       <PopoverHandler>
         <button className="hotel-buttons font-poppins">
-          View Package
+          Explore
         </button>
       </PopoverHandler>
       <PopoverContent className="z-[999] flex w-[28rem] overflow-hidden p-0">

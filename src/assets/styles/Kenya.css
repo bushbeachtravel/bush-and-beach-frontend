@@ -1,0 +1,16 @@
+.big-five {
+  background-color: #F7F8FA;
+}
+.slick-prev:before {
+  color: black;
+}
+
+.slick-next::before {
+  color: black;
+}
+
+.line-seperator {
+  height: 5px;
+  width: 20%;
+  background-color: #1b6ccf;
+}

@@ -1,12 +1,10 @@
 import { Typography } from "@material-tailwind/react";
-import HotelModalWindow from "./modals/HotelModal";
-import LukenyaModalWindow from "./modals/LukenyaModal";
-import ZanzibarModalWindow from "./modals/ZanzibarModal";
 import Footer from "./Footer";
 import NavigationMenu from "./NavigationMenu";
 
 import '../assets/styles/HomePage.css';
 import image from '../assets/images/hotel.jpg'
+import { Link } from "react-router-dom";
 
 const HotelBooking = () => (
   <>
@@ -21,19 +19,17 @@ const HotelBooking = () => (
         <div className="container-text">
           <div className="inner-container">
             <Typography variant="h3" className="font-poppins">
-              Arabian Courtyard Hotel & Spar
+              Kenya Bush Safaris
             </Typography>
             <br />
             <Typography className="font-poppins">
-              Arabian Courtyard Hotel & Spa is an award winning 4-star hotel in Dubai
-              with Arabian theme, located opposite Dubai Museum.
-              Surrounded by various points of interest such as Meena Bazaar, Gold Souk,
-              Spice Market, Al Fahidi historical area (Bastakiya),
-              Al Seef Dubai Creek and walking distance to diplomatic enclave,
-              consulates and embassies.Sharaf DG Metro Station as well as
-              Al Ghubaiba Metro and Bus Stations are 500 meters walk away.
+              Welcome to Kenya which is known for being the world’s best
+              safari destination with more than 50 epic national parks
+              and reserves that are home to diverse wildlife including the big five.
             </Typography>
-            <HotelModalWindow />
+            <button className="hotel-buttons font-poppins">
+              <Link to="/kenya">Explore</Link>
+            </button>
           </div>
         </div>
       </div>
@@ -41,20 +37,17 @@ const HotelBooking = () => (
         <div className="container-text">
           <div className="inner-container">
             <Typography variant="h3" className="font-poppins">
-              Lukenya Gateway Hotel
+              Kenya Coastal Beaches
             </Typography>
             <br />
             <Typography className="font-poppins">
-              Lukenya Getaway is rightly named as it is the perfect Getaway away from the busy city life.
-              We ride on our promise to offer a serene, quiet, peaceful and personal environment.
-              Within our surroundings.This makes Lukenya Getaway the ideal venue for strategic thinking,
-              rejuvenation, recreation and relaxation. Located just
-              40km from the city Center and just 25 mins from JKIA,
-              the resort lies on 16 acres of ever green plush gardens making it
-              convenient and enjoyable for corporate groups, tourists, church groups,
-              families, and individuals seeking relaxation & rejuvenation
+              Kenyan coast has been ranked among the best and sought-after
+              destinations within the region for several years consecutively
+              and has won Africa’s leading beach destination by the world travel awards
             </Typography>
-            <LukenyaModalWindow />
+            <button className="hotel-buttons font-poppins">
+              Explore
+            </button>
           </div>
         </div>
         <div className="content-container">
@@ -72,18 +65,87 @@ const HotelBooking = () => (
         <div className="container-text">
           <div className="inner-container">
             <Typography variant="h3" className="font-poppins">
-              Sunshine Hotel Zanzibar
+              Zanzibar Tours
             </Typography>
             <br />
             <Typography className="font-poppins">
-              Sunshine Zanzibar Group consists of two sister properties:
-              Sunshine Bay and Sunshine Marine Lodge.
-              They are both located at the North-Eastern coast of the Unguja Island (Zanzibar).
-              Designed in genuine Swahili style, offer the same level of comfort
-              but different experience with the aim of meeting the increasingly
-              demanding needs for unique holidays.
+              Discover the best of Zanzibar in just a few days!
+              Our Zanzibar day tours offer a perfect opportunity to explore
+              the islands breathtaking landscapes, exotic beaches, famous spice farms,
+              history and diverse wildlife and culture.
             </Typography>
-            <ZanzibarModalWindow />
+            <button className="hotel-buttons font-poppins">
+              Explore
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className="service-container">
+        <div className="container-text">
+          <div className="inner-container">
+            <Typography variant="h3" className="font-poppins">
+              Rwanda/Uganda Gorilla tracking
+            </Typography>
+            <br />
+            <Typography className="font-poppins">
+              We plan for our client’s holiday to Rwanda/Uganda to
+              experience and see gorillas in their natural habitats.
+              Let your imagination and adventurous side run wild
+            </Typography>
+            <button className="hotel-buttons font-poppins">
+              Explore
+            </button>
+          </div>
+        </div>
+        <div className="content-container">
+          <div className="image-container">
+            <img src={image} />
+          </div>
+        </div>
+      </div>
+      <div className="service-container">
+        <div className="content-container">
+          <div className="image-container">
+            <img src={image} />
+          </div>
+        </div>
+        <div className="container-text">
+          <div className="inner-container">
+            <Typography variant="h3" className="font-poppins">
+              International Tours
+            </Typography>
+            <br />
+            <Typography className="font-poppins">
+              We have partnered with other tour companies in various
+              countries to enable our Kenyan esteemed clients have a
+              seamless memorable travel experience.
+            </Typography>
+            <button className="hotel-buttons font-poppins">
+              Explore
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className="service-container">
+        <div className="container-text">
+          <div className="inner-container">
+            <Typography variant="h3" className="font-poppins">
+              Other excursions we offer
+            </Typography>
+            <br />
+            <Typography className="font-poppins">
+              We plan for our client’s holiday to Rwanda/Uganda to
+              experience and see gorillas in their natural habitats.
+              Let your imagination and adventurous side run wild
+            </Typography>
+            <button className="hotel-buttons font-poppins">
+              Explore
+            </button>
+          </div>
+        </div>
+        <div className="content-container">
+          <div className="image-container">
+            <img src={image} />
           </div>
         </div>
       </div>
