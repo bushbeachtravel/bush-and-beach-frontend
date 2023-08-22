@@ -2,7 +2,7 @@
 import Carousel from 'react-gallery-carousel';
 import 'react-gallery-carousel/dist/index.css';
 import NavigationMenu from '../NavigationMenu';
-import { SafariDetailsPage } from './BookingForm';
+import { SafariItenary } from './SafariItenary';
 import '../../assets/styles/Kenya.css';
 import { Typography, Input, Textarea, Button } from '@material-tailwind/react';
 import { FaRegClock, FaChildren } from 'react-icons/fa6';
@@ -63,7 +63,7 @@ const SafariDetail = () => {
       </section>
       <section className="flex justify-between flex-wrap p-5">
         <div className="itenary p-5 w-2/3">
-          <SafariDetailsPage />
+          <SafariItenary />
         </div>
         <div className="enquiry-form w-1/3 p-5 flex flex-col gap-6">
           <div className="price flex justify-between p-5">

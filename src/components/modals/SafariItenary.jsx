@@ -2,9 +2,10 @@ import { useState } from 'react';
 import { masaaiMaraIternary } from '../../data/safari';
 import { Button, CardBody, Collapse, Typography, Card } from '@material-tailwind/react';
 import { FiPlus } from 'react-icons/fi';
+import { IoIosArrowDroprightCircle, IoIosArrowDropdownCircle } from 'react-icons/io';
 
 
-export const SafariDetailsPage = () => {
+export const SafariItenary = () => {
   const [sections, setSections] = useState(masaaiMaraIternary);
 
   const toggleSection = (index) => {
@@ -18,9 +19,9 @@ export const SafariDetailsPage = () => {
       {sections.map((section, index) => (
         <li key={index}>
           {section.title}
-          <Button onClick={() => toggleSection(index)}>
-            <FiPlus />
-          </Button>
+          <button onClick={() => toggleSection(index)}>
+            {section.isOpen ? <IoIosArrowDropdownCircle /> : <IoIosArrowDroprightCircle />}
+          </button>
           <Collapse open={section.isOpen}>
             <Card className="my-4">
               <CardBody>
