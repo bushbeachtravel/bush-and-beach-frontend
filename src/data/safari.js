@@ -72,7 +72,7 @@ export const parks = [
 
 export const masaaiMaraIternary = [
   {
-    day: 1,
+    day: `Day 1`,
     title: 'Nairobi - Gateway to Adventure',
     activity: `Your adventure begins in Nairobi,
     where modern urban life meets the wild.
@@ -82,18 +82,18 @@ export const masaaiMaraIternary = [
     against the backdrop of the city skyline`
   },
   {
-    day: `2-3`,
-    title: 'Samburu&apos;s Hidden Gems',
+    day: `Day 2-3`,
+    title: `Samburu's Hidden Gems`,
     activity: `Venture north to Samburu, a hidden
     gem known for its unique wildlife.
     Witness the "Samburu Special Five"
-    the rare reticulated giraffe, Grevy&apos;s zebra,
+    the rare reticulated giraffe, Grevy's zebra,
     Somali ostrich, Beisa oryx, and gerenuk.
-    Enjoy game drives along the Ewaso Ng&apos;iro River,
+    Enjoy game drives along the Ewaso Ng'iro River,
     surrounded by stunning landscapes.`
   },
   {
-    day: `4-6`,
+    day: `Day 4`,
     title: 'Majestic Masai Mara',
     activity: `Your journey culminates in the world-famous Masai Mara,
     where the circle of life unfolds before your eyes.
@@ -103,7 +103,7 @@ export const masaaiMaraIternary = [
     elegant cheetahs, and elusive leopards on exhilarating game drives.`
   },
   {
-    day: '',
+    day: `Day 5`,
     title: 'Night Safaris and Cultural Experiences',
     activity: `Experience the magic of night safaris,
     unveiling a different world of nocturnal creatures.
@@ -111,10 +111,10 @@ export const masaaiMaraIternary = [
     into their ancient traditions and vibrant way of life.`
   },
   {
-    day: '',
+    day: `Day 6`,
     title: 'Return with Unforgettable Memories',
     activity: `As your journey comes to a close,
-    you&apos;ll carry with you the memories of
+    you'll carry with you the memories of
     breathtaking landscapes, captivating wildlife encounters,
     and the warmth of Kenyan hospitality.`
   },
