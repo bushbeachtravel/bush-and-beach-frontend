@@ -13,6 +13,7 @@ import ContactPage from './components/Contact';
 import CheckoutForm from './components/Payment';
 import ServicesPage from './components/Services';
 import KenyaSafaris from './components/modals/KenyaSafari'
+import SafariDetail from './components/modals/Safari';
 
 const App = () => {
 
@@ -33,6 +34,7 @@ const App = () => {
           <Route path="payment" element={<CheckoutForm />} />
           <Route path="services" element={<ServicesPage />} />
           <Route path="kenya" element={<KenyaSafaris />} />
+          <Route path="safari-details" element={<SafariDetail />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

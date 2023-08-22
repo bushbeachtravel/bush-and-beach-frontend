@@ -14,3 +14,23 @@
   width: 20%;
   background-color: #1b6ccf;
 }
+
+.safari-carousel {
+  background-color: #F7F8FA ;
+}
+
+.safari-container {
+  height: 90vh;
+  width: 100vw;
+}
+
+.safari-inner {
+  height: 100%;
+  width: 100%;
+  padding: 3%;
+}
+
+.enquiry-form {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  border-radius: 4px;
+}
