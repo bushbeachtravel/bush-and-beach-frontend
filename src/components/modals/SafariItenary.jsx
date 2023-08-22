@@ -16,12 +16,12 @@ export const SafariItenary = () => {
   return (
     <ul className="w-full">
       {sections.map((section, index) => (
-        <li key={index} className="w-full">
+        <li key={index} className="w-full py-3">
           <button 
           onClick={() => toggleSection(index)} 
-          className="flex items-center flex justify-between w-full p-3"
+          className="items-center flex justify-between w-full text-start"
           >
-            <Typography variant="lead" className="font-poppins">
+            <Typography variant="paragraph" className="font-poppins">
               {section.day} {section.title}
             </Typography>
             <div className="iternary-icons">

@@ -22,7 +22,7 @@ const SafariDetail = () => {
           <Carousel images={images} style={{ height: '100%', width: '100%' }} isAutoPlaying={true} className="obect-cover" />
         </div>
       </section>
-      <div className="safari-details flex justify-between p-10">
+      <section className="safari-details flex flex-wrap justify-between p-10">
         <div className="left-details flex flex-col">
           <div className="safari-header">
             <Typography variant="lead" className="font-poppins">
@@ -57,33 +57,45 @@ const SafariDetail = () => {
             </div>
           </div>
         </div>
-      </div>
-      <section>
-
       </section>
-      <section className="flex justify-between flex-wrap p-5">
-        <div className="itenary p-5 w-2/3">
-          <SafariItenary />
-        </div>
-        <div className="enquiry-form w-1/3 p-5 flex flex-col gap-6">
-          <div className="price flex justify-between p-5">
-            <div className="text">
-              <Typography variant="lead" className="font-poppins">
-                From as low as
-              </Typography>
-            </div>
-            <div className="amount font-poppins">
-              <Typography variant="lead" className="font-poppins">
-                Ksh 15,000
-              </Typography>
-            </div>
+      <section className="flex justify-between flex-wrap p-7 form-section">
+        <div className="itenary">
+          <div className="w-full p-5 one ">
+            <Typography variant="h3" className="font-poppins">
+              Itinerary
+            </Typography>
+            <SafariItenary />
           </div>
-          <hr />
-          <Input color="blue" label="Enter Name" className="font-poppins" />
-          <Input type="email" color="blue" label="Enter email" className="font-poppins" />
-          <Textarea label="Message" color="blue" className="font-poppins" />
-          <Button>Send enquiry</Button>
         </div>
+        <div className="enquiry-form flex flex-col p-5">
+          <div className="price justify-between">
+            <div className="flex justify-between">
+              <div className="text">
+                <Typography variant="lead" className="font-poppins">
+                  From as low as
+                </Typography>
+              </div>
+              <div className="amount font-poppins">
+                <Typography variant="lead" className="font-poppins">
+                  Ksh 15,000
+                </Typography>
+              </div>
+            </div>
+            <br />
+            <hr />
+            <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
+              <div className="mb-4 flex flex-col gap-6">
+                <Input color="blue" label="Enter Name" className="font-poppins" />
+                <Input type="email" color="blue" label="Enter email" className="font-poppins" />
+                <Textarea label="Message" color="blue" className="font-poppins" />
+              </div>
+              <Button>Send enquiry</Button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section className="itenary">
+        
       </section>
     </>
   );
