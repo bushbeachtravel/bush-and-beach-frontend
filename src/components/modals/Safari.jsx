@@ -1,41 +1,57 @@
 
-import Carousel from 'react-gallery-carousel';
+// import Carousel from 'react-gallery-carousel';
 import 'react-gallery-carousel/dist/index.css';
+import Slider from "react-slick";
+import { Typography, Input, Textarea, Button } from '@material-tailwind/react';
+import { FaRegClock, FaChildren } from 'react-icons/fa6';
+import { GoLocation } from 'react-icons/go'
+import Footer from '../Footer';
 import NavigationMenu from '../NavigationMenu';
 import { SafariItenary } from './SafariItenary';
 import '../../assets/styles/Kenya.css';
-import { Typography, Input, Textarea, Button } from '@material-tailwind/react';
-import { FaRegClock, FaChildren } from 'react-icons/fa6';
-import { GrLocation } from 'react-icons/gr'
 
+import { images } from '../../data/safari';
 
 const SafariDetail = () => {
-  const images = [9, 8, 7, 6, 5].map((number) => ({
-    src: `https://placedog.net/${number}00/${number}00?id=${number}`
-  }));
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 2000,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    // autoplay: true,
+    // autoplaySpeed: 2000,
+  };
 
   return (
     <>
       <NavigationMenu />
-      <section className="safari-container flex flex-col justify-center">
+      <section className="safari-container flex justify-center">
         <div className="safari-inner">
-          <Carousel images={images} style={{ height: '100%', width: '100%' }} isAutoPlaying={true} className="obect-cover" />
+          <Slider {...settings} className="slider w-full h-full">
+            {images.map((image, index) => (
+              <div key={index} className="gallery-slide">
+                <img src={image.src} alt={`Image ${index + 1}`} className="p-2 object-cover h-full w-full"/>
+              </div>
+            ))}
+          </Slider>
         </div>
       </section>
-      <section className="safari-details flex flex-wrap justify-between p-10">
-        <div className="left-details flex flex-col">
+      <section className="safari-details flex flex-wrap justify-between p-2 gap-4">
+        <div className="left-details flex flex-col px-6">
           <div className="safari-header">
             <Typography variant="lead" className="font-poppins">
               Masaai Mara, Nairobi National Park
             </Typography>
           </div>
           <div className="safari-location flex items-center gap-5">
-            <GrLocation /> Kenya
+            <GoLocation className="iternary-icons" />
+            <Typography className="font-poppins">Kenya</Typography>
           </div>
         </div>
-        <div className="right-details flex justify-between gap-8">
+        <div className="right-details flex justify-between gap-8 px-6">
           <div className="duration flex gap-5 items-center">
-            <FaRegClock />
+            <FaRegClock className="iternary-icons" />
             <div className="text flex flex-col">
               <Typography variant="small" className="font-poppins" >
                 Duration
@@ -46,7 +62,7 @@ const SafariDetail = () => {
             </div>
           </div>
           <div className="age flex gap-5 items-center">
-            <FaChildren />
+            <FaChildren className="iternary-icons" />
             <div className="text flex flex-col">
               <Typography variant="small" className="font-poppins" >
                 Min Age
@@ -58,7 +74,7 @@ const SafariDetail = () => {
           </div>
         </div>
       </section>
-      <section className="flex justify-between flex-wrap p-7 form-section">
+      <section className="flex justify-between flex-wrap p-2 form-section">
         <div className="itenary">
           <div className="w-full p-5 one ">
             <Typography variant="h3" className="font-poppins">
@@ -67,7 +83,7 @@ const SafariDetail = () => {
             <SafariItenary />
           </div>
         </div>
-        <div className="enquiry-form flex flex-col p-5">
+        <div className="enquiry-form flex flex-col p-6">
           <div className="price justify-between">
             <div className="flex justify-between">
               <div className="text">
@@ -94,9 +110,7 @@ const SafariDetail = () => {
           </div>
         </div>
       </section>
-      <section className="itenary">
-        
-      </section>
+      <Footer />
     </>
   );
 };

@@ -4,7 +4,7 @@ import leopard from '../assets/images/safari/leopard.jpg'
 import lion from '../assets/images/safari/lion.jpg'
 import rhino from '../assets/images/safari/rhino.jpg'
 
-import wildbeest from '../assets/images/safari/wildbeest.jpg'
+import wildbeest from '../assets/images/safari/wildebeest.jpg'
 import nakuru from '../assets/images/safari/lake-nakuru.jpg';
 import mountKenya from '../assets/images/safari/mount-kenya.jpg';
 import nairobi from '../assets/images/safari/nairobi-national-park.jpg';
@@ -14,8 +14,28 @@ import tsavoWest from '../assets/images/safari/tsavo-west.jpg';
 // import tsavo from '../assets/images/safari/tsavo.jpg';
 import amboseli from '../assets/images/safari/amboseli.jpg';
 
+export const images = [
+  {
+    src: nairobi,
+    alt: "Zebra",
+  },
+  {
+    src: elephants,
+    alt: "Elephants",
+  },
+  {
+    src: lion,
+    alt: "Lions",
+  },
+  {
+    src: leopard,
+    alt: "Leopard"
+  }
+  // Add more images as needed
+];
 
 export const animals = [bufallo, elephants, leopard, lion, rhino];
+
 export const parks = [
   {
     title: "Masai Mara",
@@ -119,3 +139,4 @@ export const masaaiMaraIternary = [
     and the warmth of Kenyan hospitality.`
   },
 ]
+

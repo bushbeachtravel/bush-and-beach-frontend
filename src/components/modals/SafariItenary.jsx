@@ -29,7 +29,7 @@ export const SafariItenary = () => {
             </div>
           </button>
           <Collapse open={section.isOpen}>
-            <Card className="my-4">
+            <Card className="my-4 mx-auto">
               <CardBody>
                 <Typography variant="paragraph" className="font-poppins">
                   {section.activity}

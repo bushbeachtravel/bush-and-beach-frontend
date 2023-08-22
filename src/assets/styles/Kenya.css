@@ -3,10 +3,12 @@
 }
 .slick-prev:before {
   color: black;
+  font-size: 1.5rem;
 }
 
 .slick-next::before {
   color: black;
+  font-size: 1.5rem;
 }
 
 .line-seperator {
@@ -20,29 +22,34 @@
 }
 
 .safari-container {
-  height: 90vh;
   width: 100%;
 }
 
 .safari-inner {
   height: 100%;
-  width: 100%;
-  padding: 3%;
+  width: 90%;
+  padding: 2%;
 }
 
+.left-details {
+  flex: 2;
+}
+
+.right-details {
+  flex: 1;
+}
 .enquiry-form {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   border-radius: 4px;
-  /* border: 1px solid; */
-
+  height: fit-content;
 }
 
+.gallery-slide > img {
+  height: fit-content;
+}
 .iternary-icons {
   font-size: 2.5rem;
   color: rgba(0, 0, 0, 0.55);
-}
-
-.form-section {
 }
 
 .itenary {
