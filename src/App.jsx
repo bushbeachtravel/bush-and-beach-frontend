@@ -13,8 +13,13 @@ import ContactPage from './components/Contact';
 import CheckoutForm from './components/Payment';
 import ServicesPage from './components/Services';
 import KenyaSafaris from './components/modals/KenyaSafari'
-import SafariDetail from './components/modals/Safari';
-
+import MasaaiMaraTrip from './components/modals/MasaaiMara';
+import LakeNakuruMaraTrip from './components/modals/LakeNakuruMara';
+import NairobiSamburuMaraTrip from './components/modals/NairobiSamburuMara';
+import AmboseliTsavoWestTrip from './components/modals/AmboseliTsavoWest';
+import NairobiAmboseliMaraTrip from './components/modals/NairobiAmboseliMara';
+import NairobiAmboseliMtKenyaLakeNakuruMasaaiMaraTrip from './components/modals/NrbAmboseliMaraMtKenya';
+import NairobiAmboseliLewaMaraTrip from './components/modals/NairobiAmboseliLewaMara';
 const App = () => {
 
   return (
@@ -34,7 +39,13 @@ const App = () => {
           <Route path="payment" element={<CheckoutForm />} />
           <Route path="services" element={<ServicesPage />} />
           <Route path="kenya" element={<KenyaSafaris />} />
-          <Route path="safari-details" element={<SafariDetail />} />
+          <Route path="masai-mara" element={<MasaaiMaraTrip />} />
+          <Route path="lake-nakuru-masai-mara" element={<LakeNakuruMaraTrip /> } />
+          <Route path="nairobi-samburu-masaai-mara" element={<NairobiSamburuMaraTrip />} />
+          <Route path="amboseli-tsavo-west" element={<AmboseliTsavoWestTrip />} />
+          <Route path="nairobi-amboseli-mara" element={<NairobiAmboseliMaraTrip />} />
+          <Route path="nrb-amboseli-nakuru-mt-kenya-masaai-mara" element={<NairobiAmboseliMtKenyaLakeNakuruMasaaiMaraTrip />} />
+          <Route path="nairobi-amboseli-lewa-mara" element={<NairobiAmboseliLewaMaraTrip />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

@@ -1,0 +1,408 @@
+export const masaaiMaraIternary = [
+  {
+    day: `Day 1`,
+    title: 'Journey to Masai Mara',
+    activities: [
+      `Embark on a thrilling adventure as we transport you to the iconic Masai Mara.`,
+      `Feel the anticipation build as you approach this legendary wilderness.`,
+      `Settle into your luxurious lodge, surrounded by the sights and sounds of the African savanna.`
+    ],
+  },
+  {
+    day: `Day 2`,
+    title: `Unveiling the Mara's Wonders`,
+    activities: [
+      `Rise with the sun for a day of unparalleled discovery.
+       Engage in heart-pounding game drives as the Mara's wildlife awakens
+       Witness lions on the prowl, elephants at play, and graceful giraffes on the horizon.
+       Experience the untamed beauty that has captivated explorers for generations.`,
+    ],
+  },
+
+  {
+    day: `Day 3`,
+    title: 'Farewell to the Mara',
+    activities: [
+      `Capture final glimpses of the Mara's wildlife on a morning game drive, etching these memories in your heart,
+      As the sun sets on your journey, return to Nairobi with a profound connection to the wild,
+      Your adventure concludes with drop-off at your preferred location.`,
+    ],
+  },
+];
+
+export const masaaiMaraPromoAd =   {
+  promoTitle: `Capture the Essence of Africa's Wilderness!`,
+  promoBody: `Experience the awe-inspiring landscapes and incredible wildlife 
+  of Masai Mara in just 3 days. Limited slots available for 
+  this unforgettable safari retreat. 
+  Contact us now to secure your spot on a journey 
+  that promises unforgettable 
+  moments in the heart of the wild!`,
+}
+
+export const lakeNakuruIternary = [
+  {
+    day: `Day 1`,
+    title: 'Lake Nakuru Welcomes You',
+    activities: [
+      `Depart from Nairobi and journey to Lake Nakuru`,
+      `Marvel at the flamingo spectacle and diverse birdlife.`,
+      `Thrilling game drive to spot rhinos, lions, and more.`,
+      `Overnight stay in a luxurious lodge by the lake.`
+    ]
+  },
+  {
+    day: `Day 2`,
+    title: `Into the Heart of Masai Mara`,
+    activities: [
+      `Travel to the enchanting Masai Mara.`,
+      `Afternoon game drive in search of the Big Five`,
+      `Immerse yourself in the untamed beauty of the Mara.`,
+      `Unwind at our carefully selected lodge.`,
+    ]
+  },
+  {
+    day: `Day 3`,
+    title: 'The Great Migration Experience',
+    activities: [
+      `Embark on a full-day game drive to witness the Great Migration.`,
+      `Capture unforgettable moments as herds traverse the plains.`,
+      `Encounter predators and their thrilling pursuits.`,
+      `Evening relaxation and overnight stay in Masai Mara.`,
+    ]
+  },
+  {
+    day: `Day 4`,
+    title: 'Farewell to the Wilderness',
+    activities: [
+      `Capture final glimpses of Mara's wildlife on a morning game drive.`,
+      `Return to Nairobi, cherishing memories of a lifetime.`,
+      `Your adventure concludes with drop-off at your preferred location.`,
+    ],
+  },
+];
+
+export const lakeNakPromoAd = {
+  promoTitle: `Book Now for an Unforgettable Safari!`,
+  promoBody: `Don't miss this chance to explore two of Kenya's most iconic destinations. 
+  Immerse yourself in the beauty of Lake Nakuru and witness 
+  the grandeur of the Masai Mara. Limited slots available. 
+  Contact us to secure your spot on 
+  this extraordinary 4-day journey into the wild!`
+};
+
+
+export const maraItenary = [
+  {
+    day: `Day 1`,
+    title: 'Into the Heart of the Mara',
+    activities: [
+      `Embark on an exhilarating journey as we transport you to the captivating Masai Mara.`,
+      `Brace yourself for an afternoon game drive,
+       delving into the heart of this iconic wilderness.`,
+      `Encounter elephants, lions, and the diverse wildlife that calls Mara home.`,
+      `Retreat to our carefully selected lodge and relish the tranquility of the African night.`
+    ]
+  },
+  {
+    day: `Day 2`,
+    title: 'The Great Mara Safari',
+    activities: [
+      `Rise with the sun for a full-day adventure that unfolds the magic of the Masai Mara.`,
+      `Witness the majestic landscape transform as herds of wildebeest and zebras roam the plains in the epic Great Migration.`,
+      `Capture nature's drama on your camera as predators roam in pursuit.`,
+      `As dusk falls, unwind at our lodge while the sounds of the wild serenade you.`
+    ]
+  },
+  {
+    day: `Day 3`,
+    title: `Farewell to Mara's Splendors`,
+    activities: [
+      `Your morning game drive holds the promise of last-minute wildlife encounters`,
+      `Bid farewell to the Mara as you savor these final moments in the wilderness.`,
+      `Return to Nairobi with memories etched in your heart and camera roll, arriving in the late afternoon.`
+    ]
+  },
+]
+
+export const maraPromoAd = {
+  promoTitle: `Capture the Essence of Africa's Wild Beauty!`,
+  promoBody: `Immerse yourself in the untamed realm of the Masai Mara,
+  home to incredible wildlife spectacles and awe-inspiring landscapes. 
+  Limited spots available for this exclusive 3-day journey. 
+  Contact us now to secure your place on an unforgettable safari experience! `
+};
+
+export const maraNrbSamburuItenary = [
+  {
+    day: `Day 1`,
+    title: ' Welcome to Nairobi',
+    activities: [
+      `Arrive in Nairobi, Kenya's vibrant capital. `,
+      `Immerse yourself in the city's culture, visit the Giraffe Centre, or Nairobi National Museum. `,
+      `Retire to a comfortable city hotel, preparing for the wild adventure ahead.`,
+    ]
+  },
+  {
+    day: `Day 2 - 3`,
+    title: `Samburu's Enchanting Wilderness`,
+    activities: [
+      `Journey to Samburu, a realm of unique wildlife.`,
+      `Engage in thrilling game drives to spot the "Samburu Special Five" and explore the Ewaso Ng'iro River's banks.`,
+      `Experience the rich culture of the Samburu people and find serenity in your lodge amidst nature's beauty.`,
+    ]
+  },
+  {
+    day: `Day 4 - 6`,
+    title: `Majestic Masai Mara Awaits`,
+    activities: [
+      `Travel to the renowned Masai Mara, where three days of awe-inspiring adventure await.`,
+      `Witness the Great Migration, Big Five, and countless species on exhilarating game drives.`,
+      `Delve into the Maasai culture with village visits and savor the magic of the Mara under starry African skies.`
+    ]
+  },
+  {
+    day: `Day 7`,
+    title: `Reflecting on an Incredible Journey`,
+    activities: [
+      `Embark on a final game drive in Masai Mara, capturing lingering moments with the wildlife.`,
+      `Return to Nairobi, where you can reminisce about the past week's adventures and prepare for your onward journey.`,
+    ]
+  },
+]
+
+export const maraNrbSamburPromoAd = {
+  promoTitle: `Capture the Essence of Kenya's Beauty!`,
+  promoBody: `Embark on an all-encompassing journey through Kenya's iconic landscapes, 
+  wildlife, and cultures. Limited spots available for this immersive 7-day adventure. 
+  Contact us now to secure your spot on a once-in-a-lifetime safari experience 
+  from Nairobi to Samburu and the majestic Masai Mara!`
+};
+
+export const amboseliTsavoItenary = [
+  {
+    day: `Day 1`,
+    title: `Journey to Amboseli's Majesty`,
+    activities: [
+      `Commence your adventure as we whisk you away to Amboseli National Park.`,
+      `et against the backdrop of Mount Kilimanjaro, experience breathtaking views and remarkable elephant herds.`,
+      `Engage in an afternoon game drive, capturing the essence of Amboseli's unique charm.`,
+    ]
+  },
+  {
+    day: `Day 2`,
+    title: `Amboseli's Enchanting Wildlife`,
+    activities: [
+      `Spend a full day exploring Amboseli's diverse landscapes and its abundant wildlife.`,
+      `Lions, cheetahs, and a plethora of bird species await your discovery`,
+      `Capture the iconic elephants with Kilimanjaro's snow-capped peak as a backdrop.`,
+    ]
+  },
+  {
+    day: `Day 3`,
+    title: `Tsavo West's Hidden Gems`,
+    activities: [
+      `Embark on a scenic journey to Tsavo West National Park, a realm of hidden treasures.`,
+      `Venture into the Mzima Springs to observe hippos and crocodiles underwater.`,
+      `Explore the Shetani Lava Flows and marvel at the ancient landscapes of this unique wilderness`
+    ]
+  },
+  {
+    day: `Day 4`,
+    title: `Reflecting on Nature's Grandeur`,
+    activities: [
+      `Conclude your journey with a morning game drive in Tsavo West`,
+      `Relish the final moments with the wildlife and landscapes that have left an indelible mark on your heart`,
+      `Return to your starting point with memories of Kenya's untamed beauty.`
+    ]
+  },
+]
+
+export const amboseliTsavoPromoAd = {
+  promoTitle: `Capture the Essence of Kenya's Wilderness!`,
+  promoBody: `Embark on a captivating 4-day journey through Amboseli 
+  and Tsavo West's natural wonders. Limited slots available for 
+  this immersive expedition. Contact us now to secure your spot 
+  on an unforgettable safari experience that unveils the 
+  beauty of Kenya's landscapes and wildlife!`
+};
+
+export const nrbAmboseliMaraItenary = [
+  {
+    day: `Day 1`,
+    title: 'Arrival in Nairobi',
+    activities: [
+      `Your journey begins in Nairobi, Kenya's dynamic capital.`,
+      `Explore its vibrant culture, visit the David Sheldrick Wildlife Trust, or indulge in local markets`,
+      `Settle into your city accommodation and prepare for the diverse adventure ahead.`,
+    ]
+  },
+  {
+    day: `Day 2 - 3`,
+    title: `Amboseli's Majesty`,
+    activities: [
+      `Venture to Amboseli National Park, an iconic realm beneath the gaze of Mount Kilimanjaro.`,
+      `Immerse yourself in unrivaled landscapes and experience thrilling game drives.`,
+      `Encounter herds of elephants against the backdrop of Africa's tallest peak.`,
+    ]
+  },
+  {
+    day: `Day 4 - 5`,
+    title: 'The Enchanting Masai Mara',
+    activities: [
+      `Travel to the world-famous Masai Mara, where two days of unforgettable experiences await. `,
+      `Witness the grandeur of the Great Migration and spot the Big Five on exhilarating game drives`,
+      `Engage with Maasai communities and soak in the magic of the Mara's sunsets.`,
+    ]
+  },
+  {
+    day: `Day 6`,
+    title: 'Reflecting on an Extraordinary Journey',
+    activities: [
+      `Conclude your adventure with a morning game drive in Masai Mara, 
+      capturing last memories of the wildlife.`,
+      `Return to Nairobi, cherishing the encounters and landscapes that have left an indelible mark on your heart.`,
+    ],
+  },
+  
+];
+
+export const nrbAmoseliMaraPromo = {
+  promoTitle: `Capture the Essence of Kenya's Diversity! `,
+  promoBody: `Embark on an all-encompassing 6-day expedition, 
+  spanning city life, breathtaking landscapes, 
+  and remarkable wildlife encounters. 
+  Limited slots available for this immersive journey. 
+  Contact us now to secure your place on an unforgettable 
+  safari adventure from Nairobi to Amboseli and the enchanting Masai Mara!
+  `
+};
+
+
+export const nrbAmboseliMtKenyaItenary = [
+  {
+    day: `Day 1`,
+    title: `Welcome to Nairobi`,
+    activities: [
+      `Arrive in Nairobi, Kenya's bustling capital.`,
+      `Explore its vibrant markets, museums, and wildlife centers.`,
+      `Settle into your city accommodation and prepare for the extraordinary journey ahead.`,
+    ]
+  },
+  {
+    day: `Day 2 - 3`,
+    title: `Amboseli's Majestic Charm`,
+    activities: [
+      `Head to Amboseli National Park, where the mighty Mount Kilimanjaro serves as the backdrop.`,
+      `Engage in exhilarating game drives to witness elephants, lions, and a diversity of species.`,
+      `Relish the magic of the African wilderness.`,
+    ]
+  },
+  {
+    day: `Day 4`,
+    title: `Exploring the Mystical Mt. Kenya`,
+    activities: [
+      `Travel to the awe-inspiring Mount Kenya region.`,
+      `Immerse yourself in the lush landscapes, witness diverse flora and fauna, and take in the serenity of the highland environment.`,
+      `Overnight stay near the majestic mountain.`,
+    ]
+  },
+  {
+    day: `Day 5`,
+    title: `Lake Nakuru's Pink Spectacle`,
+    activities: [
+      `Journey to Lake Nakuru National Park, a paradise for bird enthusiasts`,
+      `Witness the breathtaking sight of flamingos painting the lake pink.`,
+      `Encounter rhinos, lions, and other wildlife amidst stunning vistas.`
+    ]
+  },
+  {
+    day: `Day 6-7`,
+    title: `Majestic Masai Mara Awaits`,
+    activities: [
+      `Travel to the iconic Masai Mara for two days of unparalleled adventure.`,
+      `Witness the Great Migration, spot the Big Five, and capture unforgettable moments on game drives.`,
+      `Engage with Maasai communities and savor the African sunset.`
+    ]
+  },
+  {
+    day: 'Day 8',
+    title: `Reflections on an Epic Journey`,
+    activities: [
+      `Conclude your safari with a final game drive in Masai Mara.`,
+      `Return to Nairobi, carrying memories of diverse landscapes, 
+      captivating wildlife, and rich cultural encounters`,
+    ]
+
+  },
+]
+
+export const nrbAmboseliMtKenyaPromoAd = {
+  promoTitle: `Capture the Essence of Kenya's Diversity and Splendor!`,
+  promoBody: `
+  Embark on the journey of a lifetime, spanning Kenya's iconic 
+  landscapes, vibrant cultures, and mesmerizing wildlife encounters. 
+  Limited slots available for this comprehensive 8-day adventure. 
+  Contact us now to secure your place on an unforgettable 
+  safari that explores Nairobi, Amboseli, Mt. Kenya, Lake Nakuru, 
+  and the captivating Masai Mara!`
+};
+
+export const nrbAmboseliLewaItenary = [
+  {
+    day: `Day 1`,
+    title: `Arrival in Nairobi`,
+    activities: [
+      `Begin your adventure in Nairobi, Kenya's dynamic capital.`,
+      `Immerse yourself in its urban culture, explore local markets, or visit wildlife sanctuaries.`,
+      `Settle into your city accommodation and anticipate the enchanting journey ahead.`,
+    ]
+  },
+  {
+    day: `Day 2 - 3`,
+    title: `Amboseli's Grace and Majesty`,
+    activities: [
+      `Embark to Amboseli National Park, where the magnificence of Mount Kilimanjaro unfolds.`,
+      `Engage in exhilarating game drives to witness elephants, lions, and the park's iconic landscapes.`,
+      `Capture unforgettable moments under Africa's tallest peak.`,
+    ]
+  },
+  {
+    day: `Day 4 - 5`,
+    title: `Lewa Conservancy's Wilderness`,
+    activities: [
+      `Journey to the Lewa Conservancy, a private haven dedicated to conservation.`,
+      `Embark on game drives, encountering rare species such as Grevy's zebras and black rhinos.`,
+      `Engage in conservation activities and experience the untamed beauty of this exclusive sanctuary.`,
+    ]
+  },
+  {
+    day: `Day 6 - 7`,
+    title: `Majestic Masai Mara Awaits`,
+    activities: [
+      `Travel to the renowned Masai Mara for two days of remarkable adventure.`,
+      `Witness the Great Migration, spot the Big Five, and capture the essence of the African wilderness on exhilarating game drives.`,
+      `Engage with Maasai communities and relish the Mara's captivating sunsets.`
+    ]
+  },
+  {
+    day: `Day 8`,
+    title: `Reflections on a Multifaceted Journey`,
+    activities: [
+      `Conclude your safari with a final game drive in Masai Mara.`,
+      ` Return to Nairobi, carrying cherished memories of diverse landscapes, captivating wildlife, and rich cultural encounters.`,
+    ]
+  },
+]
+
+export const nrbAmboseliLewaPromo = {
+  promoTitle: `Capture the Essence of Kenya's Diversity and Conservation Efforts!`,
+  promoBody: `
+  Embark on an extraordinary 8-day journey, 
+  traversing Kenya's diverse landscapes, 
+  rich cultures, and incredible wildlife encounters. 
+  Limited slots available for this multifaceted safari adventure. 
+  Contact us now to secure your spot on a once-in-a-lifetime exploration 
+  that encompasses Nairobi, Amboseli, 
+  Lewa Conservancy, and the captivating Masai Mara! `
+};

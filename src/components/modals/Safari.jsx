@@ -2,6 +2,7 @@
 // import Carousel from 'react-gallery-carousel';
 import 'react-gallery-carousel/dist/index.css';
 import Slider from "react-slick";
+import PropTypes from 'prop-types';
 import { Typography, Input, Textarea, Button } from '@material-tailwind/react';
 import { FaRegClock, FaChildren } from 'react-icons/fa6';
 import { TiTick } from 'react-icons/ti'
@@ -12,18 +13,10 @@ import NavigationMenu from '../NavigationMenu';
 import { SafariItenary } from './SafariItenary';
 import { included, excluded } from '../../data/safari';
 import '../../assets/styles/Kenya.css';
-import { images } from '../../data/safari';
+import { settings } from '../../data/safari';
 
-const SafariDetail = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 2000,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    // autoplay: true,
-    // autoplaySpeed: 2000,
-  };
+const SafariDetail = ({ images, safariTitle, duration, itenary, formData }) => {
+
 
   return (
     <>
@@ -43,7 +36,7 @@ const SafariDetail = () => {
         <div className="left-details flex flex-col px-6">
           <div className="safari-header">
             <Typography variant="lead" className="font-poppins">
-              Masaai Mara, Nairobi National Park
+              {safariTitle}
             </Typography>
           </div>
           <div className="safari-location flex items-center gap-5">
@@ -59,7 +52,7 @@ const SafariDetail = () => {
                 Duration
               </Typography>
               <Typography variant="small" className="font-poppins">
-                7 Days & 6 Nights
+                {duration}
               </Typography>
             </div>
           </div>
@@ -82,7 +75,7 @@ const SafariDetail = () => {
             <Typography variant="h3" className="font-poppins">
               Itinerary
             </Typography>
-            <SafariItenary />
+            <SafariItenary itenary={itenary} />
           </div>
         </div>
         <div className="enquiry-form flex flex-col p-6">
@@ -102,10 +95,10 @@ const SafariDetail = () => {
             <br />
             <hr />
             <Typography variant="h6" className="font-poppins">
-              Interested?
+              {formData.promoTitle}
             </Typography>
-            <Typography variant="paragraph" className="font-poppins">
-              Get In touch with us now!!
+            <Typography variant="paragraph" className="font-poppins mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
+              {formData.promoBody}
             </Typography>
 
             <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
@@ -119,7 +112,7 @@ const SafariDetail = () => {
           </div>
         </div>
       </section>
-      <section className="flex font-poppins p-6">
+      <section className="flex font-poppins p-6 include-section">
         <div className="flex flex-wrap justify-between gap-5">
           <div className="included">
             <Typography variant="h3" className="font-poppins">
@@ -158,4 +151,12 @@ const SafariDetail = () => {
   );
 };
 
+SafariDetail.propTypes = {
+  images: PropTypes.arrayOf(PropTypes.string).isRequired,
+  safariTitle: PropTypes.string.isRequired,
+  duration: PropTypes.string.isRequired,
+  itenary: PropTypes.object.isRequired,
+  formData: PropTypes.object.isRequired,
+
+}
 export default SafariDetail;

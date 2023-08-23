@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { masaaiMaraIternary } from '../../data/safari';
 import { CardBody, Collapse, Typography, Card } from '@material-tailwind/react';
 import { IoIosArrowDropright, IoIosArrowDropdown } from 'react-icons/io';
+import PropTypes from 'prop-types';
 
 
-export const SafariItenary = () => {
-  const [sections, setSections] = useState(masaaiMaraIternary);
+export const SafariItenary = ({ itenary }) => {
+  const [sections, setSections] = useState(itenary);
 
   const toggleSection = (index) => {
     setSections((prevSections) => prevSections.map((section, i) => (
@@ -17,9 +17,9 @@ export const SafariItenary = () => {
     <ul className="w-full">
       {sections.map((section, index) => (
         <li key={index} className="w-full py-3">
-          <button 
-          onClick={() => toggleSection(index)} 
-          className="items-center flex justify-between w-full text-start"
+          <button
+            onClick={() => toggleSection(index)}
+            className="items-center flex justify-between w-full text-start"
           >
             <Typography variant="paragraph" className="font-poppins">
               {section.day} {section.title}
@@ -32,7 +32,7 @@ export const SafariItenary = () => {
             <Card className="my-4 mx-auto">
               <CardBody>
                 <Typography variant="paragraph" className="font-poppins">
-                  {section.activity}
+                  {section.activities}
                 </Typography>
               </CardBody>
             </Card>
@@ -43,4 +43,6 @@ export const SafariItenary = () => {
   );
 }
 
-
+SafariItenary.propTypes = {
+  itenary: PropTypes.object.isRequired,
+};

@@ -14,7 +14,7 @@ import tsavoWest from '../assets/images/safari/tsavo-west.jpg';
 // import tsavo from '../assets/images/safari/tsavo.jpg';
 import amboseli from '../assets/images/safari/amboseli.jpg';
 
-export const images = [
+export const maraImages = [
   {
     src: nairobi,
     alt: "Zebra",
@@ -41,103 +41,78 @@ export const parks = [
     image: wildbeest,
     days: "3",
     nights: "2",
-    description: `Witness the great wildebeest migration which paints the plains 
-    with a mesmerizing spectacle of life's eternal cycle.`,
-    url: "safari-details",
+    description: `
+    Mesmerizing Masai Mara. A 3 Days and 2 Nights Safari Escape To
+    Experience the Wild Wonder of Masai Mara
+    `,
+    url: "masai-mara",
   },
   {
     title: "Lake Nakuru and Masai Mara",
+    description: `Discover the Splendors of Lake 
+    Nakuru and Masai Mara in a 4 Days and 3 Nights Adventure!`,
     image: nakuru,
     days: "4",
     nights: "3",
-    description: `Welcome Lake Nakuru, a theatre of flamingo-pink ballet.`
+    url: "lake-nakuru-masai-mara",
   },
   {
-    title: "Nairobi, Samburu and Masai Mara ",
+    title: "Nairobi, Samburu, and Masai Mara ",
     image: samburu,
     days: "7",
     nights: "6",
-    description: `Join us on a mesmerizing journey through the heart of Kenya's untamed wilderness. 
-    Our exclusive safari takes you from the vibrant cityscape of Nairobi to the rugged beauty 
-    of Samburu and the iconic expanses of the Masai Mara.`
+    description: `Discover Nairobi, Samburu, 
+    and Masai Mara for a 7 Days & 6 Nights Adventure of a Lifetime! `,
+    url: "nairobi-samburu-masaai-mara",
   },
   {
-    title: "Amboseli and Tsavo west ",
+    title: "Amboseli and Tsavo West ",
     image: tsavoWest,
     days: "4",
     nights: "3",
-    description: `Come see the enchanting embrace of Amboseli's elephants against the backdrop of towering Kilimanjaro`
+    description: `
+    A 4 Days and 3 Nights Expedition into Kenya's 
+    wilderness at Amboseli and Tsavo West.
+    Embrace the Untamed Beauty of Amboseli and Tsavo West`,
+    url: "amboseli-tsavo-west",
   },
   {
-    title: "Nairobi, Amboseli and Masai Mara",
+    title: "Nairobi, Amboseli, and Masai Mara",
     image: nairobi,
     days: "6",
     nights: "5",
+    description: `
+    Embark on a Captivating Journey through Nairobi, 
+    Amboseli, and Masai Mara for a 6 Days and 5 
+    Nights Unforgettable Safari Adventure! `,
+    url: `nairobi-amboseli-mara`,
   },
   {
-    title: "Nairobi, Amboseli, Mt. Kenya, Lake Nakuru, Masai Mara ",
+    title: "Nairobi, Amboseli, Mt. Kenya, Lake Nakuru, and Masai Mara ",
     image: mountKenya,
     days: "8",
     nights: "7",
+    description: `
+      Embark on a Grand Expedition Through Nairobi, 
+      Amboseli, Mt. Kenya, Lake Nakuru, and Masai Mara`,
+    url: "nrb-amboseli-nakuru-mt-kenya-masaai-mara"
   },
   {
-    title: "Nairobi, Amboseli, Lewa conservancy, Masai Mara Nairobi",
+    title: "Nairobi, Amboseli, Lewa conservancy, and Masai Mara",
     image: amboseli,
     days: "8",
     nights: "7",
+    description: `
+    A Kaleidoscopic Expedition through Nairobi, 
+    Amboseli, Lewa Conservancy, and Masai Mara For 8 Days and 7 Nights`,
+    url: "nairobi-amboseli-lewa-mara"
   },
 
 ]
 
-export const masaaiMaraIternary = [
-  {
-    day: `Day 1`,
-    title: 'Nairobi - Gateway to Adventure',
-    activity: `Your adventure begins in Nairobi,
-    where modern urban life meets the wild.
-    Immerse yourself in the local culture and
-    visit the renowned Nairobi National Park,
-    spotting rhinos, lions, and giraffes
-    against the backdrop of the city skyline`
-  },
-  {
-    day: `Day 2-3`,
-    title: `Samburu's Hidden Gems`,
-    activity: `Venture north to Samburu, a hidden
-    gem known for its unique wildlife.
-    Witness the "Samburu Special Five"
-    the rare reticulated giraffe, Grevy's zebra,
-    Somali ostrich, Beisa oryx, and gerenuk.
-    Enjoy game drives along the Ewaso Ng'iro River,
-    surrounded by stunning landscapes.`
-  },
-  {
-    day: `Day 4`,
-    title: 'Majestic Masai Mara',
-    activity: `Your journey culminates in the world-famous Masai Mara,
-    where the circle of life unfolds before your eyes.
-    Witness the Great Migration, as thousands
-    of wildebeest and zebras navigate the plains
-    in search of greener pastures. Encounter prides of lions,
-    elegant cheetahs, and elusive leopards on exhilarating game drives.`
-  },
-  {
-    day: `Day 5`,
-    title: 'Night Safaris and Cultural Experiences',
-    activity: `Experience the magic of night safaris,
-    unveiling a different world of nocturnal creatures.
-    Engage with local Maasai communities, gaining insights
-    into their ancient traditions and vibrant way of life.`
-  },
-  {
-    day: `Day 6`,
-    title: 'Return with Unforgettable Memories',
-    activity: `As your journey comes to a close,
-    you'll carry with you the memories of
-    breathtaking landscapes, captivating wildlife encounters,
-    and the warmth of Kenyan hospitality.`
-  },
-];
+
+
+
 
 export const included = [
   `Roundtrip Airpot Transfers`, `All government taxes`,
@@ -150,3 +125,14 @@ export const excluded = [
   `Tips and gratuity`,
   `Personal items`, `Government imposed increase of taxes including parking fees`
 ];
+
+
+export const settings = {
+  dots: true,
+  infinite: true,
+  speed: 2000,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  // autoplay: true,
+  // autoplaySpeed: 2000,
+};

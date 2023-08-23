@@ -6,14 +6,15 @@ import {
   Typography,
   Button,
 } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 import { MdWbSunny, MdModeNight } from 'react-icons/md'
 import { parks, animals } from "../../data/safari";
 import NavigationMenu from "../NavigationMenu";
 import SafariCarousel from "./Carousel";
+import Footer from "../Footer";
+
 import wild from '../../assets/images/wild.jpg'
 import '../../assets/styles/Kenya.css';
-import { Link } from "react-router-dom";
-
 
 const KenyaSafaris = () => (
   <>
@@ -95,7 +96,7 @@ const KenyaSafaris = () => (
           </CardHeader>
           <CardBody>
             <Typography variant="paragraph" color="blue-gray" className="mb-2 font-poppins font-bold text-center">
-              {items.title}
+              {items.title} 
             </Typography>
             <div className="flex justify-center gap-5">
               <div className="flex items-center">
@@ -133,6 +134,7 @@ const KenyaSafaris = () => (
         </Card>
       ))}
     </section>
+    <Footer />
   </>
 
 );
