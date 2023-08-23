@@ -3,8 +3,8 @@ import {
   Button,
 } from "@material-tailwind/react";
 
-import {  MdModeNight } from 'react-icons/md'
-import { animals } from "../../data/safari";
+import { MdModeNight } from 'react-icons/md'
+import {  animals } from "../../data/safari";
 import NavigationMenu from "../NavigationMenu";
 import SafariCarousel from "./Carousel";
 import Footer from "../Footer";
@@ -12,7 +12,7 @@ import Footer from "../Footer";
 import wild from '../../assets/images/wild.jpg'
 import '../../assets/styles/Kenya.css';
 
-const KenyaCostalBeaches = () => {
+const ZanzibarTours = () => {
   const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
   return (
     <>
@@ -90,11 +90,6 @@ const KenyaCostalBeaches = () => {
           {numbers.map((item, index) => (
             <div className="w-96 container" key={index}>
               <h3 className="title">Text fadein bottom</h3>
-              {/* <img
-                className="h-96 w-full rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50"
-                src="https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
-                alt="nature image"
-              /> */}
               <div className="content">
                 <figure className="relative h-96 w-full">
                   <div className="content-overlay"></div>
@@ -153,4 +148,4 @@ const KenyaCostalBeaches = () => {
     </>
   );
 };
-export default KenyaCostalBeaches;
+export default ZanzibarTours;

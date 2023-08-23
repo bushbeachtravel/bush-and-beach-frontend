@@ -4,11 +4,8 @@ import 'react-gallery-carousel/dist/index.css';
 import Slider from "react-slick";
 import PropTypes from 'prop-types';
 import { Typography, Input, Textarea, Button } from '@material-tailwind/react';
-import { FaRegClock, FaChildren } from 'react-icons/fa6';
-import { TiTick } from 'react-icons/ti'
+import { FaRegClock, FaChildren, FaXmark, FaCheck } from 'react-icons/fa6';
 import { GoLocation } from 'react-icons/go'
-import { RxCross2 } from 'react-icons/rx'
-import Footer from '../Footer';
 import NavigationMenu from '../NavigationMenu';
 import { SafariItenary } from './SafariItenary';
 import { included, excluded } from '../../data/safari';
@@ -121,7 +118,7 @@ const SafariDetail = ({ images, safariTitle, duration, itenary, formData }) => {
             {included.map((item, index) => (
               <div key={index} className="flex items-center gap-3">
                 <div>
-                <TiTick size={20} color='green' className="font-bold"/>
+                <FaCheck size={20} color='green' className="font-bold"/>
                 </div>
                 <Typography variant="paragraph" className="flex font-poppins ">
                   {item}
@@ -136,7 +133,7 @@ const SafariDetail = ({ images, safariTitle, duration, itenary, formData }) => {
             {excluded.map((item, index) => (
               <div key={index} className="flex items-center gap-3">
                 <div>
-                <RxCross2 size={20} color='red' className="font-bold"/>
+                <FaXmark size={20} color='red' className="font-bold"/>
                 </div>
                 <Typography variant="paragraph" className="font-poppins">
                   {item}
@@ -146,7 +143,7 @@ const SafariDetail = ({ images, safariTitle, duration, itenary, formData }) => {
           </div>
         </div>
       </section>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

@@ -21,6 +21,9 @@ import NairobiAmboseliMaraTrip from './components/modals/NairobiAmboseliMara';
 import NairobiAmboseliMtKenyaLakeNakuruMasaaiMaraTrip from './components/modals/NrbAmboseliMaraMtKenya';
 import NairobiAmboseliLewaMaraTrip from './components/modals/NairobiAmboseliLewaMara';
 import KenyaCostalBeaches from './components/modals/CoastalBeaches';
+import ZanzibarTours from './components/modals/Zanzibar';
+import RwandaUganda from './components/modals/Rwanda';
+
 const App = () => {
 
   return (
@@ -48,6 +51,8 @@ const App = () => {
           <Route path="nairobi-amboseli-mara" element={<NairobiAmboseliMaraTrip />} />
           <Route path="nrb-amboseli-nakuru-mt-kenya-masaai-mara" element={<NairobiAmboseliMtKenyaLakeNakuruMasaaiMaraTrip />} />
           <Route path="nairobi-amboseli-lewa-mara" element={<NairobiAmboseliLewaMaraTrip />} />
+          <Route path="zanzibar" element={<ZanzibarTours />} />
+          <Route path="rwanda-uganda" element={<RwandaUganda />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
