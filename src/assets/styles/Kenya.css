@@ -47,6 +47,7 @@
 .gallery-slide > img {
   height: fit-content;
 }
+
 .iternary-icons {
   font-size: 2.5rem;
   color: rgba(0, 0, 0, 0.55);
@@ -55,3 +56,7 @@
 .itenary {
   flex: 2;
 }
+
+/* .safari-section {
+  background-color: grey;
+} */

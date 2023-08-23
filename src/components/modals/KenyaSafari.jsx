@@ -132,7 +132,6 @@ const KenyaSafaris = () => (
           </CardFooter>
         </Card>
       ))}
-
     </section>
   </>
 

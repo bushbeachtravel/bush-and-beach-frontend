@@ -31,7 +31,6 @@ export const images = [
     src: leopard,
     alt: "Leopard"
   }
-  // Add more images as needed
 ];
 
 export const animals = [bufallo, elephants, leopard, lion, rhino];
@@ -138,5 +137,16 @@ export const masaaiMaraIternary = [
     breathtaking landscapes, captivating wildlife encounters,
     and the warmth of Kenyan hospitality.`
   },
-]
+];
 
+export const included = [
+  `Roundtrip Airpot Transfers`, `All government taxes`,
+  `Unlimited supply of drinking water during the safari`,
+];
+
+export const excluded = [
+  `Internation flights from your home and back`,
+  `Additional accomodation before and after the safari`,
+  `Tips and gratuity`,
+  `Personal items`, `Government imposed increase of taxes including parking fees`
+];

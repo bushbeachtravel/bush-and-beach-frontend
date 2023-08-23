@@ -4,12 +4,14 @@ import 'react-gallery-carousel/dist/index.css';
 import Slider from "react-slick";
 import { Typography, Input, Textarea, Button } from '@material-tailwind/react';
 import { FaRegClock, FaChildren } from 'react-icons/fa6';
+import { TiTick } from 'react-icons/ti'
 import { GoLocation } from 'react-icons/go'
+import { RxCross2 } from 'react-icons/rx'
 import Footer from '../Footer';
 import NavigationMenu from '../NavigationMenu';
 import { SafariItenary } from './SafariItenary';
+import { included, excluded } from '../../data/safari';
 import '../../assets/styles/Kenya.css';
-
 import { images } from '../../data/safari';
 
 const SafariDetail = () => {
@@ -31,7 +33,7 @@ const SafariDetail = () => {
           <Slider {...settings} className="slider w-full h-full">
             {images.map((image, index) => (
               <div key={index} className="gallery-slide">
-                <img src={image.src} alt={`Image ${index + 1}`} className="p-2 object-cover h-full w-full"/>
+                <img src={image.src} alt={`Image ${index + 1}`} className="p-2 object-cover h-full w-full" />
               </div>
             ))}
           </Slider>
@@ -99,6 +101,13 @@ const SafariDetail = () => {
             </div>
             <br />
             <hr />
+            <Typography variant="h6" className="font-poppins">
+              Interested?
+            </Typography>
+            <Typography variant="paragraph" className="font-poppins">
+              Get In touch with us now!!
+            </Typography>
+
             <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
               <div className="mb-4 flex flex-col gap-6">
                 <Input color="blue" label="Enter Name" className="font-poppins" />
@@ -107,6 +116,40 @@ const SafariDetail = () => {
               </div>
               <Button>Send enquiry</Button>
             </form>
+          </div>
+        </div>
+      </section>
+      <section className="flex font-poppins p-6">
+        <div className="flex flex-wrap justify-between gap-5">
+          <div className="included">
+            <Typography variant="h3" className="font-poppins">
+              Included
+            </Typography>
+            {included.map((item, index) => (
+              <div key={index} className="flex items-center gap-3">
+                <div>
+                <TiTick size={20} color='green' className="font-bold"/>
+                </div>
+                <Typography variant="paragraph" className="flex font-poppins ">
+                  {item}
+                </Typography>
+              </div>
+            ))}
+          </div>
+          <div className="excluded">
+            <Typography variant="h3" className="font-poppins">
+              Excluded
+            </Typography>
+            {excluded.map((item, index) => (
+              <div key={index} className="flex items-center gap-3">
+                <div>
+                <RxCross2 size={20} color='red' className="font-bold"/>
+                </div>
+                <Typography variant="paragraph" className="font-poppins">
+                  {item}
+                </Typography>
+              </div>
+            ))}
           </div>
         </div>
       </section>
