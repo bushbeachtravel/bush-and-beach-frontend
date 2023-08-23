@@ -20,6 +20,7 @@ import AmboseliTsavoWestTrip from './components/modals/AmboseliTsavoWest';
 import NairobiAmboseliMaraTrip from './components/modals/NairobiAmboseliMara';
 import NairobiAmboseliMtKenyaLakeNakuruMasaaiMaraTrip from './components/modals/NrbAmboseliMaraMtKenya';
 import NairobiAmboseliLewaMaraTrip from './components/modals/NairobiAmboseliLewaMara';
+import KenyaCostalBeaches from './components/modals/CoastalBeaches';
 const App = () => {
 
   return (
@@ -39,6 +40,7 @@ const App = () => {
           <Route path="payment" element={<CheckoutForm />} />
           <Route path="services" element={<ServicesPage />} />
           <Route path="kenya" element={<KenyaSafaris />} />
+          <Route path="coast" element={<KenyaCostalBeaches />} />
           <Route path="masai-mara" element={<MasaaiMaraTrip />} />
           <Route path="lake-nakuru-masai-mara" element={<LakeNakuruMaraTrip /> } />
           <Route path="nairobi-samburu-masaai-mara" element={<NairobiSamburuMaraTrip />} />

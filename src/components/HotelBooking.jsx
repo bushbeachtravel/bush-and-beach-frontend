@@ -46,7 +46,7 @@ const HotelBooking = () => (
               and has won Africa’s leading beach destination by the world travel awards
             </Typography>
             <button className="hotel-buttons font-poppins">
-              Explore
+              <Link to="/coast">Explore</Link>
             </button>
           </div>
         </div>
