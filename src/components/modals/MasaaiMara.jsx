@@ -1,4 +1,5 @@
 import SafariDetail from "./Safari";
+import Footer from "../Footer";
 import { maraImages } from "../../data/safari";
 import { masaaiMaraIternary, maraPromoAd } from "../../data/itenaries";
 const MasaaiMaraTrip = () => (
@@ -10,6 +11,7 @@ const MasaaiMaraTrip = () => (
       itenary={masaaiMaraIternary}
       formData={maraPromoAd}
      />
+    <Footer />
   </>
 );
 export default MasaaiMaraTrip;

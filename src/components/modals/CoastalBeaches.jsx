@@ -68,25 +68,23 @@ const KenyaCostalBeaches = () => {
         <SafariCarousel images={animals} />
       </section>
       <section className="safari-header">
-        <div className="">
-          <Typography className="font-poppins text-center p-10" id="safari-ad-text">
-            Kenya&apos;s Coastal Paradise: Where Beaches Meet Adventure
-          </Typography>
-          <Typography variant="paragraph" className="font-poppins p-10">
-            Nestled along the azure waters of the Indian Ocean,
-            Kenya&apos;s coast unveils a captivating world where vibrant cultures,
-            pristine beaches, and exotic landscapes converge.
-            From the bustling streets of Mombasa, steeped in history and culture,
-            to the tranquil shores of Diani Beach and Watamu, a tapestry
-            of paradise awaits. Soft sands, kissed by gentle waves,
-            invite you to unwind beneath swaying palms, while coral reefs
-            beckon with a kaleidoscope of marine life.
-            Experience the thrill of water sports, delve into vibrant markets,
-            and savor the flavors of Swahili cuisine.
-            Kenya&apos;s coastal beauty offers a seamless blend of relaxation and
-            exploration, where the rhythm of the tides matches the beat of your heart
-          </Typography>
-        </div>
+        <Typography className="font-poppins text-center p-10" id="safari-ad-text">
+          Kenya&apos;s Coastal Paradise: Where Beaches Meet Adventure
+        </Typography>
+        <Typography variant="paragraph" className="font-poppins p-10">
+          Nestled along the azure waters of the Indian Ocean,
+          Kenya&apos;s coast unveils a captivating world where vibrant cultures,
+          pristine beaches, and exotic landscapes converge.
+          From the bustling streets of Mombasa, steeped in history and culture,
+          to the tranquil shores of Diani Beach and Watamu, a tapestry
+          of paradise awaits. Soft sands, kissed by gentle waves,
+          invite you to unwind beneath swaying palms, while coral reefs
+          beckon with a kaleidoscope of marine life.
+          Experience the thrill of water sports, delve into vibrant markets,
+          and savor the flavors of Swahili cuisine.
+          Kenya&apos;s coastal beauty offers a seamless blend of relaxation and
+          exploration, where the rhythm of the tides matches the beat of your heart
+        </Typography>
       </section>
       <section className="activities-section">
         <Typography variant="lead" className="font-poppins font-bold mx-20">Activities at the Kenyan coast</Typography>
@@ -120,7 +118,7 @@ const KenyaCostalBeaches = () => {
       </section>
 
       <section className="talk-to-us">
-        <div className="flex flex-col justify-around items-center gap-6 font-poppins p-20 py-20">
+        <div className="flex flex-col items-center gap-6 font-poppins p-20 py-20">
           <Typography variant="h4" className="font-poppins text-2xl">
             Ready to Explore Kenya&apos;s Coastal Paradise? Your Adventure Awaits!
           </Typography>
@@ -128,8 +126,8 @@ const KenyaCostalBeaches = () => {
         </div>
         <div className="coast-background">
           <div className="coast-text-background w-2/3 p-5">
-            <div className=" w-full">
-              <Typography color="white" variant="paragraph" className="font-poppins text-xl py-5">
+            <div className="w-full">
+              <Typography color="white" variant="paragraph" className="font-poppins text-xl py-10">
                 Dive into the beauty of Kenya&apos;s
                 coast and beaches, where every moment
                 is a new discovery. Immerse yourself

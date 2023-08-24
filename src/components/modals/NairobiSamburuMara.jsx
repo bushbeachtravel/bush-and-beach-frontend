@@ -1,4 +1,5 @@
 import SafariDetail from "./Safari";
+import Footer from "../Footer";
 import { maraImages } from "../../data/safari";
 import { maraNrbSamburuItenary, maraNrbSamburPromoAd } from "../../data/itenaries";
 const NairobiSamburuMaraTrip = () => (
@@ -10,6 +11,7 @@ const NairobiSamburuMaraTrip = () => (
       itenary={maraNrbSamburuItenary}
       formData={maraNrbSamburPromoAd}
      />
+    <Footer />
   </>
 );
 export default NairobiSamburuMaraTrip;

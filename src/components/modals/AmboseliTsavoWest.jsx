@@ -1,4 +1,5 @@
 import SafariDetail from "./Safari";
+import Footer from "../Footer";
 import { maraImages } from "../../data/safari";
 import { amboseliTsavoItenary, amboseliTsavoPromoAd } from "../../data/itenaries";
 
@@ -11,6 +12,7 @@ const AmboseliTsavoWestTrip = () => (
       itenary={amboseliTsavoItenary}
       formData={amboseliTsavoPromoAd}
      />
+    <Footer />
   </>
 );
 export default AmboseliTsavoWestTrip;

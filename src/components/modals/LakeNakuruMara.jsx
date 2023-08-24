@@ -1,4 +1,5 @@
 import SafariDetail from "./Safari";
+import Footer from "../Footer";
 import { maraImages } from "../../data/safari";
 import { lakeNakuruIternary, lakeNakPromoAd } from "../../data/itenaries";
 const LakeNakuruMaraTrip = () => (
@@ -10,6 +11,7 @@ const LakeNakuruMaraTrip = () => (
       itenary={lakeNakuruIternary}
       formData={lakeNakPromoAd}
      />
+    <Footer />
   </>
 );
 export default LakeNakuruMaraTrip;

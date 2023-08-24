@@ -1,4 +1,5 @@
 import SafariDetail from "./Safari";
+import Footer from "../Footer";
 import { maraImages } from "../../data/safari";
 import { nrbAmboseliLewaItenary, nrbAmboseliLewaPromo } from "../../data/itenaries";
 
@@ -11,6 +12,7 @@ const NairobiAmboseliLewaMaraTrip = () => (
       itenary={nrbAmboseliLewaItenary}
       formData={nrbAmboseliLewaPromo}
      />
+    <Footer />
   </>
 );
 export default NairobiAmboseliLewaMaraTrip;
