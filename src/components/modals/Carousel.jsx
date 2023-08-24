@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { Typography } from "@material-tailwind/react";
 import '../../assets/styles/Kenya.css';
 
-const SafariCarousel = ({ images }) => {
+const SafariCarousel = ({ images, title }) => {
 
   const settings = {
     dots: true,
@@ -18,11 +18,13 @@ const SafariCarousel = ({ images }) => {
   };
   return (
     <div className="p-8 big-five">
-      <Typography className="font-poppins p-2" id="big-five-text">The Big Five</Typography>
+      <Typography className="font-poppins p-2" id="big-five-text">
+        {title}
+      </Typography>
       <Slider {...settings}>
         {images.map((image, index) => (
           <div className="carousel-image-container h-full w-full p-1" key={index}>
-            <img src={image} alt="" className="h-full w-full object-cover"/>
+            <img src={image} alt="" className="h-96 w-full object-cover object-center"/>
           </div>
         ))}
       </Slider>
@@ -31,5 +33,6 @@ const SafariCarousel = ({ images }) => {
 }
 SafariCarousel.propTypes = {
   images: PropTypes.arrayOf(PropTypes.string).isRequired,
+  title: PropTypes.string.isRequired,
 }
 export default SafariCarousel;

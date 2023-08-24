@@ -23,6 +23,16 @@ import NairobiAmboseliLewaMaraTrip from './components/modals/NairobiAmboseliLewa
 import KenyaCostalBeaches from './components/modals/CoastalBeaches';
 import ZanzibarTours from './components/modals/Zanzibar';
 import RwandaUganda from './components/modals/Rwanda';
+import InternationalTours from './components/modals/InternationalTours';
+import DubaiTrip from './components/dubai/DubaiTour';
+import ChinaTrip from './components/china/ChinaTour';
+import JohannesburgTrib from './components/joburg/JoburgTrip';
+import MalaysiaTrip from './components/malaysia/MalaysiaTrip';
+import MauritiusTrip from './components/mauritius/Mauritius';
+import EgyptIsraelTrip from './components/egpyt-israel/EgyptIsrael';
+import ParisBarcaItaly from './components/pari-barca-italy/PariBarcaItaly';
+import BangkokTrip from './components/bangkok/Bangkok';
+import TurkeyTrip from './components/turkey/Turkey';
 
 const App = () => {
 
@@ -53,6 +63,16 @@ const App = () => {
           <Route path="nairobi-amboseli-lewa-mara" element={<NairobiAmboseliLewaMaraTrip />} />
           <Route path="zanzibar" element={<ZanzibarTours />} />
           <Route path="rwanda-uganda" element={<RwandaUganda />} />
+          <Route path="international" element={<InternationalTours />} />
+          <Route path="dubai" element={<DubaiTrip />} />
+          <Route path="china" element={<ChinaTrip />} />
+          <Route path="joburg" element={<JohannesburgTrib />} />
+          <Route path="malaysia" element={<MalaysiaTrip />} />
+          <Route path="mauritius" element={<MauritiusTrip />} />
+          <Route path="egypt-israel" element={<EgyptIsraelTrip />} />
+          <Route path="italy-barca-paris" element={<ParisBarcaItaly />} />
+          <Route path="bangkok" element={<BangkokTrip />} />
+          <Route path="turkey" element={<TurkeyTrip />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

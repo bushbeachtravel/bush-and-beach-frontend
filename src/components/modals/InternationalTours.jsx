@@ -1,4 +1,6 @@
-import { parks, animals } from "../../data/safari";
+// import { animals } from "../../data/safari";
+import { cities } from "../../data/cities";
+import { intlTourDestinations } from "../../data/international";
 import NavigationMenu from "../NavigationMenu";
 import Footer from "../Footer";
 import SafariCard from "./SafariCard";
@@ -7,7 +9,7 @@ import SafariIntroSection from "./SafariIntroPage";
 import wild from '../../assets/images/wild.jpg'
 import '../../assets/styles/Kenya.css';
 
-const KenyaSafaris = () => {
+const InternationalTours = () => {
   const title = `Adventure like no other.`;
   const bodyLeft = `
         Welcome to Kenya which is known for being the world’s best safari
@@ -46,20 +48,20 @@ const KenyaSafaris = () => {
       <NavigationMenu />
       <SafariLandingPage
         backgroundImage={wild}
-        title="Welcome To Kenya Safari"
+        title="International Tours."
       />
       <SafariIntroSection
         pageTitle={title}
         pageBodyLeft={bodyLeft}
         pageBodyRight={bodyRight}
-        images={animals}
+        images={cities}
         title2={title2}
         bodyTextwo={bodyTextTwo}
-        title="The Big Five"
+        title="International Destinations"
       />
-      <SafariCard tourDestination={parks} />
+      <SafariCard tourDestination={intlTourDestinations} />
       <Footer />
     </>
   )
 };
-export default KenyaSafaris;
+export default InternationalTours;

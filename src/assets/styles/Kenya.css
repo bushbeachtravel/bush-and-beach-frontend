@@ -49,7 +49,7 @@
 }
 
 .gallery-slide > img {
-  height: fit-content;
+  min-height: 430px;
 }
 
 .iternary-icons {

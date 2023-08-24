@@ -123,7 +123,9 @@ const HotelBooking = () => (
               seamless memorable travel experience.
             </Typography>
             <button className="hotel-buttons font-poppins">
-              Explore
+              <Link to="/international">
+                Explore
+              </Link>
             </button>
           </div>
         </div>

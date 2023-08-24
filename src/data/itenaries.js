@@ -509,6 +509,7 @@ export const rwandaUgandaExtras = [
   ` Eco and Community safaris`
 ]
 
+// Dubai
 export const dubai4NightsItenary = [
   {
     day: `Day 1`,
@@ -552,4 +553,450 @@ export const dubai4NightsPromoAd = {
   promoBody: `Experience the magic of Dubai's skyscrapers, deserts, and luxury. Limited slots are available for this exclusive offer.`,
   callToAction: `Contact us to embark on a journey that 
   will redefine your connection with nature and wildlife.`
+};
+
+
+// Joburg 
+export const joburgItenary = [
+  {
+    day: `Day 1`,
+    title: `Arrival in Johannesburg`,
+    activities: [
+      `Arrive in the vibrant city of Johannesburg, your gateway to South African wonders. Our warm welcome awaits as we transfer you to your comfortable accommodation. Spend the evening relaxing and anticipating the exciting days ahead.`
+    ]
+  },
+  {
+    day: `Day 2`,
+    title: `Johannesburg Exploration`,
+    activities: [
+      `Embark on a city tour, delving into Johannesburg's rich history and culture. Visit the Apartheid Museum, Constitution Hill, and explore the vibrant neighborhoods that reflect the city's diversity.`
+    ]
+  },
+  {
+    day: `Day 3`,
+    title: `Sun City Arrival`,
+    activities: [
+      `Travel to the luxurious Sun City resort, an oasis of entertainment and relaxation. Check in to your resort and immerse yourself in the lush surroundings, pristine pools, and exhilarating activities.`
+    ]
+  },
+  {
+    day: `Day 4`,
+    title: `Sun City Adventures`,
+    activities: [
+      `Enjoy a day of endless possibilities in Sun City. From thrilling water activities at the Valley of Waves to exploring the exquisite gardens and entertainment complexes, there's something for everyone.`
+    ]
+  },
+  {
+    day: `Day 5`,
+    title: `Pilanesberg National Park Safari`,
+    activities: [
+      `Embark on a safari adventure in Pilanesberg National Park, adjacent to Sun City. Encounter Africa's iconic wildlife, including the Big Five, on a thrilling game drive.`
+    ]
+  },
+  {
+    day: `Day 6`,
+    title: `Return to Johannesburg`,
+    activities: [
+      `Bid farewell to Sun City and return to Johannesburg. Spend the afternoon at leisure, perhaps indulging in some last-minute shopping or exploring more of the city's attractions.`
+    ]
+  },
+  {
+    day: `Day 7`,
+    title: `Departure`,
+    activities: [
+      `Before departure, take a moment to reflect on your South African adventure. Depending on your flight time, you may have the opportunity for a final exploration or relaxation. Depart with cherished memories and the promise of returning.`
+    ]
+  },
+]
+
+export const joburgPromoAd = {
+  promoTitle: `Book Your South African Adventure Today!`,
+  promoBody: `Discover the vibrant city life of Johannesburg and the leisurely paradise of Sun City. Limited slots are available for this exclusive offer. `,
+  callToAction: `Contact us now to secure your spot on a journey that will immerse you in the splendor and diversity of South Africa's attractions.`
+};
+
+// Malysia
+export const malaysiaItenary = [
+  {
+    day: `Day 1`,
+    title: `Arrival in Kuala Lumpur, Malaysia`,
+    activities: [
+      `Welcome to the dynamic city of Kuala Lumpur! Arrive and be transferred to your comfortable accommodation. Take the evening to relax and soak in the vibrant city atmosphere.`
+    ]
+  },
+  {
+    day: `Day 2`,
+    title: `Kuala Lumpur Highlights`,
+    activities: [
+      `Embark on a city tour, exploring Kuala Lumpur's iconic landmarks. Visit the Petronas Twin Towers, the vibrant Central Market, and the historical Merdeka Square. Immerse yourself in the city's rich culture and diversity.`
+    ]
+  },
+  {
+    day: `Day 3`,
+    title: `Batu Caves & Genting Highlands`,
+    activities: [
+      `Explore the stunning Batu Caves, a Hindu temple complex nestled within limestone caves. Continue to Genting Highlands, a mountain resort offering entertainment, casinos, and breathtaking views.`
+    ]
+  },
+  {
+    day: `Day 4`,
+    title: `Transfer to Singapore`,
+    activities: [
+      `Travel to the modern metropolis of Singapore. Check in to your accommodation and spend the afternoon exploring the vibrant streets, shopping districts, and renowned food markets.`
+    ]
+  },
+  {
+    day: `Day 5`,
+    title: `Singapore City Discovery`,
+    activities: [
+      `Delve into Singapore's charm with a city tour. Visit iconic sites like Marina Bay Sands, Gardens by the Bay, and Singapore Botanic Gardens. In the evening, take a memorable stroll along Clarke Quay.`
+    ]
+  },
+  {
+    day: `Day 6`,
+    title: `Sentosa Island Adventure`,
+    activities: [
+      `Embark on a day of excitement at Sentosa Island. Visit Universal Studios for thrilling rides and entertainment. Discover the S.E.A. Aquarium, or simply relax on the island's pristine beaches.`
+    ]
+  },
+  {
+    day: `Day 7`,
+    title: `Departure`,
+    activities: [
+      `Savor your last moments in Singapore with some leisure time for shopping or exploring. Depart with unforgettable memories of your Malaysian and Singaporean adventure.`
+    ]
+  },
+]
+
+export const malaysiaPromoAd = {
+  promoTitle: `Book Your Malaysian & Singaporean Adventure Today! `,
+  promoBody: `Discover the blend of traditions and modernity in Kuala Lumpur and Singapore.`,
+  callToAction: `Contact us now to secure your spot on a journey that will immerse you in the wonders of Malaysia and Singapore!.`
+};
+
+// Mauritius 
+export const mauritiusItenary = [
+  {
+    day: `Day 1`,
+    title: `Arrival in Mauritius`,
+    activities: [
+      `Welcome to the stunning island of Mauritius! Upon arrival, you'll be greeted and transferred to your exquisite accommodation. Feel the warm ocean breeze and let the relaxation begin.`
+    ]
+  },
+  {
+    day: `Day 2`,
+    title: `Beach Bliss & Water Adventures`,
+    activities: [
+      `Spend your day basking in the beauty of Mauritius' beaches. Relax under the sun, take a dip in the crystal-clear waters, or engage in exciting water sports. Your seaside retreat promises tranquility and fun.`
+    ]
+  },
+  {
+    day: `Day 3`,
+    title: `Island Exploration`,
+    activities: [
+      `Embark on an island tour to discover the enchanting landscapes of Mauritius. Visit landmarks like the Chamarel Seven Colored Earths, Grand Bassin, and the mesmerizing Chamarel Waterfall.`
+    ]
+  },
+  {
+    day: `Day 4`,
+    title: `Leisure & Culture`,
+    activities: [
+      `Indulge in a day at your leisure. Choose to unwind at the resort's spa, lounge by the pool, or explore local markets for souvenirs. In the evening, savor the island's cuisine and immerse yourself in its vibrant culture.`
+    ]
+  },
+  {
+    day: `Day 5`,
+    title: `Departure`,
+    activities: [
+      `Relish your last moments on the island. Depending on your flight time, enjoy a final stroll on the beach or take a refreshing swim. Depart Mauritius with unforgettable memories of your tropical retreat.`
+    ]
+  },
+]
+
+export const mauritiusPromoAd = {
+  promoTitle: `Book Your Mauritius Retreat Today!`,
+  promoBody: `Unveil the allure of Mauritius' beaches, landscapes, and vibrant culture.`,
+  callToAction: ` Contact us now to secure your spot on a journey that will immerse you in the blissful tranquility of Mauritius' tropical paradise!`
+};
+
+
+// China itenary
+export const chinaItenary = [
+  {
+    day: `Day 1`,
+    title: `Arrival in Guangzhou, China`,
+    activities: [
+      `Welcome to the bustling city of Guangzhou! Upon arrival, our team will ensure a smooth transfer to your comfortable accommodation. Rest up for the days of business and exploration ahead.`
+    ]
+  },
+  {
+    day: `Day 2`,
+    title: `Canton Fair Trade Exhibition Begins`,
+    activities: [
+      `Participate in the prestigious Canton Fair, where business opportunities and connections await. Engage with exhibitors, discover new products, and build valuable partnerships. Immerse yourself in the world of trade.`
+    ]
+  },
+  {
+    day: `Day 3-7`,
+    title: `Canton Fair Business Days`,
+    activities: [
+      `Dive into the business days of the Canton Fair. Network, negotiate deals, and explore the vast array of industries represented at this renowned trade exhibition.`
+    ]
+  },
+  {
+    day: `Day 8`,
+    title: `Explore Guangzhou`,
+    activities: [
+      `As the Canton Fair concludes, take the day to explore Guangzhou's cultural attractions. Visit the Chen Clan Ancestral Hall, explore the Shamian Island, and savor authentic Cantonese cuisine.`
+    ]
+  },
+  {
+    day: `Day 9`,
+    title: `Day Trip to Foshan`,
+    activities: [
+      `Embark on a day trip to Foshan, a city known for its rich history in arts and crafts. Visit the Foshan Ancestral Temple and experience the city's cultural heritage.`
+    ]
+  },
+  {
+    day: `Day 10`,
+    title: `Departure`,
+    activities: [
+      `Reflect on your Canton Fair experience and bid farewell to China. Depending on your flight time, you may have the opportunity for some last-minute exploration or shopping. Depart with new business connections and memories.`
+    ]
+  },
+]
+
+export const chinaPromoAd = {
+  promoTitle: `Book Your Canton Fair Experience Today!`,
+  promoBody: `Join the bustling world of trade at the Canton Fair and delve into the cultural richness of Guangzhou and Foshan.`,
+  callToAction: `Contact us now to secure your spot on a journey that combines business and exploration in China!`
+};
+
+// Egypt Israel
+export const egyptIsraelItenary = [
+  {
+    day: `Day 1`,
+    title: `Arrival in Cairo, Egypt`,
+    activities: [
+      `Begin your journey of faith in Cairo, Egypt's capital. Our warm welcome awaits as we transfer you to your comfortable accommodation. Take the evening to rest and reflect on the spiritual adventure ahead.`
+    ]
+  },
+  {
+    day: `Day 2`,
+    title: `Explore Ancient Egypt`,
+    activities: [
+      `Embark on a soul-enriching day of exploration. Visit the Giza Pyramids, Sphinx, and the Egyptian Museum, where artifacts from ancient civilizations await. Reflect on the connections between history and faith.`
+    ]
+  },
+  {
+    day: `Day 3`,
+    title: `Journey to Mount Sinai`,
+    activities: [
+      `Travel to the sacred Mount Sinai, where Moses received the Ten Commandments. Ascend the mountain to witness the sunrise, a moment of spiritual significance for pilgrims.`
+    ]
+  },
+  {
+    day: `Day 4`,
+    title: `Arrive in Jerusalem, Israel`,
+    activities: [
+      `Cross into Israel and arrive in Jerusalem, the heart of spirituality. Settle into your accommodation and prepare to explore the revered sites that hold deep meaning for multiple faiths.`
+    ]
+  },
+  {
+    day: `Day 5`,
+    title: `Jerusalem's Holy Sites`,
+    activities: [
+      `Embark on a profound day of visiting sacred sites. Explore the Western Wall, Church of the Holy Sepulchre, and the Dome of the Rock, reflecting on the spiritual heritage shared by many.`
+    ]
+  },
+  {
+    day: `Day 6`,
+    title: `Bethlehem and Jericho`,
+    activities: [
+      `Visit Bethlehem, the birthplace of Jesus, and explore the Church of the Nativity. Continue to Jericho, one of the world's oldest cities, and experience its historical and spiritual significance.`
+    ]
+  },
+  {
+    day: `Day 7`,
+    title: `Journey to Galilee`,
+    activities: [
+      `Travel to the serene region of Galilee, where Jesus performed many miracles. Visit sites like the Mount of Beatitudes, Tabgha, and Capernaum, connecting with the teachings of Christ.`
+    ]
+  },
+  {
+    day: `Day 8`,
+    title: `Reflection and Departure`,
+    activities: [
+      `Take a day of reflection and prayer. Depending on your flight time, you may have the opportunity to revisit a site or simply absorb the spiritual essence of your pilgrimage. Depart with a heart full of faith and memories.
+      `,
+    ]
+  },
+]
+
+export const egyptIsraelPromoAd = {
+  promoTitle: `Book Your Pilgrimage Journey Today!`,
+  promoBody: `Experience the sacredness of Egypt and Israel's sites, tracing the footsteps of prophets and connecting with centuries of faith.`,
+  callToAction: `Contact us now to secure your spot on a journey that will deepen your spiritual connection and understanding.`
+};
+
+// Paris and Barcelona
+export const parisBarcaItalyItenary = [
+  {
+    day: `Day 1`,
+    title: `Arrival in Paris, France`,
+    activities: [
+      `Begin your European adventure in the romantic city of Paris. Upon arrival, our team will warmly welcome you and transfer you to your charming accommodation. Take in the enchanting atmosphere and get ready for the days of exploration ahead.`
+    ]
+  },
+  {
+    day: `Day 2`,
+    title: `Parisian Charm`,
+    activities: [
+      `Explore the iconic landmarks of Paris. Visit the Eiffel Tower, stroll along the Seine River, and immerse yourself in the artistic wonder of the Louvre Museum. Experience the city's captivating blend of history and culture.`,
+    ]
+  },
+  {
+    day: `Day 3`,
+    title: `Travel to Barcelona, Spain`,
+    activities: [
+      `Fly to the vibrant city of Barcelona. Settle into your accommodation and spend the afternoon wandering through the charismatic streets, admiring Gaudi's architectural masterpieces, and savoring tapas.`,
+    ]
+  },
+  {
+    day: `Day 4`,
+    title: `Barcelona's Treasures`,
+    activities: [
+      `Embark on a comprehensive city tour of Barcelona. Visit the Sagrada Familia, Park Güell, and enjoy the breathtaking views from Montjuïc Hill. Feel the pulse of this creative and vibrant city.`
+    ]
+  },
+  {
+    day: `Day 5`,
+    title: `Explore Rome, Italy`,
+    activities: [
+      `Fly to the eternal city of Rome, Italy. Immerse yourself in its rich history as you visit the Colosseum, Roman Forum, and other ancient sites. Settle into your accommodation and savor authentic Italian cuisine.`
+    ]
+  },
+  {
+    day: `Day 6`,
+    title: `Vatican City & More`,
+    activities: [
+      `Experience the spiritual and artistic wonders of Vatican City. Visit St. Peter's Basilica and the Vatican Museums, home to masterpieces like Michelangelo's Sistine Chapel ceiling. Spend the afternoon exploring more of Rome's charm.`
+    ]
+  },
+  {
+    day: `Day 7`,
+    title: `Reflection and Departure`,
+    activities: [
+      `Savor your final moments in Europe, perhaps with some last-minute shopping or a leisurely stroll. Depart with cherished memories of your European journey.`,
+    ]
+  },
+]
+
+export const parisBaracItalyPromoAd = {
+  promoTitle: `Book Your European Getaway Today!`,
+  promoBody: `Unveil the beauty and diversity of Paris, Barcelona, and Rome. Limited slots are available for this exclusive offer.`,
+  callToAction: `Contact us now to secure your spot on a journey that promises to immerse you in the cultural riches of Europe!.`
+};
+
+// Bangkok
+export const bangkokItenary = [
+  {
+    day: `Day 1`,
+    title: `Arrival in Bangkok, Thailand`,
+    activities: [
+      `Begin your Thai adventure in the vibrant city of Bangkok. Upon arrival, our team will welcome you and transfer you to your comfortable accommodation. Feel the buzz of the city and prepare for an unforgettable journey.`
+    ]
+  },
+  {
+    day: `Day 2`,
+    title: `Bangkok City Exploration`,
+    activities: [
+      `Delve into Bangkok's cultural and historical treasures. Visit the Grand Palace, Wat Phra Kaew (Temple of the Emerald Buddha), and take a boat ride along the Chao Phraya River. Immerse yourself in the city's captivating blend of tradition and modernity.`,
+    ]
+  },
+  {
+    day: `Day 3`,
+    title: `Discover Bangkok's Charms`,
+    activities: [
+      `Embark on a day of exploration. Visit the bustling Damnoen Saduak Floating Market, where you can experience the vibrant local culture and sample delicious street food.`,
+    ]
+  },
+  {
+    day: `Day 4`,
+    title: `Travel to Phuket`,
+    activities: [
+      `Fly to the tropical paradise of Phuket. Settle into your beachfront accommodation and unwind under the palm trees. Enjoy the pristine beaches, turquoise waters, and laid-back island vibes.`
+    ]
+  },
+  {
+    day: `Day 5`,
+    title: `Phuket Island Adventures`,
+    activities: [
+      `Discover the natural wonders of Phuket. Explore Phi Phi Islands, snorkel through crystal-clear waters, and experience the vibrant marine life that makes these islands a paradise for underwater enthusiasts.`
+    ]
+  },
+  {
+    day: `Day 6`,
+    title: `Beach Bliss in Phuket`,
+    activities: [
+      `Spend your day soaking up the sun and enjoying the island's leisure activities. Engage in water sports, explore local markets, or simply relax on the sandy shores.`
+    ]
+  },
+  {
+    day: `Day 7`,
+    title: `Reflection and Departure`,
+    activities: [
+      `Savor your last moments in Thailand. Depending on your flight time, you may have the opportunity for a final exploration or relaxation. Depart with cherished memories of your Bangkok and Phuket escapade.`,
+    ]
+  },
+]
+export const bangkokPromoAd = {
+  promoTitle: `Unveil the excitement of Bangkok's city life and the tranquility of Phuket's beaches.`,
+  promoBody: `Unveil the beauty and diversity of Paris, Barcelona, and Rome. Limited slots are available for this exclusive offer.`,
+  callToAction: `Contact us now to secure your spot on a journey that promises a perfect balance of adventure and relaxation!`
+};
+
+// Turkey 
+export const turkeyItenary = [
+  {
+    day: `Day 1`,
+    title: `Arrival in Istanbul, Turkey`,
+    activities: [
+      `Welcome to the enchanting city of Istanbul! Upon arrival, our team will greet you and transfer you to your comfortable accommodation. Take in the blend of history and modernity that defines this vibrant city.`,
+    ]
+  },
+  {
+    day: `Day 2`,
+    title: `Explore Historical Istanbul`,
+    activities: [
+      `Embark on a captivating exploration of Istanbul's historical sites. Visit the iconic Hagia Sophia, the magnificent Blue Mosque, and the Grand Bazaar, where you can immerse yourself in the rich tapestry of Turkish culture.`,
+    ]
+  },
+  {
+    day: `Day 3`,
+    title: `Bosphorus Experience`,
+    activities: [
+      `Embark on a cruise along the Bosphorus, offering panoramic views of Istanbul's stunning skyline. Visit the opulent Dolmabahçe Palace and explore the charming neighborhoods that line the waterway.`,
+    ]
+  },
+  {
+    day: `Day 4`,
+    title: `Ottoman Heritage`,
+    activities: [
+      `Step into the opulent past of the Ottoman Empire. Visit Topkapi Palace, once the residence of Ottoman sultans, and explore the intricate details of the palace's architecture and treasures.`
+    ]
+  },
+  {
+    day: `Day 5`,
+    title: `Departure`,
+    activities: [
+      `Savor your final moments in Istanbul, perhaps with a leisurely stroll or some last-minute shopping. Depart with cherished memories of your Turkish journey and the allure of Istanbul's cultural heritage.`,
+    ]
+  },
+]
+
+export const turkeyPromoAd = {
+  promoTitle: `Unveil the excitement of Bangkok's city life and the tranquility of Phuket's beaches.`,
+  promoBody: `Embark on a journey through the heart of Turkey's cultural gem, Istanbul. Starting from just $1660 per person, this offer ensures you experience the city's rich history, vibrant markets, and iconic landmarks.`,
+  callToAction: `Contact us now to secure your spot on a journey that promises an immersive experience in the heart of Turkish culture.`
 };

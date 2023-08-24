@@ -34,7 +34,6 @@ export const maraImages = [
 ];
 
 export const animals = [bufallo, elephants, leopard, lion, rhino];
-
 export const parks = [
   {
     title: "Masai Mara",
@@ -109,9 +108,6 @@ export const parks = [
   },
 
 ]
-
-
-
 
 
 export const included = [
