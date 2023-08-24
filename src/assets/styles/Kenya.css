@@ -61,11 +61,28 @@
   flex: 2;
 }
 
-
 .safari-section {
   background-color: #F7F8FA;
 }
 
+#lead-text {
+  text-transform: uppercase;
+  font-size: 6vw;
+  letter-spacing: -1px;
+  font-weight: 1000;
+
+}
+#safari-ad-text {
+  font-size: 4vw;
+  font-weight: 700;
+  color: #1B1B1C;
+}
+
+#big-five-text {
+  font-size: 3vw;
+  font-weight: 700;
+  color: #1B1B1C;
+}
 /* Kenya's coast */
 
 .coast-container {
@@ -202,4 +219,11 @@
 .rwanda-line-seperator {
   min-width: 350px;
   border: 2px solid #90BAF8;
+}
+
+
+.left-para, 
+.right-para {
+  height: auto;
+  max-width: 600px;
 }

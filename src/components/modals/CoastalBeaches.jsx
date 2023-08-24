@@ -25,7 +25,7 @@ const KenyaCostalBeaches = () => {
         />
         <figcaption className="absolute inset-0 flex flex-col justify-center items-center text-center">
           <div>
-            <Typography variant="h1" color="white" className="font-poppins">
+            <Typography color="white" className="font-poppins" id="lead-text">
               Kenya Coastal Beaches
             </Typography>
           </div>
@@ -38,37 +38,41 @@ const KenyaCostalBeaches = () => {
           </Typography>
           <div className="line-seperator"></div>
         </div>
-        <div className="flex flex-wrap p-5">
-          <Typography variant="paragraph" className="w-1/2 p-3 font-poppins">
-            Kenyan coast has been ranked among the best and sought-after destinations
-            within the region for several years consecutively and has won Africa’s
-            leading beach destination by the world travel awards
-            It is renowned for its wonderful mix of cultures,
-            fascinating history, vibrant night-life and endless
-            pearly white beaches with warm, azure waters. It&apos;s a
-            tropical paradise and holiday haven for many visitors from around the world.
-            The weather is generally hot with average temperatures of 31
-            degrees Celsius all year round and a cool ocean breeze blowing
-            through making it a beloved tropical destination by visitors
-          </Typography>
-          <Typography variant="paragraph" className="w-1/2 p-3 font-poppins">
-            The expansive beaches are divided into north coast which is in
-            mainland Kenya and south coast known as ukunda.
-            North coast beach include Mombasa, Malindi, Watamu and Lamu.
-            South coast beach includes Diani further along to Zanzibar island
-            which is in Tanzania. We have partnered with various reputable beach
-            front hotels and resorts offering accommodation and other services
-            to ensure our clients needs are met with the outmost magical experiences.
-          </Typography>
+        <div className="flex justify-evenly flex-wrap w-full py-5">
+          <div className="left-para p-5">
+            <Typography variant="paragraph" className=" p-3 font-poppins">
+              Kenyan coast has been ranked among the best and sought-after destinations
+              within the region for several years consecutively and has won Africa’s
+              leading beach destination by the world travel awards
+              It is renowned for its wonderful mix of cultures,
+              fascinating history, vibrant night-life and endless
+              pearly white beaches with warm, azure waters. It&apos;s a
+              tropical paradise and holiday haven for many visitors from around the world.
+              The weather is generally hot with average temperatures of 31
+              degrees Celsius all year round and a cool ocean breeze blowing
+              through making it a beloved tropical destination by visitors
+            </Typography>
+          </div>
+          <div className="right-para p-5">
+            <Typography variant="paragraph" className=" p-3 font-poppins">
+              The expansive beaches are divided into north coast which is in
+              mainland Kenya and south coast known as ukunda.
+              North coast beach include Mombasa, Malindi, Watamu and Lamu.
+              South coast beach includes Diani further along to Zanzibar island
+              which is in Tanzania. We have partnered with various reputable beach
+              front hotels and resorts offering accommodation and other services
+              to ensure our clients needs are met with the outmost magical experiences.
+            </Typography>
+          </div>
         </div>
         <SafariCarousel images={animals} />
       </section>
       <section className="safari-header">
-        <div className="p-20">
-          <Typography variant="h3" className="font-poppins text-center">
+        <div className="">
+          <Typography className="font-poppins text-center p-10" id="safari-ad-text">
             Kenya&apos;s Coastal Paradise: Where Beaches Meet Adventure
           </Typography>
-          <Typography variant="paragraph" className="font-poppins">
+          <Typography variant="paragraph" className="font-poppins p-10">
             Nestled along the azure waters of the Indian Ocean,
             Kenya&apos;s coast unveils a captivating world where vibrant cultures,
             pristine beaches, and exotic landscapes converge.
@@ -86,10 +90,9 @@ const KenyaCostalBeaches = () => {
       </section>
       <section className="activities-section">
         <Typography variant="lead" className="font-poppins font-bold mx-20">Activities at the Kenyan coast</Typography>
-        <div className="activities-section flex flex-wrap justify-center gap-3 p-5">
+        <div className="activities-section flex flex-wrap justify-center">
           {numbers.map((item, index) => (
             <div className="w-96 coast-container" key={index}>
-              <h3 className="title">Text fadein bottom</h3>
               <div className="content">
                 <figure className="relative h-96 w-full">
                   <div className="content-overlay"></div>
@@ -115,7 +118,7 @@ const KenyaCostalBeaches = () => {
           ))}
         </div>
       </section>
-      
+
       <section className="talk-to-us">
         <div className="flex flex-col justify-around items-center gap-6 font-poppins p-20 py-20">
           <Typography variant="h4" className="font-poppins text-2xl">
@@ -124,7 +127,7 @@ const KenyaCostalBeaches = () => {
           <div className="rwanda-line-seperator"></div>
         </div>
         <div className="coast-background">
-          <div className="coast-text-background w-2/3 p-10">
+          <div className="coast-text-background w-2/3 p-5">
             <div className=" w-full">
               <Typography color="white" variant="paragraph" className="font-poppins text-xl py-5">
                 Dive into the beauty of Kenya&apos;s
