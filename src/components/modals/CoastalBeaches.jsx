@@ -115,12 +115,13 @@ const KenyaCostalBeaches = () => {
           ))}
         </div>
       </section>
+      
       <section className="talk-to-us">
-        <hr />
-        <div className="flex flex-col justify-around items-center font-poppins p-20">
+        <div className="flex flex-col justify-around items-center gap-6 font-poppins p-20 py-20">
           <Typography variant="h4" className="font-poppins text-2xl">
             Ready to Explore Kenya&apos;s Coastal Paradise? Your Adventure Awaits!
           </Typography>
+          <div className="rwanda-line-seperator"></div>
         </div>
         <div className="coast-background">
           <div className="coast-text-background w-2/3 p-10">

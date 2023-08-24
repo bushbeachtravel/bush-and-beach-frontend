@@ -76,8 +76,8 @@ const SafariDetail = ({ images, safariTitle, duration, itenary, formData }) => {
               <SafariItenary itenary={itenary} />
             </div>
           </div>
-          <div className="flex flex-wrap justify-between include-exclude py-20">
-            <div className="included w-96 p-5">
+          <div className="flex flex-wrap justify-around gap-3 include-exclude py-10">
+            <div className="included w-80">
               <Typography variant="h5" className="font-poppins">
                 Included
               </Typography>
@@ -94,7 +94,7 @@ const SafariDetail = ({ images, safariTitle, duration, itenary, formData }) => {
                 </div>
               ))}
             </div>
-            <div className="excluded w-96 p-5">
+            <div className="excluded w-80">
               <Typography variant="h5" className="font-poppins">
                 Excluded
               </Typography>

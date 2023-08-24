@@ -14,8 +14,7 @@ const RwandaUganda = () => (
       itenary={rwandaUgandaItenary}
       formData={rwandaUgandaPromoAd}
     />
-    <hr />
-    <section className="font-poppins rwanda flex flex-col items-center py-10 gap-6 p-5">
+    <section className="font-poppins rwanda flex flex-col items-center py-10 gap-6 w-full">
       <div className="rwanda-header flex flex-col items-center gap-6 py-10">
         <Typography variant="h3" className="font-poppins text-center px-10">
           Let your imagination and adventurous side run wild while offering you the below
