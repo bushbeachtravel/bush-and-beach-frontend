@@ -66,39 +66,77 @@ const SafariDetail = ({ images, safariTitle, duration, itenary, formData }) => {
           </div>
         </div>
       </section>
-      <section className="flex justify-between flex-wrap p-2 form-section">
-        <div className="itenary">
-          <div className="w-full p-5 one ">
-            <Typography variant="h3" className="font-poppins">
+      <section className="flex flex-wrap justify-between form-section">
+        <div className="itenary m-5">
+          <div className="w-full one p-5">
+            <Typography variant="h4" className="font-poppins">
               Itinerary
             </Typography>
-            <SafariItenary itenary={itenary} />
+            <div>
+              <SafariItenary itenary={itenary} />
+            </div>
+          </div>
+          <div className="flex flex-wrap justify-between include-exclude py-20">
+            <div className="included w-96 p-5">
+              <Typography variant="h5" className="font-poppins">
+                Included
+              </Typography>
+              {included.map((item, index) => (
+                <div key={index} className="flex items-center gap-3">
+                  <div>
+                    <FaCheck size={20} color='green' className="font-bold" />
+                  </div>
+                  <div className="w-full">
+                    <Typography variant="paragraph" className="flex font-poppins ">
+                      {item}
+                    </Typography>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="excluded w-96 p-5">
+              <Typography variant="h5" className="font-poppins">
+                Excluded
+              </Typography>
+              {excluded.map((item, index) => (
+                <div key={index} className="flex items-center gap-3">
+                  <div>
+                    <FaXmark size={20} color='red' className="font-bold" />
+                  </div>
+                  <Typography variant="paragraph" className="font-poppins">
+                    {item}
+                  </Typography>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-        <div className="enquiry-form flex flex-col p-6">
-          <div className="price justify-between">
+        <div className="enquiry-form w-96 flex flex-col m-5">
+          <div className="price justify-center p-5">
             <div className="flex justify-between">
-              <div className="text">
+              <div className="text py-5">
                 <Typography variant="lead" className="font-poppins">
                   From as low as
                 </Typography>
               </div>
-              <div className="amount font-poppins">
+              <div className="amount font-poppins py-5">
                 <Typography variant="lead" className="font-poppins">
                   Ksh 15,000
                 </Typography>
               </div>
             </div>
-            <br />
-            <hr />
             <Typography variant="h6" className="font-poppins">
               {formData.promoTitle}
             </Typography>
-            <Typography variant="paragraph" className="font-poppins mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
+            <Typography variant="paragraph" className="font-poppins py-3 promo-body">
               {formData.promoBody}
             </Typography>
-
-            <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
+            <div className="py-5">
+              <Typography variant="paragraph" className="font-poppins">
+                {formData.callToAction}
+              </Typography>
+            </div>
+            <form className="mt-4 mb-2 w-full">
               <div className="mb-4 flex flex-col gap-6">
                 <Input color="blue" label="Enter Name" className="font-poppins" />
                 <Input type="email" color="blue" label="Enter email" className="font-poppins" />
@@ -108,41 +146,7 @@ const SafariDetail = ({ images, safariTitle, duration, itenary, formData }) => {
             </form>
           </div>
         </div>
-      </section>
-      <section className="flex font-poppins p-6 include-section">
-        <div className="flex flex-wrap justify-between gap-5">
-          <div className="included">
-            <Typography variant="h3" className="font-poppins">
-              Included
-            </Typography>
-            {included.map((item, index) => (
-              <div key={index} className="flex items-center gap-3">
-                <div>
-                <FaCheck size={20} color='green' className="font-bold"/>
-                </div>
-                <Typography variant="paragraph" className="flex font-poppins ">
-                  {item}
-                </Typography>
-              </div>
-            ))}
-          </div>
-          <div className="excluded">
-            <Typography variant="h3" className="font-poppins">
-              Excluded
-            </Typography>
-            {excluded.map((item, index) => (
-              <div key={index} className="flex items-center gap-3">
-                <div>
-                <FaXmark size={20} color='red' className="font-bold"/>
-                </div>
-                <Typography variant="paragraph" className="font-poppins">
-                  {item}
-                </Typography>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      </section >
       {/* <Footer /> */}
     </>
   );

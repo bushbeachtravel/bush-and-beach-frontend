@@ -38,9 +38,13 @@
 .right-details {
   flex: 1;
 }
+
+.promo-body {
+  line-height: 3px;
+}
 .enquiry-form {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-  border-radius: 4px;
+  border-radius: 10px;
   height: fit-content;
 }
 
@@ -57,18 +61,20 @@
   flex: 2;
 }
 
+
 .safari-section {
   background-color: #F7F8FA;
 }
 
 /* Kenya's coast */
-.container{
+
+.coast-container {
   padding: 1em 0;
   float: left;
   width: 50%;
 }
 
-.container .title{
+.coast-container .title{
   color: #1a1a1a;
   text-align: center;
   margin-bottom: 10px;
@@ -157,7 +163,8 @@
   left: 80%;
 } */
 
-.coast-background {
+.coast-background,
+.rwanda-bg {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -168,7 +175,8 @@
   /* min-height: 100vh; */
 }
 
-.coast-background {
+.coast-background,
+.rwanda-bg {
   background-image: url("../images/hotel.jpg");
   background-size: cover;
   background-position: center;
@@ -178,19 +186,20 @@
 
 #button {
   background-color: #1b6ccf;
-  padding: 14px 42px;
+  padding: 16px 22px;
   border-radius: 0;
   font-size: 1rem;
   letter-spacing: 5px;
 }
 
 /* Rwanda */
-.rwanda-container {
-  background-color: #FFFFFF;
+.rwanda-container,
+.coast-text-background {
+  background-color: rgba(0, 0, 0, 0.55);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 .rwanda-line-seperator {
-  min-width: 250px;
-  border: 2px solid #90BAF8 ;
+  min-width: 350px;
+  border: 2px solid #90BAF8;
 }

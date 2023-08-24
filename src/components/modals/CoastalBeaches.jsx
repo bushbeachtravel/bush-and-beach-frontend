@@ -3,7 +3,7 @@ import {
   Button,
 } from "@material-tailwind/react";
 
-import {  MdModeNight } from 'react-icons/md'
+import { MdModeNight } from 'react-icons/md'
 import { animals } from "../../data/safari";
 import NavigationMenu from "../NavigationMenu";
 import SafariCarousel from "./Carousel";
@@ -88,13 +88,8 @@ const KenyaCostalBeaches = () => {
         <Typography variant="lead" className="font-poppins font-bold mx-20">Activities at the Kenyan coast</Typography>
         <div className="activities-section flex flex-wrap justify-center gap-3 p-5">
           {numbers.map((item, index) => (
-            <div className="w-96 container" key={index}>
+            <div className="w-96 coast-container" key={index}>
               <h3 className="title">Text fadein bottom</h3>
-              {/* <img
-                className="h-96 w-full rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50"
-                src="https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
-                alt="nature image"
-              /> */}
               <div className="content">
                 <figure className="relative h-96 w-full">
                   <div className="content-overlay"></div>
@@ -128,21 +123,23 @@ const KenyaCostalBeaches = () => {
           </Typography>
         </div>
         <div className="coast-background">
-          <div className="w-2/3 py-20">
-            <Typography color="white" variant="paragraph" className="font-poppins text-xl">
-              Dive into the beauty of Kenya&apos;s
-              coast and beaches, where every moment
-              is a new discovery. Immerse yourself
-              in the rich cultural tapestry of Mombasa,
-              feel the soft sands of Diani Beach between
-              your toes, and snorkel through vibrant coral
-              reefs in Watamu&apos;s crystal-clear waters.
+          <div className="coast-text-background w-2/3 p-10">
+            <div className=" w-full">
+              <Typography color="white" variant="paragraph" className="font-poppins text-xl py-5">
+                Dive into the beauty of Kenya&apos;s
+                coast and beaches, where every moment
+                is a new discovery. Immerse yourself
+                in the rich cultural tapestry of Mombasa,
+                feel the soft sands of Diani Beach between
+                your toes, and snorkel through vibrant coral
+                reefs in Watamu&apos;s crystal-clear waters.
+              </Typography>
+            </div>
+            <Typography variant="h3" color="white" className="font-poppins text-center py-5">
+              Book Your Coastal Escape Today!
             </Typography>
           </div>
-          <Typography variant="h3" color="white" className="font-poppins text-center">
-            Book Your Coastal Escape Today!
-          </Typography>
-          <div className="py-20">
+          <div className="py-10">
             <Button className="font-poppins" id="button">
               Get In Touch
             </Button>

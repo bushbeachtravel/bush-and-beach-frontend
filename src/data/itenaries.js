@@ -33,11 +33,11 @@ export const masaaiMaraIternary = [
 export const masaaiMaraPromoAd = {
   promoTitle: `Capture the Essence of Africa's Wilderness!`,
   promoBody: `Experience the awe-inspiring landscapes and incredible wildlife 
-  of Masai Mara in just 3 days. Limited slots available for 
-  this unforgettable safari retreat. 
+  of Masai Mara in just 3 days. `,
+  callToAction: `
   Contact us now to secure your spot on a journey 
   that promises unforgettable 
-  moments in the heart of the wild!`,
+  moments in the heart of the wild!`
 }
 
 export const lakeNakuruIternary = [
@@ -86,9 +86,10 @@ export const lakeNakPromoAd = {
   promoTitle: `Book Now for an Unforgettable Safari!`,
   promoBody: `Don't miss this chance to explore two of Kenya's most iconic destinations. 
   Immerse yourself in the beauty of Lake Nakuru and witness 
-  the grandeur of the Masai Mara. Limited slots available. 
-  Contact us to secure your spot on 
-  this extraordinary 4-day journey into the wild!`
+  the grandeur of the Masai Mara. Limited slots available.`,
+  callToAction: `Contact us to secure your spot on 
+  this extraordinary 4-day journey into the wild!
+  `
 };
 
 
@@ -128,9 +129,8 @@ export const maraItenary = [
 export const maraPromoAd = {
   promoTitle: `Capture the Essence of Africa's Wild Beauty!`,
   promoBody: `Immerse yourself in the untamed realm of the Masai Mara,
-  home to incredible wildlife spectacles and awe-inspiring landscapes. 
-  Limited spots available for this exclusive 3-day journey. 
-  Contact us now to secure your place on an unforgettable safari experience! `
+  home to incredible wildlife spectacles and awe-inspiring landscapes.`,
+  callToAction: `Contact us now to secure your place on an unforgettable safari experience!`
 };
 
 export const maraNrbSamburuItenary = [
@@ -174,8 +174,9 @@ export const maraNrbSamburuItenary = [
 export const maraNrbSamburPromoAd = {
   promoTitle: `Capture the Essence of Kenya's Beauty!`,
   promoBody: `Embark on an all-encompassing journey through Kenya's iconic landscapes, 
-  wildlife, and cultures. Limited spots available for this immersive 7-day adventure. 
-  Contact us now to secure your spot on a once-in-a-lifetime safari experience 
+  wildlife, and cultures.`,
+  callToAction: `Contact us now to secure your spot on 
+  a once-in-a-lifetime safari experience 
   from Nairobi to Samburu and the majestic Masai Mara!`
 };
 
@@ -221,8 +222,8 @@ export const amboseliTsavoItenary = [
 export const amboseliTsavoPromoAd = {
   promoTitle: `Capture the Essence of Kenya's Wilderness!`,
   promoBody: `Embark on a captivating 4-day journey through Amboseli 
-  and Tsavo West's natural wonders. Limited slots available for 
-  this immersive expedition. Contact us now to secure your spot 
+  and Tsavo West's natural wonders. `,
+  callToAction: `Contact us now to secure your spot 
   on an unforgettable safari experience that unveils the 
   beauty of Kenya's landscapes and wildlife!`
 };
@@ -271,11 +272,9 @@ export const nrbAmoseliMaraPromo = {
   promoTitle: `Capture the Essence of Kenya's Diversity! `,
   promoBody: `Embark on an all-encompassing 6-day expedition, 
   spanning city life, breathtaking landscapes, 
-  and remarkable wildlife encounters. 
-  Limited slots available for this immersive journey. 
-  Contact us now to secure your place on an unforgettable 
-  safari adventure from Nairobi to Amboseli and the enchanting Masai Mara!
-  `
+  and remarkable wildlife encounters.`,
+  callToAction: `Contact us now to secure your place on an unforgettable 
+  safari adventure from Nairobi to Amboseli and the enchanting Masai Mara!`
 };
 
 
@@ -341,9 +340,8 @@ export const nrbAmboseliMtKenyaPromoAd = {
   promoTitle: `Capture the Essence of Kenya's Diversity and Splendor!`,
   promoBody: `
   Embark on the journey of a lifetime, spanning Kenya's iconic 
-  landscapes, vibrant cultures, and mesmerizing wildlife encounters. 
-  Limited slots available for this comprehensive 8-day adventure. 
-  Contact us now to secure your place on an unforgettable 
+  landscapes, vibrant cultures, and mesmerizing wildlife encounters.`,
+  callToAction: `Contact us now to secure your place on an unforgettable 
   safari that explores Nairobi, Amboseli, Mt. Kenya, Lake Nakuru, 
   and the captivating Masai Mara!`
 };
@@ -400,9 +398,8 @@ export const nrbAmboseliLewaPromo = {
   promoBody: `
   Embark on an extraordinary 8-day journey, 
   traversing Kenya's diverse landscapes, 
-  rich cultures, and incredible wildlife encounters. 
-  Limited slots available for this multifaceted safari adventure. 
-  Contact us now to secure your spot on a once-in-a-lifetime exploration 
+  rich cultures, and incredible wildlife encounters.`,
+  callToAction: `Contact us now to secure your spot on a once-in-a-lifetime exploration 
   that encompasses Nairobi, Amboseli, 
   Lewa Conservancy, and the captivating Masai Mara! `
 };
@@ -494,8 +491,13 @@ export const rwandaUgandaItenary = [
 
 export const rwandaUgandaPromoAd = {
   promoTitle: `Ready for Your Gorilla Adventure?`,
-  promoBody: `
-  Experience the majesty of mountain gorillas and the diverse beauty of Rwanda and Uganda. Our meticulously curated itinerary offers helicopter flights, luxury lodges, thrilling treks, and meaningful interactions. Contact us to embark on a journey that will redefine your connection with nature and wildlife. `
+  promoBody: `Experience the majesty of mountain gorillas 
+  and the diverse beauty of Rwanda and Uganda. 
+  Our meticulously curated itinerary offers helicopter flights, 
+  luxury lodges, thrilling treks, and meaningful interactions. 
+  `,
+  callToAction: `Contact us to embark on a journey that 
+  will redefine your connection with nature and wildlife.`
 };
 
 export const rwandaUgandaExtras = [
