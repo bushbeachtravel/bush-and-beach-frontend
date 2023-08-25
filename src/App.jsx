@@ -4,7 +4,6 @@ import AirTicketing from './components/AirTicketing';
 import SafariPackage from './components/SafariPackage';
 import HotelBooking from './components/HotelBooking';
 import About from './components/About';
-import Conference from './components/Conference';
 import NotFound from './components/NotFound';
 import BlogPosts from './components/Blog';
 import BlogDetailView from './components/BlogDetail';
@@ -45,7 +44,6 @@ const App = () => {
           <Route path="airtickets" element={<AirTicketing />} />
           <Route path="hotels" element={<HotelBooking />} />
           <Route path="safari" element={<SafariPackage />} />
-          <Route path="conference" element={<Conference />} />
           <Route path="blog" element={<BlogPosts />} />
           <Route path="detail" element={<BlogDetailView />} />
           <Route path="gallery" element={<Gallery />} />

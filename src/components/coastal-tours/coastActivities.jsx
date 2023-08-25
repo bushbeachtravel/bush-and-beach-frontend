@@ -19,13 +19,17 @@ const CoastActivities = ({ activities, location }) => (
                 src={item.src}
                 alt={item.title}
               />
-              <div className="content-details fadeIn-bottom">
-                <Typography variant="h5" color="white" className="content-title" >
-                  {item.title}
-                </Typography>
-                <Typography color="gray" className="mt-2 font-normal content-title">
-                  <FaHeart />
-                </Typography>
+              <div className="flex items-center justify-between content-details fadeIn-bottom">
+                <div>
+                  <Typography variant="h6" color="white" className="content-title font-poppins" >
+                    {item.title}
+                  </Typography>
+                </div>
+                <div>
+                  <Typography color="gray" className="font-normal content-title">
+                    <FaHeart size={23} />
+                  </Typography>
+                </div>
               </div>
             </figure>
           </div>

@@ -2,7 +2,7 @@ import { Typography } from "@material-tailwind/react";
 import PropTypes from 'prop-types';
 
 const CoastalLandingPage = ({backgroundImage, pageTitle}) => (
-  <figure className="relative h-full w-full">
+  <figure className="relative h-screen w-full" id="coastal-landing-bg">
     <img
       className="h-full w-full object-cover object-center"
       src={backgroundImage}
@@ -10,7 +10,7 @@ const CoastalLandingPage = ({backgroundImage, pageTitle}) => (
     />
     <figcaption className="absolute inset-0 flex flex-col justify-center items-center text-center">
       <div>
-        <Typography color="white" className="font-poppins" id="lead-text">
+        <Typography color="white" className="font-poppins" variant="h3">
           {pageTitle}
         </Typography>
       </div>

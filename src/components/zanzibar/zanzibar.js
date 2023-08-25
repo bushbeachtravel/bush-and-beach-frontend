@@ -65,11 +65,11 @@ export const zanzibarIslandActivities = [
     src: horseRiding
   },
   {
-    title: 'Mangapwani slave chamber Zanzibar',
+    title: 'Mangapwani slave chamber',
     src: slave
   },
   {
-    title: 'Half day Zanzibar quad bike (village tour)',
+    title: 'Half day quad bike village tour',
     src: villageTour
   },
   {
@@ -77,7 +77,7 @@ export const zanzibarIslandActivities = [
     src: swimDolphin
   },
   {
-    title: 'Blue lagoon Zanzibar snorkeling',
+    title: 'Blue lagoon snorkeling',
     src: snorkeling
   }
 ]
