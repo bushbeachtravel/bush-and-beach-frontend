@@ -34,6 +34,7 @@ export const maraImages = [
 ];
 
 export const animals = [bufallo, elephants, leopard, lion, rhino];
+
 export const parks = [
   {
     title: "Masai Mara",
@@ -129,6 +130,6 @@ export const settings = {
   speed: 2000,
   slidesToShow: 2,
   slidesToScroll: 1,
-  // autoplay: true,
-  // autoplaySpeed: 2000,
+  autoplay: true,
+  autoplaySpeed: 5000,
 };

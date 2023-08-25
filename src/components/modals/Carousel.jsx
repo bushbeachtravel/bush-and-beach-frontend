@@ -12,8 +12,8 @@ const SafariCarousel = ({ images, title }) => {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: false,
-    speed: 500,
+    autoplay: true,
+    speed: 2000,
     cssEase: "linear"
   };
   return (
@@ -21,10 +21,10 @@ const SafariCarousel = ({ images, title }) => {
       <Typography className="font-poppins p-2" id="big-five-text">
         {title}
       </Typography>
-      <Slider {...settings}>
+      <Slider {...settings} className="h-full w-full">
         {images.map((image, index) => (
-          <div className="carousel-image-container h-full w-full p-1" key={index}>
-            <img src={image} alt="" className="h-96 w-full object-cover object-center"/>
+          <div className="carousel-image-container p-1 h-80 w-full" key={index}>
+            <img src={image} alt="" className="h-full w-full object-cover object-center"/>
           </div>
         ))}
       </Slider>

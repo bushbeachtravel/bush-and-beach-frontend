@@ -22,7 +22,7 @@ const SafariDetail = ({ images, safariTitle, duration, itenary, formData }) => {
         <div className="safari-inner">
           <Slider {...settings} className="slider w-full h-full">
             {images.map((image, index) => (
-              <div key={index} className="gallery-slide">
+              <div key={index} className="gallery-slide h-80 w-80">
                 <img src={image.src} alt={`Image ${index + 1}`} className="p-2 object-cover h-full w-full" />
               </div>
             ))}
