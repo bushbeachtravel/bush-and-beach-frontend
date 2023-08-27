@@ -2,7 +2,7 @@ import accomodation from '../assets/images/accomodation.jpg'
 import airpotTransfer from '../assets/images/airpotTransfer.jpg'
 import airTravel from '../assets/images/airTravel.jpg'
 import conference from '../assets/images/conference.jpg'
-import safariPackage from '../assets/images/safariPackage.jpg'
+import safariPackage from '../assets/images/ndovu.jpg'
 import wild from '../assets/images/wild.jpg'
 import travelling from '../assets/images/travelling.jpg'
 

@@ -1,6 +1,8 @@
 import { Textarea, Typography, Input, Button, IconButton } from "@material-tailwind/react";
 import { FaLocationDot, FaPhone, FaPaperPlane } from 'react-icons/fa6'
-import { BiWorld } from 'react-icons/bi'
+import { BiWorld } from 'react-icons/bi';
+import { BsMailbox } from 'react-icons/bs';
+
 import Footer from "./Footer";
 import NavigationMenu from "./NavigationMenu";
 
@@ -8,14 +10,18 @@ const ContactPage = () => {
   return (
     <>
       <NavigationMenu />
-      <section className="contact-section flex flex-wrap">
-        <div className="flex flex-col gap-6 contact-form">
-          <Typography variant="h5" className="font-poppins font-bold">
-            Leave a message
-          </Typography>
-          <Input variant="outlined" label="Email" type="email" />
-          <Textarea color="blue" label="Message" />
-          <Button color="blue" className="contact-btn">Send</Button>
+      <section className="contact-section flex flex-wrap items-center">
+        <div className="flex flex-col contact-form h-96">
+          <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
+            <div className="mb-4 flex flex-col gap-6">
+              <Typography variant="h5" className="font-poppins font-bold">
+                Leave a message
+              </Typography>
+              <Input variant="outlined" label="Email" type="email" />
+              <Textarea color="blue" label="Message" />
+            </div>
+            <Button color="blue" className="contact-btn">Send</Button>
+          </form>
         </div>
         <div className="flex flex-col contact-info">
           <ul className="flex flex-col gap-6 contact-elements">
@@ -23,34 +29,86 @@ const ContactPage = () => {
               Contact us
             </Typography>
             <li className="flex items-center gap-6">
-              <IconButton className="rounded-full">
-                <FaLocationDot size={20} />
-              </IconButton>
-              Address
+              <div>
+                <IconButton className="rounded-full">
+                  <FaLocationDot size={20} />
+                </IconButton>
+              </div>
+              <div>
+                <Typography variant="small" className="font-poppins font-bold">
+                  Address
+                </Typography>
+                <Typography variant="small" className="font-poppins font-bold">
+                  Suraj Plaza (4th Floor) Limuru Road, Nairobi Kenya
+                </Typography>
+              </div>
             </li>
             <li className="flex items-center gap-6">
-              <IconButton className="rounded-full">
-                <FaPhone size={20} />
-              </IconButton>
-              Phone
+              <div>
+                <IconButton className="rounded-full">
+                  <FaPhone size={20} />
+                </IconButton>
+              </div>
+              <div>
+                <Typography variant="small" className="font-poppins font-bold">
+                  Phone
+                </Typography>
+                <Typography variant="small" className="font-poppins font-bold">
+                  +254780269465
+                </Typography>
+              </div>
             </li>
             <li className="flex items-center gap-6">
-              <IconButton className="rounded-full">
-                <FaPaperPlane size={20} />
-              </IconButton>
-              Email
+              <div>
+                <IconButton className="rounded-full">
+                  <FaPaperPlane size={20} />
+                </IconButton>
+              </div>
+              <div>
+                <Typography variant="small" className="font-poppins font-bold">
+                  Email
+                </Typography>
+                <Typography variant="small" className="font-poppins font-bold">
+                  sales@milantours.com
+                </Typography>
+              </div>
             </li>
             <li className="flex items-center gap-6">
-              <IconButton className="rounded-full">
-                <BiWorld size={20} />
-              </IconButton>
-              Website
+              <div>
+                <IconButton className="rounded-full">
+                  <BiWorld size={20} />
+                </IconButton>
+              </div>
+              <div>
+                <Typography variant="small" className="font-poppins font-bold">
+                  Website
+                </Typography>
+                <Typography variant="small" className="font-poppins font-bold">
+                  www.bushandbeach.com
+                </Typography>
+              </div>
+            </li>
+            <li className="flex items-center gap-6">
+              <div>
+                <IconButton className="rounded-full">
+                  <BsMailbox size={20} />
+                </IconButton>
+              </div>
+              <div>
+                <Typography variant="small" className="font-poppins font-bold">
+                  P.O Box
+                </Typography>
+                <Typography variant="small" className="font-poppins font-bold">
+                  67833 - 00200 Nairobi, Kenya
+                </Typography>
+              </div>
             </li>
           </ul>
         </div>
-      </section>
+      </section >
       <Footer />
     </>
   );
 }
 export default ContactPage;
+

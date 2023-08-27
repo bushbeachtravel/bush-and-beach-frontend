@@ -14,7 +14,7 @@ const About = () => {
       <section className="about-section">
         <div className="flex p-5 about-background"></div>
         <div className="about-container ">
-          <div className="about-us-header p-20">
+          <div className="about-us-header p-10">
             <div className="about-desc p-10">
               <div className="dot"></div>
               <Typography variant="h3" className="font-poppins py-">
@@ -77,8 +77,8 @@ const About = () => {
               </div>
             </div>
             <div className="our-mission flex flex-col items-center justify-center">
-              <div className="mission-container flex p-3">
-                <div className="mission-upper w-1/2">
+              <div className="mission-container flex justify-around flex-wrap">
+                <div className="mission-upper w-96">
                   <Typography variant="h3" className="font-poppins text-center mt-10">
                     Our Mission
                   </Typography>
@@ -88,7 +88,7 @@ const About = () => {
                     for our customers through delivery of quality service that exceeds their expectations.
                   </Typography>
                 </div>
-                <div className="mission-upper w-1/2">
+                <div className="mission-upper w-96 ">
                   <Typography variant="h3" className="font-poppins text-center mt-10">
                     Our Vision
                   </Typography>
@@ -102,7 +102,7 @@ const About = () => {
                 <Typography variant="h3" color="white" className="mt-10 font-poppins font-bold text-center">
                   Our Story
                 </Typography>
-                <Typography variant="paragraph" className="font-poppins p-20" color="white">
+                <Typography variant="paragraph" className="font-poppins p-5" color="white">
                   Bush and Beach Travel & Safaris Ltd is a fully integrated tour and travels
                   company with a proven track record that provides customised luxury
                   journeys to inspiring destinations.We are a trusted company, passionate travel
