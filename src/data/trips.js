@@ -8,15 +8,13 @@ import safari from '../assets/images/ndovu.jpg';
 export const kenyaSafari = 
   {
     title: "Kenya Bush Safaris",
-    bodyText: `Welcome to Kenya which is known for being the world’s best safari destination
+    bodyText: `Welcome to Kenya renown as the world’s best safari destination
         with more than 50 epic national parks and reserves that are home
-        to diverse wildlife including the big fiveYou will get to experience
+        to diverse wildlife including the big five. You will get to experience
         the notorious wildebeest migration
         with a picturesque view of over 2 million animals migrating
         from Serengeti national park into Masai Mara national park which
-        normally happens in July to October every year.
-        This experience has been ranked as one of the seven wonders
-        of the world`,
+        normally happens in July to October every year.`,
     url: `kenya`,
     image: safari,
   };
