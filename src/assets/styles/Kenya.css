@@ -52,6 +52,7 @@
 .enquiry-form {
   box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
   border-radius: 10px;
+  height: 100%;
 }
 
 .iternary-icons {
@@ -267,56 +268,3 @@
   height: auto;
   max-width: 600px;
 }
-
-/**
-##############################################
-############ CAROUSEL ########################
-##############################################
-**/
-
-/* .carousel-images {
-  min-height: 500px;
-} */
-/* .carousel-image-container {
-  height: 350px;
-} */
-
-@media only screen and (min-width: 600px) {
-  .carousel-images {
-    height: 180px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .carousel-images {
-    height: 100px;
-  }
-
-  .carousel-image-container {
-    height: 450px;
-  }
-}
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (min-width: 768px) {
-  .carousel-images {
-    min-height: 300px;
-  }
-
-  .carousel-image-container {
-    max-height: 150px;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .carousel-images {
-    max-height: 220px;
-  }
-
-  .carousel-image-container {
-    min-height: 250px;
-  }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-

@@ -18,12 +18,11 @@ const About = () => {
     <>
       <NavigationMenu />
       <section className="about-section">
-        <div className="flex p-5 about-background"></div>
         <div className="about-container ">
           <div className="about-us-header p-10">
-            <div className="about-desc p-10">
+            <div className="about-desc p-7">
               <div className="dot"></div>
-              <Typography variant="h3" className="font-poppins py-">
+              <Typography variant="h3" className="font-poppins">
                 Bush & Beach
                 <br />
                 Safaris.
@@ -32,7 +31,7 @@ const About = () => {
                 <Typography variant="" className="py-3 font-poppins">
                   We offer you Extra Ordinary Packages <br />
                 </Typography>
-                <div className="flex flex-wrap justify-around">
+                <div className="flex flex-wrap gap-3 items-center">
                   <Typography variant="h7" className="flex gap-1 items-center font-poppins font-bold">
                     <FaCheckCircle size={25} color="green" />
                     Air Ticketing
@@ -53,17 +52,20 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-center flex-col items-center">
-            <Typography variant="h4" color="white" className="text-center font-poppins m-4 p-8 values">
-              Our Values.
-            </Typography>
+          <div className="flex justify-center flex-col items-center gap-3">
+            <Button variant="outlined" >
+              <Typography variant="lead" className="text-center font-poppins font-bold">
+                Our Values
+              </Typography>
+            </Button>
+
             <div className="flex flex-wrap gap-3 core-values-container">
               {values.map((item, index) => (
-                <div key={index} className="our-values">
-                  <Typography variant="lead" className="font-poppins font-bold m-2 text-center">
+                <div key={index} className="our-values p-5">
+                  <Typography variant="lead" color="white" className="font-poppins font-bold m-3 text-center">
                     {item.title}
                   </Typography>
-                  <Typography className="font-poppins">
+                  <Typography className="font-poppins" color="white">
                     {item.body}
                   </Typography>
                 </div>
@@ -73,17 +75,17 @@ const About = () => {
               <div className="mission-container flex justify-around flex-wrap">
                 {mission.map((item, index) => (
                   <div key={index} className="mission-upper w-96">
-                    <Typography variant="h3" className="font-poppins text-center mt-10">
+                    <Typography variant="h3" color="white" className="font-poppins text-center mt-5">
                       {item.title}
                     </Typography>
-                    <Typography variant="paragraph" className="font-poppins p-5">
+                    <Typography variant="paragraph" color="white" className="font-poppins p-3">
                       {item.body}
                     </Typography>
                   </div>
                 ))}
               </div>
-              <div className="mission-lower">
-                <Typography variant="h3" color="white" className="mt-10 font-poppins font-bold text-center">
+              <div className="mission-lower p-5">
+                <Typography variant="h3" color="white" className="mt-5 font-poppins font-bold text-center">
                   {story.title}
                 </Typography>
                 <Typography variant="paragraph" className="font-poppins p-5" color="white">
@@ -115,7 +117,7 @@ const About = () => {
                 ))}
               </ul>
             </div>
-            <div className=" inner-div">
+            <div className="inner-div">
               <ul>
                 {rightServices.map((item, index) => (
                   <li key={index} className="flex items-center gap-2 p-3">
