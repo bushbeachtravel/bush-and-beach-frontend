@@ -24,7 +24,7 @@ const SafariCarousel = ({ images, title }) => {
       </Typography>
       <Slider {...settings}>
         {images.map((image, index) => (
-          <div className="p-1" key={index}>
+          <div className="p-1 carousel-image-container" key={index}>
             <img src={image} alt="" className="object-cover object-center carousel-images w-full"/>
           </div>
         ))}

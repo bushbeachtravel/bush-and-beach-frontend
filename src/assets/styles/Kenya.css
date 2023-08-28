@@ -268,3 +268,55 @@
   height: auto;
   max-width: 600px;
 }
+
+/**
+##############################################
+############ CAROUSEL ########################
+##############################################
+**/
+
+.carousel-image-container {
+  max-height: 450px;
+}
+
+@media only screen and (max-width: 600px) {
+  .carousel-images {
+    min-height: 120px;
+  }
+
+  .carousel-image-container {
+    max-height: 100px;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 768px) {
+  .carousel-images {
+    max-height: 350px;
+  }
+
+  .carousel-image-container {
+    max-height: 170px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .carousel-images {
+    max-height: 200px;
+  }
+
+  .carousel-image-container {
+    max-height: 220px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .carousel-images {
+    max-height: 300px;
+  }
+
+  .carousel-image-container {
+    max-height: 220px;
+  }
+}
