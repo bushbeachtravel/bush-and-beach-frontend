@@ -140,7 +140,7 @@
 /* Mobile */
 @media only screen and (max-width: 600px) {
   .contact-form {
-    width: 100%;
+    width: 75%;
     margin-bottom: 0;
   }
 
@@ -155,12 +155,12 @@
 
 @media only screen and (min-width: 768px) {
   .contact-form {
-    width: 100%;
+    width: 75%;
     margin-bottom: 0;
   }
 
   .contact-info {
-    width: 100%;
+    width: 75%;
   }
 
   .contact-btn {
@@ -170,7 +170,7 @@
 
 @media only screen and (min-width: 992px) {
   .contact-form {
-    width: 60%;
+    width: 55%;
     margin-bottom: 2%;
   }
 
@@ -220,6 +220,10 @@
 
 .tabs-body {
   font-family: 'Poppins', sans-serif;
+}
+
+.services-section {
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 /*************************************************************
@@ -273,7 +277,7 @@
 .mission-container {
   background-color: #ffff;
   height: 100%;
-  width: 90%;
+  width: 80%;
 }
 
 .mission-lower {

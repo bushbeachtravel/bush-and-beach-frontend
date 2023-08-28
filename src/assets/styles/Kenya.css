@@ -1,0 +1,326 @@
+/**
+##############################################
+############ SAFARI STYLES ###################
+##############################################
+**/
+.big-five {
+  background-color: #f7f8fa;
+}
+
+.slick-prev::before {
+  color: black;
+  font-size: 1.5rem;
+}
+
+.slick-next::before {
+  color: black;
+  font-size: 1.5rem;
+}
+
+.line-seperator {
+  height: 5px;
+  width: 20%;
+  background-color: #1b6ccf;
+}
+
+.safari-carousel {
+  background-color: #f7f8fa;
+}
+
+.safari-container {
+  width: 100%;
+}
+
+.safari-inner {
+  height: 100%;
+  width: 90%;
+  padding: 2%;
+}
+
+/**
+##############################################
+############SAFARI DETAIL STYLES##############
+##############################################
+**/
+.left-details {
+  flex: 2;
+}
+
+.right-details {
+  flex: 1;
+}
+
+.promo-body {
+  line-height: 3px;
+}
+
+.enquiry-form {
+  box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
+  border-radius: 10px;
+  height: auto;
+}
+
+.iternary-icons {
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.itenary {
+  flex: 2;
+}
+
+.safari-section {
+  background-color: #f7f8fa;
+}
+
+#safari-ad-text {
+  font-size: 4vw;
+  font-weight: 700;
+  color: #1b1b1c;
+}
+
+#big-five-text {
+  font-size: 3vw;
+  font-weight: 700;
+  color: #1b1b1c;
+}
+
+/* Price Button */
+.price-button {
+  background-color: #004a7f;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 20px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-animation: glowing 1500ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+}
+
+/* stylelint-disable declaration-block-single-line-max-declarations */
+@-webkit-keyframes glowing {
+  0% { background-color: #669b45; -webkit-box-shadow: 0 0 3px #669b45; }
+  50% { background-color: #57d309; -webkit-box-shadow: 0 0 40px #57d309; }
+  100% { background-color: #669b45; -webkit-box-shadow: 0 0 3px #669b45; }
+}
+
+@-moz-keyframes glowing {
+  0% { background-color: #669b45; -moz-box-shadow: 0 0 3px #669b45; }
+  50% { background-color: #57d309; -moz-box-shadow: 0 0 40px #57d309; }
+  100% { background-color: #669b45; -moz-box-shadow: 0 0 3px #669b45; }
+}
+
+@-o-keyframes glowing {
+  0% { background-color: #669b45; box-shadow: 0 0 3px #669b45; }
+  50% { background-color: #57d309; box-shadow: 0 0 40px #57d309; }
+  100% { background-color: #669b45; box-shadow: 0 0 3px #669b45; }
+}
+
+@keyframes glowing {
+  0% { background-color: #669b45; box-shadow: 0 0 3px #669b45; }
+  50% { background-color: #57d309; box-shadow: 0 0 40px #57d309; }
+  100% { background-color: #669b45; box-shadow: 0 0 3px #669b45; }
+}
+/* stylelint-enable declaration-block-single-line-max-declarations */
+
+/**
+##############################################
+############ COAST TOURS  ####################
+##############################################
+**/
+.coast-container {
+  padding: 1em 0;
+  float: left;
+  width: 50%;
+}
+
+.coast-container .title {
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.content {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.content .content-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay {
+  opacity: 1;
+}
+
+.content-image {
+  width: 100%;
+}
+
+.content-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.content:hover .content-details {
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+.content-details h3 {
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.content-details p {
+  color: #fff;
+  font-size: 0.8em;
+}
+
+.fadeIn-bottom {
+  top: 80%;
+}
+
+.coast-background,
+.rwanda-bg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  width: 100%;
+  height: 50%;
+}
+
+.coast-background {
+  background-image: url("../images/zanzibar/zanzibar-contact.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 600px;
+}
+
+.rwanda-bg {
+  background-image: url("../images/rwanda-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 600px;
+}
+
+#button {
+  background-color: #1b6ccf;
+  padding: 16px 22px;
+  border-radius: 0;
+  font-size: 1rem;
+  letter-spacing: 5px;
+}
+
+#landing-bg-img {
+  max-height: 500px;
+}
+
+/* Rwanda */
+.rwanda-container,
+.coast-text-background {
+  background-color: rgba(0, 0, 0, 0.55);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 14px 28px, rgba(0, 0, 0, 0.22) 0 10px 10px;
+}
+
+.rwanda-line-seperator {
+  min-width: 350px;
+  border: 2px solid #90baf8;
+}
+
+.left-para,
+.right-para {
+  height: auto;
+  max-width: 600px;
+}
+
+/**
+##############################################
+############ CAROUSEL ########################
+##############################################
+**/
+
+/* .carousel-images {
+  min-height: 500px;
+} */
+.carousel-image-container {
+  max-height: 350px;
+}
+
+@media only screen and (max-width: 600px) {
+  .carousel-images {
+    min-height: 150px;
+  }
+
+  .carousel-image-container {
+    max-height: 150px;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 768px) {
+  .carousel-images {
+    min-height: 300px;
+  }
+
+  .carousel-image-container {
+    max-height: 150px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .carousel-images {
+    max-height: 220px;
+  }
+
+  .carousel-image-container {
+    min-height: 250px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .carousel-images {
+    min-height: 180px;
+  }
+}
