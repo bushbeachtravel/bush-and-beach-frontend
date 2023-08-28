@@ -1,37 +1,41 @@
-import Homepage from './components/Homepage';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import AirTicketing from './components/AirTicketing';
-// import SafariPackage from './components/SafariPackage';
-import HotelBooking from './components/HotelBooking';
-import About from './components/about/About';
-import NotFound from './components/NotFound';
-import BlogPosts from './components/blog/Blog';
-import BlogDetailView from './components/blog/BlogDetail';
-import Gallery from './components/GalleryComponent';
-import ContactPage from './components/Contact';
-import CheckoutForm from './components/Payment';
-import ServicesPage from './components/Services';
-import KenyaSafaris from './components/kenya-safari/KenyaSafari';
-import MasaaiMaraTrip from './components/kenya-safari/masaai-mara/MasaaiMara';
-import LakeNakuruMaraTrip from './components/kenya-safari/lake-nakuru/LakeNakuruMara';
-import NairobiSamburuMaraTrip from './components/kenya-safari/nrb-samburu-mara/NairobiSamburuMara';
-import AmboseliTsavoWestTrip from './components/kenya-safari/amboseli-tsavo-west/AmboseliTsavoWest';
-import NairobiAmboseliMaraTrip from './components/kenya-safari/nrb-amboseli-mara/NairobiAmboseliMara';
-import NairobiAmboseliMtKenyaLakeNakuruMasaaiMaraTrip from './components/kenya-safari/nrb-amboseli-mara-mt-kenya/NrbAmboseliMaraMtKenya';
-import NairobiAmboseliLewaMaraTrip from './components/kenya-safari/nrb-amboseli-lewa-mara/NairobiAmboseliLewaMara';
-import KenyaCostalBeaches from './components/kenya-coast/CoastalBeaches';
-import ZanzibarTours from './components/zanzibar/Zanzibar';
-import RwandaUganda from './components/rwanda-uganda/Rwanda';
-import InternationalTours from './components/international/InternationalTours';
-import DubaiTrip from './components/dubai/DubaiTour';
-import ChinaTrip from './components/china/ChinaTour';
-import JohannesburgTrib from './components/joburg/JoburgTrip';
-import MalaysiaTrip from './components/malaysia/MalaysiaTrip';
-import MauritiusTrip from './components/mauritius/Mauritius';
-import EgyptIsraelTrip from './components/egpyt-israel/EgyptIsrael';
-import ParisBarcaItaly from './components/pari-barca-italy/PariBarcaItaly';
-import BangkokTrip from './components/bangkok/Bangkok';
-import TurkeyTrip from './components/turkey/Turkey';
+import Homepage from './features/home-page/Homepage';
+import Trips from './features/home-page/Trips';
+import About from './features/about/About';
+import NotFound from './features/error-page/NotFound';
+import BlogPosts from './features/blog/Blog';
+import BlogDetailView from './features/blog/BlogDetail';
+import Gallery from './features/gallery/GalleryComponent';
+import ContactPage from './features/about/Contact';
+import CheckoutForm from './features/checkout/Payment';
+
+
+
+import KenyaSafaris from './features/local-trips/KenyaSafari';
+import MasaaiMaraTrip from './features/local-trips/masaai-mara/MasaaiMara';
+import LakeNakuruMaraTrip from './features/local-trips/lake-nakuru/LakeNakuruMara';
+import NairobiSamburuMaraTrip from './features/local-trips/nrb-samburu-mara/NairobiSamburuMara';
+import AmboseliTsavoWestTrip from './features/local-trips/amboseli-tsavo-west/AmboseliTsavoWest';
+import NairobiAmboseliMaraTrip from './features/local-trips/nrb-amboseli-mara/NairobiAmboseliMara';
+import NairobiAmboseliMtKenyaLakeNakuruMasaaiMaraTrip from './features/local-trips/nrb-amboseli-mara-mt-kenya/NrbAmboseliMaraMtKenya';
+import NairobiAmboseliLewaMaraTrip from './features/local-trips/nrb-amboseli-lewa-mara/NairobiAmboseliLewaMara';
+
+
+import KenyaCostalBeaches from './features/beach-holidays/kenya/CoastalBeaches';
+import ZanzibarTours from './features/beach-holidays/zanzibar/Zanzibar';
+
+
+import RwandaUganda from './features/international-trips/rwanda-uganda/Rwanda';
+import InternationalTours from './features/international-trips/InternationalTours';
+import DubaiTrip from './features/international-trips/dubai/DubaiTour';
+import ChinaTrip from './features/international-trips/china/ChinaTour';
+import JohannesburgTrib from './features/international-trips/joburg/JoburgTrip';
+import MalaysiaTrip from './features/international-trips/malaysia/MalaysiaTrip';
+import MauritiusTrip from './features/international-trips/mauritius/Mauritius';
+import EgyptIsraelTrip from './features/international-trips/egpyt-israel/EgyptIsrael';
+import ParisBarcaItaly from './features/international-trips/pari-barca-italy/PariBarcaItaly';
+import BangkokTrip from './features/international-trips/bangkok/Bangkok';
+import TurkeyTrip from './features/international-trips/turkey/Turkey';
 
 const App = () => {
 
@@ -41,15 +45,12 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="about" element={<About />} />
-          <Route path="airtickets" element={<AirTicketing />} />
-          <Route path="hotels" element={<HotelBooking />} />
-          {/* <Route path="safari" element={<SafariPackage />} /> */}
+          <Route path="trips" element={<Trips />} />
           <Route path="blog" element={<BlogPosts />} />
           <Route path="detail" element={<BlogDetailView />} />
           <Route path="gallery" element={<Gallery />} />
           <Route path="contact" element={<ContactPage />} />
           <Route path="payment" element={<CheckoutForm />} />
-          <Route path="services" element={<ServicesPage />} />
           <Route path="kenya" element={<KenyaSafaris />} />
           <Route path="coast" element={<KenyaCostalBeaches />} />
           <Route path="masai-mara" element={<MasaaiMaraTrip />} />
