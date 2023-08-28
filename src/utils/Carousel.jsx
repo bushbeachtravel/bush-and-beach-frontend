@@ -14,7 +14,7 @@ const SafariCarousel = ({ images, title }) => {
     slidesToShow: 3,
     slidesToScroll: 1,
     // autoplay: true,
-    speed: 500,
+    speed: 2000,
     cssEase: "linear"
   };
   return (

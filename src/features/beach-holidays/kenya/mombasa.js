@@ -103,7 +103,7 @@ export const aboutKenyaCoastBodyParagraph = `
     exploration, where the rhythm of the tides matches the beat of your heart
   `;
 
-export const kenyaCoastContactSectionTitle = `Ready to Explore Kenya&apos;s Coastal Paradise? Your Adventure Awaits!`;
+export const kenyaCoastContactSectionTitle = `Ready to Explore Kenya's Coastal Paradise? Your Adventure Awaits!`;
 export const kenyaCoastContactSectionBody = `
     Dive into the beauty of Kenya's
     coast and beaches, where every moment

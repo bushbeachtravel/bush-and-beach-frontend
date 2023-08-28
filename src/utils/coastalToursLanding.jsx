@@ -10,7 +10,7 @@ const CoastalLandingPage = ({backgroundImage, pageTitle}) => (
     />
     <figcaption className="absolute inset-0 flex flex-col justify-center items-center text-center">
       <div>
-        <Typography color="white" className="font-poppins" variant="h3">
+        <Typography color="white" className="font-poppins p-5" variant="h3">
           {pageTitle}
         </Typography>
       </div>
