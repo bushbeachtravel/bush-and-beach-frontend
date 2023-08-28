@@ -11,8 +11,8 @@ const ContactPage = () => {
     <>
       <NavigationMenu />
       <section className="contact-section flex flex-wrap items-center">
-        <div className="flex flex-col contact-form h-96">
-          <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
+        <div className="flex flex-col items-center contact-form h-96 w-full max-w-screen-lg sm:w-96 ">
+          <form className="mb-2 w-80 max-w-screen-lg sm:w-80">
             <div className="mb-4 flex flex-col gap-6">
               <Typography variant="h5" className="font-poppins font-bold">
                 Leave a message

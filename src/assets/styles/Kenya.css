@@ -57,7 +57,7 @@
 .enquiry-form {
   box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
   border-radius: 10px;
-  height: auto;
+  /* height: fit-content; */
 }
 
 .iternary-icons {

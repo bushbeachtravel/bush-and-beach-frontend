@@ -107,7 +107,7 @@
   justify-content: center;
   flex-wrap: wrap;
   height: 100%;
-  padding: 15%;
+  padding-top: 5%;
 }
 
 .contact-form {
@@ -121,7 +121,7 @@
 .contact-info {
   background-color: rgba(0, 133, 255, 1);
   border-radius: 4px;
-  width: 40%;
+  /* width: 40%; */
 }
 
 .contact-elements {
