@@ -1,8 +1,9 @@
 import SafariDetail from "../modals/Safari";
 import Footer from "../Footer";
-import { mauritiusImages } from "./data";
-import { mauritiusItenary, mauritiusPromoAd } from "../../data/itenaries";
-
+import { 
+  mauritiusImages,
+  mauritiusItenary, mauritiusPromoAd
+ } from "./data";
 const MauritiusTrip = () => (
   <>
     <SafariDetail

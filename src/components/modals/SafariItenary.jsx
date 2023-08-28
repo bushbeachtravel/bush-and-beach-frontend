@@ -25,7 +25,7 @@ export const SafariItenary = ({ itenary }) => {
               {section.day} {section.title}
             </Typography>
             <div className="iternary-icons">
-              {section.isOpen ? <IoIosArrowDropdown /> : <IoIosArrowDropright />}
+              {section.isOpen ? <IoIosArrowDropdown size={30} /> : <IoIosArrowDropright size={30}/>}
             </div>
           </button>
           <Collapse open={section.isOpen}>

@@ -2,7 +2,7 @@ import { Typography } from "@material-tailwind/react";
 import PropTypes from 'prop-types';
 
 const CoastalLandingPage = ({backgroundImage, pageTitle}) => (
-  <figure className="relative h-screen w-full" id="coastal-landing-bg">
+  <figure className="relative h-screen w-full" id="landing-bg-img">
     <img
       className="h-full w-full object-cover object-center"
       src={backgroundImage}

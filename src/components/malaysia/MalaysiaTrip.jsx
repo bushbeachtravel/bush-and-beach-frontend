@@ -1,7 +1,9 @@
 import SafariDetail from "../modals/Safari";
 import Footer from "../Footer";
-import { malaysiaImages } from "./data";
-import { malaysiaItenary, malaysiaPromoAd } from "../../data/itenaries";
+import { 
+  malaysiaImages, malaysiaItenary,
+  malaysiaPromoAd
+ } from "./data";
 
 const MalaysiaTrip = () => (
   <>

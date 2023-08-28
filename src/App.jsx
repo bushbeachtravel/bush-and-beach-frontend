@@ -1,28 +1,28 @@
 import Homepage from './components/Homepage';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AirTicketing from './components/AirTicketing';
-import SafariPackage from './components/SafariPackage';
+// import SafariPackage from './components/SafariPackage';
 import HotelBooking from './components/HotelBooking';
-import About from './components/About';
+import About from './components/about/About';
 import NotFound from './components/NotFound';
-import BlogPosts from './components/Blog';
-import BlogDetailView from './components/BlogDetail';
+import BlogPosts from './components/blog/Blog';
+import BlogDetailView from './components/blog/BlogDetail';
 import Gallery from './components/GalleryComponent';
 import ContactPage from './components/Contact';
 import CheckoutForm from './components/Payment';
 import ServicesPage from './components/Services';
-import KenyaSafaris from './components/modals/KenyaSafari'
-import MasaaiMaraTrip from './components/modals/MasaaiMara';
-import LakeNakuruMaraTrip from './components/modals/LakeNakuruMara';
-import NairobiSamburuMaraTrip from './components/modals/NairobiSamburuMara';
-import AmboseliTsavoWestTrip from './components/modals/AmboseliTsavoWest';
-import NairobiAmboseliMaraTrip from './components/modals/NairobiAmboseliMara';
-import NairobiAmboseliMtKenyaLakeNakuruMasaaiMaraTrip from './components/modals/NrbAmboseliMaraMtKenya';
-import NairobiAmboseliLewaMaraTrip from './components/modals/NairobiAmboseliLewaMara';
+import KenyaSafaris from './components/kenya-safari/KenyaSafari';
+import MasaaiMaraTrip from './components/kenya-safari/masaai-mara/MasaaiMara';
+import LakeNakuruMaraTrip from './components/kenya-safari/lake-nakuru/LakeNakuruMara';
+import NairobiSamburuMaraTrip from './components/kenya-safari/nrb-samburu-mara/NairobiSamburuMara';
+import AmboseliTsavoWestTrip from './components/kenya-safari/amboseli-tsavo-west/AmboseliTsavoWest';
+import NairobiAmboseliMaraTrip from './components/kenya-safari/nrb-amboseli-mara/NairobiAmboseliMara';
+import NairobiAmboseliMtKenyaLakeNakuruMasaaiMaraTrip from './components/kenya-safari/nrb-amboseli-mara-mt-kenya/NrbAmboseliMaraMtKenya';
+import NairobiAmboseliLewaMaraTrip from './components/kenya-safari/nrb-amboseli-lewa-mara/NairobiAmboseliLewaMara';
 import KenyaCostalBeaches from './components/kenya-coast/CoastalBeaches';
 import ZanzibarTours from './components/zanzibar/Zanzibar';
-import RwandaUganda from './components/modals/Rwanda';
-import InternationalTours from './components/modals/InternationalTours';
+import RwandaUganda from './components/rwanda-uganda/Rwanda';
+import InternationalTours from './components/international/InternationalTours';
 import DubaiTrip from './components/dubai/DubaiTour';
 import ChinaTrip from './components/china/ChinaTour';
 import JohannesburgTrib from './components/joburg/JoburgTrip';
@@ -43,7 +43,7 @@ const App = () => {
           <Route path="about" element={<About />} />
           <Route path="airtickets" element={<AirTicketing />} />
           <Route path="hotels" element={<HotelBooking />} />
-          <Route path="safari" element={<SafariPackage />} />
+          {/* <Route path="safari" element={<SafariPackage />} /> */}
           <Route path="blog" element={<BlogPosts />} />
           <Route path="detail" element={<BlogDetailView />} />
           <Route path="gallery" element={<Gallery />} />

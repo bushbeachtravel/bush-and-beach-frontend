@@ -1,9 +1,11 @@
 import { Button, Typography } from "@material-tailwind/react";
 import { FaCheck } from "react-icons/fa6";
-import SafariDetail from "./Safari";
+import SafariDetail from "../modals/Safari";
 import Footer from "../Footer";
 import { maraImages } from "../../data/safari";
-import { rwandaUgandaItenary, rwandaUgandaPromoAd, rwandaUgandaExtras } from "../../data/itenaries";
+import { 
+  rwandaUgandaItenary, rwandaUgandaPromoAd, rwandaUgandaExtras
+ } from "./data"
 
 const RwandaUganda = () => (
   <>

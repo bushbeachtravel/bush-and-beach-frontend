@@ -1,7 +1,8 @@
 import SafariDetail from "../modals/Safari";
 import Footer from "../Footer";
-import { turkeyImages } from "./data";
-import { turkeyItenary, turkeyPromoAd } from "../../data/itenaries";
+import { turkeyImages,
+  turkeyItenary, turkeyPromoAd
+} from "./data";
 
 const TurkeyTrip = () => (
   <>

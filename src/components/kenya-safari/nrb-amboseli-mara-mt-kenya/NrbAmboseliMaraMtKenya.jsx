@@ -1,8 +1,7 @@
-import SafariDetail from "./Safari";
-import Footer from "../Footer";
-import { maraImages } from "../../data/safari";
-import { nrbAmboseliMtKenyaItenary, nrbAmboseliMtKenyaPromoAd } from "../../data/itenaries";
-
+import SafariDetail from "../../modals/Safari";
+import Footer from "../../Footer";
+import { maraImages } from "../../../data/safari";
+import { nrbAmboseliMtKenyaItenary, nrbAmboseliMtKenyaPromoAd } from "./data";
 const NairobiAmboseliMtKenyaLakeNakuruMasaaiMaraTrip = () => (
   <>
     <SafariDetail

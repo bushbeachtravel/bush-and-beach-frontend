@@ -8,12 +8,12 @@ import {
   IconButton
 } from '@material-tailwind/react';
 import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa6";
-import Comment from './modals/Comment';
-import Footer from './Footer';
-import NavigationMenu from './NavigationMenu';
+import Comment from '../Comment';
+import Footer from '../Footer';
+import NavigationMenu from '../NavigationMenu';
 
-import '../assets/styles/Blog.css';
-import wild from '../assets/images/wild.jpg';
+import '../../assets/styles/Blog.css';
+import wild from '../../assets/images/wild.jpg';
 
 const BlogDetailView = () => (
   <>

@@ -1,7 +1,7 @@
-import SafariDetail from "./Safari";
-import Footer from "../Footer";
-import { maraImages } from "../../data/safari";
-import { amboseliTsavoItenary, amboseliTsavoPromoAd } from "../../data/itenaries";
+import SafariDetail from "../../modals/Safari";
+import Footer from "../../Footer";
+import { maraImages } from "../../../data/safari";
+import { amboseliTsavoItenary, amboseliTsavoPromoAd } from "./data";
 
 const AmboseliTsavoWestTrip = () => (
   <>

@@ -1,7 +1,9 @@
 import SafariDetail from "../modals/Safari";
 import Footer from "../Footer";
-import { egyptIsraelImages } from "./data";
-import { egyptIsraelItenary, egyptIsraelPromoAd } from "../../data/itenaries";
+import { 
+  egyptIsraelImages,
+  egyptIsraelItenary, egyptIsraelPromoAd
+ } from "./data";
 
 const EgyptIsraelTrip = () => (
   <>

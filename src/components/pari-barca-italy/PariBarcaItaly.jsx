@@ -1,7 +1,9 @@
 import SafariDetail from "../modals/Safari";
 import Footer from "../Footer";
-import { barcaItalyParisImages } from "./data";
-import { parisBaracItalyPromoAd, parisBarcaItalyItenary } from "../../data/itenaries";
+import { 
+  barcaItalyParisImages,
+  parisBaracItalyPromoAd, parisBarcaItalyItenary
+} from "./data";
 
 const ParisBarcaItaly = () => (
   <>

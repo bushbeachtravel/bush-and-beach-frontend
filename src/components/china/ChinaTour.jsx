@@ -1,8 +1,10 @@
 import SafariDetail from "../modals/Safari";
 import Footer from "../Footer";
-import { chinaImages } from "./data";
-import { chinaItenary, chinaPromoAd } from "../../data/itenaries";
-
+import { 
+  chinaImages,
+  chinaItenary, chinaPromoAd
+ } from "./data";
+ 
 const ChinaTrip = () => (
   <>
     <SafariDetail

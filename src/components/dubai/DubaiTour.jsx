@@ -1,7 +1,9 @@
 import SafariDetail from "../modals/Safari";
 import Footer from "../Footer";
-import { dubaiImages } from "./data";
-import { dubai4NightsItenary, dubai4NightsPromoAd } from "../../data/itenaries";
+import { 
+  dubaiImages, dubai4NightsItenary, 
+  dubai4NightsPromoAd
+ } from "./data";
 const DubaiTrip = () => (
   <>
     <SafariDetail

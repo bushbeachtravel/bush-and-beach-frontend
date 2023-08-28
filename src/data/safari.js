@@ -9,9 +9,7 @@ import nakuru from '../assets/images/safari/lake-nakuru.jpg';
 import mountKenya from '../assets/images/safari/mount-kenya.jpg';
 import nairobi from '../assets/images/safari/nairobi-national-park.jpg';
 import samburu from '../assets/images/safari/samburu.jpg';
-// import tsavoEast from '../assets/images/safari/tsavo-east.jpg';
 import tsavoWest from '../assets/images/safari/tsavo-west.jpg';
-// import tsavo from '../assets/images/safari/tsavo.jpg';
 import amboseli from '../assets/images/safari/amboseli.jpg';
 
 export const maraImages = [

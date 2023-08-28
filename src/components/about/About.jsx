@@ -5,10 +5,13 @@ import {
 import { Link } from "react-router-dom";
 import { FaCheckCircle } from 'react-icons/fa'
 import { FaCheckToSlot, FaPhone, FaPaperPlane } from 'react-icons/fa6'
-import Footer from "./Footer";
-import NavigationMenu from "./NavigationMenu";
-import { leftServices, rightServices } from "../data/about";
-import '../assets/styles/Blog.css';
+import Footer from "../Footer";
+import NavigationMenu from "../NavigationMenu";
+import {
+  leftServices, rightServices, values,
+  mission, story
+} from "./about";
+import '../../assets/styles/Blog.css';
 
 const About = () => {
   return (
@@ -55,83 +58,36 @@ const About = () => {
               Our Values.
             </Typography>
             <div className="flex flex-wrap gap-3 core-values-container">
-              <div className="our-values">
-                <Typography variant="lead" className="font-poppins font-bold m-2 text-center">
-                  Honesty
-                </Typography>
-                <Typography className="font-poppins">
-                  We are always ready to admit our actions
-                  regardless of the situations we are in.
-                </Typography>
-              </div>
-              <div className="our-values">
-                <Typography variant="lead" className="font-poppins font-bold m-2 text-center">
-                  Transparency
-                </Typography>
-                <Typography className="font-poppins">
-                  We have nothing to hide and are ready
-                  to publicize our good performance as
-                  wide as possible.
-                </Typography>
-              </div>
-              <div className="our-values">
-                <Typography variant="lead" className="font-poppins font-bold m-2 text-center">
-                  Integrity
-                </Typography>
-                <Typography className="font-poppins">
-                  We beleive in being responsible.
-                  We accomplish what we say we will do to our clients.
-                </Typography>
-              </div>
-              <div className="our-values">
-                <Typography variant="lead" className="font-poppins font-bold m-2 text-center">
-                  Excellence
-                </Typography>
-                <Typography className="font-poppins">
-                  We try our best to make ourself so valuable in our work
-                  so as to become indispensable.
-                </Typography>
-              </div>
+              {values.map((item, index) => (
+                <div key={index} className="our-values">
+                  <Typography variant="lead" className="font-poppins font-bold m-2 text-center">
+                    {item.title}
+                  </Typography>
+                  <Typography className="font-poppins">
+                    {item.body}
+                  </Typography>
+                </div>
+              ))}
             </div>
             <div className="our-mission flex flex-col items-center justify-center">
               <div className="mission-container flex justify-around flex-wrap">
-                <div className="mission-upper w-96">
-                  <Typography variant="h3" className="font-poppins text-center mt-10">
-                    Our Mission
-                  </Typography>
-                  <Typography variant="paragraph" className="font-poppins p-5">
-                    We strive to be the premier travel service company committed to making
-                    travel most pleasurable, safe, fun, exciting and hassle-free
-                    for our customers through delivery of quality service that exceeds their expectations.
-                  </Typography>
-                </div>
-                <div className="mission-upper w-96 ">
-                  <Typography variant="h3" className="font-poppins text-center mt-10">
-                    Our Vision
-                  </Typography>
-                  <Typography variant="paragraph" className="font-poppins p-5">
-                    Focusing on to be the leading tours and transport solution provider
-                    and establish a professional managed travel and Tour Company of global standard.
-                  </Typography>
-                </div>
+                {mission.map((item, index) => (
+                  <div key={index} className="mission-upper w-96">
+                    <Typography variant="h3" className="font-poppins text-center mt-10">
+                      {item.title}
+                    </Typography>
+                    <Typography variant="paragraph" className="font-poppins p-5">
+                      {item.body}
+                    </Typography>
+                  </div>
+                ))}
               </div>
               <div className="mission-lower">
                 <Typography variant="h3" color="white" className="mt-10 font-poppins font-bold text-center">
-                  Our Story
+                  {story.title}
                 </Typography>
                 <Typography variant="paragraph" className="font-poppins p-5" color="white">
-                  Bush and Beach Travel & Safaris Ltd is a fully integrated tour and travels
-                  company with a proven track record that provides customised luxury
-                  journeys to inspiring destinations.We are a trusted company, passionate travel
-                  specialists who strive to ensure that we are and remain the perfect solution to transport
-                  and tour requirements in East Africa.Our trips are completely based around
-                  our clients’ interests and schedule but also specialist in one-of-a-kind
-                  beach experiences and expeditions.At bush and beach we provide the most magical opportunities to
-                  visit and see the discovered and undiscovered places in Kenya,
-                  Africa and across the globe. From the highlands of Mt Kenya
-                  to shores of the Indian Ocean, from Egyptian Pyramids in
-                  Cape Town to the Eiffel Tower in France, Bush and Beach
-                  Travel & Safaris Ltd believes in the best experience of a Safari.
+                  {story.body}
                 </Typography>
               </div>
             </div>

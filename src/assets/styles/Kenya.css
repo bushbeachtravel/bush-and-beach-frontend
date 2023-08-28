@@ -59,7 +59,6 @@
 }
 
 .iternary-icons {
-  font-size: 2.5rem;
   color: rgba(0, 0, 0, 0.55);
 }
 
@@ -83,6 +82,48 @@
   color: #1B1B1C;
 }
 
+/* Price Button */
+.price-button {
+  background-color: #004A7F;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial;
+  font-size: 20px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-animation: glowing 1500ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+}
+@-webkit-keyframes glowing {
+  0% { background-color: #669B45; -webkit-box-shadow: 0 0 3px #669B45; }
+  50% { background-color: #57D309; -webkit-box-shadow: 0 0 40px #57D309; }
+  100% { background-color: #669B45; -webkit-box-shadow: 0 0 3px #669B45; }
+}
+
+@-moz-keyframes glowing {
+  0% { background-color: #669B45; -moz-box-shadow: 0 0 3px #669B45; }
+  50% { background-color: #57D309; -moz-box-shadow: 0 0 40px #57D309; }
+  100% { background-color: #669B45; -moz-box-shadow: 0 0 3px #669B45; }
+}
+
+@-o-keyframes glowing {
+  0% { background-color: #669B45; box-shadow: 0 0 3px #669B45; }
+  50% { background-color: #57D309; box-shadow: 0 0 40px #57D309; }
+  100% { background-color: #669B45; box-shadow: 0 0 3px #669B45; }
+}
+
+@keyframes glowing {
+  0% { background-color: #669B45; box-shadow: 0 0 3px #669B45; }
+  50% { background-color: #57D309; box-shadow: 0 0 40px #57D309; }
+  100% { background-color: #669B45; box-shadow: 0 0 3px #669B45; }
+}
 /**
 ##############################################
 ############ COAST TOURS  ####################
@@ -171,18 +212,6 @@
   top: 80%;
 }
 
-/* .fadeIn-top{
-  top: 20%;
-}
-
-.fadeIn-left{
-  left: 20%;
-}
-
-.fadeIn-right{
-  left: 80%;
-} */
-
 .coast-background,
 .rwanda-bg {
   display: flex;
@@ -218,7 +247,7 @@
   letter-spacing: 5px;
 }
 
-#coastal-landing-bg {
+#landing-bg-img {
   max-height: 500px;
 }
 /* Rwanda */

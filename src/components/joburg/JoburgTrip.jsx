@@ -1,7 +1,8 @@
 import SafariDetail from "../modals/Safari";
 import Footer from "../Footer";
-import { joburgImages } from "./data";
-import { joburgItenary, joburgPromoAd } from "../../data/itenaries";
+import { 
+  joburgImages, joburgItenary, joburgPromoAd
+ } from "./data";
 
 const JohannesburgTrib = () => (
   <>

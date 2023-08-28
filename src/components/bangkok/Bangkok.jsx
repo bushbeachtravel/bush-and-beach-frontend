@@ -1,14 +1,16 @@
 import SafariDetail from "../modals/Safari";
 import Footer from "../Footer";
-import { thailandImages } from "./data";
-import { bangkokItenary, bangkokPromoAd } from "../../data/itenaries";
+import { 
+  thailandImages,
+  bangkokItenary, bangkokPromoAd
+} from "./data";
 
 const BangkokTrip = () => (
   <>
     <SafariDetail
       images={thailandImages}
       duration="7 Days & 6 Nights"
-      safariTitle="Johannesburg & Sun City Delight"
+      safariTitle="Bangkok & Phuket Getaway"
       itenary={bangkokItenary}
       formData={bangkokPromoAd}
      />

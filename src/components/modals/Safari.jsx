@@ -37,13 +37,13 @@ const SafariDetail = ({ images, safariTitle, duration, itenary, formData }) => {
             </Typography>
           </div>
           <div className="safari-location flex items-center gap-5">
-            <GoLocation className="iternary-icons" />
+            <GoLocation className="iternary-icons" size={30} />
             <Typography className="font-poppins">Kenya</Typography>
           </div>
         </div>
         <div className="right-details flex justify-between gap-8 px-6">
           <div className="duration flex gap-5 items-center">
-            <FaRegClock className="iternary-icons" />
+            <FaRegClock className="iternary-icons" size={30} />
             <div className="text flex flex-col">
               <Typography variant="small" className="font-poppins" >
                 Duration
@@ -54,7 +54,7 @@ const SafariDetail = ({ images, safariTitle, duration, itenary, formData }) => {
             </div>
           </div>
           <div className="age flex gap-5 items-center">
-            <FaChildren className="iternary-icons" />
+            <FaChildren className="iternary-icons" size={30} />
             <div className="text flex flex-col">
               <Typography variant="small" className="font-poppins" >
                 Min Age
@@ -115,24 +115,24 @@ const SafariDetail = ({ images, safariTitle, duration, itenary, formData }) => {
           <div className="price justify-center p-5">
             <div className="flex justify-between">
               <div className="text py-5">
-                <Typography variant="lead" className="font-poppins">
+                <Typography variant="paragraph" className="font-poppins font-bold">
                   From as low as
                 </Typography>
               </div>
               <div className="amount font-poppins py-5">
-                <Typography variant="lead" className="font-poppins">
-                  Ksh 15,000
+                <Typography variant="paragraph" className="font-poppins font-bold price-button">
+                  {formData.price}
                 </Typography>
               </div>
             </div>
-            <Typography variant="h6" className="font-poppins">
+            <Typography variant="small" className="font-poppins font-bold py-3">
               {formData.promoTitle}
             </Typography>
-            <Typography variant="paragraph" className="font-poppins py-3 promo-body">
+            <Typography variant="small" className="font-poppins py-3 promo-body">
               {formData.promoBody}
             </Typography>
             <div className="py-5">
-              <Typography variant="paragraph" className="font-poppins">
+              <Typography variant="small" className="font-poppins font-bold">
                 {formData.callToAction}
               </Typography>
             </div>
@@ -147,7 +147,6 @@ const SafariDetail = ({ images, safariTitle, duration, itenary, formData }) => {
           </div>
         </div>
       </section >
-      {/* <Footer /> */}
     </>
   );
 };

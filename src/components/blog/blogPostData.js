@@ -1,7 +1,7 @@
-import wild from '../assets/images/wild.jpg';
-import accomodation from '../assets/images/accomodation.jpg';
-import hotel from '../assets/images/hotel.jpg';
-import travel from '../assets/images/airpotTransfer.jpg';
+import wild from '../../assets/images/wild.jpg';
+import accomodation from '../../assets/images/accomodation.jpg';
+import hotel from '../../assets/images/hotel.jpg';
+import travel from '../../assets/images/airpotTransfer.jpg';
 
 const blogs = [
   {

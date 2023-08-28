@@ -2,10 +2,10 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
-import '../assets/styles/HomePage.css';
-import NavigationMenu from "./NavigationMenu";
-import Footer from "./Footer";
-import blogs from "../data/blogPostData";
+import '../../assets/styles/HomePage.css';
+import NavigationMenu from "../NavigationMenu";
+import Footer from "../Footer";
+import blogs from "./blogPostData";
 
 const BlogPost = () => {
   return (
