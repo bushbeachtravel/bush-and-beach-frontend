@@ -6,11 +6,11 @@ import {
   aboutZanzibarIslandTitle, aboutZanzibarIslandBodyParagraph,
  } from "./zanzibar";
 import NavigationMenu from "../../home-page/NavigationMenu";
-import CoastalLandingPage from "../coastal-tours/coastalToursLanding";
-import CoastalToursDescription from "../coastal-tours/coastalToursDescription";
-import AboutCoastalTours from "../coastal-tours/aboutCoastalTours";
-import CoastActivities from "../coastal-tours/coastActivities";
-import CoastContact from "../coastal-tours/coastToursContact";
+import CoastalLandingPage from "../../../utils/coastalToursLanding";
+import CoastalToursDescription from "../../../utils/coastalToursDescription";
+import AboutCoastalTours from "../../../utils/aboutCoastalTours";
+import CoastActivities from "../../../utils/coastActivities";
+import CoastContact from "../../../utils/coastToursContact";
 import Footer from "../../footer/Footer";
 
 import bg from '../../../assets/images/zanzibar/zanzibar.jpg';

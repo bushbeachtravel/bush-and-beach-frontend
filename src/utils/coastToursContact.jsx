@@ -1,5 +1,6 @@
 import { Typography, Button } from "@material-tailwind/react"
 import PropTypes from 'prop-types';
+import { Link } from "react-router-dom";
 
 const CoastContact = ({ contactSectionTitle, contactSectionBody, callToActionText }) => (
   <section className="talk-to-us">
@@ -22,7 +23,9 @@ const CoastContact = ({ contactSectionTitle, contactSectionBody, callToActionTex
       </div>
       <div className="py-10">
         <Button className="font-poppins" id="button">
-          Get In Touch
+          <Link to="/contact">
+            Get In Touch
+          </Link>
         </Button>
       </div>
     </div>

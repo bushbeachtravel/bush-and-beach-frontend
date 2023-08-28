@@ -1,11 +1,12 @@
+import { Link } from "react-router-dom";
 import { Button, Typography } from "@material-tailwind/react";
 import { FaCheck } from "react-icons/fa6";
 import SafariDetail from "../../../utils/Safari";
 import Footer from "../../footer/Footer";
 import { maraImages } from "../../../data/safari";
-import { 
+import {
   rwandaUgandaItenary, rwandaUgandaPromoAd, rwandaUgandaExtras
- } from "./data"
+} from "./data"
 
 const RwandaUganda = () => (
   <>
@@ -42,7 +43,9 @@ const RwandaUganda = () => (
         </div>
         <div className="button p-10">
           <Button className="font-poppins" id="button">
-            Contact Us Today
+            <Link to="/contact">
+              Contact Us Today
+            </Link>
           </Button>
         </div>
       </div>

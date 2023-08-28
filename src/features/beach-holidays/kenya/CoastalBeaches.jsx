@@ -8,13 +8,13 @@ import {
 import NavigationMenu from "../../home-page/NavigationMenu";
 import Footer from "../../footer/Footer";
 
-import CoastalLandingPage from "../coastal-tours/coastalToursLanding";
-import AboutCoastalTours from "../coastal-tours/aboutCoastalTours";
-import CoastActivities from "../coastal-tours/coastActivities";
-import CoastContact from "../coastal-tours/coastToursContact";
+import CoastalLandingPage from "../../../utils/coastalToursLanding";
+import AboutCoastalTours from "../../../utils/aboutCoastalTours";
+import CoastActivities from "../../../utils/coastActivities";
+import CoastContact from "../../../utils/coastToursContact";
 
 
-import CoastalToursDescription from "../coastal-tours/coastalToursDescription";
+import CoastalToursDescription from "../../../utils/coastalToursDescription";
 import coast from '../../../assets/images/mombasa/coast.jpg';
 import '../../../assets/styles/Kenya.css';
 

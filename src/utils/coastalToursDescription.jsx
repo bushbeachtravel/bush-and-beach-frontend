@@ -1,6 +1,6 @@
 import { Typography } from "@material-tailwind/react"
 import PropTypes from 'prop-types';
-import SafariCarousel from "../../../utils/Carousel"
+import SafariCarousel from "./Carousel"
 
 const CoastalToursDescription = ({pageTitle, pageBodyRight, pageBodyLeft, carouselImages}) => (
   <section className="safari-section w-full">

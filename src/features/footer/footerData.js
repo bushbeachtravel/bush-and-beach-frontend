@@ -3,32 +3,16 @@ const LINKS = [
     title: "Our Services",
     items: [
       {
-        title: "Air Ticketing",
-        url: "services",
+        title: "Local Safari",
+        url: "kenya",
       },
       {
-        title: "Travel Adisory",
-        url: "services",
+        title: "Beach Holidays",
+        url: "zanzibar",
       },
       {
-        title: "Airport Transfers",
-        url: "services",
-      },
-      {
-        title: "Visa Processing",
-        url: "services",
-      },
-      {
-        title: "Hotel Booking & Accomodation",
-        url: "hotels",
-      },
-      {
-        title: "Conference Packages",
-        url: "hotels",
-      },
-      {
-        title: "Safari, Game Drives",
-        url: "hotels"
+        title: "International Tours",
+        url: "international",
       }
     ]
   },

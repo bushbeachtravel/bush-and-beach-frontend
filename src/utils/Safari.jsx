@@ -9,7 +9,7 @@ import { GoLocation } from 'react-icons/go'
 import NavigationMenu from '../features/home-page/NavigationMenu';
 import { SafariItenary } from './SafariItenary';
 import { included, excluded } from '../data/safari';
-import '../../assets/styles/Kenya.css';
+import '../assets/styles/Kenya.css';
 import { settings } from '../data/safari';
 
 const SafariDetail = ({ images, safariTitle, duration, itenary, formData }) => {
