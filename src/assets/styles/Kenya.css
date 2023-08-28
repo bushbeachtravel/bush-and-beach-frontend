@@ -4,9 +4,10 @@
 ##############################################
 **/
 .big-five {
-  background-color: #F7F8FA;
+  background-color: #f7f8fa;
 }
-.slick-prev:before {
+
+.slick-prev::before {
   color: black;
   font-size: 1.5rem;
 }
@@ -23,7 +24,7 @@
 }
 
 .safari-carousel {
-  background-color: #F7F8FA ;
+  background-color: #f7f8fa;
 }
 
 .safari-container {
@@ -52,10 +53,11 @@
 .promo-body {
   line-height: 3px;
 }
+
 .enquiry-form {
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
   border-radius: 10px;
-  height: fit-content;
+  height: auto;
 }
 
 .iternary-icons {
@@ -67,31 +69,30 @@
 }
 
 .safari-section {
-  background-color: #F7F8FA;
+  background-color: #f7f8fa;
 }
 
 #safari-ad-text {
   font-size: 4vw;
   font-weight: 700;
-  color: #1B1B1C;
+  color: #1b1b1c;
 }
 
 #big-five-text {
   font-size: 3vw;
   font-weight: 700;
-  color: #1B1B1C;
+  color: #1b1b1c;
 }
 
 /* Price Button */
 .price-button {
-  background-color: #004A7F;
+  background-color: #004a7f;
   -webkit-border-radius: 10px;
   border-radius: 10px;
   border: none;
-  color: #FFFFFF;
+  color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: Arial;
   font-size: 20px;
   padding: 5px 10px;
   text-align: center;
@@ -101,29 +102,33 @@
   -o-animation: glowing 1500ms infinite;
   animation: glowing 1500ms infinite;
 }
+
+/* stylelint-disable declaration-block-single-line-max-declarations */
 @-webkit-keyframes glowing {
-  0% { background-color: #669B45; -webkit-box-shadow: 0 0 3px #669B45; }
-  50% { background-color: #57D309; -webkit-box-shadow: 0 0 40px #57D309; }
-  100% { background-color: #669B45; -webkit-box-shadow: 0 0 3px #669B45; }
+  0% { background-color: #669b45; -webkit-box-shadow: 0 0 3px #669b45; }
+  50% { background-color: #57d309; -webkit-box-shadow: 0 0 40px #57d309; }
+  100% { background-color: #669b45; -webkit-box-shadow: 0 0 3px #669b45; }
 }
 
 @-moz-keyframes glowing {
-  0% { background-color: #669B45; -moz-box-shadow: 0 0 3px #669B45; }
-  50% { background-color: #57D309; -moz-box-shadow: 0 0 40px #57D309; }
-  100% { background-color: #669B45; -moz-box-shadow: 0 0 3px #669B45; }
+  0% { background-color: #669b45; -moz-box-shadow: 0 0 3px #669b45; }
+  50% { background-color: #57d309; -moz-box-shadow: 0 0 40px #57d309; }
+  100% { background-color: #669b45; -moz-box-shadow: 0 0 3px #669b45; }
 }
 
 @-o-keyframes glowing {
-  0% { background-color: #669B45; box-shadow: 0 0 3px #669B45; }
-  50% { background-color: #57D309; box-shadow: 0 0 40px #57D309; }
-  100% { background-color: #669B45; box-shadow: 0 0 3px #669B45; }
+  0% { background-color: #669b45; box-shadow: 0 0 3px #669b45; }
+  50% { background-color: #57d309; box-shadow: 0 0 40px #57d309; }
+  100% { background-color: #669b45; box-shadow: 0 0 3px #669b45; }
 }
 
 @keyframes glowing {
-  0% { background-color: #669B45; box-shadow: 0 0 3px #669B45; }
-  50% { background-color: #57D309; box-shadow: 0 0 40px #57D309; }
-  100% { background-color: #669B45; box-shadow: 0 0 3px #669B45; }
+  0% { background-color: #669b45; box-shadow: 0 0 3px #669b45; }
+  50% { background-color: #57d309; box-shadow: 0 0 40px #57d309; }
+  100% { background-color: #669b45; box-shadow: 0 0 3px #669b45; }
 }
+/* stylelint-enable declaration-block-single-line-max-declarations */
+
 /**
 ##############################################
 ############ COAST TOURS  ####################
@@ -150,7 +155,7 @@
 }
 
 .content .content-overlay {
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
   position: absolute;
   height: 100%;
   width: 100%;
@@ -164,11 +169,11 @@
   transition: all 0.4s ease-in-out 0s;
 }
 
-.content:hover .content-overlay{
+.content:hover .content-overlay {
   opacity: 1;
 }
 
-.content-image{
+.content-image {
   width: 100%;
 }
 
@@ -189,13 +194,13 @@
   transition: all 0.5s ease-in-out 0s;
 }
 
-.content:hover .content-details{
+.content:hover .content-details {
   top: 50%;
   left: 50%;
   opacity: 1;
 }
 
-.content-details h3{
+.content-details h3 {
   color: #fff;
   font-weight: 500;
   letter-spacing: 0.15em;
@@ -203,12 +208,12 @@
   text-transform: uppercase;
 }
 
-.content-details p{
+.content-details p {
   color: #fff;
   font-size: 0.8em;
 }
 
-.fadeIn-bottom{
+.fadeIn-bottom {
   top: 80%;
 }
 
@@ -250,19 +255,20 @@
 #landing-bg-img {
   max-height: 500px;
 }
+
 /* Rwanda */
 .rwanda-container,
 .coast-text-background {
   background-color: rgba(0, 0, 0, 0.55);
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 14px 28px, rgba(0, 0, 0, 0.22) 0 10px 10px;
 }
 
 .rwanda-line-seperator {
   min-width: 350px;
-  border: 2px solid #90BAF8;
+  border: 2px solid #90baf8;
 }
 
-.left-para, 
+.left-para,
 .right-para {
   height: auto;
   max-width: 600px;
@@ -281,11 +287,11 @@
   max-height: 350px;
 }
 
-
 @media only screen and (max-width: 600px) {
   .carousel-images {
     min-height: 150px;
   }
+
   .carousel-image-container {
     max-height: 150px;
   }
@@ -296,6 +302,7 @@
   .carousel-images {
     min-height: 300px;
   }
+
   .carousel-image-container {
     max-height: 150px;
   }
@@ -305,12 +312,11 @@
   .carousel-images {
     max-height: 220px;
   }
+
   .carousel-image-container {
     min-height: 250px;
   }
 }
-
-
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
@@ -318,9 +324,3 @@
     min-height: 180px;
   }
 }
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
