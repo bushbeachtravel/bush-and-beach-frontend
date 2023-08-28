@@ -20,10 +20,10 @@ const SafariDetail = ({ images, safariTitle, duration, itenary, formData }) => {
       <NavigationMenu />
       <section className="safari-container flex justify-center">
         <div className="safari-inner">
-          <Slider {...settings} className="slider w-full h-full">
+          <Slider {...settings} className="">
             {images.map((image, index) => (
-              <div key={index} className="gallery-slide h-80 w-80">
-                <img src={image.src} alt={`Image ${index + 1}`} className="p-2 object-cover h-full w-full" />
+              <div key={index} className="p-1">
+                <img src={image.src} alt={`Image ${index + 1}`} className="object-cover object-center carousel-images w-full" />
               </div>
             ))}
           </Slider>

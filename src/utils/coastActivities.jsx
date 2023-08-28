@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const CoastActivities = ({ activities, location }) => (
   <section className="activities-section">
-    <Typography variant="lead" className="font-poppins font-bold mx-20">
+    <Typography variant="paragraph" className="font-poppins font-bold py-10 mx-20">
       Activities at {location}
     </Typography>
     <div className="activities-section flex flex-wrap justify-center">

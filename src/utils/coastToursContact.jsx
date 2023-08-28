@@ -4,20 +4,20 @@ import { Link } from "react-router-dom";
 
 const CoastContact = ({ contactSectionTitle, contactSectionBody, callToActionText }) => (
   <section className="talk-to-us">
-    <div className="flex flex-col items-center gap-6 font-poppins p-20 py-20">
-      <Typography variant="h4" className="font-poppins text-2xl">
+    <div className="flex flex-col items-center justify-center gap-6 font-poppins p-10 py-20">
+      <Typography variant="h5" className="font-poppins font-bold">
         {contactSectionTitle}
       </Typography>
       <div className="rwanda-line-seperator"></div>
     </div>
     <div className="coast-background">
-      <div className="coast-text-background w-2/3 p-5">
+      <div className="coast-text-background w-2/3 p-2">
         <div className="w-full">
-          <Typography color="white" variant="paragraph" className="font-poppins text-xl py-10">
+          <Typography color="white" variant="paragraph" className="font-poppins text-xl py-5">
             {contactSectionBody}
           </Typography>
         </div>
-        <Typography variant="h3" color="white" className="font-poppins text-center py-5">
+        <Typography variant="h5" color="white" className="font-poppins text-center py-3 font-bold">
           {callToActionText}
         </Typography>
       </div>

@@ -3,6 +3,7 @@ import {
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 import '../../assets/styles/HomePage.css';
+import '../../assets/styles/Blog.css';
 import NavigationMenu from "../home-page/NavigationMenu";
 import Footer from "../footer/Footer";
 import blogs from "./blogPostData";
