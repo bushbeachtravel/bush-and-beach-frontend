@@ -10,6 +10,7 @@ import NavigationMenu from "../home-page/NavigationMenu";
 const BlogList = () => {
   const userId = JSON.parse(window.localStorage.getItem("userId"));
   const posts = useSelector((state) => state.post.posts);
+  console.log(posts)
 
   const dispatch = useDispatch();
 

@@ -1,28 +1,29 @@
 import { Textarea, Button, IconButton } from "@material-tailwind/react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
 import PropTypes from 'prop-types';
+import { createCommentAsync } from "../../app/commentSlice";
 
 const Comment = ({ postId }) => {
-  const user = JSON.parse(window.localStorage.getItem("userId"));
+  const userId = JSON.parse(window.localStorage.getItem("userId"));
   const loggedIn = useSelector((state) => state.auth.loggedIn);
+  const dispatch = useDispatch()
   const [commentText, setCommentText] = useState('');
-  // const 
-  console.log("commentID", postId)
+
 
   const handleInputChange = (event) => {
     setCommentText(event.target.value);
   }
   const handleSaveComment = (event) => {
     event.preventDefault();
-    if (user && loggedIn) {
+    if (userId && loggedIn) {
       const formData = {
-        postId: postId,
+        post_id: postId,
+        user_id: userId,
         text: commentText
       }
-      window.localStorage.setItem("comment", JSON.stringify(formData));
+      dispatch(createCommentAsync(formData));
       setCommentText('')
-      alert('These are clean')
     } else {
       alert('You need to login in before commenting')
     }

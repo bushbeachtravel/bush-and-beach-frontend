@@ -15,6 +15,7 @@ import { useParams } from "react-router-dom";
 
 import Footer from "../footer/Footer";
 import { fetchBlogPostAsync } from '../../app/blogSlice';
+import { fetchAllCommentsAsync } from '../../app/commentSlice';
 import { currentUserAsync } from '../../app/authenticationSlice';
 import Comment from '../blog/Comment';
 import NavigationMenu from "../home-page/NavigationMenu";
@@ -25,14 +26,19 @@ import formatTimestamp from '../../utils/dateFormat';
 const BlogDetail = () => {
   const posts = useSelector((state) => state.post.posts);
   const userId = JSON.parse(window.localStorage.getItem("userId"));
-  const comment = JSON.parse(window.localStorage.getItem("comment"));
+  const comments = useSelector((state) => state.comment.comments);
   const dispatch = useDispatch();
   const { id } = useParams();
-  
-  const post = posts.filter((post) => post.id === parseInt(id, 10));
-  console.log("Blog posts", posts, id)
 
-  console.log("identity", id);
+  const post = posts.find((post) => post.id === parseInt(id, 10));
+
+  useEffect(() => {
+    const data = {
+      user_id: userId,
+      post_id: id
+    }
+    dispatch(fetchAllCommentsAsync(data))
+  }, [dispatch, id, userId, comments.length]);
 
   useEffect(() => {
     dispatch(currentUserAsync());
@@ -40,7 +46,7 @@ const BlogDetail = () => {
 
   useEffect(() => {
     dispatch(fetchBlogPostAsync(userId))
-  }, [dispatch, posts.length, userId])
+  }, [dispatch, userId, posts.length])
 
   return (
     <>
@@ -48,11 +54,11 @@ const BlogDetail = () => {
       <section className="blog-detail-section">
         <div className="editor right p-5">
           <div className="right-container">
-            {post && post[0].body.blocks.map((data) => {
+            {post && post.body.blocks.map((data) => {
               if (data.type === 'header') {
                 return (
                   <>
-                    <p>{formatTimestamp(post[0].created_at)}</p>
+                    <p>{formatTimestamp(post.created_at)}</p>
                     <Typography
                       key={data.id}
                       className="text-center font-poppins font-bold"
@@ -89,10 +95,22 @@ const BlogDetail = () => {
                 <FaLinkedin size={30} />
               </IconButton>
             </div>
+            <div className="py-5 font-poppins">
+              {comments.length ? (
+                comments.map((comment) => (
+                  <div key={comment.id}>
+                    <ListItem>
+                      {comment.text}
+                    </ListItem>
+                  </div>
+                ))
+              ) : (
+                <Typography variant="paragraph" className="font-poppins">
+                  This post has no comment. Be the first one to leave a comment
+                </Typography>
+              )}
+            </div>
             <div className="comment-section">
-              <h1>Comments</h1>
-              <hr />
-              <p>{comment.text}</p>
               <Typography variant="small" className="font-poppins font-bold">
                 Leave a comment
               </Typography>
