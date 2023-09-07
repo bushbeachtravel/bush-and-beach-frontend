@@ -28,6 +28,7 @@ const Comment = ({ postId }) => {
       alert('You need to login in before commenting')
     }
   }
+
   return (
     <div className="relative">
       <form onSubmit={handleSaveComment}>

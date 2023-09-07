@@ -5,31 +5,34 @@ import {
   ListItemPrefix,
   Avatar,
   Card,
-  IconButton
+  IconButton,
+  Button
 } from '@material-tailwind/react';
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa6";
 import { useParams } from "react-router-dom";
 
 import Footer from "../footer/Footer";
 import { fetchBlogPostAsync } from '../../app/blogSlice';
-import { fetchAllCommentsAsync } from '../../app/commentSlice';
+import { fetchAllCommentsAsync, deleteCommentAsync } from '../../app/commentSlice';
 import { currentUserAsync } from '../../app/authenticationSlice';
 import Comment from '../blog/Comment';
 import NavigationMenu from "../home-page/NavigationMenu";
 import formatTimestamp from '../../utils/dateFormat';
-
+import ConfirmDeleteModal from '../../utils/ConfirmDeleteModal';
 
 
 const BlogDetail = () => {
   const posts = useSelector((state) => state.post.posts);
   const userId = JSON.parse(window.localStorage.getItem("userId"));
+  const loggedIn = useSelector((state) => state.auth.loggedIn);
   const comments = useSelector((state) => state.comment.comments);
+  const [openDeleteModal, setOpenDeleteModal] = useState(false);
+  const [deleteCommentData, setDeleteCommentData] = useState({});
   const dispatch = useDispatch();
   const { id } = useParams();
-
   const post = posts.find((post) => post.id === parseInt(id, 10));
 
   useEffect(() => {
@@ -47,6 +50,31 @@ const BlogDetail = () => {
   useEffect(() => {
     dispatch(fetchBlogPostAsync(userId))
   }, [dispatch, userId, posts.length])
+
+  const handleDeleteComment = (commentId) => {
+    if (loggedIn) {
+      const data = {
+        user_id: userId,
+        post_id: parseInt(id, 10),
+        comment_id: commentId
+      }
+      setDeleteCommentData({
+        ...data,
+      })
+
+      setOpenDeleteModal(true);
+    } else {
+      return
+    }
+  }
+
+  const handleConfirmDelete = () => {
+    dispatch(deleteCommentAsync(deleteCommentData));
+    setOpenDeleteModal(false);
+  }
+  const handleCancelDelete = () => {
+    setOpenDeleteModal(false);
+  }
 
   return (
     <>
@@ -98,10 +126,23 @@ const BlogDetail = () => {
             <div className="py-5 font-poppins">
               {comments.length ? (
                 comments.map((comment) => (
-                  <div key={comment.id}>
-                    <ListItem>
-                      {comment.text}
-                    </ListItem>
+                  <div key={comment.id} className="flex justify-evenly">
+                    <Typography>
+                      {comment.text} by
+                    </Typography>
+                    <Typography>
+                      {comment.author_email} on {formatTimestamp(comment.time_created)}
+                    </Typography>
+                    {loggedIn && userId === comment.author_id && (
+                      <Button
+                        variant="text"
+                        color="red"
+                        size="sm"
+                        onClick={() => handleDeleteComment(comment.id)}
+                      >
+                        Delete
+                      </Button>
+                    )}
                   </div>
                 ))
               ) : (
@@ -155,6 +196,12 @@ const BlogDetail = () => {
             </Card>
           </div>
         </div>
+        {openDeleteModal && (
+          <ConfirmDeleteModal
+            handleCancelDelete={handleCancelDelete}
+            handleConfirmDelete={handleConfirmDelete}
+          />
+        )}
       </section >
       <Footer />
     </>

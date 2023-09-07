@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { createComment, fetchAllComments } from "./commentApi";
+import { createComment, fetchAllComments, deleteComment } from "./commentApi";
 
 
 export const createCommentAsync = createAsyncThunk(
@@ -14,10 +14,17 @@ export const createCommentAsync = createAsyncThunk(
 export const fetchAllCommentsAsync = createAsyncThunk(
   'comments/fetchAllComments',
   async(data) => {
-    console.log('userId', data)
     const response = await fetchAllComments(data);
     return response.data;
   }
+);
+
+export const deleteCommentAsync = createAsyncThunk(
+  'comments/deleteComment',
+  async(data) => {
+    const response = await deleteComment(data);
+    return response.data;
+  },
 );
 
 const commentSlice = createSlice({
@@ -52,6 +59,18 @@ const commentSlice = createSlice({
         state.status = 'failed';
         state.error = action.error;
       })
+      .addCase(deleteCommentAsync.pending, (state) => {
+        state.status = 'loading';
+      })
+      .addCase(deleteCommentAsync.fulfilled, (state, action) => ({
+        ...state,
+        comments: action.payload,
+      }))
+      .addCase(deleteCommentAsync.rejected, (state, action) => {
+        state.status = 'failed';
+        state.error = action.error;
+      })
+
   },
 });
 export default commentSlice.reducer;
