@@ -5,4 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '/bush-and-beach-frontend/',
   plugins: [react()],
+  define: {
+    global: 'window',
+  }
 })
