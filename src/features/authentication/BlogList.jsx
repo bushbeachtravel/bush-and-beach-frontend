@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { useEffect } from "react";
+import { useEffect} from "react";
 import { Typography } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 import { fetchBlogPostAsync } from "../../app/blogSlice";
@@ -7,10 +7,11 @@ import { currentUserAsync } from "../../app/authenticationSlice";
 import Footer from "../footer/Footer";
 import NavigationMenu from "../home-page/NavigationMenu";
 
+
 const BlogList = () => {
   const userId = JSON.parse(window.localStorage.getItem("userId"));
   const posts = useSelector((state) => state.post.posts);
-  console.log(posts)
+  
 
   const dispatch = useDispatch();
 
@@ -25,11 +26,10 @@ const BlogList = () => {
   return (
     <>
       <NavigationMenu />
-      <section className="blog-card-section">
-        <div className="editor">
-          
+      <section className="blog-card-section flex gap-3">
+        <div className="">
           {posts ? (
-            <div className="blog-card">
+            <div className="blog-card w-1/2">
               {posts && posts.map((data) => {
                 return data.body.blocks.map((block) => {
                   if (block.type === 'header') {

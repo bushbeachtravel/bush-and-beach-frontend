@@ -8,14 +8,14 @@ import {
   IconButton,
   Button
 } from '@material-tailwind/react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa6";
 import { useParams } from "react-router-dom";
 
 import Footer from "../footer/Footer";
-import { fetchBlogPostAsync } from '../../app/blogSlice';
+import { fetchBlogPostAsync, deleteBlogPostAsync } from '../../app/blogSlice';
 import { fetchAllCommentsAsync, deleteCommentAsync } from '../../app/commentSlice';
 import { currentUserAsync } from '../../app/authenticationSlice';
 import Comment from '../blog/Comment';
@@ -26,14 +26,18 @@ import ConfirmDeleteModal from '../../utils/ConfirmDeleteModal';
 
 const BlogDetail = () => {
   const posts = useSelector((state) => state.post.posts);
+  console.log("blog detail posts", posts);
   const userId = JSON.parse(window.localStorage.getItem("userId"));
   const loggedIn = useSelector((state) => state.auth.loggedIn);
   const comments = useSelector((state) => state.comment.comments);
   const [openDeleteModal, setOpenDeleteModal] = useState(false);
   const [deleteCommentData, setDeleteCommentData] = useState({});
+  const [deletePostData, setDeletePostData] = useState({});
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const { id } = useParams();
-  const post = posts.find((post) => post.id === parseInt(id, 10));
+
+  const post = posts.find((blog) => blog.id === parseInt(id, 10));
 
   useEffect(() => {
     const data = {
@@ -49,7 +53,7 @@ const BlogDetail = () => {
 
   useEffect(() => {
     dispatch(fetchBlogPostAsync(userId))
-  }, [dispatch, userId, posts.length])
+  }, [dispatch, userId])
 
   const handleDeleteComment = (commentId) => {
     if (loggedIn) {
@@ -68,10 +72,34 @@ const BlogDetail = () => {
     }
   }
 
+  const handleDeleteBlog = () => {
+    if (loggedIn) {
+      const data = {
+        user_id: userId,
+        post_id: parseInt(id, 10),
+      }
+      setDeletePostData({
+        ...data,
+      })
+      setOpenDeleteModal(true);
+    }
+  }
+
+  const confirmDeleteBlog = () => {
+    dispatch(deleteBlogPostAsync(deletePostData));
+    setOpenDeleteModal(false);
+    navigate('/blog-list');
+  }
+
+  const cancelDeleteBlog = () => {
+    setOpenDeleteModal(false);
+  }
+
   const handleConfirmDelete = () => {
     dispatch(deleteCommentAsync(deleteCommentData));
     setOpenDeleteModal(false);
   }
+
   const handleCancelDelete = () => {
     setOpenDeleteModal(false);
   }
@@ -111,6 +139,21 @@ const BlogDetail = () => {
                 )
               }
             })}
+            {loggedIn && (
+              <>
+              <Button
+                variant="text"
+                color="red"
+                size="sm"
+                onClick={() => handleDeleteBlog()}
+              >
+                Delete
+              </Button>
+              <Button>
+                <Link to={`/blog-update/${id}`}>Update</Link>
+              </Button>
+              </>
+            )}
             <br />
             <div className="sharing-icons">
               <IconButton className="rounded bg-[#2b90ec] hover:shadow-[#2b90ec]/20 focus:shadow-[#2b90ec]/20 active:shadow-[#2b90ec]/10">
@@ -200,6 +243,12 @@ const BlogDetail = () => {
           <ConfirmDeleteModal
             handleCancelDelete={handleCancelDelete}
             handleConfirmDelete={handleConfirmDelete}
+          />
+        )}
+        {openDeleteModal && (
+          <ConfirmDeleteModal
+            handleCancelDelete={cancelDeleteBlog}
+            handleConfirmDelete={confirmDeleteBlog}
           />
         )}
       </section >

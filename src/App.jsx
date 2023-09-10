@@ -41,6 +41,7 @@ import Login from './features/authentication/Login';
 import Logout from './features/authentication/Logout';
 import Signup from './features/authentication/Signup';
 import BlogDetail from './features/authentication/BlogDetail';
+import UpdateBlogPost from './features/authentication/BlogUpdate';
 import BlogList from './features/authentication/BlogList';
 
 import './assets/styles/Kenya.css';
@@ -61,6 +62,7 @@ const App = () => {
           <Route path="blog" element={<BlogPage />} />
           <Route path="/blog-detail/:id" element={<BlogDetail />} />
           <Route path="blog-list" element={<BlogList />} />
+          <Route path="/blog-update/:id" element={<UpdateBlogPost />} />
           <Route path="about" element={<About />} />
           <Route path="trips" element={<Trips />} />
           <Route path="blog" element={<BlogPosts />} />
