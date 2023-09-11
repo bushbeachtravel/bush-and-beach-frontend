@@ -68,9 +68,9 @@
   }
 }
 
-/* WYSIWIG EDITOR STYLES*/
+/* WYSIWIG EDITOR STYLES */
 .editor {
-  box-shadow: 0px 0px 20px 0px rgba(76, 87, 125, 0.02);
+  box-shadow: 0 0 20px 0 rgba(76, 87, 125, 0.02);
   background: #fff;
   padding: 20px 30px;
   width: 60%;
@@ -83,7 +83,8 @@
   margin-bottom: 20px;
 }
 
-.ce-toolbar__content, .ce-block__content {
+.ce-toolbar__content,
+.ce-block__content {
   max-width: unset;
   width: 92% !important;
 }

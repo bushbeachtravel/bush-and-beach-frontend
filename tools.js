@@ -5,6 +5,7 @@ import LinkTool from "@editorjs/link";
 import Delimiter from "@editorjs/delimiter";
 import CheckList from "@editorjs/checklist";
 import SimpleImage from "@editorjs/simple-image";
+
 export const EDITOR_JS_TOOLS = {
   checkList: CheckList,
   list: List,

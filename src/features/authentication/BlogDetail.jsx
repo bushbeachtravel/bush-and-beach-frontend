@@ -26,7 +26,6 @@ import ConfirmDeleteModal from '../../utils/ConfirmDeleteModal';
 
 const BlogDetail = () => {
   const posts = useSelector((state) => state.post.posts);
-  console.log("blog detail posts", posts);
   const userId = JSON.parse(window.localStorage.getItem("userId"));
   const loggedIn = useSelector((state) => state.auth.loggedIn);
   const comments = useSelector((state) => state.comment.comments);
@@ -134,24 +133,25 @@ const BlogDetail = () => {
               } else if (data.type === 'paragraph') {
                 return (
                   <div className="blog-body" key={data.id}>
-                    <p dangerouslySetInnerHTML={{ __html: data.data.text }} />
+                    <p dangerouslySetInnerHTML={{ __html: data.data.text }} className="font-poppins" />
                   </div>
                 )
               }
             })}
             {loggedIn && (
               <>
-              <Button
-                variant="text"
-                color="red"
-                size="sm"
-                onClick={() => handleDeleteBlog()}
-              >
-                Delete
-              </Button>
-              <Button>
-                <Link to={`/blog-update/${id}`}>Update</Link>
-              </Button>
+                <Button
+                  className="font-poppins"
+                  variant="text"
+                  color="red"
+                  size="sm"
+                  onClick={() => handleDeleteBlog()}
+                >
+                  Delete
+                </Button>
+                <Button>
+                  <Link to={`/blog-update/${id}`}>Update</Link>
+                </Button>
               </>
             )}
             <br />
@@ -170,14 +170,15 @@ const BlogDetail = () => {
               {comments.length ? (
                 comments.map((comment) => (
                   <div key={comment.id} className="flex justify-evenly">
-                    <Typography>
+                    <Typography className="font-poppins">
                       {comment.text} by
                     </Typography>
-                    <Typography>
+                    <Typography className="font-poppins">
                       {comment.author_email} on {formatTimestamp(comment.time_created)}
                     </Typography>
                     {loggedIn && userId === comment.author_id && (
                       <Button
+                        className="font-poppins"
                         variant="text"
                         color="red"
                         size="sm"
@@ -221,7 +222,7 @@ const BlogDetail = () => {
                                 <Avatar variant="circular" alt={post.data.caption} src={post.data.url} />
                               </ListItemPrefix>
                               <div>
-                                <Typography variant="h6" color="blue-gray">
+                                <Typography variant="h6" color="blue-gray" className="font-poppins">
                                   Tania Andrew
                                 </Typography>
                                 <Typography variant="small" color="gray" className="font-normal">

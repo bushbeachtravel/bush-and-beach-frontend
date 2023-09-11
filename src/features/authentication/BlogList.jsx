@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { useEffect} from "react";
+import { useEffect } from "react";
 import { Typography } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 import { fetchBlogPostAsync } from "../../app/blogSlice";
@@ -11,7 +11,6 @@ import NavigationMenu from "../home-page/NavigationMenu";
 const BlogList = () => {
   const userId = JSON.parse(window.localStorage.getItem("userId"));
   const posts = useSelector((state) => state.post.posts);
-  
 
   const dispatch = useDispatch();
 
@@ -39,8 +38,9 @@ const BlogList = () => {
                           <Link to={`/blog-detail/${data.id}`}>
                             <h1
                               dangerouslySetInnerHTML={{ __html: block.data.text }}
+                              className="font-poppins"
                             />
-                          </Link> 
+                          </Link>
                         </Typography>
                       </div>
                     )
@@ -48,7 +48,9 @@ const BlogList = () => {
                     return (
                       <div key={block.id} className="image-card">
                         <img src={block.data.url} alt={block.data.caption} />
-                        <p dangerouslySetInnerHTML={{ __html: block.data.caption }} />
+                        <p dangerouslySetInnerHTML={{ __html: block.data.caption }}
+                          className="font-poppins"
+                        />
                       </div>
                     );
                   } else if (block.type === 'paragraph') {
@@ -68,7 +70,9 @@ const BlogList = () => {
               })}
             </div>
           ) : (
-            <p>No blog data found. </p>
+            <p className="font-poppins">
+              No blog data found.
+            </p>
           )}
         </div>
       </section>

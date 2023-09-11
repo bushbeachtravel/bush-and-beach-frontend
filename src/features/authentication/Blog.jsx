@@ -5,6 +5,7 @@ import EditorJS from "@editorjs/editorjs";
 
 import { useNavigate } from "react-router-dom";
 import { Button } from "@material-tailwind/react";
+
 import { createBlogAsync } from "../../app/blogSlice";
 import { currentUserAsync } from "../../app/authenticationSlice";
 import { EDITOR_JS_TOOLS } from "../../../tools";
@@ -37,23 +38,17 @@ const BlogPage = () => {
   }, [])
 
   useEffect(() => {
-    const editorInstance = new EditorJS({
-      holder: 'editorjs',
-      tools: EDITOR_JS_TOOLS
-    });
-    setEditor(editorInstance);
+    const newEditor = new EditorJS({
+      holder: "editorjs-container",
+      tools: EDITOR_JS_TOOLS,
+    })
 
-    return () => {
-      if (editorInstance) {
-        editorInstance.destroy();
-      }
-    };
+    setEditor(newEditor);
   }, []);
 
   const handleSave = async () => {
     if (editor) {
       const newData = await editor.save();
-
       const post = {
         body: {
           blocks: newData.blocks
@@ -70,12 +65,12 @@ const BlogPage = () => {
         <Editor
           data={data}
           onChange={setData}
-          editorBlock="editorjs"
+          editorBlock="editorjs-container"
         />
         <Button
           type="submit"
           onClick={handleSave}
-          className="savebtn"
+          className="savebtn font-poppins"
         >
           Save
         </Button>

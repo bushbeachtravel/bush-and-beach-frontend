@@ -54,7 +54,6 @@ const blogSlice = createSlice({
       .addCase(createBlogAsync.rejected, (state, action) => {
         state.status = 'failed';
         state.error = action.error;
-        console.log("That did  not work", state.error)
       })
       .addCase(fetchBlogPostAsync.pending, (state) => {
         state.status = 'loading';
