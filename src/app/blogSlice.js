@@ -18,8 +18,8 @@ export const updateBlogPostAsync = createAsyncThunk(
 )
 export const fetchBlogPostAsync = createAsyncThunk(
   'blog/fetchBlogs',
-  async (id) => {
-    const response = await fetchBlogPost(id);
+  async () => {
+    const response = await fetchBlogPost();
     return response.data;
   }
 );

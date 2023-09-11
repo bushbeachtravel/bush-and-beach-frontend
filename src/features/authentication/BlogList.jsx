@@ -9,7 +9,6 @@ import NavigationMenu from "../home-page/NavigationMenu";
 
 
 const BlogList = () => {
-  const userId = JSON.parse(window.localStorage.getItem("userId"));
   const posts = useSelector((state) => state.post.posts);
 
   const dispatch = useDispatch();
@@ -19,8 +18,8 @@ const BlogList = () => {
   }, []);
 
   useEffect(() => {
-    dispatch(fetchBlogPostAsync(userId))
-  }, [dispatch, posts.length, userId]);
+    dispatch(fetchBlogPostAsync())
+  }, [dispatch, posts.length]);
 
   return (
     <>

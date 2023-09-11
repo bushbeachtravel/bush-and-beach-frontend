@@ -51,8 +51,8 @@ const BlogDetail = () => {
   }, [])
 
   useEffect(() => {
-    dispatch(fetchBlogPostAsync(userId))
-  }, [dispatch, userId])
+    dispatch(fetchBlogPostAsync())
+  }, [dispatch])
 
   const handleDeleteComment = (commentId) => {
     if (loggedIn) {

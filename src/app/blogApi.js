@@ -4,8 +4,8 @@ export const createBlogPost = async ({data, userId}) => {
   return axiosInstance.post(`/api/v1/users/${userId}/posts`, { post: data });
 };
 
-export const fetchBlogPost = async (userId) => {
-  return axiosInstance.get(`/api/v1/users/${userId}/posts`)
+export const fetchBlogPost = async () => {
+  return axiosInstance.get('/api/v1/posts');
 };
 
 export const updateBlogPost = async (data) => {

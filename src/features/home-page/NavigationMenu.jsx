@@ -65,8 +65,8 @@ const NavigationMenu = () => {
         color="blue-gray"
         className="p-1 font-poppins text-blue-50 font-semibold"
       >
-        <Link to="/blog" className="color flex items-center">
-          Blog
+        <Link to="/blog-list" className="color flex items-center">
+          Blogs
         </Link>
       </Typography>
       <Typography

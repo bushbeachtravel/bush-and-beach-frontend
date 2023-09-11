@@ -69,6 +69,8 @@ const authenticationSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
+
+    // User registration
       .addCase(registerUserAsync.pending, (state) => {
         state.isLoading = true;
       })
@@ -97,6 +99,22 @@ const authenticationSlice = createSlice({
         state.httpLoginResponseText = action.error.message;
         state.httpLoginResponse = 401;
       })
+      // Logout User
+      .addCase(logoutUserAsync.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(logoutUserAsync.fulfilled, (state) => {
+        state.isLoading = false;
+        state.loggedIn = false;
+        state.authToken = null;
+        state.userId = null;
+      })
+      .addCase(logoutUserAsync.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
+      })
+
+      // Current User
       .addCase(currentUserAsync.pending, (state) => {
         state.isLoading = true;
       })

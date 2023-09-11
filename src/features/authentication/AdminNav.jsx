@@ -31,8 +31,9 @@ const AdminNavBar = () => {
 
   const handleLogout = () => {
     dispatch(logoutUserAsync());
-    navigate('/admin');
+    navigate('/login');
   }
+  user ? console.log(user) : console.log('No one here!');
 
   const navList = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
@@ -54,12 +55,16 @@ const AdminNavBar = () => {
             color="black"
             className="p-1 font-normal font-poppins text-blue-50 font-semibold"
           >
-            <button type="submit" onClick={handleLogout}>
-              <Typography
-                color="black"
-                className="p-1 font-normal font-poppins font-semibold"
-              >Logout</Typography>
-            </button>
+            <Typography
+              as="li"
+              variant="small"
+              color="black"
+              className="p-1 font-normal font-poppins text-blue-50 font-semibold"
+            >
+              <Link to="/admin" onClick={handleLogout} className="color flex items-center font-poppins">
+                Logout
+              </Link>
+            </Typography>
           </Typography>
           <Typography
             as="li"
@@ -67,7 +72,7 @@ const AdminNavBar = () => {
             color="black"
             className="p-1 font-normal font-poppins text-blue-50 font-semibold"
           >
-            <Link to="/blog" className="color flex items-center font-poppins">
+            <Link to="/blog-list" className="color flex items-center font-poppins">
               Create Blog
             </Link>
           </Typography>
@@ -110,7 +115,7 @@ const AdminNavBar = () => {
         color="blue-gray"
         className="p-1 font-poppins text-blue-50 font-semibold"
       >
-        <Link to="/blog" className="color flex items-center">
+        <Link to="/blog-list" className="color flex items-center">
           Blog
         </Link>
       </Typography>
