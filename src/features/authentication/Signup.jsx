@@ -41,15 +41,22 @@ const Signup = () => {
   return (
     <>
       <AdminNavBar />
-      <section>
+      <section className="flex justify-center mt-10">
         <Card color="transparent" shadow={false}>
-          <Typography variant="h4" color="blue-gray">
+          <Typography variant="h4" color="blue-gray" className="text-center font-poppins">
             Sign Up
           </Typography>
-          <Typography color="gray" className="mt-1 font-normal">
+          <Typography
+            color="gray"
+            className="mt-1 font-normal text-center font-poppins"
+            variant="small"
+          >
             Enter your details to register.
           </Typography>
-          <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96" onSubmit={handleSubmitForm}>
+          <form
+            className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96"
+            onSubmit={handleSubmitForm}
+          >
             <div className="mb-4 flex flex-col gap-6">
               <Input
                 size="lg"
@@ -88,10 +95,10 @@ const Signup = () => {
                 required
               />
             </div>
-            <Button className="mt-6" fullWidth type="submit">
+            <Button className="mt-6 font-poppins" fullWidth type="submit">
               Register
             </Button>
-            <Typography color="gray" className="mt-4 text-center font-normal">
+            <Typography color="gray" className="mt-4 text-center font-normal font-poppins">
               Already have an account?{" "}
               <Link to="/login">
                 Sign In
