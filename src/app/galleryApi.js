@@ -6,5 +6,5 @@ export const uploadPhoto = (data) => {
 }
 
 export const fetchPhotos = () => {
-  return axiosInstance.get(`api/v1/photos`)
+  return axiosInstance.get('api/v1/photos/')
 }

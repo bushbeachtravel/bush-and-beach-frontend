@@ -38,6 +38,17 @@ const gallerySlice = createSlice({
         state.status = 'failed';
         state.error = action.error;
       })
+      .addCase(fetchPhotosAsync.pending, (state) => {
+        state.status = 'loading';
+      })
+      .addCase(fetchPhotosAsync.fulfilled, (state, action) => ({
+        ...state,
+        photos: action.payload,
+      }))
+      .addCase(fetchPhotosAsync.rejected, (state, action) => {
+        state.status = 'failed';
+        state.error = action.error;
+      })
   }
 })
 export default gallerySlice.reducer;
