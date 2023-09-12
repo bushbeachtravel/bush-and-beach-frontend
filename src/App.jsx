@@ -44,6 +44,8 @@ import BlogDetail from './features/authentication/BlogDetail';
 import UpdateBlogPost from './features/authentication/BlogUpdate';
 import BlogList from './features/authentication/BlogList';
 
+import UploadPhoto from './features/gallery/UploadPhoto';
+
 import './assets/styles/Kenya.css';
 import './assets/styles/Blog.css';
 import './assets/styles/HomePage.css';
@@ -63,6 +65,7 @@ const App = () => {
           <Route path="/blog-detail/:id" element={<BlogDetail />} />
           <Route path="blog-list" element={<BlogList />} />
           <Route path="/blog-update/:id" element={<UpdateBlogPost />} />
+          <Route path='/photo-upload' element={<UploadPhoto />} />
           <Route path="about" element={<About />} />
           <Route path="trips" element={<Trips />} />
           <Route path="blog" element={<BlogPosts />} />

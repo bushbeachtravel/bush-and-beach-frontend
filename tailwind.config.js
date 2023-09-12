@@ -5,6 +5,7 @@ export default withMT({
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'
   ],
   theme: {
     fontFamily: {
@@ -12,6 +13,6 @@ export default withMT({
     },
     extend: {},
   },
-  plugins: [],
+  plugins: [require('flowbite/plugin')],
 });
 
