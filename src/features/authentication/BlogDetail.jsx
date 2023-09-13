@@ -113,7 +113,19 @@ const BlogDetail = () => {
               if (data.type === 'header') {
                 return (
                   <>
-                    <p>{formatTimestamp(post.created_at)}</p>
+                    <div className="flex justify-between p-5">
+                      <div className="date">
+                        <Typography variant="paragraph" className="font-poppins">
+                          {formatTimestamp(post.created_at)}
+                        </Typography>
+                      </div>
+                      <div>
+                        <Typography variant="paragraph" className="font-poppins">
+                          Post by {post.author.name ? post.author.name : 'Anonymous'}
+                        </Typography>
+                      </div>
+                    </div>
+
                     <Typography
                       key={data.id}
                       className="text-center font-poppins font-bold"
@@ -132,7 +144,7 @@ const BlogDetail = () => {
                 )
               } else if (data.type === 'paragraph') {
                 return (
-                  <div className="blog-body" key={data.id}>
+                  <div className="blog-body py-10" key={data.id}>
                     <p dangerouslySetInnerHTML={{ __html: data.data.text }} className="font-poppins" />
                   </div>
                 )

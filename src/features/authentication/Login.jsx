@@ -18,6 +18,7 @@ const LoginForm = () => {
     password: '',
   });
 
+
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setFormData({
@@ -28,17 +29,8 @@ const LoginForm = () => {
 
   const handleSubmitForm = (event) => {
     event.preventDefault();
-    dispatch(loginUserAsync(formData))
-      .then(() => {
-        setFormData({
-          email: '',
-          password: '',
-        })
-        navigate('/admin')
-      })
-      .catch((error) => {
-        console.log('Login failed', error)
-      })
+    dispatch(loginUserAsync(formData));
+    navigate('/admin')
   }
   return (
     <>

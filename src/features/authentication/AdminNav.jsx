@@ -11,8 +11,9 @@ import { currentUserAsync, logoutUserAsync } from "../../app/authenticationSlice
 import '../../assets/styles/HomePage.css';
 import '../../assets/styles/Navbar.css';
 
+
 const AdminNavBar = () => {
-  const user = useSelector((state) => state.auth.user);
+  const loggedIn = useSelector((state) => state.auth.loggedIn);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -31,23 +32,13 @@ const AdminNavBar = () => {
 
   const handleLogout = () => {
     dispatch(logoutUserAsync());
-    navigate('/login');
+    navigate('/admin');
+
   }
-  user ? console.log(user) : console.log('No one here!');
 
   const navList = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-poppins text-blue-50 font-semibold"
-      >
-        <Link to="/trips" className="color flex items-center">
-          Safari Packages
-        </Link>
-      </Typography>
-      {user ? (
+      {loggedIn ? (
         <>
           <Typography
             as="li"
@@ -55,16 +46,9 @@ const AdminNavBar = () => {
             color="black"
             className="p-1 font-normal font-poppins text-blue-50 font-semibold"
           >
-            <Typography
-              as="li"
-              variant="small"
-              color="black"
-              className="p-1 font-normal font-poppins text-blue-50 font-semibold"
-            >
-              <Link to="/admin" onClick={handleLogout} className="color flex items-center font-poppins">
-                Logout
-              </Link>
-            </Typography>
+            <Link to="/admin" onClick={handleLogout} className="color flex items-center font-poppins">
+              Logout
+            </Link>
           </Typography>
           <Typography
             as="li"
@@ -74,6 +58,16 @@ const AdminNavBar = () => {
           >
             <Link to="/blog-list" className="color flex items-center font-poppins">
               Create Blog
+            </Link>
+          </Typography>
+          <Typography
+            as="li"
+            variant="small"
+            color="black"
+            className="p-1 font-normal font-poppins text-blue-50 font-semibold"
+          >
+            <Link to="/photo-upload" className="color flex items-center font-poppins">
+              Upload Photos
             </Link>
           </Typography>
         </>
@@ -88,48 +82,9 @@ const AdminNavBar = () => {
             Login
           </Link>
         </Typography>
-      )}
-      <Typography
-        as="li"
-        variant="small"
-        color="black"
-        className="p-1 font-normal font-poppins text-blue-50 font-semibold"
-      >
-        <Link to="/about" className="color flex items-center font-poppins">
-          About us
-        </Link>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-poppins text-blue-50 font-semibold"
-      >
-        <Link to="/gallery" className="color flex items-center">
-          Gallery
-        </Link>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-poppins text-blue-50 font-semibold"
-      >
-        <Link to="/blog-list" className="color flex items-center">
-          Blog
-        </Link>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-poppins text-blue-50 font-semibold"
-      >
-        <Link to="/contact" className="color flex items-center">
-          Contact us
-        </Link>
-      </Typography>
-    </ul>
+      )
+      }
+    </ul >
   );
 
   return (

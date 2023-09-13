@@ -13,6 +13,7 @@ import AdminNavBar from "./AdminNav";
 const Signup = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -32,7 +33,7 @@ const Signup = () => {
     event.preventDefault();
     dispatch(registerUserAsync(formData))
       .then(() => {
-        navigate('/admin/login')
+        navigate('/login')
       })
       .catch((error) => {
         console.log('Error in registration', error);
