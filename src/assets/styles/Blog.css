@@ -107,18 +107,11 @@
                         GALLERY COMPONENT
 **************************************************************/
 .gallery-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
-  padding: 5%;
+  padding: 2%;
   border: 2px solid #f2f4f8;
-  margin: 5%;
+  margin: 1%;
   border-radius: 4px;
-}
-
-.my-gallery {
-  flex: 1;
 }
 
 .my-gallery img {

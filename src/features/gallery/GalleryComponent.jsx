@@ -31,23 +31,24 @@ export default function Gallery() {
   const breakpoints = [3840, 2400, 1080, 640, 384, 256, 128, 96, 64, 48];
 
   gallery.map((data) => {
-    const randomHeight = Math.floor(Math.random() * (1440 - 695 + 1)) + 695;
-    console.log("random height", randomHeight);
+    const aspectRatioWidth = 16;
+    const aspectRatioHeight = 11;
+    let randomHeight = Math.floor(Math.random() * (1440 - 695 + 1)) + 695;
+    randomHeight = (1080 / aspectRatioWidth ) * aspectRatioHeight;
+    console.log(randomHeight);
     pictures.push({
       src: `http://localhost:3000/${data.image}`,
       width: 1080,
       height: randomHeight,
     });
   });
-  console.log(gallery);
+  console.log(pictures);
 
   const picha = pictures.map((photo) => {
-    const width = breakpoints[0];
-    const height = (photo.height / photo.width) * width;
     return {
       src: photo.src,
-      width,
-      height,
+      width: photo.width,
+      height: photo.height,
       srcSet: breakpoints.map((breakpoint) => {
         const height = Math.round((photo.height / photo.width) * breakpoint);
         return {
@@ -58,7 +59,6 @@ export default function Gallery() {
       })
     }
   })
-  console.log(picha);
 
   useEffect(() => {
     dispatch(fetchPhotosAsync())
