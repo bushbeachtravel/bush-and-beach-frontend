@@ -24,6 +24,6 @@ const Logout = () => {
         console.log('Error decoding token', error);
       }
     }
-  }, []);
+  }, [dispatch]);
 }
 export default Logout;

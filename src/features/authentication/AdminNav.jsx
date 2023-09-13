@@ -28,7 +28,7 @@ const AdminNavBar = () => {
 
   React.useEffect(() => {
     dispatch(currentUserAsync());
-  }, []);
+  }, [dispatch]);
 
   const handleLogout = () => {
     dispatch(logoutUserAsync());
