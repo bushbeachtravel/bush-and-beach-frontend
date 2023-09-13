@@ -5,13 +5,16 @@ import {
   IconButton,
   Collapse,
 } from "@material-tailwind/react";
-import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { currentUserAsync } from "../../app/authenticationSlice";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { currentUserAsync, logoutUserAsync } from "../../app/authenticationSlice";
 import '../../assets/styles/HomePage.css';
 import '../../assets/styles/Navbar.css';
 
-const NavigationMenu = () => {
+
+const AdminNavBar = () => {
+  const loggedIn = useSelector((state) => state.auth.loggedIn);
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const [openNav, setOpenNav] = React.useState(false);
@@ -27,59 +30,61 @@ const NavigationMenu = () => {
     dispatch(currentUserAsync());
   }, []);
 
+  const handleLogout = () => {
+    dispatch(logoutUserAsync());
+    navigate('/admin');
+
+  }
+
   const navList = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-poppins text-blue-50 font-semibold"
-      >
-        <Link to="/trips" className="color flex items-center">
-          Safari Packages
-        </Link>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="black"
-        className="p-1 font-normal font-poppins text-blue-50 font-semibold"
-      >
-        <Link to="/about" className="color flex items-center font-poppins">
-          About us
-        </Link>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-poppins text-blue-50 font-semibold"
-      >
-        <Link to="/gallery" className="color flex items-center">
-          Gallery
-        </Link>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-poppins text-blue-50 font-semibold"
-      >
-        <Link to="/blog-list" className="color flex items-center">
-          Blogs
-        </Link>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-poppins text-blue-50 font-semibold"
-      >
-        <Link to="/contact" className="color flex items-center">
-          Contact us
-        </Link>
-      </Typography>
-    </ul>
+      {loggedIn ? (
+        <>
+          <Typography
+            as="li"
+            variant="small"
+            color="black"
+            className="p-1 font-normal font-poppins text-blue-50 font-semibold"
+          >
+            <Link to="/admin" onClick={handleLogout} className="color flex items-center font-poppins">
+              Logout
+            </Link>
+          </Typography>
+          <Typography
+            as="li"
+            variant="small"
+            color="black"
+            className="p-1 font-normal font-poppins text-blue-50 font-semibold"
+          >
+            <Link to="/blog-list" className="color flex items-center font-poppins">
+              Create Blog
+            </Link>
+          </Typography>
+          <Typography
+            as="li"
+            variant="small"
+            color="black"
+            className="p-1 font-normal font-poppins text-blue-50 font-semibold"
+          >
+            <Link to="/photo-upload" className="color flex items-center font-poppins">
+              Upload Photos
+            </Link>
+          </Typography>
+        </>
+      ) : (
+        <Typography
+          as="li"
+          variant="small"
+          color="black"
+          className="p-1 font-normal font-poppins text-blue-50 font-semibold"
+        >
+          <Link to="/login" className="color flex items-center font-poppins">
+            Login
+          </Link>
+        </Typography>
+      )
+      }
+    </ul >
   );
 
   return (
@@ -143,4 +148,4 @@ const NavigationMenu = () => {
     </div>
   );
 }
-export default NavigationMenu;
+export default AdminNavBar;

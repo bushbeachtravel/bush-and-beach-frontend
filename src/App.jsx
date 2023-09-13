@@ -1,4 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import "react-toastify/dist/ReactToastify.css";
+
 import Homepage from './features/home-page/Homepage';
 import Trips from './features/home-page/Trips';
 import About from './features/about/About';
@@ -8,8 +10,7 @@ import BlogDetailView from './features/blog/BlogDetail';
 import Gallery from './features/gallery/GalleryComponent';
 import ContactPage from './features/about/Contact';
 import CheckoutForm from './features/checkout/Payment';
-
-
+import BlogPage from './features/authentication/Blog';
 
 import KenyaSafaris from './features/local-trips/KenyaSafari';
 import MasaaiMaraTrip from './features/local-trips/masaai-mara/MasaaiMara';
@@ -37,13 +38,33 @@ import ParisBarcaItaly from './features/international-trips/pari-barca-italy/Par
 import BangkokTrip from './features/international-trips/bangkok/Bangkok';
 import TurkeyTrip from './features/international-trips/turkey/Turkey';
 
+import AdminDashBoard from './features/authentication/Admin';
+import Login from './features/authentication/Login';
+import Logout from './features/authentication/Logout';
+import Signup from './features/authentication/Signup';
+import BlogDetail from './features/authentication/BlogDetail';
+import UpdateBlogPost from './features/authentication/BlogUpdate';
+import BlogList from './features/authentication/BlogList';
+
+import './assets/styles/Kenya.css';
+import './assets/styles/Blog.css';
+import './assets/styles/HomePage.css';
+
 const App = () => {
 
   return (
     <div>
       <BrowserRouter basename="/bush-and-beach-frontend">
+        <Logout />
         <Routes>
           <Route path="/" element={<Homepage />} />
+          <Route path="admin" element={<AdminDashBoard />} />
+          <Route path="login" element={<Login />} /> 
+          <Route path="signup" element={<Signup />} />
+          <Route path="blog" element={<BlogPage />} />
+          <Route path="/blog-detail/:id" element={<BlogDetail />} />
+          <Route path="blog-list" element={<BlogList />} />
+          <Route path="/blog-update/:id" element={<UpdateBlogPost />} />
           <Route path="about" element={<About />} />
           <Route path="trips" element={<Trips />} />
           <Route path="blog" element={<BlogPosts />} />

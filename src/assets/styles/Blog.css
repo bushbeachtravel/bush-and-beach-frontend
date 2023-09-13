@@ -68,6 +68,41 @@
   }
 }
 
+/* WYSIWIG EDITOR STYLES */
+.editor {
+  box-shadow: 0 0 20px 0 rgba(76, 87, 125, 0.02);
+  background: #fff;
+  padding: 20px 30px;
+  width: 60%;
+  margin: 50px auto;
+}
+
+#editorjs-container {
+  background-color: #f9f9f9;
+  padding: 20px 30px;
+  margin-bottom: 20px;
+}
+
+.ce-toolbar__content,
+.ce-block__content {
+  max-width: unset;
+  width: 92% !important;
+}
+
+.editorjs-codeFlask_Wrapper .editorjs-codeFlask_LangDisplay {
+  max-width: unset;
+  height: unset !important;
+}
+
+.editor button {
+  border: none;
+  padding: 10px 20px;
+  background: #2cd3ff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 /*************************************************************
                         GALLERY COMPONENT
 **************************************************************/
@@ -229,19 +264,6 @@
 /*************************************************************
                         ABOUT US PAGE
 **************************************************************/
-
-/* .about-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-image: url('../images/accomodation.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  z-index: -1;
-} */
 
 .about-desc {
   background-image: linear-gradient(to left, #005aa7, #fffde4);
