@@ -24,7 +24,7 @@ const UpdateBlogPost = () => {
 
   useEffect(() => {
     dispatch(currentUserAsync());
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     dispatch(fetchBlogPostAsync(userId))
@@ -38,7 +38,7 @@ const UpdateBlogPost = () => {
     });
 
     setEditor(editorInstance);
-  }, []);
+  }, [post]);
 
   const handleBlogUpdate = async () => {
     if (editor) {

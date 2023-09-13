@@ -35,7 +35,7 @@ const BlogPage = () => {
 
   useEffect(() => {
     dispatch(currentUserAsync());
-  }, [])
+  }, [dispatch])
 
   useEffect(() => {
     const newEditor = new EditorJS({

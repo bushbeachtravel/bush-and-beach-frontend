@@ -48,7 +48,7 @@ const BlogDetail = () => {
 
   useEffect(() => {
     dispatch(currentUserAsync());
-  }, [])
+  }, [dispatch])
 
   useEffect(() => {
     dispatch(fetchBlogPostAsync())

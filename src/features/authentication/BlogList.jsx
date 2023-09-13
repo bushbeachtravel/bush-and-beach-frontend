@@ -16,7 +16,7 @@ const BlogList = () => {
 
   useEffect(() => {
     dispatch(currentUserAsync());
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     dispatch(fetchBlogPostAsync())
