@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { registerUser, userLogin, userLogout, currentUser } from "./authenticationApi";
 
@@ -6,15 +7,9 @@ export const registerUserAsync = createAsyncThunk(
   async (data) => {
     const response = await registerUser(data);
     const authToken = response.headers.authorization;
-    const httpResponse = response.status;
-    const httpResponseText = response.statusText;
     window.localStorage.setItem('authToken', authToken);
 
-    return {
-      authToken,
-      httpResponse,
-      httpResponseText,
-    };
+    return response.data;
   },
 );
 
@@ -23,15 +18,9 @@ export const loginUserAsync = createAsyncThunk(
   async (data) => {
     const response = await userLogin(data);
     const authToken = response.headers.authorization;
-    const httpLoginResponse = response.status;
-    const httpLoginResponseText = response.statusText;
     window.localStorage.setItem("authToken", authToken);
-    return {
-      authToken,
-      httpLoginResponse,
-      httpLoginResponseText,
-    };
-  },
+    return response.data;
+  }
 );
 
 export const logoutUserAsync = createAsyncThunk(
@@ -69,36 +58,52 @@ const authenticationSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-
-    // User registration
+      // User registration
       .addCase(registerUserAsync.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(registerUserAsync.fulfilled, (state, action) => {
+      .addCase(registerUserAsync.fulfilled, (state) => {
         state.isLoading = false;
-        state.authToken = action.payload.authToken;
-        state.httpResponse = action.payload.httpResponse;
-        state.httpResponseText = action.payload.httpResponseText;
+        toast.success(
+          'Registration successfuly!!', {
+          position: toast.POSITION.TOP_RIGHT
+        }
+        )
       })
       .addCase(registerUserAsync.rejected, (state) => {
         state.isLoading = false;
+        toast.error(
+          'User could not be created successfuly', {
+          position: toast.POSITION.TOP_RIGHT
+        }
+        )
       })
+
       // Login 
       .addCase(loginUserAsync.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(loginUserAsync.fulfilled, (state, action) => {
+      .addCase(loginUserAsync.fulfilled, (state) => {
         state.isLoading = false;
         state.loggedIn = true;
-        state.authToken = action.payload.authToken;
-        state.httpLoginResponse = action.payload.httpLoginResponse;
-        state.httpLoginResponseText = action.payload.httpLoginResponseText;
+
+        toast.success(
+          `Log in successful `, {
+          position: toast.POSITION.TOP_RIGHT
+        }
+        );
       })
       .addCase(loginUserAsync.rejected, (state, action) => {
         state.isLoading = false;
-        state.httpLoginResponseText = action.error.message;
-        state.httpLoginResponse = 401;
+        state.error = action.error.message;
+
+        toast.error(
+          `Login failed! Check your email and password`, {
+          position: toast.POSITION.TOP_RIGHT
+        }
+        );
       })
+
       // Logout User
       .addCase(logoutUserAsync.pending, (state) => {
         state.isLoading = true;
@@ -106,18 +111,29 @@ const authenticationSlice = createSlice({
       .addCase(logoutUserAsync.fulfilled, (state) => {
         state.isLoading = false;
         state.loggedIn = false;
-        state.authToken = null;
-        state.userId = null;
+
+        toast.success(
+          'You have logged out successfuly!!', {
+          position: toast.POSITION.TOP_RIGHT
+        }
+        );
       })
       .addCase(logoutUserAsync.rejected, (state, action) => {
         state.isLoading = false;
-        state.error = action.payload;
+        state.error = action.error;
+
+        toast.error(
+          'Could not find an active session!', {
+          position: toast.POSITION.TOP_RIGHT
+        }
+        )
       })
 
       // Current User
       .addCase(currentUserAsync.pending, (state) => {
         state.isLoading = true;
       })
+
       .addCase(currentUserAsync.fulfilled, (state, action) => {
         state.isLoading = false;
         state.user = action.payload;

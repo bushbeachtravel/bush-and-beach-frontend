@@ -11,8 +11,9 @@ import { currentUserAsync, logoutUserAsync } from "../../app/authenticationSlice
 import '../../assets/styles/HomePage.css';
 import '../../assets/styles/Navbar.css';
 
+
 const AdminNavBar = () => {
-  const user = useSelector((state) => state.auth.user);
+  const loggedIn = useSelector((state) => state.auth.loggedIn);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -31,12 +32,13 @@ const AdminNavBar = () => {
 
   const handleLogout = () => {
     dispatch(logoutUserAsync());
-    navigate('/login');
+    navigate('/admin');
+
   }
 
   const navList = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      {user ? (
+      {loggedIn ? (
         <>
           <Typography
             as="li"

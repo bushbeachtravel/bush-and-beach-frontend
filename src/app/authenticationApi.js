@@ -16,7 +16,6 @@ axiosInstance.interceptors.request.use((config) => {
 
 export const registerUser = async (data) => {
   const { name, email, password, password_confirmation } = data;
-  console.log("my name is", name);
   return axiosInstance.post('/signup', {
     user: {
       name,

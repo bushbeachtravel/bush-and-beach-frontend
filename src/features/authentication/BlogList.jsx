@@ -25,7 +25,7 @@ const BlogList = () => {
   return (
     <>
       <NavigationMenu />
-      <section className="flex">
+      <section className="mt-10">
         {posts && posts.length ? (
           <div className="flex justify-center flex-wrap">
             {posts.map((data) => (
