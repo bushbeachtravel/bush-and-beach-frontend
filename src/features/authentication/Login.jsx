@@ -6,7 +6,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import PropTypes from 'prop-types';
 import { loginUserAsync } from "../../app/authenticationSlice";
@@ -35,7 +35,7 @@ const LoginForm = ({ route, handleLoginSuccess }) => {
   }
   return (
     <>
-      <section className="flex justify-center mt-20">
+      <section className="flex justify-center">
         <Card color="transparent" shadow={false}>
           <Typography variant="h4" color="blue-gray" className="font-poppins text-center">
             Login
@@ -70,15 +70,6 @@ const LoginForm = ({ route, handleLoginSuccess }) => {
             <Button className="mt-6 font-poppins" fullWidth type="submit">
               Signin
             </Button>
-            <Typography
-              color="gray"
-              className="mt-4 text-center font-normal font-poppins"
-            >
-              Don&apos;t an account?{" "}
-              <Link to="/signup">
-                Sign Up
-              </Link>
-            </Typography>
           </form>
         </Card>
       </section>

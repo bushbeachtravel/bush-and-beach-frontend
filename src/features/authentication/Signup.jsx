@@ -4,16 +4,12 @@ import {
   Button,
   Typography,
 } from "@material-tailwind/react";
-import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { registerUserAsync } from "../../app/authenticationSlice";
-import AdminNavBar from "./AdminNav";
 
 const Signup = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
-
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -32,17 +28,10 @@ const Signup = () => {
   const handleSubmitForm = (event) => {
     event.preventDefault();
     dispatch(registerUserAsync(formData))
-      .then(() => {
-        navigate('/login')
-      })
-      .catch((error) => {
-        console.log('Error in registration', error);
-      })
   }
   return (
     <>
-      <AdminNavBar />
-      <section className="flex justify-center mt-10">
+      <section className="flex justify-center">
         <Card color="transparent" shadow={false}>
           <Typography variant="h4" color="blue-gray" className="text-center font-poppins">
             Sign Up
@@ -99,12 +88,6 @@ const Signup = () => {
             <Button className="mt-6 font-poppins" fullWidth type="submit">
               Register
             </Button>
-            <Typography color="gray" className="mt-4 text-center font-normal font-poppins">
-              Already have an account?{" "}
-              <Link to="/login">
-                Sign In
-              </Link>
-            </Typography>
           </form>
         </Card>
       </section>

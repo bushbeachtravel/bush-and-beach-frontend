@@ -5,11 +5,28 @@ import {
   DialogHeader,
   DialogBody,
   DialogFooter,
-  Typography,
+  Tabs,
+  TabsHeader,
+  TabsBody,
+  Tab,
+  TabPanel,
 } from "@material-tailwind/react";
 import LoginForm from '../authentication/Login';
+import Signup from '../authentication/Signup';
 
 const CommentModalWindow = ({ open, handleOpen, id, onLoginSuccess }) => {
+  const pages = [
+    {
+      label: "Login",
+      value: "login",
+      desc: <LoginForm route={`/blog-detail/${id}`} handleLoginSuccess={onLoginSuccess} />,
+    },
+    {
+      label: "Sign up",
+      value: "register",
+      desc: <Signup />,
+    }
+  ]
   return (
     <>
       <Dialog
@@ -20,16 +37,34 @@ const CommentModalWindow = ({ open, handleOpen, id, onLoginSuccess }) => {
           unmount: { scale: 0.9, y: -100 },
         }}
       >
-        <DialogHeader>
-          <Typography variant="lead" className="text-center font-poppins font-bold">
-            Login to leave a comment
-          </Typography>
+        <DialogHeader className="flex justify-center font-poppins">
+          You need to login or register to leave a comment!
         </DialogHeader>
+
         <DialogBody divider>
-          <LoginForm
-            route={`/blog-detail/${id}`}
-            handleLoginSuccess={onLoginSuccess}
-          />
+
+          <Tabs id="custom-animation" value="login">
+            <TabsHeader>
+              {pages.map(({ label, value }) => (
+                <Tab key={value} value={value}>
+                  {label}
+                </Tab>
+              ))}
+            </TabsHeader>
+            <TabsBody
+              animate={{
+                animate: { y: 250 },
+                mount: { y: 0 },
+                unmount: { y: 250 },
+              }}
+            >
+              {pages.map(({ value, desc }) => (
+                <TabPanel key={value} value={value}>
+                  {desc}
+                </TabPanel>
+              ))}
+            </TabsBody>
+          </Tabs>
         </DialogBody>
         <DialogFooter>
           <Button
@@ -38,16 +73,14 @@ const CommentModalWindow = ({ open, handleOpen, id, onLoginSuccess }) => {
             onClick={handleOpen}
             className="mr-1"
           >
-            <span>Cancel</span>
-          </Button>
-          <Button variant="gradient" color="green" onClick={handleOpen}>
-            <span>Confirm</span>
+            <span className="text-center font-poppins">Close</span>
           </Button>
         </DialogFooter>
       </Dialog>
     </>
   );
 }
+
 CommentModalWindow.propTypes = {
   open: PropTypes.bool.isRequired,
   handleOpen: PropTypes.func.isRequired,
