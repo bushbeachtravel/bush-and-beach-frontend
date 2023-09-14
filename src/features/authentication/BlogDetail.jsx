@@ -29,7 +29,8 @@ const BlogDetail = () => {
   const userId = JSON.parse(window.localStorage.getItem("userId"));
   const loggedIn = useSelector((state) => state.auth.loggedIn);
   const comments = useSelector((state) => state.comment.comments);
-  const [openDeleteModal, setOpenDeleteModal] = useState(false);
+  const [openDeleteBlogModal, setOpenDeleteBlogModal] = useState(false);
+  const [openDeleteCommentModal, setOpenDeleteCommentModal] = useState(false);
   const [deleteCommentData, setDeleteCommentData] = useState({});
   const [deletePostData, setDeletePostData] = useState({});
   const navigate = useNavigate();
@@ -48,7 +49,7 @@ const BlogDetail = () => {
 
   useEffect(() => {
     dispatch(currentUserAsync());
-  }, [dispatch])
+  }, [dispatch, loggedIn])
 
   useEffect(() => {
     dispatch(fetchBlogPostAsync())
@@ -65,7 +66,7 @@ const BlogDetail = () => {
         ...data,
       })
 
-      setOpenDeleteModal(true);
+      setOpenDeleteCommentModal(true);
     } else {
       return
     }
@@ -80,34 +81,34 @@ const BlogDetail = () => {
       setDeletePostData({
         ...data,
       })
-      setOpenDeleteModal(true);
+      setOpenDeleteBlogModal(true);
     }
   }
 
   const confirmDeleteBlog = () => {
     dispatch(deleteBlogPostAsync(deletePostData));
-    setOpenDeleteModal(false);
+    setOpenDeleteBlogModal(false);
     navigate('/blog-list');
   }
 
   const cancelDeleteBlog = () => {
-    setOpenDeleteModal(false);
+    setOpenDeleteBlogModal(false);
   }
 
-  const handleConfirmDelete = () => {
+  const handleConfirmDeleteComment = () => {
     dispatch(deleteCommentAsync(deleteCommentData));
-    setOpenDeleteModal(false);
+    setOpenDeleteCommentModal(false);
   }
 
-  const handleCancelDelete = () => {
-    setOpenDeleteModal(false);
+  const handleCancelDeleteComment = () => {
+    setOpenDeleteCommentModal(false);
   }
 
   return (
     <>
       <NavigationMenu />
       <section className="blog-detail-section">
-        <div className="editor right p-5">
+        <div className="right p-5">
           <div className="right-container">
             {post && post.body.blocks.map((data) => {
               if (data.type === 'header') {
@@ -151,7 +152,7 @@ const BlogDetail = () => {
               }
             })}
             {loggedIn && (
-              <>
+              <div className="flex gap-3">
                 <Button
                   className="font-poppins"
                   variant="text"
@@ -161,10 +162,14 @@ const BlogDetail = () => {
                 >
                   Delete
                 </Button>
-                <Button>
-                  <Link to={`/blog-update/${id}`}>Update</Link>
+                <Button
+                  className="font-poppins"
+                  variant="text"
+                  size="sm"
+                >
+                  <Link to={`/blog-update/${id}`}>Edit</Link>
                 </Button>
-              </>
+              </div>
             )}
             <br />
             <div className="sharing-icons">
@@ -202,7 +207,7 @@ const BlogDetail = () => {
                   </div>
                 ))
               ) : (
-                <Typography variant="paragraph" className="font-poppins">
+                <Typography variant="small" className="font-poppins">
                   This post has no comment. Be the first one to leave a comment
                 </Typography>
               )}
@@ -252,16 +257,18 @@ const BlogDetail = () => {
             </Card>
           </div>
         </div>
-        {openDeleteModal && (
+        {openDeleteCommentModal && (
           <ConfirmDeleteModal
-            handleCancelDelete={handleCancelDelete}
-            handleConfirmDelete={handleConfirmDelete}
+            handleCancelDelete={handleCancelDeleteComment}
+            handleConfirmDelete={handleConfirmDeleteComment}
+            text="comment"
           />
         )}
-        {openDeleteModal && (
+        {openDeleteBlogModal && (
           <ConfirmDeleteModal
             handleCancelDelete={cancelDeleteBlog}
             handleConfirmDelete={confirmDeleteBlog}
+            text="post"
           />
         )}
       </section >

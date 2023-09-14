@@ -1,3 +1,4 @@
+
 import {
   Card,
   Input,
@@ -7,17 +8,16 @@ import {
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import PropTypes from 'prop-types';
 import { loginUserAsync } from "../../app/authenticationSlice";
-import AdminNavBar from "./AdminNav";
 
-const LoginForm = () => {
+const LoginForm = ({ route, handleLoginSuccess }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: '',
     password: '',
   });
-
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -30,11 +30,11 @@ const LoginForm = () => {
   const handleSubmitForm = (event) => {
     event.preventDefault();
     dispatch(loginUserAsync(formData));
-    navigate('/admin')
+    handleLoginSuccess();
+    navigate(`/${route}`)
   }
   return (
     <>
-      <AdminNavBar />
       <section className="flex justify-center mt-20">
         <Card color="transparent" shadow={false}>
           <Typography variant="h4" color="blue-gray" className="font-poppins text-center">
@@ -53,7 +53,6 @@ const LoginForm = () => {
           >
             <div className="mb-4 flex flex-col gap-6">
               <Input
-                size="lg"
                 label="Email"
                 name="email"
                 type="email"
@@ -62,7 +61,6 @@ const LoginForm = () => {
               />
               <Input
                 type="password"
-                size="lg"
                 label="Password"
                 name="password"
                 value={formData.password}
@@ -86,5 +84,9 @@ const LoginForm = () => {
       </section>
     </>
   );
+}
+LoginForm.propTypes = {
+  route: PropTypes.string.isRequired,
+  handleLoginSuccess: PropTypes.func.isRequired,
 }
 export default LoginForm;

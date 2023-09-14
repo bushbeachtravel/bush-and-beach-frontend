@@ -1,34 +1,50 @@
-import { Textarea, Button, IconButton } from "@material-tailwind/react";
+import {
+  Textarea,
+  Button,
+  IconButton,
+} from "@material-tailwind/react";
 import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
 import PropTypes from 'prop-types';
 import { createCommentAsync } from "../../app/commentSlice";
 
+
+import CommentModalWindow from "./CommentModalWindow";
+
 const Comment = ({ postId }) => {
   const userId = JSON.parse(window.localStorage.getItem("userId"));
   const loggedIn = useSelector((state) => state.auth.loggedIn);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const [commentText, setCommentText] = useState('');
+  const [showMessage, setShowMessage] = useState(false);
 
+  const handleOpen = () => setShowMessage(!showMessage);
 
   const handleInputChange = (event) => {
     setCommentText(event.target.value);
   }
+
+  const handleCancelComment = () => {
+    setCommentText('');
+  }
   const handleSaveComment = (event) => {
     event.preventDefault();
-    if (userId && loggedIn) {
+    if (loggedIn) {
       const formData = {
         post_id: postId,
         user_id: userId,
         text: commentText
       }
       dispatch(createCommentAsync(formData));
-      setCommentText('')
+      setCommentText('');
     } else {
-      alert('You need to login in before commenting')
+      setShowMessage(true);
     }
   }
 
+  const handleLoginSuccess = () => {
+    setShowMessage(false);
+  }
   return (
     <div className="relative">
       <form onSubmit={handleSaveComment}>
@@ -38,6 +54,7 @@ const Comment = ({ postId }) => {
           rows={8} className="font-poppins"
           value={commentText}
           onChange={handleInputChange}
+          required
         />
         <div className="flex w-full justify-between py-1.5">
           <IconButton variant="text" color="blue-gray" size="sm">
@@ -57,7 +74,13 @@ const Comment = ({ postId }) => {
             </svg>
           </IconButton>
           <div className="flex gap-2">
-            <Button size="sm" color="red" variant="text" className="rounded-md">
+            <Button
+              size="sm"
+              color="red"
+              variant="text"
+              className="rounded-md"
+              onClick={handleCancelComment}
+            >
               Cancel
             </Button>
             <Button
@@ -70,6 +93,14 @@ const Comment = ({ postId }) => {
           </div>
         </div>
       </form>
+      {showMessage && (
+        <CommentModalWindow
+          handleOpen={handleOpen}
+          open={showMessage}
+          id={postId}
+          onLoginSuccess={handleLoginSuccess}
+        />
+      )}
     </div >
   );
 }
