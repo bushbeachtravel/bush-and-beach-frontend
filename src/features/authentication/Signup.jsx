@@ -6,10 +6,12 @@ import {
 } from "@material-tailwind/react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { useNavigate, Link } from "react-router-dom";
 import { registerUserAsync } from "../../app/authenticationSlice";
 
 const Signup = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -28,10 +30,11 @@ const Signup = () => {
   const handleSubmitForm = (event) => {
     event.preventDefault();
     dispatch(registerUserAsync(formData))
+    navigate('/login');
   }
   return (
     <>
-      <section className="flex justify-center">
+      <section className="flex justify-center mt-10">
         <Card color="transparent" shadow={false}>
           <Typography variant="h4" color="blue-gray" className="text-center font-poppins">
             Sign Up
@@ -85,9 +88,15 @@ const Signup = () => {
                 required
               />
             </div>
-            <Button className="mt-6 font-poppins" fullWidth type="submit">
+            <Button className="mt-6" fullWidth type="submit">
               Register
             </Button>
+            <Typography color="gray" className="mt-4 text-center font-normal">
+              Already have an account?{" "}
+              <Link to="/login">
+                Sign In
+              </Link>
+            </Typography>
           </form>
         </Card>
       </section>
@@ -95,4 +104,5 @@ const Signup = () => {
 
   );
 }
+
 export default Signup;

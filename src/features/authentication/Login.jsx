@@ -6,12 +6,11 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import PropTypes from 'prop-types';
 import { loginUserAsync } from "../../app/authenticationSlice";
 
-const LoginForm = ({ route, handleLoginSuccess }) => {
+const LoginForm = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -30,12 +29,11 @@ const LoginForm = ({ route, handleLoginSuccess }) => {
   const handleSubmitForm = (event) => {
     event.preventDefault();
     dispatch(loginUserAsync(formData));
-    handleLoginSuccess();
-    navigate(`/${route}`)
+    navigate('/admin')
   }
   return (
     <>
-      <section className="flex justify-center">
+      <section className="flex justify-center mt-10">
         <Card color="transparent" shadow={false}>
           <Typography variant="h4" color="blue-gray" className="font-poppins text-center">
             Login
@@ -67,17 +65,20 @@ const LoginForm = ({ route, handleLoginSuccess }) => {
                 onChange={handleInputChange}
               />
             </div>
-            <Button className="mt-6 font-poppins" fullWidth type="submit">
+            <Button className="mt-6" fullWidth type="submit">
               Signin
             </Button>
+            <Typography color="gray" className="mt-4 text-center font-normal">
+              Don&apos;t an account?{" "}
+              <Link to="/signup">
+                Sign Up
+              </Link>
+            </Typography>
           </form>
         </Card>
       </section>
     </>
   );
 }
-LoginForm.propTypes = {
-  route: PropTypes.string.isRequired,
-  handleLoginSuccess: PropTypes.func.isRequired,
-}
+
 export default LoginForm;

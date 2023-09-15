@@ -5,20 +5,16 @@ import {
   ListItemPrefix,
   Avatar,
   Card,
-  IconButton,
   Button
 } from '@material-tailwind/react';
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
-import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa6";
 import { useParams } from "react-router-dom";
 
 import Footer from "../footer/Footer";
 import { fetchBlogPostAsync, deleteBlogPostAsync } from '../../app/blogSlice';
-import { fetchAllCommentsAsync, deleteCommentAsync } from '../../app/commentSlice';
 import { currentUserAsync } from '../../app/authenticationSlice';
-import Comment from '../blog/Comment';
 import NavigationMenu from "../home-page/NavigationMenu";
 import formatTimestamp from '../../utils/dateFormat';
 import ConfirmDeleteModal from '../../utils/ConfirmDeleteModal';
@@ -28,24 +24,13 @@ const BlogDetail = () => {
   const posts = useSelector((state) => state.post.posts);
   const userId = JSON.parse(window.localStorage.getItem("userId"));
   const loggedIn = useSelector((state) => state.auth.loggedIn);
-  const comments = useSelector((state) => state.comment.comments);
   const [openDeleteBlogModal, setOpenDeleteBlogModal] = useState(false);
-  const [openDeleteCommentModal, setOpenDeleteCommentModal] = useState(false);
-  const [deleteCommentData, setDeleteCommentData] = useState({});
   const [deletePostData, setDeletePostData] = useState({});
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { id } = useParams();
 
   const post = posts.find((blog) => blog.id === parseInt(id, 10));
-
-  useEffect(() => {
-    const data = {
-      user_id: userId,
-      post_id: id
-    }
-    dispatch(fetchAllCommentsAsync(data))
-  }, [dispatch, id, userId, comments.length]);
 
   useEffect(() => {
     dispatch(currentUserAsync());
@@ -55,23 +40,7 @@ const BlogDetail = () => {
     dispatch(fetchBlogPostAsync())
   }, [dispatch])
 
-  const handleDeleteComment = (commentId) => {
-    if (loggedIn) {
-      const data = {
-        user_id: userId,
-        post_id: parseInt(id, 10),
-        comment_id: commentId
-      }
-      setDeleteCommentData({
-        ...data,
-      })
-
-      setOpenDeleteCommentModal(true);
-    } else {
-      return
-    }
-  }
-
+  
   const handleDeleteBlog = () => {
     if (loggedIn) {
       const data = {
@@ -93,15 +62,6 @@ const BlogDetail = () => {
 
   const cancelDeleteBlog = () => {
     setOpenDeleteBlogModal(false);
-  }
-
-  const handleConfirmDeleteComment = () => {
-    dispatch(deleteCommentAsync(deleteCommentData));
-    setOpenDeleteCommentModal(false);
-  }
-
-  const handleCancelDeleteComment = () => {
-    setOpenDeleteCommentModal(false);
   }
 
   return (
@@ -172,52 +132,6 @@ const BlogDetail = () => {
               </div>
             )}
             <br />
-            <div className="sharing-icons">
-              <IconButton className="rounded bg-[#2b90ec] hover:shadow-[#2b90ec]/20 focus:shadow-[#2b90ec]/20 active:shadow-[#2b90ec]/10">
-                <FaFacebook size={30} />
-              </IconButton>
-              <IconButton className="rounded bg-[#1DA1F2] hover:shadow-[#1DA1F2]/20 focus:shadow-[#1DA1F2]/20 active:shadow-[#1DA1F2]/10">
-                <FaTwitter size={30} />
-              </IconButton>
-              <IconButton className="rounded bg-[#2e72d7] hover:shadow-[#2e72d7]/20 focus:shadow-[#2e72d7]/20 active:shadow-[#2e72d7]/10">
-                <FaLinkedin size={30} />
-              </IconButton>
-            </div>
-            <div className="py-5 font-poppins">
-              {comments.length ? (
-                comments.map((comment) => (
-                  <div key={comment.id} className="flex justify-evenly">
-                    <Typography className="font-poppins">
-                      {comment.text} by
-                    </Typography>
-                    <Typography className="font-poppins">
-                      {comment.author_email} on {formatTimestamp(comment.time_created)}
-                    </Typography>
-                    {loggedIn && userId === comment.author_id && (
-                      <Button
-                        className="font-poppins"
-                        variant="text"
-                        color="red"
-                        size="sm"
-                        onClick={() => handleDeleteComment(comment.id)}
-                      >
-                        Delete
-                      </Button>
-                    )}
-                  </div>
-                ))
-              ) : (
-                <Typography variant="small" className="font-poppins">
-                  This post has no comment. Be the first one to leave a comment
-                </Typography>
-              )}
-            </div>
-            <div className="comment-section">
-              <Typography variant="small" className="font-poppins font-bold">
-                Leave a comment
-              </Typography>
-              <Comment postId={id} />
-            </div>
           </div>
         </div>
         <div className="left">
@@ -257,13 +171,6 @@ const BlogDetail = () => {
             </Card>
           </div>
         </div>
-        {openDeleteCommentModal && (
-          <ConfirmDeleteModal
-            handleCancelDelete={handleCancelDeleteComment}
-            handleConfirmDelete={handleConfirmDeleteComment}
-            text="comment"
-          />
-        )}
         {openDeleteBlogModal && (
           <ConfirmDeleteModal
             handleCancelDelete={cancelDeleteBlog}

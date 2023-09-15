@@ -11,22 +11,24 @@ import {
   Tab,
   TabPanel,
 } from "@material-tailwind/react";
-import LoginForm from '../authentication/Login';
-import Signup from '../authentication/Signup';
+import LoginForm from '../features/authentication/Login';
+import Signup from '../features/authentication/Signup';
+import { useState } from 'react';
 
 const CommentModalWindow = ({ open, handleOpen, id, onLoginSuccess }) => {
-  const pages = [
-    {
-      label: "Login",
-      value: "login",
-      desc: <LoginForm route={`/blog-detail/${id}`} handleLoginSuccess={onLoginSuccess} />,
-    },
-    {
-      label: "Sign up",
-      value: "register",
-      desc: <Signup />,
-    }
-  ]
+  const [activeTab, setActiveTab] = useState('login');
+  console.log(activeTab)
+
+  // const handleTabChange = (value) => {
+  //   setActiveTab(value);
+  //   console.log(activeTab)
+  // };
+
+  const handleSignUpSuccess = () => {
+    setActiveTab('login');
+    console.log('second', activeTab);
+    // handleOpen();
+  }
   return (
     <>
       <Dialog
@@ -43,13 +45,17 @@ const CommentModalWindow = ({ open, handleOpen, id, onLoginSuccess }) => {
 
         <DialogBody divider>
 
-          <Tabs id="custom-animation" value="login">
+          <Tabs
+            id="custom-animation"
+            value={activeTab}
+          >
             <TabsHeader>
-              {pages.map(({ label, value }) => (
-                <Tab key={value} value={value}>
-                  {label}
-                </Tab>
-              ))}
+              <Tab key="login" value="login">
+                Login
+              </Tab>
+              <Tab key="register" value="register">
+                Sign up
+              </Tab>
             </TabsHeader>
             <TabsBody
               animate={{
@@ -58,11 +64,12 @@ const CommentModalWindow = ({ open, handleOpen, id, onLoginSuccess }) => {
                 unmount: { y: 250 },
               }}
             >
-              {pages.map(({ value, desc }) => (
-                <TabPanel key={value} value={value}>
-                  {desc}
-                </TabPanel>
-              ))}
+              <TabPanel key="login" value="login">
+                <LoginForm route={`/blog-detail/${id}`} handleLoginSuccess={onLoginSuccess} />
+              </TabPanel>
+              <TabPanel key="register" value="register">
+                <Signup onSignupSuccess={handleSignUpSuccess} />
+              </TabPanel>
             </TabsBody>
           </Tabs>
         </DialogBody>
