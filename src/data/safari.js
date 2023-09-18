@@ -28,6 +28,10 @@ export const maraImages = [
   {
     src: leopard,
     alt: "Leopard"
+  },
+  {
+    src: rhino,
+    alt: "Leopard"
   }
 ];
 
@@ -104,6 +108,15 @@ export const parks = [
     A Kaleidoscopic Expedition through Nairobi, 
     Amboseli, Lewa Conservancy, and Masai Mara For 8 Days and 7 Nights`,
     url: "nairobi-amboseli-lewa-mara"
+  },
+  {
+    title: "4 Days Taste of Kenya Safari",
+    image: rhino,
+    days: "4",
+    nights: "3",
+    description: `4 Days Taste of Kenya Safari takes to Kenya’s most famous National Parks, 
+    the Masai Mara and Lake Nakuru.`,
+    url: "kenya-safari"
   },
 
 ]

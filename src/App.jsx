@@ -20,7 +20,7 @@ import AmboseliTsavoWestTrip from './features/local-trips/amboseli-tsavo-west/Am
 import NairobiAmboseliMaraTrip from './features/local-trips/nrb-amboseli-mara/NairobiAmboseliMara';
 import NairobiAmboseliMtKenyaLakeNakuruMasaaiMaraTrip from './features/local-trips/nrb-amboseli-mara-mt-kenya/NrbAmboseliMaraMtKenya';
 import NairobiAmboseliLewaMaraTrip from './features/local-trips/nrb-amboseli-lewa-mara/NairobiAmboseliLewaMara';
-
+import FourDayKenyaSafari from './features/local-trips/four-day-safari/FourDaySafari';
 
 import KenyaCostalBeaches from './features/beach-holidays/kenya/CoastalBeaches';
 import ZanzibarTours from './features/beach-holidays/zanzibar/Zanzibar';
@@ -74,7 +74,9 @@ const App = () => {
           <Route path="detail" element={<BlogDetailView />} />
           <Route path="gallery" element={<Gallery />} />
           <Route path="contact" element={<ContactPage />} />
+
           <Route path="payment" element={<CheckoutForm />} />
+
           <Route path="kenya" element={<KenyaSafaris />} />
           <Route path="coast" element={<KenyaCostalBeaches />} />
           <Route path="masai-mara" element={<MasaaiMaraTrip />} />
@@ -84,6 +86,8 @@ const App = () => {
           <Route path="nairobi-amboseli-mara" element={<NairobiAmboseliMaraTrip />} />
           <Route path="nrb-amboseli-nakuru-mt-kenya-masaai-mara" element={<NairobiAmboseliMtKenyaLakeNakuruMasaaiMaraTrip />} />
           <Route path="nairobi-amboseli-lewa-mara" element={<NairobiAmboseliLewaMaraTrip />} />
+          <Route path="kenya-safari" element={<FourDayKenyaSafari />} />
+          
           <Route path="zanzibar" element={<ZanzibarTours />} />
           <Route path="rwanda-uganda" element={<RwandaUganda />} />
           <Route path="international" element={<InternationalTours />} />
