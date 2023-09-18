@@ -108,20 +108,6 @@ export const parks = [
 
 ]
 
-
-export const included = [
-  `Roundtrip Airpot Transfers`, `All government taxes`,
-  `Unlimited supply of drinking water during the safari`,
-];
-
-export const excluded = [
-  `Internation flights from your home and back`,
-  `Additional accomodation before and after the safari`,
-  `Tips and gratuity`,
-  `Personal items`, `Government imposed increase of taxes including parking fees`
-];
-
-
 export const settings = {
   dots: true,
   infinite: true,

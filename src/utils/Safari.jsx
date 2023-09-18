@@ -1,19 +1,20 @@
-
-// import Carousel from 'react-gallery-carousel';
 import 'react-gallery-carousel/dist/index.css';
 import Slider from "react-slick";
 import PropTypes from 'prop-types';
-import { Typography, Input, Textarea, Button } from '@material-tailwind/react';
-import { FaRegClock, FaChildren, FaXmark, FaCheck } from 'react-icons/fa6';
+import { Typography } from '@material-tailwind/react';
+import { FaRegClock, FaChildren } from 'react-icons/fa6';
 import { GoLocation } from 'react-icons/go'
+
+import 'react-phone-number-input/style.css'
+
 import NavigationMenu from '../features/home-page/NavigationMenu';
+import RequisitionForm from '../features/requisition-form/RequisitionForm';
 import { SafariItenary } from './SafariItenary';
-import { included, excluded } from '../data/safari';
 import '../assets/styles/Kenya.css';
 import { settings } from '../data/safari';
 
-const SafariDetail = ({ images, safariTitle, duration, itenary, formData }) => {
 
+const SafariDetail = ({ images, safariTitle, duration, itenary, formData }) => {
 
   return (
     <>
@@ -38,7 +39,9 @@ const SafariDetail = ({ images, safariTitle, duration, itenary, formData }) => {
           </div>
           <div className="safari-location flex items-center gap-5">
             <GoLocation className="iternary-icons" size={30} />
-            <Typography className="font-poppins">Kenya</Typography>
+            <Typography className="font-poppins">
+              Kenya
+            </Typography>
           </div>
         </div>
         <div className="right-details flex justify-between gap-8 px-6">
@@ -76,55 +79,9 @@ const SafariDetail = ({ images, safariTitle, duration, itenary, formData }) => {
               <SafariItenary itenary={itenary} />
             </div>
           </div>
-          <div className="flex flex-wrap justify-around gap-3 include-exclude py-10">
-            <div className="included w-80">
-              <Typography variant="h5" className="font-poppins">
-                Included
-              </Typography>
-              {included.map((item, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <div>
-                    <FaCheck size={20} color='green' className="font-bold" />
-                  </div>
-                  <div className="w-full">
-                    <Typography variant="paragraph" className="flex font-poppins ">
-                      {item}
-                    </Typography>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="excluded w-80">
-              <Typography variant="h5" className="font-poppins">
-                Excluded
-              </Typography>
-              {excluded.map((item, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <div>
-                    <FaXmark size={20} color='red' className="font-bold" />
-                  </div>
-                  <Typography variant="paragraph" className="font-poppins">
-                    {item}
-                  </Typography>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
         <div className="enquiry-form w-96 flex flex-col m-5">
           <div className="price justify-center p-5">
-            <div className="flex justify-between">
-              <div className="text py-5">
-                <Typography variant="paragraph" className="font-poppins font-bold">
-                  From as low as
-                </Typography>
-              </div>
-              <div className="amount font-poppins py-5">
-                <Typography variant="paragraph" className="font-poppins font-bold price-button">
-                  {formData.price}
-                </Typography>
-              </div>
-            </div>
             <Typography variant="small" className="font-poppins font-bold py-3">
               {formData.promoTitle}
             </Typography>
@@ -136,14 +93,7 @@ const SafariDetail = ({ images, safariTitle, duration, itenary, formData }) => {
                 {formData.callToAction}
               </Typography>
             </div>
-            <form className="mt-4 mb-2 w-full">
-              <div className="mb-4 flex flex-col gap-6">
-                <Input color="blue" label="Enter Name" className="font-poppins" />
-                <Input type="email" color="blue" label="Enter email" className="font-poppins" />
-                <Textarea label="Message" color="blue" className="font-poppins" />
-              </div>
-              <Button>Send enquiry</Button>
-            </form>
+            <RequisitionForm />
           </div>
         </div>
       </section >

@@ -26,7 +26,7 @@ const KenyaSafaris = () => {
         images={animals}
         title2={title2}
         bodyTextwo={bodyTextTwo}
-        title="The Big Five"
+        title="The Big Five."
       />
       <SafariCard tourDestination={parks} />
       <Footer />
