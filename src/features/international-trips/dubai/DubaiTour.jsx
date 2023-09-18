@@ -13,6 +13,7 @@ const DubaiTrip = () => (
       safariTitle="Masaai Mara"
       itenary={dubai4NightsItenary}
       formData={dubai4NightsPromoAd}
+      location="Dubai"
      />
     <Footer />
   </>

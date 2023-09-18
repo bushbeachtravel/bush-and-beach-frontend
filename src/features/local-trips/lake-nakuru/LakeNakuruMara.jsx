@@ -10,6 +10,7 @@ const LakeNakuruMaraTrip = () => (
       safariTitle="Lake Nakuru and Masai Mara"
       itenary={lakeNakuruIternary}
       formData={lakeNakPromoAd}
+      location="Kenya"
      />
     <Footer />
   </>

@@ -10,6 +10,7 @@ const MasaaiMaraTrip = () => (
       safariTitle="Masaai Mara"
       itenary={masaaiMaraIternary}
       formData={masaaiMaraPromoAd}
+      location="Kenya"
      />
     <Footer />
   </>

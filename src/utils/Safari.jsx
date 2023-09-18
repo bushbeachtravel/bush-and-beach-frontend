@@ -14,7 +14,7 @@ import '../assets/styles/Kenya.css';
 import { settings } from '../data/safari';
 
 
-const SafariDetail = ({ images, safariTitle, duration, itenary, formData }) => {
+const SafariDetail = ({ images, safariTitle, duration, itenary, formData, location }) => {
 
   return (
     <>
@@ -40,7 +40,7 @@ const SafariDetail = ({ images, safariTitle, duration, itenary, formData }) => {
           <div className="safari-location flex items-center gap-5">
             <GoLocation className="iternary-icons" size={30} />
             <Typography className="font-poppins">
-              Kenya
+              {location}
             </Typography>
           </div>
         </div>
@@ -63,7 +63,7 @@ const SafariDetail = ({ images, safariTitle, duration, itenary, formData }) => {
                 Min Age
               </Typography>
               <Typography variant="small" className="font-poppins">
-                0
+                3 years
               </Typography>
             </div>
           </div>
@@ -107,6 +107,7 @@ SafariDetail.propTypes = {
   duration: PropTypes.string.isRequired,
   itenary: PropTypes.object.isRequired,
   formData: PropTypes.object.isRequired,
+  location: PropTypes.string.isRequired,
 
 }
 export default SafariDetail;

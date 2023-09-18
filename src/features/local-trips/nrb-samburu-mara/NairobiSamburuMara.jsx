@@ -11,6 +11,7 @@ const NairobiSamburuMaraTrip = () => (
       safariTitle="Nairobi, Samburu and Masaai Mara"
       itenary={maraNrbSamburuItenary}
       formData={maraNrbSamburPromoAd}
+      location="Kenya"
      />
     <Footer />
   </>

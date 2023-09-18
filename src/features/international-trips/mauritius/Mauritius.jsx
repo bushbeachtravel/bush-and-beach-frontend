@@ -13,6 +13,7 @@ const MauritiusTrip = () => (
       safariTitle="Mauritius Escapade"
       itenary={mauritiusItenary}
       formData={mauritiusPromoAd}
+      location="Mauritius"
      />
     <Footer />
   </>

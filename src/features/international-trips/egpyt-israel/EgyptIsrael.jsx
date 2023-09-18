@@ -14,6 +14,7 @@ const EgyptIsraelTrip = () => (
       safariTitle="Sacred Pilgrimage Tour: Egypt & Israel Journey of Faith"
       itenary={egyptIsraelItenary}
       formData={egyptIsraelPromoAd}
+      location="Egypt & Israel"
      />
     <Footer />
   </>

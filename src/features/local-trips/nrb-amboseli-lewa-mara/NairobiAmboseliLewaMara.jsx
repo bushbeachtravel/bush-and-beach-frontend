@@ -11,6 +11,7 @@ const NairobiAmboseliLewaMaraTrip = () => (
       safariTitle="Nairobi, Amboseli, Lewa conservancy, Masai Mara"
       itenary={nrbAmboseliLewaItenary}
       formData={nrbAmboseliLewaPromo}
+      location="Kenya"
      />
     <Footer />
   </>

@@ -14,6 +14,7 @@ const ParisBarcaItaly = () => (
       safariTitle="Paris, Barcelona & Italy Adventure"
       itenary={parisBarcaItalyItenary}
       formData={parisBaracItalyPromoAd}
+      location="Europe"
      />
     <Footer />
   </>

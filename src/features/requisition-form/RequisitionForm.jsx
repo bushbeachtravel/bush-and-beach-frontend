@@ -52,18 +52,20 @@ const RequisitionForm = () => {
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className="mb-4 flex flex-col gap-6">
-          <label>Enter Your full name</label>
+          <label className="font-poppins">Enter Your full name</label>
           <input
             {...register("FullName", { required: true, maxLength: 100 })}
             placeholder="John Doe"
-            type="text" />
-          <label>Enter your email address</label>
+            type="text"
+            className="font-poppins"
+             />
+          <label className="font-poppins">Enter your email address</label>
           <input
             {...register("email", { required: true })}
             placeholder="johndoe@gmail.com"
             type="email"
           />
-          <label>Enter your mobile phone number</label>
+          <label className="font-poppins">Enter your mobile phone number</label>
           <PhoneInput
             placeholder="Enter phone number"
             defaultCountry='ke'
@@ -71,17 +73,17 @@ const RequisitionForm = () => {
             onChange={(value) => setPhone(value)}
           />
           {!isValid && <div style={{ color: 'red' }}>Phone number is not valid</div>}
-          <label>Set travel Date</label>
+          <label className="font-poppins">Set travel Date</label>
           <input {...register("travelDate", { required: true })} type="date" min={today} />
-          <label >Set the Number of adults(12+yrs)</label>
+          <label className="font-poppins">Set the Number of adults(12+yrs)</label>
           <input {...register("numberOfAdults", { required: true })} type="number" min={1} max={100} />
-          <label>Set the Number of children(3+yrs)</label>
+          <label className="font-poppins">Set the Number of children(3+yrs)</label>
           <input {...register("numberOfChildren", { required: true })} type="number" min={1} max={100} />
-          <label>Select mode of Transpot</label>
-          <select {...register("selectOption", { required: true })}>
+          <label className="font-poppins">Select mode of Transpot</label>
+          <select {...register("selectOption", { required: true })} className="font-poppins">
             <option value="" disabled>Select an option</option>
-            <option value="Tour Van">Tour Van</option>
-            <option value="Land Cruiser">Land Cruiser</option>
+            <option value="Tour Van" className="font-poppins">Tour Van</option>
+            <option value="Land Cruiser" className="font-poppins">Land Cruiser</option>
           </select>
           <div
             className="max-w-md"
@@ -91,6 +93,7 @@ const RequisitionForm = () => {
               <Label
                 htmlFor="comment"
                 value="Your message"
+                className="font-poppins"
               />
             </div>
             <Textarea
@@ -99,14 +102,9 @@ const RequisitionForm = () => {
               required
               rows={4}
               {...register("message", { required: true })}
+              className="font-poppins"
             />
           </div>
-          {/* <Textarea
-            label="Message"
-            color="blue"
-            className="font-poppins"
-            
-          /> */}
         </div>
         <Button
           type="submit"
