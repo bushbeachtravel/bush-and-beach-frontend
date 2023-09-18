@@ -5,17 +5,17 @@ import PropTypes from 'prop-types';
 
 const CoastActivities = ({ activities, location }) => (
   <section className="activities-section">
-    <Typography variant="paragraph" className="font-poppins font-bold py-10 mx-20">
+    <Typography variant="paragraph" className="font-poppins font-bold py-10 mx-20 text-center">
       Activities at {location}
     </Typography>
-    <div className="activities-section flex flex-wrap justify-center">
+    <div className="activities-section flex flex-wrap justify-center gap-3">
       {activities.map((item, index) => (
-        <div className="w-96 coast-container" key={index}>
+        <div className="coast-container" key={index}>
           <div className="content">
-            <figure className="relative h-96 w-full">
+            <figure className="relative h-80 w-80">
               <div className="content-overlay"></div>
               <img
-                className="h-96 w-full object-cover object-center content-image"
+                className="h-full w-full object-cover object-center content-image"
                 src={item.src}
                 alt={item.title}
               />
