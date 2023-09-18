@@ -7,7 +7,7 @@ import rwanda from '../../assets/images/rwanda.jpg'
 const slides = [
   {
     image: localSafari,
-    title: 'Local safaris',
+    title: 'Local Safaris.',
     para: `We at Bush and Beach tours and safaris beleive a tour is more than just seeing the scenery. 
     It’s all about the whole experience and this business is driven by our mission statement.`,
     urlPath: 'kenya',
@@ -21,7 +21,7 @@ const slides = [
   {
     image: zanzibar,
     title: 'Zanzibar Beach Holidays',
-    para: `Our Zanzibar day tours offer a perfect opportunity to explore the islands breathtaking landscapes, exotic beaches, famous spice farms, history and diverse wildlife and culture`,
+    para: `Our Zanzibar day tours offer a perfect opportunity to explore the island's breathtaking landscapes, exotic beaches, famous spice farms, history and diverse wildlife and culture.`,
     urlPath: 'zanzibar',
   },
   {
@@ -32,8 +32,8 @@ const slides = [
   },
   {
     image: internationalTravel,
-    title: 'Internation travel',
-    para: `We have partnered with other tour companies in various countries to enable our Kenyan esteemed clients have a seamless memorable travel experience. `,
+    title: 'International Travel',
+    para: `We have partnered with other tour companies in various countries to enable our Kenyan esteemed clients to have a seamless memorable travel experience. `,
     urlPath: 'international',
   },
 ]

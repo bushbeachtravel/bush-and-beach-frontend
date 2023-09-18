@@ -29,7 +29,7 @@ const NavigationMenu = () => {
         className="p-1 font-poppins text-blue-50 font-semibold"
       >
         <Link to="/trips" className="flex items-center">
-          Safari Packages
+          Our Services
         </Link>
       </Typography>
       <Typography
@@ -85,7 +85,7 @@ const NavigationMenu = () => {
             className="mr-4 cursor-pointer py-1.5 font-poppins text-blue-50 font-semibold"
           >
             <Link to="/">
-              Bush & Beach
+              Bush & Beach Travel
             </Link>
           </Typography>
           <div className="hidden lg:block">{navList}</div>
