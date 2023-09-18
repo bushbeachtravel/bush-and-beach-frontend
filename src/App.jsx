@@ -21,6 +21,12 @@ import NairobiAmboseliMaraTrip from './features/local-trips/nrb-amboseli-mara/Na
 import NairobiAmboseliMtKenyaLakeNakuruMasaaiMaraTrip from './features/local-trips/nrb-amboseli-mara-mt-kenya/NrbAmboseliMaraMtKenya';
 import NairobiAmboseliLewaMaraTrip from './features/local-trips/nrb-amboseli-lewa-mara/NairobiAmboseliLewaMara';
 import FourDayKenyaSafari from './features/local-trips/four-day-safari/FourDaySafari';
+import MasaaiMaraTsavo from './features/local-trips/masaai-mara-tsavo/MasaaiMaraTsavo';
+import Abderdares from './features/local-trips/aberdare/Aberdare';
+import OlPajeta from './features/local-trips/ol-pajeta/OlPajeta';
+import NairobiTsavoEast from './features/local-trips/nrb-tsavo/NairobiTsavoEast';
+import NairobiOlPajeta from './features/local-trips/ol-pajeta/NairobiOlPajeta';
+import BushAndBeachSafari from './features/local-trips/bush-beach/BushAndBeachSafari';
 
 import KenyaCostalBeaches from './features/beach-holidays/kenya/CoastalBeaches';
 import ZanzibarTours from './features/beach-holidays/zanzibar/Zanzibar';
@@ -87,7 +93,13 @@ const App = () => {
           <Route path="nrb-amboseli-nakuru-mt-kenya-masaai-mara" element={<NairobiAmboseliMtKenyaLakeNakuruMasaaiMaraTrip />} />
           <Route path="nairobi-amboseli-lewa-mara" element={<NairobiAmboseliLewaMaraTrip />} />
           <Route path="kenya-safari" element={<FourDayKenyaSafari />} />
-          
+          <Route path="mara-lake-nakuru" element={<MasaaiMaraTsavo />} />
+          <Route path="nakuru-aberdare" element={<Abderdares />} />
+          <Route path="olpajeta" element={<OlPajeta />} />
+          <Route path="giant-safari" element={<NairobiTsavoEast />} />
+          <Route path="highlight-safari" element={<NairobiOlPajeta />} />
+          <Route path="bush-beach-safari" element={<BushAndBeachSafari />} />
+
           <Route path="zanzibar" element={<ZanzibarTours />} />
           <Route path="rwanda-uganda" element={<RwandaUganda />} />
           <Route path="international" element={<InternationalTours />} />

@@ -11,6 +11,13 @@ import nairobi from '../assets/images/safari/nairobi-national-park.jpg';
 import samburu from '../assets/images/safari/samburu.jpg';
 import tsavoWest from '../assets/images/safari/tsavo-west.jpg';
 import amboseli from '../assets/images/safari/amboseli.jpg';
+import ninDaysSafari from '../assets/images/9days-safari.jpg';
+import lakeNaivasha from '../assets/images/lake-naivasha.jpg';
+import olPajeta from '../assets/images/safari/ol-pajeta.jpg';
+import buffalo from '../assets/images/safari/buffallo.jpg'
+import bongo from '../assets/images/safari/bongo.jpg';
+import coast from '../assets/images/safari/beach.jpg';
+
 
 export const maraImages = [
   {
@@ -117,6 +124,54 @@ export const parks = [
     description: `4 Days Taste of Kenya Safari takes to Kenya’s most famous National Parks, 
     the Masai Mara and Lake Nakuru.`,
     url: "kenya-safari"
+  },
+  {
+    title: "9 Days Kenya Wildlife Safari",
+    image: ninDaysSafari,
+    days: "9",
+    nights: "8",
+    description: `9 Days Kenya Wildlife Safari takes you to the most famous national parks in Kenya.`,
+    url: "mara-lake-nakuru"
+  },
+  {
+    title: "7 Days Big Five Safari",
+    image: lakeNaivasha,
+    days: "7",
+    nights: "6",
+    description: `7 Days Big Five Kenya Safari is a premium safari which gives you a unique experience. `,
+    url: "nakuru-aberdare"
+  },
+  {
+    title: "11 Days Kenya Classic Safari",
+    image: buffalo,
+    days: "11",
+    nights: "10",
+    description: `11 Days Kenya Classic Safari is ideal for families and couples looking for an active trip and a once-in-a-lifetime vacation.`,
+    url: "olpajeta"
+  },
+  {
+    title: "5 Days Giants Trail Safari",
+    image: olPajeta,
+    days: "5",
+    nights: "4",
+    description: `5 Days Safari takes you to Amboseli National Park famous for its enormous elephants.`,
+    url: "giant-safari"
+  },
+  {
+    title: "6 Days Kenya Highlights Safari",
+    image: bongo,
+    days: "6",
+    nights: "5",
+    description: `6 Days Kenya Highlights Safari takes you to Kenya’s diverse national parks and private ranches.`,
+    url: "highlight-safari"
+  },
+  {
+    title: "10 Days Bush and Beach Safari",
+    image: coast,
+    days: "10",
+    nights: "9",
+    description: `10 Days Bush and Beach Safari takes you from the wild to the sandy beaches of Kenya.`,
+    url: "bush-beach-safari"
   },
 
 ]
