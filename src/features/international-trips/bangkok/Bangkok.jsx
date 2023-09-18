@@ -13,6 +13,7 @@ const BangkokTrip = () => (
       safariTitle="Bangkok & Phuket Getaway"
       itenary={bangkokItenary}
       formData={bangkokPromoAd}
+      location="Thailand"
      />
     <Footer />
   </>

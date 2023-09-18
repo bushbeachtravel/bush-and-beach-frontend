@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Typography, Button } from '@material-tailwind/react';
 
-const ConfirmDeleteModal = ({handleCancelDelete, handleConfirmDelete}) => (
+const ConfirmDeleteModal = ({handleCancelDelete, handleConfirmDelete, text}) => (
   <>
     <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
       <div className="bg-white p-5 rounded-lg shadow-lg">
@@ -9,7 +9,7 @@ const ConfirmDeleteModal = ({handleCancelDelete, handleConfirmDelete}) => (
           Confirm Deletion
         </Typography>
         <Typography className="font-poppins mt-3">
-          Are you sure you want to delete this comment?
+          Are you sure you want to delete this {text}?
         </Typography>
         <div className="flex justify-end mt-5">
           <Button
@@ -28,5 +28,6 @@ const ConfirmDeleteModal = ({handleCancelDelete, handleConfirmDelete}) => (
 ConfirmDeleteModal.propTypes = {
   handleCancelDelete: PropTypes.func.isRequired,
   handleConfirmDelete: PropTypes.func.isRequired,
+  text: PropTypes.string.isRequired,
 };
 export default ConfirmDeleteModal;

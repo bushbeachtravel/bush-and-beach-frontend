@@ -1,40 +1,58 @@
 export const masaaiMaraIternary = [
   {
     day: `Day 1`,
-    title: 'Journey to Masai Mara',
+    title: 'Nairobi – Masai Mara National Reserve',
     activities: [
-      `Embark on a thrilling adventure as we transport you to the iconic Masai Mara.`,
-      `Feel the anticipation build as you approach this legendary wilderness.`,
-      `Settle into your luxurious lodge, surrounded by the sights and sounds of the African savanna.`
+      ` Your Safari will start at 7:00 am with pick up from Airport, 
+        Hotel or Residence with our driver guide. After a briefing, 
+        you will drive to Masai Mara for approximately 5-6 hours 
+        skirting around Mount Suswa. First highlight of the journey 
+        is the glimpse of East Africa’s Great Rift Valley. 
+        Covering approximately 7000kms, the valley runs from 
+        Lebanon in Asia to Mozambique in South East Asia. 
+        You will arrive at your camp in time for lunch 
+        followed by an afternoon game drive to explore the Masai Mara.`
     ],
   },
   {
     day: `Day 2`,
-    title: `Unveiling the Mara's Wonders`,
+    title: `Masai Mara National Reserve`,
     activities: [
-      `Rise with the sun for a day of unparalleled discovery.
-       Engage in heart-pounding game drives as the Mara's wildlife awakens
-       Witness lions on the prowl, elephants at play, and graceful giraffes on the horizon.
-       Experience the untamed beauty that has captivated explorers for generations.`,
+      `Enjoy full-day morning and afternoon game drives with packed lunch. 
+      Masai Mara National Reserve is famous for The Big Five animals 
+      (Elephant, Lion, Leopard, Rhinos and Buffalo). 
+      What amazes travelers in this reserve is the annual 
+      migration of wildebeests. The animals shift on July 
+      and return on November and is among the seventh wonder of the world. 
+      The park has the largest concentration of African lions, 
+      including the black-maned lion. 
+      Bird life is in plenty as wildlife at the Mara, which boasts over 
+      400 different bird species.`,
     ],
   },
 
   {
     day: `Day 3`,
-    title: 'Farewell to the Mara',
+    title: 'Masai Mara - Nairobi',
     activities: [
-      `Capture final glimpses of the Mara's wildlife on a morning game drive, etching these memories in your heart,
-      As the sun sets on your journey, return to Nairobi with a profound connection to the wild,
-      Your adventure concludes with drop-off at your preferred location.`,
+      `Wake up to an early morning Game Drive before breakfast to 
+      enjoy watching wildlife in cool early morning. 
+      This increases chances of spotting the big cats such as lions, 
+      cheetahs and leopards while they are hunting. 
+      Return to camp for breakfast then drive back to Nairobi 
+      where you will arrive later in the afternoon followed by a 
+      drop off to your Hotel or Airport.`,
     ],
   },
 ];
 
 export const masaaiMaraPromoAd = {
   promoTitle: `Capture the Essence of Africa's Wilderness!`,
-  promoBody: `Experience the awe-inspiring landscapes and incredible wildlife 
-  of Masai Mara in just 3 days. `,
-  price: `Ksh.15,000`,
+  promoBody: `3 Days Masai Mara Safari takes you to Kenya’s most 
+  famous game park, Masai Mara National Reserve. 
+  It offers the possibility of seeing the Big Five and many other species of game. 
+  This is where the great wildebeest migration is happens between July to October 
+  every year. `,
   callToAction: `
   Contact us now to secure your spot on a journey 
   that promises unforgettable 

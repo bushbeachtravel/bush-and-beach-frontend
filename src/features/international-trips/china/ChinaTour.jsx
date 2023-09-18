@@ -14,6 +14,7 @@ const ChinaTrip = () => (
       safariTitle="China Canton Fair Trade Exhibition Adventure"
       itenary={chinaItenary}
       formData={chinaPromoAd}
+      location="China"
      />
     <Footer />
   </>

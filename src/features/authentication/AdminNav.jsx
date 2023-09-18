@@ -56,7 +56,7 @@ const AdminNavBar = () => {
             color="black"
             className="p-1 font-normal font-poppins text-blue-50 font-semibold"
           >
-            <Link to="/blog-list" className="color flex items-center font-poppins">
+            <Link to="/blog" className="color flex items-center font-poppins">
               Create Blog
             </Link>
           </Typography>

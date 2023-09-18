@@ -13,6 +13,7 @@ const TurkeyTrip = () => (
       safariTitle="Istanbul Discovery: Journey through Turkey's Cultural Heart"
       itenary={turkeyItenary}
       formData={turkeyPromoAd}
+      location="Turkey"
      />
     <Footer />
   </>

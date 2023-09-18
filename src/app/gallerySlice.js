@@ -44,6 +44,7 @@ const gallerySlice = createSlice({
       .addCase(fetchPhotosAsync.fulfilled, (state, action) => ({
         ...state,
         photos: action.payload,
+        status: 'success',
       }))
       .addCase(fetchPhotosAsync.rejected, (state, action) => {
         state.status = 'failed';

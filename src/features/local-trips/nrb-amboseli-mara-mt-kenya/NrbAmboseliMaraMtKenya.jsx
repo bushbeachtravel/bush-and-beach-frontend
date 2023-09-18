@@ -10,6 +10,7 @@ const NairobiAmboseliMtKenyaLakeNakuruMasaaiMaraTrip = () => (
       safariTitle="Nairobi, Amboseli, Mt. Kenya, Lake Nakuru, Masai Mara"
       itenary={nrbAmboseliMtKenyaItenary}
       formData={nrbAmboseliMtKenyaPromoAd}
+      location="Kenya"
      />
     <Footer />
   </>

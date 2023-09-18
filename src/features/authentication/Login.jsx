@@ -1,14 +1,13 @@
+
 import {
   Card,
-  Input,
-  Button,
   Typography,
 } from "@material-tailwind/react";
 import { useState } from "react";
+import { Button, Label, TextInput } from 'flowbite-react';
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { loginUserAsync } from "../../app/authenticationSlice";
-import AdminNavBar from "./AdminNav";
 
 const LoginForm = () => {
   const dispatch = useDispatch();
@@ -17,7 +16,6 @@ const LoginForm = () => {
     email: '',
     password: '',
   });
-
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -34,48 +32,58 @@ const LoginForm = () => {
   }
   return (
     <>
-      <AdminNavBar />
-      <section className="flex justify-center mt-20">
+      <section className="flex justify-center mt-10">
         <Card color="transparent" shadow={false}>
           <Typography variant="h4" color="blue-gray" className="font-poppins text-center">
             Login
-          </Typography>
-          <Typography
-            color="gray"
-            className="mt-1 font-normal font-poppins text-center"
-            variant="small"
-          >
-            Enter your details to log in.
           </Typography>
           <form
             className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96"
             onSubmit={handleSubmitForm}
           >
-            <div className="mb-4 flex flex-col gap-6">
-              <Input
-                size="lg"
-                label="Email"
-                name="email"
+            <div>
+              <div className="mb-2 block">
+                <Label
+                  htmlFor="email2"
+                  value="Your email"
+                  className="font-poppins"
+                />
+              </div>
+              <TextInput
+                id="email2"
+                placeholder="name@flowbite.com"
+                className="font-poppins"
+                required
+                shadow
                 type="email"
+                name="email"
                 value={formData.email}
                 onChange={handleInputChange}
               />
-              <Input
+            </div>
+            <div>
+              <div className="mb-2 block">
+                <Label
+                  htmlFor="password2"
+                  value="Your password"
+                  className="font-poppins"
+                />
+              </div>
+              <TextInput
+                id="password2"
+                className="font-poppins"
+                required
+                shadow
                 type="password"
-                size="lg"
-                label="Password"
                 name="password"
                 value={formData.password}
                 onChange={handleInputChange}
               />
             </div>
-            <Button className="mt-6 font-poppins" fullWidth type="submit">
+            <Button className="mt-6 font-poppins" type="submit">
               Signin
             </Button>
-            <Typography
-              color="gray"
-              className="mt-4 text-center font-normal font-poppins"
-            >
+            <Typography color="gray" className="mt-4 text-center font-normal">
               Don&apos;t an account?{" "}
               <Link to="/signup">
                 Sign Up
@@ -87,4 +95,5 @@ const LoginForm = () => {
     </>
   );
 }
+
 export default LoginForm;

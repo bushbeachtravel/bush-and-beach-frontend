@@ -61,6 +61,7 @@ const blogSlice = createSlice({
       .addCase(fetchBlogPostAsync.fulfilled, (state, action) => ({
         ...state,
         posts: action.payload,
+        status: 'success',
       }))
       .addCase(fetchBlogPostAsync.rejected, (state, action) => {
         state.status = 'failed';

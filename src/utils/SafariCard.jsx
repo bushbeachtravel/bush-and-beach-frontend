@@ -27,7 +27,7 @@ const SafariCard = ({ tourDestination }) => (
               </Typography>
               <MdWbSunny />
               <Typography className="font-poppins font-bold" variant="small">
-                days
+                days.
               </Typography>
             </div>
             <Typography variant="small" className="font-poppins font-bold items-center">&</Typography>

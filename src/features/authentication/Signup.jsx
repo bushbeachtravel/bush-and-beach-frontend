@@ -1,19 +1,16 @@
 import {
   Card,
-  Input,
-  Button,
   Typography,
 } from "@material-tailwind/react";
+import { Button,Label, TextInput } from 'flowbite-react';
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { registerUserAsync } from "../../app/authenticationSlice";
-import AdminNavBar from "./AdminNav";
 
 const Signup = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -32,74 +29,100 @@ const Signup = () => {
   const handleSubmitForm = (event) => {
     event.preventDefault();
     dispatch(registerUserAsync(formData))
-      .then(() => {
-        navigate('/login')
-      })
-      .catch((error) => {
-        console.log('Error in registration', error);
-      })
+    navigate('/login');
   }
   return (
     <>
-      <AdminNavBar />
       <section className="flex justify-center mt-10">
         <Card color="transparent" shadow={false}>
           <Typography variant="h4" color="blue-gray" className="text-center font-poppins">
             Sign Up
           </Typography>
-          <Typography
-            color="gray"
-            className="mt-1 font-normal text-center font-poppins"
-            variant="small"
-          >
-            Enter your details to register.
-          </Typography>
           <form
             className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96"
             onSubmit={handleSubmitForm}
           >
-            <div className="mb-4 flex flex-col gap-6">
-              <Input
-                size="lg"
-                label="Name"
-                name="name"
+            <div>
+              <div className="mb-2 block w-full">
+                <Label
+                  htmlFor="base"
+                  value="Full Name"
+                  className="font-poppins"
+                />
+              </div>
+              <TextInput
+                id="base"
+                sizing="md"
                 type="text"
+                required
+                className="font-poppins"
+                name="name"
                 value={formData.name}
                 onChange={handleInputChange}
-                required
-              />
-              <Input
-                size="lg"
-                label="Email"
-                name="email"
-                type="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                required
-              />
-              <Input
-                type="password"
-                size="lg"
-                name="password"
-                label="Password"
-                value={formData.password}
-                onChange={handleInputChange}
-                required
-              />
-              <Input
-                type="password"
-                size="lg"
-                name="password_confirmation"
-                label="Confirm passowrd"
-                value={formData.password_confirmation}
-                onChange={handleInputChange}
-                required
               />
             </div>
-            <Button className="mt-6 font-poppins" fullWidth type="submit">
+            <div>
+              <div className="mb-2 block">
+                <Label
+                  htmlFor="email2"
+                  value="Your email"
+                  className="font-poppins"
+                />
+              </div>
+              <TextInput
+                id="email2"
+                placeholder="name@flowbite.com"
+                className="font-poppins"
+                required
+                shadow
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div>
+              <div className="mb-2 block">
+                <Label
+                  htmlFor="password2"
+                  value="Your password"
+                  className="font-poppins"
+                />
+              </div>
+              <TextInput
+                id="password2"
+                className="font-poppins"
+                required
+                shadow
+                type="password"
+                name="password"
+                value={formData.password}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div>
+              <div className="mb-2 block">
+                <Label
+                  htmlFor="repeat-password"
+                  value="Repeat password"
+                  className="font-poppins"
+                />
+              </div>
+              <TextInput
+                id="repeat-password"
+                className="font-poppins"
+                required
+                shadow
+                type="password"
+                name="password_confirmation"
+                value={formData.password_confirmation}
+                onChange={handleInputChange}
+              />
+            </div>
+            <Button className="mt-6 font-poppins" type="submit">
               Register
             </Button>
-            <Typography color="gray" className="mt-4 text-center font-normal font-poppins">
+            <Typography color="gray" className="mt-4 text-center font-normal">
               Already have an account?{" "}
               <Link to="/login">
                 Sign In

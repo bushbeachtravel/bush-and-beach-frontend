@@ -13,6 +13,7 @@ const JohannesburgTrib = () => (
       safariTitle="Johannesburg & Sun City Delight"
       itenary={joburgItenary}
       formData={joburgPromoAd}
+      location="South Africa"
      />
     <Footer />
   </>

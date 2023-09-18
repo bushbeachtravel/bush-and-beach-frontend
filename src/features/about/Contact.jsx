@@ -1,24 +1,56 @@
-import { Textarea, Typography, Input, Button, IconButton } from "@material-tailwind/react";
+import { Typography, IconButton } from "@material-tailwind/react";
+import { Button, Label, TextInput, Textarea } from 'flowbite-react';
 import { FaLocationDot, FaPhone, FaPaperPlane } from 'react-icons/fa6'
 import { BiWorld } from 'react-icons/bi';
 import { BsMailbox } from 'react-icons/bs';
 
 import Footer from "../footer/Footer";
 import NavigationMenu from "../home-page/NavigationMenu";
+import { Link } from "react-router-dom";
 
 const ContactPage = () => {
   return (
     <>
       <NavigationMenu />
-      <section className="contact-section flex flex-wrap items-center">
-        <div className="flex flex-col items-center contact-form h-96 w-full max-w-screen-lg sm:w-96 ">
-          <form className="mb-2 w-80 max-w-screen-lg sm:w-80">
+      <section className="contact-section flex flex-wrap mb-20">
+        <div className="flex flex-col contact-form w-full max-w-screen-lg sm:w-96 ">
+          <Typography variant="h5" className="font-poppins font-bold">
+            Leave a message
+          </Typography>
+          <form className="flex max-w-md flex-col gap-4">
             <div className="mb-4 flex flex-col gap-6">
-              <Typography variant="h5" className="font-poppins font-bold">
-                Leave a message
-              </Typography>
-              <Input variant="outlined" label="Email" type="email" />
-              <Textarea color="blue" label="Message" />
+              <div>
+                <div className="mb-2 block">
+                  <Label
+                    htmlFor="email1"
+                    value="Your email"
+                  />
+                </div>
+                <TextInput
+                  id="email1"
+                  placeholder="johndoe@gmail.com"
+                  required
+                  type="email"
+                />
+              </div>
+              <div
+                className="max-w-md"
+                id="textarea"
+              >
+                <div className="mb-2 block">
+                  <Label
+                    htmlFor="comment"
+                    value="Your message"
+                  />
+                </div>
+                <Textarea
+                  id="comment"
+                  placeholder="Write your message here..."
+                  required
+                  rows={4}
+                  className="w-full"
+                />
+              </div>
             </div>
             <Button color="blue" className="contact-btn">Send</Button>
           </form>
@@ -84,7 +116,8 @@ const ContactPage = () => {
                   Website
                 </Typography>
                 <Typography variant="small" className="font-poppins font-bold">
-                  www.bushandbeach.com
+                  <Link to="www.bushandbeach.com">www.bushandbeach.com</Link>
+                  
                 </Typography>
               </div>
             </li>
@@ -105,7 +138,7 @@ const ContactPage = () => {
             </li>
           </ul>
         </div>
-      </section >
+      </section>
       <Footer />
     </>
   );

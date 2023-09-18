@@ -14,6 +14,7 @@ const MalaysiaTrip = () => (
       safariTitle="Malaysia & Singapore Exploration"
       itenary={malaysiaItenary}
       formData={malaysiaPromoAd}
+      location="Malaysia"
      />
     <Footer />
   </>

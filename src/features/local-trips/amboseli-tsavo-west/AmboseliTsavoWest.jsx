@@ -12,6 +12,7 @@ const AmboseliTsavoWestTrip = () => (
       safariTitle="Amboseli and Tsavo West"
       itenary={amboseliTsavoItenary}
       formData={amboseliTsavoPromoAd}
+      location="Kenya"
      />
     <Footer />
   </>
