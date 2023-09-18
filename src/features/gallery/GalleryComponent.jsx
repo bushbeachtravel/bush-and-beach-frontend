@@ -23,7 +23,7 @@ import '../../assets/styles/Blog.css';
 export default function Gallery() {
   const gallery = useSelector((state) => state.photos.photos);
   const loggedIn = useSelector((state) => state.auth.loggedIn);
-
+  console.log(gallery, loggedIn);
   const dispatch = useDispatch();
   const [index, setIndex] = useState(-1);
 
@@ -34,7 +34,7 @@ export default function Gallery() {
     const aspectRatioWidth = 16;
     const aspectRatioHeight = 11;
     let randomHeight = Math.floor(Math.random() * (1440 - 695 + 1)) + 695;
-    randomHeight = (1080 / aspectRatioWidth ) * aspectRatioHeight;
+    randomHeight = (1080 / aspectRatioWidth) * aspectRatioHeight;
     console.log(randomHeight);
     pictures.push({
       src: `http://localhost:3000/${data.image}`,
@@ -67,7 +67,7 @@ export default function Gallery() {
   return (
     <>
       <NavigationMenu />
-      {gallery ? (
+      {loggedIn && gallery.length ? (
         <div className="gallery-container">
           <div className="my-gallery">
             <PhotoAlbum
@@ -85,23 +85,24 @@ export default function Gallery() {
             index={index}
           />
         </div>
-      ) : (
-        <div className="mt-20 p-10">
-          {loggedIn ? (
-            <Typography variant="lead" className="font-poppins text-center">
-              No photos yet!!
-              <Link to="/photo-upload">Upload New Photos</Link>
+      ) : (loggedIn ? (
+        <div className="flex justify-center items-center font-poppins">
+          <Link to="/photo-upload" color="blue">
+            The Gallery is empty!!!!
+            <Typography variant="paragraph" color="blue" className="font-poppins">
+              upload new photos
             </Typography>
-          ) : (
-            <Typography variant="lead" className="font-poppins text-center">
-              No Photos in the gallery.
-            </Typography>
-          )}
-
+          </Link>
         </div>
-
-      )}
-
+      ) : (
+        <div className="flex justify-center mt-20">
+          <Typography variant="lead" className="font-poppins font-bold">
+            The photo gallery is currently empty!
+          </Typography>
+        </div>
+      )
+      )
+      }
       <Footer />
     </>
   );
