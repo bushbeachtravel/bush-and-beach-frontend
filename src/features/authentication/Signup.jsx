@@ -7,12 +7,10 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { registerUserAsync } from "../../app/authenticationSlice";
-import AdminNavBar from "./AdminNav";
 
 const Signup = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -31,16 +29,10 @@ const Signup = () => {
   const handleSubmitForm = (event) => {
     event.preventDefault();
     dispatch(registerUserAsync(formData))
-      .then(() => {
-        navigate('/login')
-      })
-      .catch((error) => {
-        console.log('Error in registration', error);
-      })
+    navigate('/login');
   }
   return (
     <>
-      <AdminNavBar />
       <section className="flex justify-center mt-10">
         <Card color="transparent" shadow={false}>
           <Typography variant="h4" color="blue-gray" className="text-center font-poppins">
@@ -130,7 +122,7 @@ const Signup = () => {
             <Button className="mt-6 font-poppins" type="submit">
               Register
             </Button>
-            <Typography color="gray" className="mt-4 text-center font-normal font-poppins">
+            <Typography color="gray" className="mt-4 text-center font-normal">
               Already have an account?{" "}
               <Link to="/login">
                 Sign In
@@ -144,5 +136,3 @@ const Signup = () => {
   );
 }
 export default Signup;
-
-

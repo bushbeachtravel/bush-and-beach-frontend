@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-
+import { Spinner } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 import PhotoAlbum from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
@@ -22,6 +22,7 @@ import '../../assets/styles/Blog.css';
 
 export default function Gallery() {
   const gallery = useSelector((state) => state.photos.photos);
+  const status = useSelector((state) => state.photos.status);
   const loggedIn = useSelector((state) => state.auth.loggedIn);
   console.log(gallery, loggedIn);
   const dispatch = useDispatch();
@@ -35,14 +36,12 @@ export default function Gallery() {
     const aspectRatioHeight = 11;
     let randomHeight = Math.floor(Math.random() * (1440 - 695 + 1)) + 695;
     randomHeight = (1080 / aspectRatioWidth) * aspectRatioHeight;
-    console.log(randomHeight);
     pictures.push({
       src: `http://localhost:3000/${data.image}`,
       width: 1080,
       height: randomHeight,
     });
   });
-  console.log(pictures);
 
   const picha = pictures.map((photo) => {
     return {
@@ -62,47 +61,55 @@ export default function Gallery() {
 
   useEffect(() => {
     dispatch(fetchPhotosAsync())
-  }, [dispatch]);
+  }, [dispatch, gallery.length]);
 
   return (
     <>
       <NavigationMenu />
-      {loggedIn && gallery.length ? (
-        <div className="gallery-container">
-          <div className="my-gallery">
-            <PhotoAlbum
-              layout="rows"
-              photos={picha}
-              targetRowHeight={150}
-              onClick={({ index }) => setIndex(index)}
-            />
-          </div>
-          <Lightbox
-            open={index >= 0}
-            close={() => setIndex(-1)}
-            slides={picha}
-            plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
-            index={index}
-          />
-        </div>
-      ) : (loggedIn ? (
-        <div className="flex justify-center items-center font-poppins">
-          <Link to="/photo-upload" color="blue">
-            The Gallery is empty!!!!
-            <Typography variant="paragraph" color="blue" className="font-poppins">
-              upload new photos
-            </Typography>
-          </Link>
+      {status === "loading" ? (
+        <div className="flex justify-center mt-20">
+          <Spinner className="h-16 w-16 text-gray-900/50" />
         </div>
       ) : (
-        <div className="flex justify-center mt-20">
-          <Typography variant="lead" className="font-poppins font-bold">
-            The photo gallery is currently empty!
-          </Typography>
-        </div>
-      )
-      )
-      }
+        gallery.length ? (
+          <>
+            <div className="gallery-container">
+              <div className="my-gallery">
+                <PhotoAlbum
+                  layout="columns"
+                  photos={picha}
+                  targetRowHeight={150}
+                  onClick={({ index }) => setIndex(index)}
+                />
+              </div>
+              <Lightbox
+                open={index >= 0}
+                close={() => setIndex(-1)}
+                slides={picha}
+                plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
+                index={index}
+              />
+            </div>
+          </>
+        ) : (
+          loggedIn ? (
+            <div className="flex justify-center items-center font-poppins">
+              <Link to="/photo-upload" color="blue">
+                The Gallery is empty!!!!
+                <Typography variant="paragraph" color="blue" className="font-poppins">
+                  upload new photos
+                </Typography>
+              </Link>
+            </div>
+          ) : (
+            <div className="flex justify-center mt-20">
+              <Typography variant="lead" className="font-poppins font-bold">
+                The photo gallery is currently empty!
+              </Typography>
+            </div>
+          )
+        )
+      )}
       <Footer />
     </>
   );

@@ -1,3 +1,4 @@
+
 import {
   Card,
   Typography,
@@ -7,7 +8,6 @@ import { Button, Label, TextInput } from 'flowbite-react';
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { loginUserAsync } from "../../app/authenticationSlice";
-import AdminNavBar from "./AdminNav";
 
 const LoginForm = () => {
   const dispatch = useDispatch();
@@ -16,7 +16,6 @@ const LoginForm = () => {
     email: '',
     password: '',
   });
-
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -33,8 +32,7 @@ const LoginForm = () => {
   }
   return (
     <>
-      <AdminNavBar />
-      <section className="flex justify-center mt-20">
+      <section className="flex justify-center mt-10">
         <Card color="transparent" shadow={false}>
           <Typography variant="h4" color="blue-gray" className="font-poppins text-center">
             Login
@@ -85,10 +83,7 @@ const LoginForm = () => {
             <Button className="mt-6 font-poppins" type="submit">
               Signin
             </Button>
-            <Typography
-              color="gray"
-              className="mt-4 text-center font-normal font-poppins"
-            >
+            <Typography color="gray" className="mt-4 text-center font-normal">
               Don&apos;t an account?{" "}
               <Link to="/signup">
                 Sign Up
@@ -100,4 +95,5 @@ const LoginForm = () => {
     </>
   );
 }
+
 export default LoginForm;

@@ -28,7 +28,7 @@ const NavigationMenu = () => {
         color="blue-gray"
         className="p-1 font-poppins text-blue-50 font-semibold"
       >
-        <Link to="/trips" className="flex items-center">
+        <Link to="/services" className="flex items-center">
           Our Services
         </Link>
       </Typography>
