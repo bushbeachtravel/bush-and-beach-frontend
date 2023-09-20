@@ -1,123 +1,188 @@
-// import {
-//   Typography,
-//   List,
-//   ListItem,
-//   ListItemPrefix,
-//   Avatar,
-//   Card,
-//   IconButton
-// } from '@material-tailwind/react';
-// import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa6";
-// import Footer from '../footer/Footer';
-// import NavigationMenu from '../home-page/NavigationMenu';
+import {
+  Typography,
+  List,
+  ListItem,
+  ListItemPrefix,
+  Avatar,
+  Card,
+  Button
+} from '@material-tailwind/react';
+import { Link, useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect, useState } from 'react';
+import { useParams } from "react-router-dom";
 
-// import '../../assets/styles/Blog.css';
-// import wild from '../../assets/images/wild.jpg';
+import Footer from "../footer/Footer";
+import { fetchBlogPostAsync, deleteBlogPostAsync } from '../../app/blogSlice';
+import { currentUserAsync } from '../../app/authenticationSlice';
+import NavigationMenu from "../home-page/NavigationMenu";
+import formatTimestamp from '../../utils/dateFormat';
+import ConfirmDeleteModal from '../../utils/ConfirmDeleteModal';
 
-// const BlogDetailView = () => (
-//   <>
-//     <NavigationMenu />
-//     <section className="blog-detail-section">
-//       <div className="right p-5">
-//         <div className="right-container">
-//           <Typography variant="lead" className="text-center font-poppins font-bold">
-//             Masaai Mara
-//           </Typography>
 
-//           <div className="blog-image-container">
-//             <img src={wild} />
-//           </div>
-//           <br />
-//           <div className="blog-body">
-//             <Typography variant="small" className="font-poppins my-3">
-//               Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-//               lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
-//               iriure dolor in hendrerit in vulputate velit esse molestie consequat,
-//               vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et
-//               iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis.
-//               Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-//               lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor
-//               in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu
-//               feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui
-//               blandit praesent luptatum zzril delenit augue duis Ut wisi enim ad minim veniam,
-//               quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
-//               commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit
-//               esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros
-//               et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis
-//             </Typography>
-//           </div>
-//           <div className="sharing-icons">
-//             <IconButton className="rounded bg-[#2b90ec] hover:shadow-[#2b90ec]/20 focus:shadow-[#2b90ec]/20 active:shadow-[#2b90ec]/10">
-//               <FaFacebook size={30} />
-//             </IconButton>
-//             <IconButton className="rounded bg-[#1DA1F2] hover:shadow-[#1DA1F2]/20 focus:shadow-[#1DA1F2]/20 active:shadow-[#1DA1F2]/10">
-//               <FaTwitter size={30} />
-//             </IconButton>
-//             <IconButton className="rounded bg-[#2e72d7] hover:shadow-[#2e72d7]/20 focus:shadow-[#2e72d7]/20 active:shadow-[#2e72d7]/10">
-//               <FaLinkedin size={30} />
-//             </IconButton>
-//           </div>
-//           <div className="comment-section">
-//             <Typography variant="small" className="font-poppins font-bold">
-//               Leave a comment
-//             </Typography>
-//             <Comment />
-//           </div>
-//         </div>
-//       </div>
-//       <div className="left">
-//         <div className="left-container">
-//           <Typography variant="lead" className="font-poppins font-bold blog-heading">
-//             Popular posts
-//           </Typography>
-//           <br />
-//           <Card className="blog-list">
-//             <List>
-//               <ListItem>
-//                 <ListItemPrefix>
-//                   <Avatar variant="circular" alt="candice" src={wild} />
-//                 </ListItemPrefix>
-//                 <div>
-//                   <Typography variant="h6" color="blue-gray">
-//                     Tania Andrew
-//                   </Typography>
-//                   <Typography variant="small" color="gray" className="font-normal">
-//                     Software Engineer @ Material Tailwind
-//                   </Typography>
-//                 </div>
-//               </ListItem>
-//               <ListItem>
-//                 <ListItemPrefix>
-//                   <Avatar variant="circular" alt="alexander" src={wild} />
-//                 </ListItemPrefix>
-//                 <div>
-//                   <Typography variant="h6" color="blue-gray">
-//                     Alexander
-//                   </Typography>
-//                   <Typography variant="small" color="gray" className="font-normal">
-//                     Backend Developer @ Material Tailwind
-//                   </Typography>
-//                 </div>
-//               </ListItem>
-//               <ListItem>
-//                 <ListItemPrefix>
-//                   <Avatar variant="circular" alt="emma" src={wild} />
-//                 </ListItemPrefix>
-//                 <div>
-//                   <Typography variant="h6" color="blue-gray">
-//                     Emma Willever
-//                   </Typography>
-//                   <Typography variant="small" color="gray" className="font-normal">
-//                     UI/UX Designer @ Material Tailwind
-//                   </Typography>
-//                 </div>
-//               </ListItem>
-//             </List>
-//           </Card>
-//         </div>
-//       </div>
-//     </section>
-//     <Footer />
-//   </>
-// );
-// export default BlogDetailView;
+const BlogDetail = () => {
+  const posts = useSelector((state) => state.post.posts);
+  const user = useSelector((state) => state.auth.user);
+  const loggedIn = useSelector((state) => state.auth.loggedIn);
+  const [openDeleteBlogModal, setOpenDeleteBlogModal] = useState(false);
+  const [deletePostData, setDeletePostData] = useState({});
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { id } = useParams();
+
+  const post = posts.find((blog) => blog.id === parseInt(id, 10));
+
+  useEffect(() => {
+    dispatch(currentUserAsync());
+  }, [dispatch])
+
+  useEffect(() => {
+    dispatch(fetchBlogPostAsync())
+  }, [dispatch])
+
+  
+  const handleDeleteBlog = () => {
+    if (loggedIn && user.admin) {
+      const data = {
+        user_id: user.id,
+        post_id: parseInt(id, 10),
+      }
+      setDeletePostData({
+        ...data,
+      })
+      setOpenDeleteBlogModal(true);
+    }
+  }
+
+  const confirmDeleteBlog = () => {
+    dispatch(deleteBlogPostAsync(deletePostData));
+    setOpenDeleteBlogModal(false);
+    navigate('/blog-list');
+  }
+
+  const cancelDeleteBlog = () => {
+    setOpenDeleteBlogModal(false);
+  }
+
+  return (
+    <>
+      <NavigationMenu />
+      <section className="blog-detail-section">
+        <div className="right p-5">
+          <div className="right-container">
+            {post && post.body.blocks.map((data) => {
+              if (data.type === 'header') {
+                return (
+                  <>
+                    <div className="flex justify-between p-5">
+                      <div className="date">
+                        <Typography variant="paragraph" className="font-poppins">
+                          {formatTimestamp(post.created_at)}
+                        </Typography>
+                      </div>
+                      <div>
+                        <Typography variant="paragraph" className="font-poppins">
+                          Post by {post.author.name ? post.author.name : 'Anonymous'}
+                        </Typography>
+                      </div>
+                    </div>
+
+                    <Typography
+                      key={data.id}
+                      className="text-center font-poppins font-bold"
+                      dangerouslySetInnerHTML={{ __html: data.data.text }}
+                      posts />
+                  </>
+                )
+              } else if (data.type === 'image') {
+                return (
+                  <div className="blog-image-container" key={data.id}>
+                    <img
+                      src={data.data.url}
+                      alt={data.data.caption}
+                    />
+                  </div>
+                )
+              } else if (data.type === 'paragraph') {
+                return (
+                  <div className="blog-body py-10" key={data.id}>
+                    <p dangerouslySetInnerHTML={{ __html: data.data.text }} className="font-poppins" />
+                  </div>
+                )
+              }
+            })}
+            {loggedIn && user.admin && (
+              <div className="flex gap-3">
+                <Button
+                  className="font-poppins"
+                  variant="text"
+                  color="red"
+                  size="sm"
+                  onClick={() => handleDeleteBlog()}
+                >
+                  Delete
+                </Button>
+                <Button
+                  className="font-poppins"
+                  variant="text"
+                  size="sm"
+                >
+                  <Link to={`/blog-update/${id}`}>Edit</Link>
+                </Button>
+              </div>
+            )}
+            <br />
+          </div>
+        </div>
+        <div className="left">
+          <div className="left-container">
+            <Typography variant="lead" className="font-poppins font-bold blog-heading">
+              Popular posts
+            </Typography>
+            <br />
+            <Card className="blog-list">
+              <List>
+                {posts.map((data) => {
+                  return data.body.blocks.map((post) => {
+                    if (post.type === 'image') {
+                      return (
+                        <>
+                          <Link to={`/blog-detail/${data.id}`}>
+                            <ListItem>
+                              <ListItemPrefix>
+                                <Avatar variant="circular" alt={post.data.caption} src={post.data.url} />
+                              </ListItemPrefix>
+                              <div>
+                                <Typography variant="h6" color="blue-gray" className="font-poppins">
+                                  Tania Andrew
+                                </Typography>
+                                <Typography variant="small" color="gray" className="font-normal">
+                                  Software Engineer @ Material Tailwind
+                                </Typography>
+                              </div>
+                            </ListItem>
+                          </Link>
+                        </>
+                      )
+                    }
+                  })
+                })}
+              </List>
+            </Card>
+          </div>
+        </div>
+        {openDeleteBlogModal && (
+          <ConfirmDeleteModal
+            handleCancelDelete={cancelDeleteBlog}
+            handleConfirmDelete={confirmDeleteBlog}
+            text="post"
+          />
+        )}
+      </section >
+      <Footer />
+    </>
+  );
+};
+export default BlogDetail;
+
+

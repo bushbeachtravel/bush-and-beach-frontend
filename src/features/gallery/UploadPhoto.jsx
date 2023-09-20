@@ -11,15 +11,13 @@ import {
 import { useForm } from 'react-hook-form';
 import { uploadPhotoAsync } from '../../app/gallerySlice';
 import NavigationMenu from '../home-page/NavigationMenu';
-import { Link } from 'react-router-dom';
-
 
 const UploadPhoto = () => {
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const isLogged = useSelector((state) => state.auth.loggedIn);
-  const userId = JSON.parse(window.localStorage.getItem("userId"));
+  // const user = useSelector((state) => state.auth.user);
 
   const { register, handleSubmit, reset } = useForm();
 
@@ -31,12 +29,12 @@ const UploadPhoto = () => {
     dispatch(uploadPhotoAsync(formData))
     reset();
     navigate('/gallery');
-  } 
+  }
 
   return (
     <>
       <NavigationMenu />
-      {userId && isLogged ? (
+      {isLogged && (
         <section className="flex justify-center mt-20">
           <Card color="transparent" shadow={false}>
             <Typography variant="h4" color="blue-gray">
@@ -79,19 +77,6 @@ const UploadPhoto = () => {
             </form>
           </Card>
         </section>
-      ) : (
-        <div className='flex flex-col items-center mt-20'>
-          <div>
-            <Typography variant="lead" className="font-poppins text-center mt-20">
-              You are not authorized!!
-            </Typography>
-          </div>
-          <div>
-            <Button className="font-poppins">
-              <Link to="/">Home</Link>
-            </Button>
-          </div>
-        </div>
       )}
 
     </>

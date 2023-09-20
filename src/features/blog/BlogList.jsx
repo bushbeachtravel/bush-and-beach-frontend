@@ -51,37 +51,13 @@ const BlogList = () => {
               ))}
             </div>
           ) : (
-            <div>
+            <div className="flex mt-20 justify-center">
               <Typography variant="paragraph" className="font-poppins">
-                No greetings
+                No Blog posts yet
               </Typography>
             </div>
           )
         )}
-        {/* {posts && posts.length ? (
-          <div className="flex justify-center flex-wrap">
-            {posts.map((data) => (
-              <React.Fragment key={data.id}>
-                <div className="flex flex-col blog-card m-2">
-                  {data.body.blocks.map((block) => {
-                    if (block.type === "header") {
-                      return <BlogCardTitle block={block} data={data} key={block.id} />;
-                    } else if (block.type === "image") {
-                      return <BlogImage block={block} data={data} key={block.id} />;
-                    }
-                    return null;
-                  })}
-                </div>
-              </React.Fragment>
-            ))}
-          </div>
-        ) : (
-          <div>
-            <Typography variant="paragraph" className="font-poppins">
-              No greetings
-            </Typography>
-          </div>
-        )} */}
       </section>
       <Footer />
     </>

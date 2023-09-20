@@ -1,14 +1,27 @@
+import { useDispatch } from "react-redux";
+import { useForm } from "react-hook-form";
 import { Typography, IconButton } from "@material-tailwind/react";
 import { Button, Label, TextInput, Textarea } from 'flowbite-react';
 import { FaLocationDot, FaPhone, FaPaperPlane } from 'react-icons/fa6'
 import { BiWorld } from 'react-icons/bi';
 import { BsMailbox } from 'react-icons/bs';
-
+import { contactUsMessageAsync } from "../../app/messagesSlice";
 import Footer from "../footer/Footer";
 import NavigationMenu from "../home-page/NavigationMenu";
 import { Link } from "react-router-dom";
 
 const ContactPage = () => {
+  const { register, handleSubmit, reset } = useForm();
+  const dispatch = useDispatch();
+
+  const sendMessageToFormSpree = (data) => {
+    const formData = new FormData();
+    formData.append('email', data.email);
+    formData.append('message', data.message);
+    dispatch(contactUsMessageAsync(formData))
+    reset();
+  }
+
   return (
     <>
       <NavigationMenu />
@@ -17,20 +30,25 @@ const ContactPage = () => {
           <Typography variant="h5" className="font-poppins font-bold">
             Leave a message
           </Typography>
-          <form className="flex max-w-md flex-col gap-4">
+          <form
+            className="flex max-w-md flex-col gap-4"
+            onSubmit={handleSubmit(sendMessageToFormSpree)}
+          >
             <div className="mb-4 flex flex-col gap-6">
               <div>
                 <div className="mb-2 block">
                   <Label
-                    htmlFor="email1"
+                    htmlFor="email"
                     value="Your email"
                   />
                 </div>
                 <TextInput
-                  id="email1"
+                  id="email"
                   placeholder="johndoe@gmail.com"
                   required
                   type="email"
+                  name="email"
+                  {...register('email')}
                 />
               </div>
               <div
@@ -39,20 +57,28 @@ const ContactPage = () => {
               >
                 <div className="mb-2 block">
                   <Label
-                    htmlFor="comment"
+                    htmlFor="message"
                     value="Your message"
                   />
                 </div>
                 <Textarea
-                  id="comment"
+                  id="message"
                   placeholder="Write your message here..."
                   required
                   rows={4}
                   className="w-full"
+                  name="message"
+                  {...register('message')}
                 />
               </div>
             </div>
-            <Button color="blue" className="contact-btn">Send</Button>
+            <Button
+              color="blue"
+              className="contact-btn"
+              type="submit"
+            >
+              Send
+            </Button>
           </form>
         </div>
         <div className="flex flex-col contact-info">
@@ -101,7 +127,7 @@ const ContactPage = () => {
                   Email
                 </Typography>
                 <Typography variant="small" className="font-poppins font-bold">
-                  sales@milantours.com
+                  <Link to="mailto:sales@milantours.com">sales@milantours.com</Link>
                 </Typography>
               </div>
             </li>
@@ -116,8 +142,8 @@ const ContactPage = () => {
                   Website
                 </Typography>
                 <Typography variant="small" className="font-poppins font-bold">
-                  <Link to="www.bushandbeach.com">www.bushandbeach.com</Link>
-                  
+                  <Link to="https://kennankole.me/bush-and-beach-frontend/" target="_blank">bushandbeach.com</Link>
+
                 </Typography>
               </div>
             </li>
