@@ -66,7 +66,7 @@ import UpdateBlogPost from './features/blog/BlogUpdate';
 import BlogList from './features/blog/BlogList';
 import BlogPage from './features/blog/Blog';
 
-import "./index.css";
+import "./index.css"
 // import './assets/styles/Kenya.css';
 // import './assets/styles/Blog.css';
 // import './assets/styles/HomePage.css';
