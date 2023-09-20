@@ -18,7 +18,7 @@ const Logout = () => {
         if (decodedToken.exp < currentTimestamp) {
           window.localStorage.clear();
           dispatch(logoutUserAsync());
-          navigate('/')
+          navigate('/admin')
         }
       } catch (error) {
         console.log('Error decoding token', error);

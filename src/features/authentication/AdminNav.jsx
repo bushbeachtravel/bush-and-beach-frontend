@@ -12,8 +12,10 @@ import '../../assets/styles/HomePage.css';
 import '../../assets/styles/Navbar.css';
 
 
+
 const AdminNavBar = () => {
   const loggedIn = useSelector((state) => state.auth.loggedIn);
+  const user = useSelector((state) => state.auth.user);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -28,7 +30,7 @@ const AdminNavBar = () => {
 
   React.useEffect(() => {
     dispatch(currentUserAsync());
-  }, [dispatch]);
+  }, [dispatch, loggedIn]);
 
   const handleLogout = () => {
     dispatch(logoutUserAsync());
@@ -38,7 +40,7 @@ const AdminNavBar = () => {
 
   const navList = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      {loggedIn ? (
+      {loggedIn && user.admin ? (
         <>
           <Typography
             as="li"
@@ -97,7 +99,7 @@ const AdminNavBar = () => {
             className="mr-4 cursor-pointer py-1.5 font-poppins text-blue-50 font-semibold"
           >
             <Link to="/" className="color">
-              Bush & Beach
+              Bush & Beach Travel
             </Link>
           </Typography>
           <div className="hidden lg:block">{navList}</div>

@@ -17,8 +17,10 @@ export const loginUserAsync = createAsyncThunk(
   'authentication/userLogin',
   async (data) => {
     const response = await userLogin(data);
+    const user = JSON.stringify(response.data.data);
     const authToken = response.headers.authorization;
     window.localStorage.setItem("authToken", authToken);
+    window.localStorage.setItem("user", user);
     return response.data;
   }
 );
@@ -35,21 +37,21 @@ export const currentUserAsync = createAsyncThunk(
   'authentication/currentUser',
   async () => {
     const response = await currentUser();
-    const user = response.data;
-    window.localStorage.setItem("userId", user.id);
+    const user = JSON.stringify(response.data)
+    JSON.stringify(window.localStorage.setItem("user", user));
     return response.data;
   },
 );
 
 const authToken = window.localStorage.getItem('authToken');
-const userId = window.localStorage.getItem('userId');
+const user = JSON.parse(window.localStorage.getItem('user'));
 
 const initialState = {
   error: null,
   isLoading: false,
-  userId: userId || null,
   loggedIn: !!authToken,
   authToken: authToken || null,
+  user: user || null,
 };
 
 const authenticationSlice = createSlice({

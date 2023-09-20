@@ -37,6 +37,7 @@ import NairobiTsavoEast from './features/local-trips/nrb-tsavo/NairobiTsavoEast'
 import NairobiOlPajeta from './features/local-trips/ol-pajeta/NairobiOlPajeta';
 import BushAndBeachSafari from './features/local-trips/bush-beach/BushAndBeachSafari';
 
+// Coastal Trips
 import KenyaCostalBeaches from './features/beach-holidays/kenya/CoastalBeaches';
 import ZanzibarTours from './features/beach-holidays/zanzibar/Zanzibar';
 
@@ -60,10 +61,10 @@ import Logout from './features/authentication/Logout';
 import Signup from './features/authentication/Signup';
 
 // Blog routes 
-import BlogDetail from './features/authentication/BlogDetail';
-import UpdateBlogPost from './features/authentication/BlogUpdate';
-import BlogList from './features/authentication/BlogList';
-
+import BlogDetail from './features/blog/BlogDetail';
+import UpdateBlogPost from './features/blog/BlogUpdate';
+import BlogList from './features/blog/BlogList';
+import BlogPage from './features/blog/Blog';
 
 import './assets/styles/Kenya.css';
 import './assets/styles/Blog.css';
@@ -83,8 +84,10 @@ const App = () => {
           <Route path="signup" element={<Signup />} />
 
           <Route path="about" element={<About />} />
+
           <Route path="/blog-detail/:id" element={<BlogDetail />} />
-          <Route path="blog-list" element={<BlogList />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog-list" element={<BlogList />} />
           <Route path="/blog-update/:id" element={<UpdateBlogPost />} />
 
           <Route path='/photo-upload' element={<UploadPhoto />} />

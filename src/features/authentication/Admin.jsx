@@ -10,37 +10,48 @@ import {
   AccordionHeader,
   AccordionBody,
 } from "@material-tailwind/react";
+import { Link, useNavigate } from "react-router-dom";
 import {
   UserCircleIcon,
   Cog6ToothIcon,
   PowerIcon,
 } from "@heroicons/react/24/solid";
 import { ChevronRightIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
-import { currentUserAsync } from "../../app/authenticationSlice";
+import { currentUserAsync, logoutUserAsync } from "../../app/authenticationSlice";
 import LoginForm from "./Login";
 import AdminNavBar from "./AdminNav";
+import Footer from "../footer/Footer";
+
 
 const AdminDashBoard = () => {
   const [open, setOpen] = React.useState(0);
   const dispatch = useDispatch();
-  const loggedIn = useSelector((state) => state.auth.loggedIn)
+  const loggedIn = useSelector((state) => state.auth.loggedIn);
+  const user = useSelector((state) => state.auth.user);
+  const navigate = useNavigate();
 
   React.useEffect(() => {
     dispatch(currentUserAsync())
-  }, [dispatch])
+  }, [dispatch, loggedIn])
+
   const handleOpen = (value) => {
     setOpen(open === value ? 0 : value);
   };
 
+  const handleLogout = () => {
+    dispatch(logoutUserAsync());
+    navigate('/admin');
+  }
+
   return (
     <>
       <AdminNavBar />
-      {loggedIn ? (
+      {loggedIn && user.admin ? (
         <>
           <Card className="h-[calc(100vh-2rem)] w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5">
             <div className="mb-2 p-4">
-              <Typography variant="h5" color="blue-gray">
-                Sidebar
+              <Typography variant="h5" color="blue-gray" className="font-poppins">
+                Actions
               </Typography>
             </div>
             <List>
@@ -58,8 +69,8 @@ const AdminDashBoard = () => {
                     <ListItemPrefix>
                       <UserCircleIcon className="h-5 w-5" />
                     </ListItemPrefix>
-                    <Typography color="blue-gray" className="mr-auto font-normal">
-                      Users
+                    <Typography color="blue-gray" className="mr-auto font-normal font-poppins">
+                      {user.name}
                     </Typography>
                   </AccordionHeader>
                 </ListItem>
@@ -69,32 +80,27 @@ const AdminDashBoard = () => {
                       <ListItemPrefix>
                         <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                       </ListItemPrefix>
-                      Analytics
+                      <Link to="/blog" className="font-poppins">Create Blog Post</Link>
                     </ListItem>
                     <ListItem>
                       <ListItemPrefix>
                         <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                       </ListItemPrefix>
-                      Reporting
-                    </ListItem>
-                    <ListItem>
-                      <ListItemPrefix>
-                        <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
-                      </ListItemPrefix>
-                      Projects
+                      <Link to="/photo-upload" className="font-poppins">Upload Photos To Gallery</Link>
+                      
                     </ListItem>
                   </List>
                 </AccordionBody>
               </Accordion>
-              <ListItem>
+              <ListItem className="font-poppins">
                 <ListItemPrefix>
                   <Cog6ToothIcon className="h-5 w-5" />
                 </ListItemPrefix>
                 Settings
               </ListItem>
-              <ListItem>
+              <ListItem className="font-poppins" onClick={handleLogout} >
                 <ListItemPrefix>
-                  <PowerIcon className="h-5 w-5" />
+                  <PowerIcon className="h-5 w-5"/>
                 </ListItemPrefix>
                 Log Out
               </ListItem>
@@ -102,8 +108,9 @@ const AdminDashBoard = () => {
           </Card>
         </>
       ) : (
-        <LoginForm route="admin" />
+        <LoginForm />
       )}
+      <Footer />
     </>
   );
 }

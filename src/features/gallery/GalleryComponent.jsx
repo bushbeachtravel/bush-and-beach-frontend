@@ -24,7 +24,6 @@ export default function Gallery() {
   const gallery = useSelector((state) => state.photos.photos);
   const status = useSelector((state) => state.photos.status);
   const loggedIn = useSelector((state) => state.auth.loggedIn);
-  console.log(gallery, loggedIn);
   const dispatch = useDispatch();
   const [index, setIndex] = useState(-1);
 
@@ -37,7 +36,7 @@ export default function Gallery() {
     let randomHeight = Math.floor(Math.random() * (1440 - 695 + 1)) + 695;
     randomHeight = (1080 / aspectRatioWidth) * aspectRatioHeight;
     pictures.push({
-      src: `http://localhost:3000/${data.image}`,
+      src: `https://bush-and-beach-travel.onrender.com/${data.image}`,
       width: 1080,
       height: randomHeight,
     });
@@ -93,7 +92,7 @@ export default function Gallery() {
           </>
         ) : (
           loggedIn ? (
-            <div className="flex justify-center items-center font-poppins">
+            <div className="flex justify-center items-center font-poppins mt-20">
               <Link to="/photo-upload" color="blue">
                 The Gallery is empty!!!!
                 <Typography variant="paragraph" color="blue" className="font-poppins">
