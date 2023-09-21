@@ -24,6 +24,7 @@ export default function Gallery() {
   const gallery = useSelector((state) => state.photos.photos);
   const status = useSelector((state) => state.photos.status);
   const loggedIn = useSelector((state) => state.auth.loggedIn);
+  const user = useSelector((state) => state.auth.user)
   const dispatch = useDispatch();
   const [index, setIndex] = useState(-1);
 
@@ -91,7 +92,7 @@ export default function Gallery() {
             </div>
           </>
         ) : (
-          loggedIn ? (
+          loggedIn && user.admin ? (
             <div className="flex justify-center items-center font-poppins mt-20">
               <Link to="/photo-upload" color="blue">
                 The Gallery is empty!!!!

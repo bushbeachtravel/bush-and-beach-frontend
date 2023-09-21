@@ -4,7 +4,6 @@ import {
 } from "@material-tailwind/react";
 import { Button,Label, TextInput } from 'flowbite-react';
 import { Link, useNavigate } from "react-router-dom";
-// import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import { registerUserAsync } from "../../app/authenticationSlice";

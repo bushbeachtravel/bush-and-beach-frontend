@@ -98,7 +98,6 @@ const authenticationSlice = createSlice({
       .addCase(loginUserAsync.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.error.message;
-
         toast.error(
           `Login failed! Check your email and password`, {
           position: toast.POSITION.TOP_RIGHT
