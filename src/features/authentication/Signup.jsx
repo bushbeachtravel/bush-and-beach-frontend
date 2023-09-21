@@ -15,21 +15,6 @@ const Signup = () => {
   const navigate = useNavigate();
   const { register, handleSubmit, reset } = useForm();
 
-  // const [formData, setFormData] = useState({
-  //   name: '',
-  //   email: '',
-  //   password: '',
-  //   password_confirmation: '',
-  // });
-
-  // const handleInputChange = (event) => {
-  //   const { name, value } = event.target;
-  //   setFormData({
-  //     ...formData,
-  //     [name]: value,
-  //   });
-  // };
-
   const handleSubmitForm = (data) => {
     dispatch(registerUserAsync(data))
     navigate('/login');
@@ -62,8 +47,6 @@ const Signup = () => {
                 className="font-poppins"
                 {...register("name", { required: true, maxLength: 100})}
                 name="name"
-                // value={formData.name}
-                // onChange={handleInputChange}
               />
             </div>
             <div>
@@ -83,8 +66,6 @@ const Signup = () => {
                 type="email"
                 {...register("email", { required: true})}
                 name="email"
-                // value={formData.email}
-                // onChange={handleInputChange}
               />
             </div>
             <div>
@@ -103,8 +84,6 @@ const Signup = () => {
                 type="password"
                 {...register("password", { required: true})}
                 name="password"
-                // value={formData.password}
-                // onChange={handleInputChange}
               />
             </div>
             <div>
@@ -123,8 +102,6 @@ const Signup = () => {
                 type="password"
                 {...register("password_confirmation", { required: true})}
                 name="password_confirmation"
-                // value={formData.password_confirmation}
-                // onChange={handleInputChange}
               />
             </div>
             <Button className="mt-6 font-poppins" type="submit">
