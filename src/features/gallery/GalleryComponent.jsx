@@ -36,7 +36,7 @@ export default function Gallery() {
     let randomHeight = Math.floor(Math.random() * (1440 - 695 + 1)) + 695;
     randomHeight = (1080 / aspectRatioWidth) * aspectRatioHeight;
     pictures.push({
-      src: `https://bush-and-beach-travel.onrender.com/${data.image}`,
+      src: `https://bush-and-beach-backend-server.onrender.com/${data.image}`,
       width: 1080,
       height: randomHeight,
     });

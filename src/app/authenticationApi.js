@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const axiosInstance = axios.create({
-  baseURL: 'https://bush-and-beach-travel.onrender.com',
+  baseURL: 'https://bush-and-beach-backend-server.onrender.com/',
   // baseURL: 'http://[::1]:3000/',
   'Content-Type': 'application/json',
 
