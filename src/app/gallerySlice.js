@@ -3,10 +3,10 @@ import { uploadPhoto, fetchPhotos } from "./galleryApi";
 
 export const uploadPhotoAsync = createAsyncThunk(
   'photo/upoloadPhoto',
-    async (data) => {
-      const response = await uploadPhoto(data);
-      return response.data;
-    }
+  async (data) => {
+    const response = await uploadPhoto(data);
+    return response.data;
+  }
 );
 
 export const fetchPhotosAsync = createAsyncThunk(
@@ -21,33 +21,39 @@ const gallerySlice = createSlice({
   name: 'photos',
   initialState: {
     photos: [],
-    status: 'idle',
+    uploadStatus: 'idle',
+    fetchStatus: 'idle',
     error: null,
   },
   reducers: {},
   extraReducers: (builder) => {
     builder
+      // Uploading photos
       .addCase(uploadPhotoAsync.pending, (state) => {
-        state.status = 'loading';
+        state.uploadStatus = 'loading';
       })
       .addCase(uploadPhotoAsync.fulfilled, (state, action) => ({
         ...state,
-        photos: action.payload
-      }))
+        photos: action.payload,
+        uploadStatus: 'success',
+      })
+      )
       .addCase(uploadPhotoAsync.rejected, (state, action) => {
-        state.status = 'failed';
+        state.uploadStatus = 'rejected';
         state.error = action.error;
       })
+
+      // Fetching photos
       .addCase(fetchPhotosAsync.pending, (state) => {
-        state.status = 'loading';
+        state.fetchStatus = 'loading';
       })
       .addCase(fetchPhotosAsync.fulfilled, (state, action) => ({
         ...state,
         photos: action.payload,
-        status: 'success',
+        fetchStatus: 'success',
       }))
       .addCase(fetchPhotosAsync.rejected, (state, action) => {
-        state.status = 'failed';
+        state.fetchStatus = 'rejected';
         state.error = action.error;
       })
   }

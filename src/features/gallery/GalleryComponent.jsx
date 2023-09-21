@@ -22,7 +22,7 @@ import '../../assets/styles/Blog.css';
 
 export default function Gallery() {
   const gallery = useSelector((state) => state.photos.photos);
-  const status = useSelector((state) => state.photos.status);
+  const fetchStatus = useSelector((state) => state.photos.fetchStatus);
   const loggedIn = useSelector((state) => state.auth.loggedIn);
   const user = useSelector((state) => state.auth.user)
   const dispatch = useDispatch();
@@ -67,12 +67,66 @@ export default function Gallery() {
   return (
     <>
       <NavigationMenu />
-      {status === "loading" ? (
+      {fetchStatus === "loading" && (
+        <div className="flex justify-center mt-20">
+          <Spinner className="h-16 w-16 text-gray-900/50" />
+        </div>
+      )}
+      {fetchStatus === "success" && gallery.length ? (
+        <>
+          <div className="gallery-container">
+            <div className="my-gallery">
+              <PhotoAlbum
+                layout="columns"
+                photos={picha}
+                targetRowHeight={150}
+                onClick={({ index }) => setIndex(index)}
+              />
+            </div>
+            <Lightbox
+              open={index >= 0}
+              close={() => setIndex(-1)}
+              slides={picha}
+              plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
+              index={index}
+            />
+          </div>
+          {loggedIn && user.admin && (
+            <div className="flex p-5">
+              <Link to="/photo-upload">
+                <Typography variant="small" color="blue" className="font-poppins font-bold">
+                  Upload new photos
+                </Typography>
+              </Link>
+            </div>
+          )}
+        </>
+      ) : (
+        loggedIn && user.admin ? (
+          <div className="flex justify-center items-center font-poppins mt-20">
+            <Link to="/photo-upload" color="blue">
+              The Gallery is empty!!!!
+              <Typography variant="paragraph" color="blue" className="font-poppins">
+                upload new photos
+              </Typography>
+            </Link>
+          </div>
+        ) : (
+          <div className="flex justify-center mt-20">
+            <Typography variant="lead" className="font-poppins font-bold">
+              The photo gallery is currently empty!
+            </Typography>
+          </div>
+        )
+      )}
+
+
+      {/* {status === "loading" ? (
         <div className="flex justify-center mt-20">
           <Spinner className="h-16 w-16 text-gray-900/50" />
         </div>
       ) : (
-        gallery.length ? (
+        status === "success" ? (
           <>
             <div className="gallery-container">
               <div className="my-gallery">
@@ -91,6 +145,15 @@ export default function Gallery() {
                 index={index}
               />
             </div>
+            {user.admin && loggedIn && (
+              <div className="flex p-5">
+                <Link to="/photo-upload">
+                  <Typography variant="small" color="blue" className="font-poppins font-bold">
+                    Upload New Photos
+                  </Typography>
+                </Link>
+              </div>
+            )}
           </>
         ) : (
           loggedIn && user.admin ? (
@@ -110,7 +173,7 @@ export default function Gallery() {
             </div>
           )
         )
-      )}
+      )} */}
       <Footer />
     </>
   );
