@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 export const axiosInstance = axios.create({
-  baseURL: 'https://bush-and-beach-travel.onrender.com',
-  // baseURL: 'http://[::1]:3000/',
+  // baseURL: 'https://bush-and-beach-travel.onrender.com',
+  baseURL: 'http://[::1]:3000/',
   'Content-Type': 'application/json',
 
 });
@@ -16,13 +16,14 @@ axiosInstance.interceptors.request.use((config) => {
 });
 
 export const registerUser = async (data) => {
-  const { fullName, email, password, passwordConfimation } = data;
+  const { name, email, password, password_confirmation } = data;
+  console.log("saving data", data);
   return axiosInstance.post('/signup', {
     user: {
-      name: fullName,
+      name,
       email,
       password,
-      password_confirmation: passwordConfimation,
+      password_confirmation,
       admin: true,
     },
   });

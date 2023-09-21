@@ -31,7 +31,6 @@ const Signup = () => {
   // };
 
   const handleSubmitForm = (data) => {
-    console.log("formData", data)
     dispatch(registerUserAsync(data))
     navigate('/login');
     reset();
@@ -61,8 +60,8 @@ const Signup = () => {
                 type="text"
                 required
                 className="font-poppins"
-                {...register("fullName", { required: true, maxLength: 100})}
-                name="fullName"
+                {...register("name", { required: true, maxLength: 100})}
+                name="name"
                 // value={formData.name}
                 // onChange={handleInputChange}
               />
@@ -122,8 +121,8 @@ const Signup = () => {
                 required
                 shadow
                 type="password"
-                {...register("passwordConfirmation", { required: true})}
-                name="passwordConfirmation"
+                {...register("password_confirmation", { required: true})}
+                name="password_confirmation"
                 // value={formData.password_confirmation}
                 // onChange={handleInputChange}
               />
