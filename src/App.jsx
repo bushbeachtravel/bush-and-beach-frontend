@@ -72,7 +72,7 @@ const App = () => {
 
   return (
     <div>
-      <BrowserRouter basename="/bush-and-beach-frontend">
+      <BrowserRouter>
         <Logout />
         <Routes>
           <Route path="/" element={<Homepage />} />

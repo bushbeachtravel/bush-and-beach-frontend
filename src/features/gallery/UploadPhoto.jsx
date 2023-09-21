@@ -17,11 +17,10 @@ const UploadPhoto = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const isLogged = useSelector((state) => state.auth.loggedIn);
-  const status = useSelector((state) => state.photos.uploadStatus);
+  const status = useSelector((state) => state.photos.status);
   const user = useSelector((state) => state.auth.user);
   const { register, handleSubmit, reset } = useForm();
 
-  console.log(status);
   const sendDataToApi = (data) => {
     const formData = new FormData()
     const photo = { ...data, image: data.image[0] }

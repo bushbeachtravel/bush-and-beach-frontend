@@ -21,8 +21,7 @@ const gallerySlice = createSlice({
   name: 'photos',
   initialState: {
     photos: [],
-    uploadStatus: 'idle',
-    fetchStatus: 'idle',
+    status: 'idle',
     error: null,
   },
   reducers: {},
@@ -35,25 +34,23 @@ const gallerySlice = createSlice({
       .addCase(uploadPhotoAsync.fulfilled, (state, action) => ({
         ...state,
         photos: action.payload,
-        uploadStatus: 'success',
       })
       )
       .addCase(uploadPhotoAsync.rejected, (state, action) => {
-        state.uploadStatus = 'rejected';
         state.error = action.error;
       })
 
       // Fetching photos
       .addCase(fetchPhotosAsync.pending, (state) => {
-        state.fetchStatus = 'loading';
+        state.status = 'loading';
       })
       .addCase(fetchPhotosAsync.fulfilled, (state, action) => ({
         ...state,
         photos: action.payload,
-        fetchStatus: 'success',
+        status: 'success',
       }))
       .addCase(fetchPhotosAsync.rejected, (state, action) => {
-        state.fetchStatus = 'rejected';
+        state.status = 'rejected';
         state.error = action.error;
       })
   }
