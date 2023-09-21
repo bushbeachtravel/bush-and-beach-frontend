@@ -8,7 +8,6 @@ export const registerUserAsync = createAsyncThunk(
     const response = await registerUser(data);
     const authToken = response.headers.authorization;
     window.localStorage.setItem('authToken', authToken);
-
     return response.data;
   },
 );
@@ -48,7 +47,7 @@ const user = JSON.parse(window.localStorage.getItem('user'));
 
 const initialState = {
   error: null,
-  isLoading: false,
+  status: '',
   loggedIn: !!authToken,
   authToken: authToken || null,
   user: user || null,
@@ -62,10 +61,10 @@ const authenticationSlice = createSlice({
     builder
       // User registration
       .addCase(registerUserAsync.pending, (state) => {
-        state.isLoading = true;
+        state.status = 'loading';
       })
       .addCase(registerUserAsync.fulfilled, (state) => {
-        state.isLoading = false;
+        state.status = 'success';
         toast.success(
           'Registration successfuly!!', {
           position: toast.POSITION.TOP_RIGHT
@@ -73,7 +72,7 @@ const authenticationSlice = createSlice({
         )
       })
       .addCase(registerUserAsync.rejected, (state) => {
-        state.isLoading = false;
+        state.status = 'failed';
         toast.error(
           'User could not be created successfuly', {
           position: toast.POSITION.TOP_RIGHT
@@ -83,12 +82,12 @@ const authenticationSlice = createSlice({
 
       // Login 
       .addCase(loginUserAsync.pending, (state) => {
-        state.isLoading = true;
+        state.status = 'loading';
       })
-      .addCase(loginUserAsync.fulfilled, (state) => {
-        state.isLoading = false;
+      .addCase(loginUserAsync.fulfilled, (state, action) => {
+        state.status = 'success';
         state.loggedIn = true;
-
+        state.user = action.payload.data
         toast.success(
           `Log in successful `, {
           position: toast.POSITION.TOP_RIGHT
@@ -96,7 +95,7 @@ const authenticationSlice = createSlice({
         );
       })
       .addCase(loginUserAsync.rejected, (state, action) => {
-        state.isLoading = false;
+        state.status = 'failed';
         state.error = action.error.message;
         toast.error(
           `Login failed! Check your email and password`, {
@@ -107,10 +106,10 @@ const authenticationSlice = createSlice({
 
       // Logout User
       .addCase(logoutUserAsync.pending, (state) => {
-        state.isLoading = true;
+        state.status = 'loading';
       })
       .addCase(logoutUserAsync.fulfilled, (state) => {
-        state.isLoading = false;
+        state.status = 'success';
         state.loggedIn = false;
 
         toast.success(
@@ -120,7 +119,7 @@ const authenticationSlice = createSlice({
         );
       })
       .addCase(logoutUserAsync.rejected, (state, action) => {
-        state.isLoading = false;
+        state.status = 'failed';
         state.error = action.error;
 
         toast.error(
@@ -132,11 +131,11 @@ const authenticationSlice = createSlice({
 
       // Current User
       .addCase(currentUserAsync.pending, (state) => {
-        state.isLoading = true;
+        state.status = 'loading';
       })
 
       .addCase(currentUserAsync.fulfilled, (state, action) => {
-        state.isLoading = false;
+        state.status = 'success';
         state.user = action.payload;
         state.loggedIn = true;
       });

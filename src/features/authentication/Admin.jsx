@@ -29,7 +29,8 @@ const AdminDashBoard = () => {
   const loggedIn = useSelector((state) => state.auth.loggedIn);
   const user = useSelector((state) => state.auth.user);
   const navigate = useNavigate();
-  console.log(user);
+
+  console.log(loggedIn, user);
   React.useEffect(() => {
     dispatch(currentUserAsync())
   }, [dispatch, loggedIn])

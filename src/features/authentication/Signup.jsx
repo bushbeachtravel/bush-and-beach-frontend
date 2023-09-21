@@ -4,21 +4,30 @@ import {
 } from "@material-tailwind/react";
 import { Button,Label, TextInput } from 'flowbite-react';
 import { Link, useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
+import { useEffect } from "react";
 import { registerUserAsync } from "../../app/authenticationSlice";
+
 
 
 const Signup = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { register, handleSubmit, reset } = useForm();
+  const status = useSelector((state) => state.auth.status);
+  console.log(status);
 
   const handleSubmitForm = (data) => {
     dispatch(registerUserAsync(data))
-    navigate('/login');
-    reset();
   }
+
+  useEffect(() => {
+    if(status === 'success') {
+      navigate('/login');
+      reset();
+    }
+  }, [status, navigate, reset])
   return (
     <>
       <section className="flex justify-center mt-10">
