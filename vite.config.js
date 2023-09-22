@@ -1,11 +1,23 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import { resolve } from 'path';
+import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
+// export default defineConfig({
+//   base: './',
+//   plugins: [react()],
+//   define: {
+//     global: 'window',
+//   }
+// })
 export default defineConfig({
-  base: '/bush-and-beach-frontend/',
+  build: {
+    rollupOptions: {
+      input: {
+        // eslint-disable-next-line no-undef
+        main: resolve(__dirname, "index.html"),
+      },
+    },
+  },
   plugins: [react()],
-  define: {
-    global: 'window',
-  }
-})
+});

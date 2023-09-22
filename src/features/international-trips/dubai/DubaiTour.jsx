@@ -10,7 +10,7 @@ const DubaiTrip = () => (
     <SafariDetail
       images={dubaiImages}
       duration="3 Days & 2 Nights"
-      safariTitle="Masaai Mara"
+      safariTitle="Dubai"
       itenary={dubai4NightsItenary}
       formData={dubai4NightsPromoAd}
       location="Dubai"

@@ -80,15 +80,17 @@ const LoginForm = () => {
                 onChange={handleInputChange}
               />
             </div>
-            <Button className="mt-6 font-poppins" type="submit">
-              Signin
-            </Button>
-            <Typography color="gray" className="mt-4 text-center font-normal">
-              Don&apos;t an account?{" "}
-              <Link to="/signup">
-                Sign Up
-              </Link>
-            </Typography>
+            <div className="">
+              <Button className="mt-6 font-poppins" type="submit">
+                Signin
+              </Button>
+              <Typography color="gray" className="mt-4 font-normal">
+                Don&apos;t an account?{" "}
+                <Link to="/signup">
+                  Sign Up
+                </Link>
+              </Typography>
+            </div>
           </form>
         </Card>
       </section>

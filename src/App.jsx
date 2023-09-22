@@ -37,6 +37,7 @@ import NairobiTsavoEast from './features/local-trips/nrb-tsavo/NairobiTsavoEast'
 import NairobiOlPajeta from './features/local-trips/ol-pajeta/NairobiOlPajeta';
 import BushAndBeachSafari from './features/local-trips/bush-beach/BushAndBeachSafari';
 
+// Coastal Trips
 import KenyaCostalBeaches from './features/beach-holidays/kenya/CoastalBeaches';
 import ZanzibarTours from './features/beach-holidays/zanzibar/Zanzibar';
 
@@ -60,70 +61,67 @@ import Logout from './features/authentication/Logout';
 import Signup from './features/authentication/Signup';
 
 // Blog routes 
-import BlogDetail from './features/authentication/BlogDetail';
-import UpdateBlogPost from './features/authentication/BlogUpdate';
-import BlogList from './features/authentication/BlogList';
+import BlogDetail from './features/blog/BlogDetail';
+import UpdateBlogPost from './features/blog/BlogUpdate';
+import BlogList from './features/blog/BlogList';
+import BlogPage from './features/blog/Blog';
 
-
-import './assets/styles/Kenya.css';
-import './assets/styles/Blog.css';
-import './assets/styles/HomePage.css';
+import "./index.css"
 
 const App = () => {
 
   return (
     <div>
-      <BrowserRouter basename="/bush-and-beach-frontend">
+      <BrowserRouter>
         <Logout />
         <Routes>
           <Route path="/" element={<Homepage />} />
 
-          <Route path="admin" element={<AdminDashBoard />} />
-          <Route path="login" element={<Login />} /> 
-          <Route path="signup" element={<Signup />} />
+          <Route path="/admin" element={<AdminDashBoard />} />
+          <Route path="/login" element={<Login />} /> 
+          <Route path="/signup" element={<Signup />} />
 
-          <Route path="about" element={<About />} />
+          <Route path="/about" element={<About />} />
+
           <Route path="/blog-detail/:id" element={<BlogDetail />} />
-          <Route path="blog-list" element={<BlogList />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog-list" element={<BlogList />} />
           <Route path="/blog-update/:id" element={<UpdateBlogPost />} />
 
           <Route path='/photo-upload' element={<UploadPhoto />} />
-          <Route path="gallery" element={<Gallery />} />
-          <Route path="contact" element={<ContactPage />} />
-          <Route path="services" element={<Trips />} />
-          <Route path="kenya" element={<KenyaSafaris />} />
-          <Route path="coast" element={<KenyaCostalBeaches />} />
-          <Route path="masai-mara" element={<MasaaiMaraTrip />} />
-          <Route path="lake-nakuru-masai-mara" element={<LakeNakuruMaraTrip /> } />
-          <Route path="nairobi-samburu-masaai-mara" element={<NairobiSamburuMaraTrip />} />
-          <Route path="amboseli-tsavo-west" element={<AmboseliTsavoWestTrip />} />
-          <Route path="nairobi-amboseli-mara" element={<NairobiAmboseliMaraTrip />} />
-          <Route path="nrb-amboseli-nakuru-mt-kenya-masaai-mara" element={<NairobiAmboseliMtKenyaLakeNakuruMasaaiMaraTrip />} />
-          <Route path="nairobi-amboseli-lewa-mara" element={<NairobiAmboseliLewaMaraTrip />} />
-          <Route path="kenya-safari" element={<FourDayKenyaSafari />} />
-          <Route path="mara-lake-nakuru" element={<MasaaiMaraTsavo />} />
-          <Route path="nakuru-aberdare" element={<Abderdares />} />
-          <Route path="olpajeta" element={<OlPajeta />} />
-          <Route path="giant-safari" element={<NairobiTsavoEast />} />
-          <Route path="highlight-safari" element={<NairobiOlPajeta />} />
-          <Route path="bush-beach-safari" element={<BushAndBeachSafari />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/services" element={<Trips />} />
+          <Route path="/kenya" element={<KenyaSafaris />} />
+          <Route path="/coast" element={<KenyaCostalBeaches />} />
+          <Route path="/masai-mara" element={<MasaaiMaraTrip />} />
+          <Route path="/lake-nakuru-masai-mara" element={<LakeNakuruMaraTrip /> } />
+          <Route path="/nairobi-samburu-masaai-mara" element={<NairobiSamburuMaraTrip />} />
+          <Route path="/amboseli-tsavo-west" element={<AmboseliTsavoWestTrip />} />
+          <Route path="/nairobi-amboseli-mara" element={<NairobiAmboseliMaraTrip />} />
+          <Route path="/nrb-amboseli-nakuru-mt-kenya-masaai-mara" element={<NairobiAmboseliMtKenyaLakeNakuruMasaaiMaraTrip />} />
+          <Route path="/nairobi-amboseli-lewa-mara" element={<NairobiAmboseliLewaMaraTrip />} />
+          <Route path="/kenya-safari" element={<FourDayKenyaSafari />} />
+          <Route path="/mara-lake-nakuru" element={<MasaaiMaraTsavo />} />
+          <Route path="/nakuru-aberdare" element={<Abderdares />} />
+          <Route path="/olpajeta" element={<OlPajeta />} />
+          <Route path="/giant-safari" element={<NairobiTsavoEast />} />
+          <Route path="/highlight-safari" element={<NairobiOlPajeta />} />
+          <Route path="/bush-beach-safari" element={<BushAndBeachSafari />} />
 
-          <Route path="zanzibar" element={<ZanzibarTours />} />
-          <Route path="rwanda-uganda" element={<RwandaUganda />} />
-          <Route path="international" element={<InternationalTours />} />
-          <Route path="dubai" element={<DubaiTrip />} />
-          <Route path="china" element={<ChinaTrip />} />
-          <Route path="joburg" element={<JohannesburgTrib />} />
-          <Route path="malaysia" element={<MalaysiaTrip />} />
-          <Route path="mauritius" element={<MauritiusTrip />} />
-          <Route path="egypt-israel" element={<EgyptIsraelTrip />} />
-          <Route path="italy-barca-paris" element={<ParisBarcaItaly />} />
-          <Route path="bangkok" element={<BangkokTrip />} />
-          <Route path="turkey" element={<TurkeyTrip />} />
-
+          <Route path="/zanzibar" element={<ZanzibarTours />} />
+          <Route path="/rwanda-uganda" element={<RwandaUganda />} />
+          <Route path="/international" element={<InternationalTours />} />
+          <Route path="/dubai" element={<DubaiTrip />} />
+          <Route path="/china" element={<ChinaTrip />} />
+          <Route path="/joburg" element={<JohannesburgTrib />} />
+          <Route path="/malaysia" element={<MalaysiaTrip />} />
+          <Route path="/mauritius" element={<MauritiusTrip />} />
+          <Route path="/egypt-israel" element={<EgyptIsraelTrip />} />
+          <Route path="/italy-barca-paris" element={<ParisBarcaItaly />} />
+          <Route path="/bangkok" element={<BangkokTrip />} />
+          <Route path="/turkey" element={<TurkeyTrip />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<NotFound />} />
-          
-          <Route path="contact" element={<ContactPage />} />
         </Routes>
       </BrowserRouter>
 

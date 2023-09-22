@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 export const axiosInstance = axios.create({
-  baseURL: 'http://[::1]:3000/',
+  baseURL: 'https://bush-and-beach-backend-server.onrender.com/',
+  // baseURL: 'http://[::1]:3000/',
   'Content-Type': 'application/json',
 
 });
@@ -22,6 +23,7 @@ export const registerUser = async (data) => {
       email,
       password,
       password_confirmation,
+      admin: true,
     },
   });
 };
@@ -41,3 +43,4 @@ export const currentUser = () => {
     },
   });
 };
+

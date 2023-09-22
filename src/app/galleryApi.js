@@ -1,8 +1,8 @@
 import { axiosInstance } from "./authenticationApi";
 
-const userId = JSON.parse(window.localStorage.getItem("userId"));
+const user = JSON.parse(window.localStorage.getItem("user"));
 export const uploadPhoto = (data) => {
-  return axiosInstance.post(`api/v1/users/${userId}/photos/`, data);
+  return axiosInstance.post(`api/v1/users/${user.id}/photos/`, data);
 }
 
 export const fetchPhotos = () => {

@@ -1,7 +1,7 @@
 import { axiosInstance } from "./authenticationApi";
 
-export const createBlogPost = async ({data, userId}) => {
-  return axiosInstance.post(`/api/v1/users/${userId}/posts`, { post: data });
+export const createBlogPost = async ({data, user}) => {
+  return axiosInstance.post(`/api/v1/users/${user.id}/posts`, { post: data });
 };
 
 export const fetchBlogPost = async () => {
@@ -9,8 +9,8 @@ export const fetchBlogPost = async () => {
 };
 
 export const updateBlogPost = async (data) => {
-  const { post, userId, id } = data; 
-  return axiosInstance.patch(`/api/v1/users/${userId}/posts/${id}`, { post: post } )
+  const { post, user, id } = data; 
+  return axiosInstance.patch(`/api/v1/users/${user.id}/posts/${id}`, { post: post } )
 }
 
 export const deleteBlogPost = async (data) => {

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import EditorJS from "@editorjs/editorjs";
 
 import { useNavigate, useParams } from "react-router-dom";
-import { Button } from "@material-tailwind/react";
+import { Button, Typography } from "@material-tailwind/react";
 
 import { updateBlogPostAsync, fetchBlogPostAsync } from "../../app/blogSlice";
 import { currentUserAsync } from "../../app/authenticationSlice";
@@ -16,7 +16,9 @@ import "../../assets/styles/Blog.css";
 
 const UpdateBlogPost = () => {
   const [editor, setEditor] = useState(null);
-  const userId = JSON.parse(window.localStorage.getItem("userId"));
+  const loggedIn = useSelector((state) => state.auth.isLoggedIn);
+  const user = useSelector((state) => state.auth.user);
+  console.log(user);
   const { id } = useParams();
   const post = useSelector((state) => state.post.posts.find((blog) => blog.id === parseInt(id, 10)));
   const dispatch = useDispatch();
@@ -24,11 +26,11 @@ const UpdateBlogPost = () => {
 
   useEffect(() => {
     dispatch(currentUserAsync());
-  }, [dispatch]);
+  }, [dispatch, loggedIn]);
 
   useEffect(() => {
-    dispatch(fetchBlogPostAsync(userId))
-  }, [dispatch, userId]);
+    dispatch(fetchBlogPostAsync(user))
+  }, [dispatch, user]);
 
   useEffect(() => {
     const editorInstance = new EditorJS({
@@ -48,7 +50,7 @@ const UpdateBlogPost = () => {
           blocks: newData.blocks
         }
       }
-      dispatch(updateBlogPostAsync({post, userId, id}))
+      dispatch(updateBlogPostAsync({post, user, id}))
       navigate(`/blog-detail/${id}`);
     }
   };
@@ -56,7 +58,8 @@ const UpdateBlogPost = () => {
   return (
     <>
       <NavigationMenu />
-      <div className="editor">
+      {loggedIn || user.admin ? (
+        <div className="editor">
         <Editor
           data={post ? post.body : null}
           onChange={() => { }}
@@ -70,6 +73,14 @@ const UpdateBlogPost = () => {
           Update
         </Button>
       </div>
+      ) : (
+        <div className="mt-20 flex justify-center">
+          <Typography variant="paragraph" className="font-poppins">
+            You need to log in before this operation
+          </Typography>
+        </div>
+      )}
+      
     </>
   )
 }

@@ -72,7 +72,7 @@ export const internationalTrips =
     Our partnership with renowned tour companies
     in Dubai, Israel, Egypt, Singapore, Thailand, Italy,
     Barcelona, and France ensures a seamless and
-    unforgettable travel experience.We have partnered with
+    unforgettable travel experience. We have partnered with
     other tour companies in various
     countries to enable our Kenyan esteemed clients have a
     seamless memorable travel experience.`,
