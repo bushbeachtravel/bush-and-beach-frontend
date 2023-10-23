@@ -7,9 +7,9 @@ import {
 } from "@material-tailwind/react";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { currentUserAsync, logoutUserAsync } from "../../app/authenticationSlice";
-import '../../assets/styles/HomePage.css';
-import '../../assets/styles/Navbar.css';
+import { currentUserAsync, logoutUserAsync } from "@state-management/authenticationSlice";
+import '@styling/HomePage.css';
+import '@styling/Navbar.css';
 
 
 

@@ -7,17 +7,18 @@ import {
   Card,
   Button
 } from '@material-tailwind/react';
+
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 
-import Footer from "../footer/Footer";
-import { fetchBlogPostAsync, deleteBlogPostAsync } from '../../app/blogSlice';
-import { currentUserAsync } from '../../app/authenticationSlice';
-import NavigationMenu from "../home-page/NavigationMenu";
-import formatTimestamp from '../../utils/dateFormat';
-import ConfirmDeleteModal from '../../utils/ConfirmDeleteModal';
+import Footer from "@home-page/Footer";
+import { fetchBlogPostAsync, deleteBlogPostAsync } from '@state-management/blogSlice';
+import { currentUserAsync } from '@state-management/authenticationSlice';
+import NavigationMenu from "@home-page/NavigationMenu";
+import formatTimestamp from '@utils/dateFormat';
+import ConfirmDeleteModal from '@utils/ConfirmDeleteModal';
 
 
 const BlogDetail = () => {

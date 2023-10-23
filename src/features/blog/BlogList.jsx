@@ -1,15 +1,17 @@
 import { useSelector, useDispatch } from "react-redux";
 import React, { useEffect } from "react";
-import { Spinner } from "@material-tailwind/react";
-import { fetchBlogPostAsync } from "../../app/blogSlice";
-import { currentUserAsync } from "../../app/authenticationSlice";
-import Footer from "../footer/Footer";
-import NavigationMenu from "../home-page/NavigationMenu";
-
-import BlogImage from "../../utils/BlogImage";
-import BlogCardTitle from "../../utils/BlogTitle";
-import { Typography } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
+import { Spinner } from "@material-tailwind/react";
+
+import { fetchBlogPostAsync } from "@state-management/blogSlice";
+import { currentUserAsync } from "@state-management/authenticationSlice";
+import Footer from "@home-page/Footer";
+import NavigationMenu from "@home-page/NavigationMenu";
+
+import BlogImage from "@utils/BlogImage";
+import BlogCardTitle from "@utils/BlogTitle";
+import { Typography } from "@material-tailwind/react";
+
 
 const BlogList = () => {
   const posts = useSelector((state) => state.post.posts);

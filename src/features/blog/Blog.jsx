@@ -6,12 +6,12 @@ import EditorJS from "@editorjs/editorjs";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@material-tailwind/react";
 
-import { createBlogAsync } from "../../app/blogSlice";
-import { currentUserAsync } from "../../app/authenticationSlice";
+import { createBlogAsync } from "@state-management/blogSlice";
+import { currentUserAsync } from "@state-management/authenticationSlice";
 import { EDITOR_JS_TOOLS } from "../../../tools";
-import NavigationMenu from "../home-page/NavigationMenu";
-import Editor from "./Editor";
-import "../../assets/styles/Blog.css";
+import NavigationMenu from "@home-page/NavigationMenu";
+import Editor from "@blog/Editor";
+import "@styling/Blog.css";
 
 const INITIAL_DATA = {
   time: new Date().getTime(),

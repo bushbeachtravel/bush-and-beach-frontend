@@ -7,9 +7,9 @@ import {
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { currentUserAsync } from "../../app/authenticationSlice";
-import '../../assets/styles/HomePage.css';
-import '../../assets/styles/Navbar.css';
+import { currentUserAsync } from "@state-management/authenticationSlice";
+import '@styling/HomePage.css';
+import '@styling/Navbar.css';
 
 const NavigationMenu = () => {
   const dispatch = useDispatch();

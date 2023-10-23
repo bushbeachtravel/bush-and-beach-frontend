@@ -16,11 +16,12 @@ import {
   Cog6ToothIcon,
   PowerIcon,
 } from "@heroicons/react/24/solid";
+
 import { ChevronRightIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
-import { currentUserAsync, logoutUserAsync } from "../../app/authenticationSlice";
-import LoginForm from "./Login";
-import AdminNavBar from "./AdminNav";
-import Footer from "../footer/Footer";
+import { currentUserAsync, logoutUserAsync } from "@state-management/authenticationSlice";
+import LoginForm from "@authentication/Login";
+import AdminNavBar from "@authentication/AdminNav";
+import Footer from "@home-page/Footer";
 
 
 const AdminDashBoard = () => {

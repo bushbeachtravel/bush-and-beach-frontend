@@ -1,8 +1,8 @@
-import localSafari from '../../assets/images/ndovu.jpg'
-import beachHoliday from '../../assets/images/mombasa/coast.jpg';
-import internationalTravel from '../../assets/images/paris.jpg';
-import zanzibar from '../../assets/images/zanzibar/zanzibar.jpg'
-import rwanda from '../../assets/images/rwanda.jpg'
+import localSafari from '@images/ndovu.jpg'
+import beachHoliday from '@images/mombasa/coast.jpg';
+import internationalTravel from '@images/paris.jpg';
+import zanzibar from '@images/zanzibar/zanzibar.jpg'
+import rwanda from '@images/rwanda.jpg'
 
 const slides = [
   {

@@ -70,6 +70,15 @@
   color: #1b1b1c;
 }
 
+#phone-input {
+  background-color: yellow;
+}
+.react-international-phone-input {
+  width: 100;
+  background-color: yellow;
+  height: 45px;
+}
+
 /* Price Button */
 .price-button {
   background-color: #004a7f;

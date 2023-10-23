@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import jwtDecode from "jwt-decode";
 import { useNavigate } from "react-router-dom";
-import { logoutUserAsync } from "../../app/authenticationSlice";
+import { logoutUserAsync } from "@state-management/authenticationSlice";
 import { useDispatch } from "react-redux";
 
 const Logout = () => {

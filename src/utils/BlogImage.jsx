@@ -1,6 +1,7 @@
 import { Typography } from '@material-tailwind/react';
 import PropTypes from 'prop-types';
-import formatTimestamp from './dateFormat';
+import formatTimestamp from '@utils/dateFormat';
+
 const BlogImage = ({ block, data }) => (
   <div key={block.id} className="image-card">
     <img src={block.data.url} alt={block.data.caption} />

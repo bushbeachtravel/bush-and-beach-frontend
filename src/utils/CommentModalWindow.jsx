@@ -11,23 +11,18 @@ import {
   Tab,
   TabPanel,
 } from "@material-tailwind/react";
-import LoginForm from '../features/authentication/Login';
-import Signup from '../features/authentication/Signup';
+import LoginForm from '.@src/features/authentication/Login';
+import Signup from '.@src/features/authentication/Signup';
 import { useState } from 'react';
 
 const CommentModalWindow = ({ open, handleOpen, id, onLoginSuccess }) => {
   const [activeTab, setActiveTab] = useState('login');
   console.log(activeTab)
 
-  // const handleTabChange = (value) => {
-  //   setActiveTab(value);
-  //   console.log(activeTab)
-  // };
-
   const handleSignUpSuccess = () => {
     setActiveTab('login');
     console.log('second', activeTab);
-    // handleOpen();
+
   }
   return (
     <>

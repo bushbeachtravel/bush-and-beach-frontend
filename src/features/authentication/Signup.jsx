@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
 import { useEffect } from "react";
-import { registerUserAsync } from "../../app/authenticationSlice";
+import { registerUserAsync } from "@state-management/authenticationSlice";
 
 
 

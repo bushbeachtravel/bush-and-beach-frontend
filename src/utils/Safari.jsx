@@ -7,11 +7,11 @@ import { GoLocation } from 'react-icons/go'
 
 import 'react-phone-number-input/style.css'
 
-import NavigationMenu from '../features/home-page/NavigationMenu';
-import RequisitionForm from '../features/requisition-form/RequisitionForm';
-import { SafariItenary } from './SafariItenary';
-import '../assets/styles/Kenya.css';
-import { settings } from '../data/safari';
+import NavigationMenu from '@home-page/NavigationMenu';
+import RequisitionForm from '@home-page/RequisitionForm';
+import { SafariItenary } from '@utils/SafariItenary';
+import '@styling/Kenya.css';
+import { settings } from '@data/safari';
 
 
 const SafariDetail = ({ images, safariTitle, duration, itenary, formData, location }) => {

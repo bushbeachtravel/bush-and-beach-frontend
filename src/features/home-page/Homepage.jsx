@@ -1,13 +1,15 @@
 import { Carousel, Typography, Button } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
-import NavigationMenu from "./HomeNavbar";
-import slides from "./homePageData";
+import { Outlet } from "react-router-dom";
+import NavigationMenu from "@home-page/HomeNavbar";
+import slides from "@home-page/homePageData";
 
 export const HomePage = () => {
 
   return (
     <>
       <NavigationMenu />
+      <Outlet />
       <Carousel
         className="carousel"
         transition={{ duration: 2 }}
