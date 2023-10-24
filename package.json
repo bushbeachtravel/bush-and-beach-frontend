@@ -60,7 +60,7 @@
     "yet-another-react-lightbox": "^3.12.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.22.10",
+    "@babel/core": "^7.23.2",
     "@babel/eslint-parser": "^7.22.10",
     "@babel/plugin-syntax-jsx": "^7.22.5",
     "@babel/preset-react": "^7.22.5",
