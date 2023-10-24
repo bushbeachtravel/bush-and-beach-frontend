@@ -2,7 +2,7 @@ import { Carousel, Typography, Button } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import NavigationMenu from "@home-page/HomeNavbar";
-import slides from "@home-page/homePageData";
+import slides from "@data/homePageData";
 
 export const HomePage = () => {
 

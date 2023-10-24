@@ -8,6 +8,7 @@ import {
 
 import { ThemeProvider } from '@material-tailwind/react'
 import { ToastContainer } from 'react-toastify'
+import "react-toastify/dist/ReactToastify.css";
 
 // Homepage
 import Homepage from "@home-page/Homepage";
@@ -15,7 +16,8 @@ import NotFound from "@home-page/NotFound";
 import Trips from "@home-page/Trips";
 import About from '@home-page/About';
 import Gallery from '@home-page/GalleryComponent';
-import ContactPage from '@home-page/Contact'
+import ContactPage from '@home-page/Contact';
+import UploadPhoto from '@home-page/UploadPhoto';
 
 // Internation travel
 import InternationalTours from '@international/InternationalTours';
@@ -51,6 +53,7 @@ import BushAndBeachSafari from '@local-trips/BushAndBeachSafari';
 import BlogPage from '@blog/Blog';
 import BlogDetail from '@blog/BlogDetail';
 import BlogList from '@blog/BlogList';
+import UpdateBlogPost from '@blog/BlogUpdate';
 
 // Coastal beaches
 import KenyaCostalBeaches from '@beach-holidays/CoastalBeaches';
@@ -202,8 +205,12 @@ const router = createBrowserRouter([
     element: <BlogPage />
   },
   {
-    path: "blog-detail",
+    path: "blog-detail/:id",
     element: <BlogDetail />
+  },
+  {
+    path: "blog-update/:id",
+    element: <UpdateBlogPost />
   },
   {
     path: "blog-list",
@@ -228,6 +235,10 @@ const router = createBrowserRouter([
   {
     path: "login",
     element: <LoginForm />
+  },
+  {
+    path: "photo-upload",
+    element: <UploadPhoto />
   }
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(

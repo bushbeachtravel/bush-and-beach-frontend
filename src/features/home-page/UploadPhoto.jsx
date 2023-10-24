@@ -9,8 +9,8 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { useForm } from 'react-hook-form';
-import { uploadPhotoAsync } from '@src/app/gallerySlice';
-import NavigationMenu from '@src/features/home-page/NavigationMenu';
+import { uploadPhotoAsync } from '@state-management/gallerySlice';
+import NavigationMenu from '@home-page/NavigationMenu';
 
 const UploadPhoto = () => {
 
