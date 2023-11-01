@@ -1,18 +1,23 @@
 import { useSelector, useDispatch } from "react-redux";
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Spinner } from "@material-tailwind/react";
-import { fetchBlogPostAsync } from "../../app/blogSlice";
-import { currentUserAsync } from "../../app/authenticationSlice";
-import Footer from "../footer/Footer";
-import NavigationMenu from "../home-page/NavigationMenu";
 
-import BlogImage from "../../utils/BlogImage";
-import BlogCardTitle from "../../utils/BlogTitle";
+import { fetchBlogPostAsync } from "@state-management/blogSlice";
+import { currentUserAsync } from "@state-management/authenticationSlice";
+import Footer from "@home-page/Footer";
+import NavigationMenu from "@home-page/NavigationMenu";
+
+import BlogImage from "@utils/BlogImage";
+import BlogCardTitle from "@utils/BlogTitle";
 import { Typography } from "@material-tailwind/react";
+
 
 const BlogList = () => {
   const posts = useSelector((state) => state.post.posts);
   const status = useSelector((state) => state.post.status);
+  const user = useSelector((state) => state.auth.user);
+  const loggedIn = useSelector((state) => state.auth.loggedIn);
 
   const dispatch = useDispatch();
 
@@ -51,11 +56,24 @@ const BlogList = () => {
               ))}
             </div>
           ) : (
-            <div className="flex mt-20 justify-center">
-              <Typography variant="paragraph" className="font-poppins">
-                No Blog posts yet
-              </Typography>
-            </div>
+            loggedIn && user.admin ? (
+              <div className="flex flex-col mt-20 justify-center items-center">
+                <Typography variant="paragraph" className="font-poppins">
+                  There are no Blog posts.
+                </Typography>
+                <Link to="/blog">
+                  <Typography color="blue" className="font-poppins">
+                    Create blog post
+                  </Typography>
+                </Link>
+              </div>
+            ) : (
+              <div className="flex mt-20 justify-center">
+                <Typography variant="paragraph" className="font-poppins">
+                  There are no blog posts at the moment!
+                </Typography>
+              </div>
+            )
           )
         )}
       </section>

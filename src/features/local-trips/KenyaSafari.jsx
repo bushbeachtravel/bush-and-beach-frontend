@@ -1,15 +1,15 @@
-import { parks, animals } from "../../data/safari";
-import NavigationMenu from "../home-page/NavigationMenu";
-import Footer from "../footer/Footer";
-import SafariCard from "../../utils/SafariCard";
-import SafariLandingPage from "../../utils/SafariLanding";
-import SafariIntroSection from "../../utils/SafariIntroPage";
-import wild from '../../assets/images/wild.jpg'
-import '../../assets/styles/Kenya.css';
+import { parks, animals } from "@data/safari";
+import NavigationMenu from "@home-page/NavigationMenu";
+import Footer from "@home-page/Footer";
+import SafariCard from "@utils/SafariCard";
+import SafariLandingPage from "@utils/SafariLanding";
+import SafariIntroSection from "@utils/SafariIntroPage";
+import wild from '@images/wild.jpg'
+import '@styling/Kenya.css';
 import {
   title, bodyLeft, bodyRight,
   bodyTextTwo, title2
-} from "./data";
+} from "@data/kenyaData";
 
 const KenyaSafaris = () => {
   return (

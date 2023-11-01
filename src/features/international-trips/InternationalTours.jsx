@@ -1,14 +1,14 @@
 import { 
   intlTourDestinations, title,
   bodyLeft, bodyRight, bodyTextTwo, title2, cities
- } from "./international";
-import NavigationMenu from "../home-page/NavigationMenu";
-import Footer from "../footer/Footer";
-import SafariCard from "../../utils/SafariCard";
-import SafariLandingPage from "../../utils/SafariLanding";
-import SafariIntroSection from "../../utils/SafariIntroPage";
-import bgImg from '../../assets/images/paris.jpg';
-import '../../assets/styles/Kenya.css';
+ } from "@data/international";
+import NavigationMenu from "@home-page/NavigationMenu";
+import Footer from "@home-page/Footer";
+import SafariCard from "@utils/SafariCard";
+import SafariLandingPage from "@utils/SafariLanding";
+import SafariIntroSection from "@utils/SafariIntroPage";
+import bgImg from '@images/paris.jpg';
+import '@styling/Kenya.css';
 
 const InternationalTours = () => {
   return (

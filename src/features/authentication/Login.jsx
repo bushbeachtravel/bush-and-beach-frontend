@@ -7,7 +7,7 @@ import { useState } from "react";
 import { Button, Label, TextInput } from 'flowbite-react';
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { loginUserAsync } from "../../app/authenticationSlice";
+import { loginUserAsync } from "@state-management/authenticationSlice";
 
 const LoginForm = () => {
   const dispatch = useDispatch();

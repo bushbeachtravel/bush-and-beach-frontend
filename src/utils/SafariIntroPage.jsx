@@ -1,6 +1,6 @@
 import { Typography } from "@material-tailwind/react";
 import PropTypes from 'prop-types';
-import SafariCarousel from "./Carousel";
+import SafariCarousel from "@utils/Carousel";
 
 const SafariIntroSection = ({
   pageTitle, pageBodyLeft, pageBodyRight, 

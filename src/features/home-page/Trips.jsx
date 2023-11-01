@@ -1,8 +1,11 @@
 import { Typography } from "@material-tailwind/react";
-import Footer from "../footer/Footer";
-import NavigationMenu from "./NavigationMenu";
-import { kenyaSafari, rwandaUganda, mombasa, zanzibarTours, internationalTrips } from "../../data/trips";
-import '../../assets/styles/HomePage.css';
+import Footer from "@home-page/Footer";
+import NavigationMenu from "@home-page/NavigationMenu";
+import {
+  kenyaSafari, rwandaUganda, mombasa,
+  zanzibarTours, internationalTrips
+} from "@data/trips";
+import '@styling/HomePage.css';
 
 import { Link } from "react-router-dom";
 
@@ -13,7 +16,7 @@ const Trips = () => (
       <div className="service-container h-full w-full">
         <div className="content-container">
           <div className="image-container">
-            <img src={kenyaSafari.image} alt={kenyaSafari.title} className="h-80 w-full object-cover object-center"/>
+            <img src={kenyaSafari.image} alt={kenyaSafari.title} className="h-80 w-full object-cover object-center" />
           </div>
         </div>
         <div className="container-text">
@@ -58,7 +61,7 @@ const Trips = () => (
       <div className="service-container">
         <div className="content-container">
           <div className="image-container h-80">
-            <img src={zanzibarTours.image} alt={zanzibarTours.title} className="h-full w-full object-cover object-center"/>
+            <img src={zanzibarTours.image} alt={zanzibarTours.title} className="h-full w-full object-cover object-center" />
           </div>
         </div>
         <div className="container-text">
@@ -98,14 +101,14 @@ const Trips = () => (
         </div>
         <div className="content-container desktop">
           <div className="image-container">
-            <img src={rwandaUganda.image} alt={rwandaUganda.title} className="h-80 w-full object-cover object-center"/>
+            <img src={rwandaUganda.image} alt={rwandaUganda.title} className="h-80 w-full object-cover object-center" />
           </div>
         </div>
       </div>
       <div className="service-container">
         <div className="content-container">
           <div className="image-container">
-            <img src={internationalTrips.image} alt={internationalTrips.title} className="h-80 w-full object-cover object-center"/>
+            <img src={internationalTrips.image} alt={internationalTrips.title} className="h-80 w-full object-cover object-center" />
           </div>
         </div>
         <div className="container-text">

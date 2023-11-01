@@ -4,38 +4,30 @@ import {
 } from "@material-tailwind/react";
 import { Button,Label, TextInput } from 'flowbite-react';
 import { Link, useNavigate } from "react-router-dom";
-// import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
-import { registerUserAsync } from "../../app/authenticationSlice";
+import { useEffect } from "react";
+import { registerUserAsync } from "@state-management/authenticationSlice";
+
 
 
 const Signup = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { register, handleSubmit, reset } = useForm();
-
-  // const [formData, setFormData] = useState({
-  //   name: '',
-  //   email: '',
-  //   password: '',
-  //   password_confirmation: '',
-  // });
-
-  // const handleInputChange = (event) => {
-  //   const { name, value } = event.target;
-  //   setFormData({
-  //     ...formData,
-  //     [name]: value,
-  //   });
-  // };
+  const status = useSelector((state) => state.auth.status);
+  console.log(status);
 
   const handleSubmitForm = (data) => {
-    console.log("formData", data)
     dispatch(registerUserAsync(data))
-    navigate('/login');
-    reset();
   }
+
+  useEffect(() => {
+    if(status === 'success') {
+      navigate('/login');
+      reset();
+    }
+  }, [status, navigate, reset])
   return (
     <>
       <section className="flex justify-center mt-10">
@@ -61,10 +53,8 @@ const Signup = () => {
                 type="text"
                 required
                 className="font-poppins"
-                {...register("fullName", { required: true, maxLength: 100})}
-                name="fullName"
-                // value={formData.name}
-                // onChange={handleInputChange}
+                {...register("name", { required: true, maxLength: 100})}
+                name="name"
               />
             </div>
             <div>
@@ -84,8 +74,6 @@ const Signup = () => {
                 type="email"
                 {...register("email", { required: true})}
                 name="email"
-                // value={formData.email}
-                // onChange={handleInputChange}
               />
             </div>
             <div>
@@ -104,8 +92,6 @@ const Signup = () => {
                 type="password"
                 {...register("password", { required: true})}
                 name="password"
-                // value={formData.password}
-                // onChange={handleInputChange}
               />
             </div>
             <div>
@@ -122,10 +108,8 @@ const Signup = () => {
                 required
                 shadow
                 type="password"
-                {...register("passwordConfirmation", { required: true})}
-                name="passwordConfirmation"
-                // value={formData.password_confirmation}
-                // onChange={handleInputChange}
+                {...register("password_confirmation", { required: true})}
+                name="password_confirmation"
               />
             </div>
             <Button className="mt-6 font-poppins" type="submit">

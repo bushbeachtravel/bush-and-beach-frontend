@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const AboutCoastalTours = ({ leadingHeader, bodyParagraph}) => (
   <section className="safari-header">
-    <Typography variant="h5" className="font-poppins text-center p-5 mt-20" >
+    <Typography variant="h4" className="font-poppins text-center p-5 mt-20" >
       {leadingHeader}
     </Typography>
     <Typography variant="paragraph" className="font-poppins p-5">

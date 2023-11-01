@@ -1,137 +1,232 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import "react-toastify/dist/ReactToastify.css";
+import {
+  createBrowserRouter,
+} from "react-router-dom"
 
-// Home page route
-import Homepage from './features/home-page/Homepage';
+// Homepage
+import Homepage from "@home-page/Homepage";
+import NotFound from "@home-page/NotFound";
+import Trips from "@home-page/Trips";
+import About from '@home-page/About';
+import Gallery from '@home-page/GalleryComponent';
+import ContactPage from '@home-page/Contact';
+import UploadPhoto from '@home-page/UploadPhoto';
 
-// About us route
-import About from './features/about/About';
+// Internation travel
+import InternationalTours from '@international/InternationalTours';
+import BangkokTrip from '@international/Bangkok';
+import ChinaTrip from '@international/ChinaTour';
+import DubaiTrip from '@international/DubaiTour';
+import EgyptIsraelTrip from '@international/EgyptIsrael';
+import JohannesburgTrib from '@international/JoburgTrip';
+import MalaysiaTrip from '@international/MalaysiaTrip';
+import MauritiusTrip from '@international/Mauritius';
+import ParisBarcaItaly from '@international/PariBarcaItaly';
+import RwandaUganda from '@international/Rwanda';
+import TurkeyTrip from '@international/Turkey';
 
-// 404 page
-import NotFound from './features/error-page/NotFound';
+// Local Trips
+import KenyaSafaris from '@local-trips/KenyaSafari';
+import MasaaiMaraTrip from '@local-trips/MasaaiMara';
+import LakeNakuruMaraTrip from '@local-trips/LakeNakuruMara';
+import NairobiSamburuMaraTrip from '@local-trips/NairobiSamburuMara';
+import AmboseliTsavoWestTrip from '@local-trips/AmboseliTsavoWest';
+import NairobiAmboseliMaraTrip from '@local-trips/NairobiAmboseliMara';
+import NairobiAmboseliMtKenyaLakeNakuruMasaaiMaraTrip from '@local-trips/NrbAmboseliMaraMtKenya';
+import NairobiAmboseliLewaMaraTrip from '@local-trips/NairobiAmboseliLewaMara';
+import FourDayKenyaSafari from '@local-trips/FourDaySafari';
+import MasaaiMaraTsavo from '@local-trips/MasaaiMaraTsavo';
+import Abderdares from '@local-trips/Aberdare';
+import OlPajeta from '@local-trips/OlPajeta';
+import NairobiTsavoEast from '@local-trips/NairobiTsavoEast';
+import NairobiOlPajeta from '@local-trips/NairobiOlPajeta';
+import BushAndBeachSafari from '@local-trips/BushAndBeachSafari';
 
-// Contact page
-import ContactPage from './features/about/Contact';
+// Blog
+import BlogPage from '@blog/Blog';
+import BlogDetail from '@blog/BlogDetail';
+import BlogList from '@blog/BlogList';
+import UpdateBlogPost from '@blog/BlogUpdate';
 
-// Gallery
-import UploadPhoto from './features/gallery/UploadPhoto';
-import Gallery from './features/gallery/GalleryComponent';
+// Coastal beaches
+import KenyaCostalBeaches from '@beach-holidays/CoastalBeaches';
+import ZanzibarTours from '@beach-holidays/Zanzibar';
 
-// Servics routes 
-import Trips from './features/home-page/Trips';
+//Authentication
+import AdminDashBoard from '@authentication/Admin';
+import Signup from '@authentication/Signup';
+import LoginForm from '@authentication/Login';
 
-// Local safari routes
-import KenyaSafaris from './features/local-trips/KenyaSafari';
-import MasaaiMaraTrip from './features/local-trips/masaai-mara/MasaaiMara';
-import LakeNakuruMaraTrip from './features/local-trips/lake-nakuru/LakeNakuruMara';
-import NairobiSamburuMaraTrip from './features/local-trips/nrb-samburu-mara/NairobiSamburuMara';
-import AmboseliTsavoWestTrip from './features/local-trips/amboseli-tsavo-west/AmboseliTsavoWest';
-import NairobiAmboseliMaraTrip from './features/local-trips/nrb-amboseli-mara/NairobiAmboseliMara';
-import NairobiAmboseliMtKenyaLakeNakuruMasaaiMaraTrip from './features/local-trips/nrb-amboseli-mara-mt-kenya/NrbAmboseliMaraMtKenya';
-import NairobiAmboseliLewaMaraTrip from './features/local-trips/nrb-amboseli-lewa-mara/NairobiAmboseliLewaMara';
-import FourDayKenyaSafari from './features/local-trips/four-day-safari/FourDaySafari';
-import MasaaiMaraTsavo from './features/local-trips/masaai-mara-tsavo/MasaaiMaraTsavo';
-import Abderdares from './features/local-trips/aberdare/Aberdare';
-import OlPajeta from './features/local-trips/ol-pajeta/OlPajeta';
-import NairobiTsavoEast from './features/local-trips/nrb-tsavo/NairobiTsavoEast';
-import NairobiOlPajeta from './features/local-trips/ol-pajeta/NairobiOlPajeta';
-import BushAndBeachSafari from './features/local-trips/bush-beach/BushAndBeachSafari';
 
-// Coastal Trips
-import KenyaCostalBeaches from './features/beach-holidays/kenya/CoastalBeaches';
-import ZanzibarTours from './features/beach-holidays/zanzibar/Zanzibar';
-
-// International trips routes
-import RwandaUganda from './features/international-trips/rwanda-uganda/Rwanda';
-import InternationalTours from './features/international-trips/InternationalTours';
-import DubaiTrip from './features/international-trips/dubai/DubaiTour';
-import ChinaTrip from './features/international-trips/china/ChinaTour';
-import JohannesburgTrib from './features/international-trips/joburg/JoburgTrip';
-import MalaysiaTrip from './features/international-trips/malaysia/MalaysiaTrip';
-import MauritiusTrip from './features/international-trips/mauritius/Mauritius';
-import EgyptIsraelTrip from './features/international-trips/egpyt-israel/EgyptIsrael';
-import ParisBarcaItaly from './features/international-trips/pari-barca-italy/PariBarcaItaly';
-import BangkokTrip from './features/international-trips/bangkok/Bangkok';
-import TurkeyTrip from './features/international-trips/turkey/Turkey';
-
-// Authentication
-import AdminDashBoard from './features/authentication/Admin';
-import Login from './features/authentication/Login';
-import Logout from './features/authentication/Logout';
-import Signup from './features/authentication/Signup';
-
-// Blog routes 
-import BlogDetail from './features/blog/BlogDetail';
-import UpdateBlogPost from './features/blog/BlogUpdate';
-import BlogList from './features/blog/BlogList';
-import BlogPage from './features/blog/Blog';
-
-import './assets/styles/Kenya.css';
-import './assets/styles/Blog.css';
-import './assets/styles/HomePage.css';
-
-const App = () => {
-
-  return (
-    <div>
-      <BrowserRouter basename="/bush-and-beach-frontend">
-        <Logout />
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-
-          <Route path="admin" element={<AdminDashBoard />} />
-          <Route path="login" element={<Login />} /> 
-          <Route path="signup" element={<Signup />} />
-
-          <Route path="about" element={<About />} />
-
-          <Route path="/blog-detail/:id" element={<BlogDetail />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/blog-list" element={<BlogList />} />
-          <Route path="/blog-update/:id" element={<UpdateBlogPost />} />
-
-          <Route path='/photo-upload' element={<UploadPhoto />} />
-          <Route path="gallery" element={<Gallery />} />
-          <Route path="contact" element={<ContactPage />} />
-          <Route path="services" element={<Trips />} />
-          <Route path="kenya" element={<KenyaSafaris />} />
-          <Route path="coast" element={<KenyaCostalBeaches />} />
-          <Route path="masai-mara" element={<MasaaiMaraTrip />} />
-          <Route path="lake-nakuru-masai-mara" element={<LakeNakuruMaraTrip /> } />
-          <Route path="nairobi-samburu-masaai-mara" element={<NairobiSamburuMaraTrip />} />
-          <Route path="amboseli-tsavo-west" element={<AmboseliTsavoWestTrip />} />
-          <Route path="nairobi-amboseli-mara" element={<NairobiAmboseliMaraTrip />} />
-          <Route path="nrb-amboseli-nakuru-mt-kenya-masaai-mara" element={<NairobiAmboseliMtKenyaLakeNakuruMasaaiMaraTrip />} />
-          <Route path="nairobi-amboseli-lewa-mara" element={<NairobiAmboseliLewaMaraTrip />} />
-          <Route path="kenya-safari" element={<FourDayKenyaSafari />} />
-          <Route path="mara-lake-nakuru" element={<MasaaiMaraTsavo />} />
-          <Route path="nakuru-aberdare" element={<Abderdares />} />
-          <Route path="olpajeta" element={<OlPajeta />} />
-          <Route path="giant-safari" element={<NairobiTsavoEast />} />
-          <Route path="highlight-safari" element={<NairobiOlPajeta />} />
-          <Route path="bush-beach-safari" element={<BushAndBeachSafari />} />
-
-          <Route path="zanzibar" element={<ZanzibarTours />} />
-          <Route path="rwanda-uganda" element={<RwandaUganda />} />
-          <Route path="international" element={<InternationalTours />} />
-          <Route path="dubai" element={<DubaiTrip />} />
-          <Route path="china" element={<ChinaTrip />} />
-          <Route path="joburg" element={<JohannesburgTrib />} />
-          <Route path="malaysia" element={<MalaysiaTrip />} />
-          <Route path="mauritius" element={<MauritiusTrip />} />
-          <Route path="egypt-israel" element={<EgyptIsraelTrip />} />
-          <Route path="italy-barca-paris" element={<ParisBarcaItaly />} />
-          <Route path="bangkok" element={<BangkokTrip />} />
-          <Route path="turkey" element={<TurkeyTrip />} />
-
-          <Route path="*" element={<NotFound />} />
-          
-          <Route path="contact" element={<ContactPage />} />
-        </Routes>
-      </BrowserRouter>
-
-    </div>
-
-  );
-}
-export default App;
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Homepage />,
+    errorElement: <NotFound />,
+  },
+    
+  {
+    path: "services",
+    element: <Trips />,
+  },
+  {
+    path: "international",
+    element: <InternationalTours />, 
+  },
+  {
+    path: "bangkok",
+    element: <BangkokTrip />
+  },
+  {
+    path: "china",
+    element: <ChinaTrip />
+  },
+  {
+    path: "dubai",
+    element: <DubaiTrip />
+  },
+  {
+    path: "egypt-israel",
+    element: <EgyptIsraelTrip />
+  },
+  {
+    path: "joburg",
+    element: <JohannesburgTrib />
+  },
+  {
+    path: "malaysia",
+    element: <MalaysiaTrip />
+  },
+  {
+    path: "mauritius",
+    element: <MauritiusTrip />
+  },
+  {
+    path: "italy-barca-paris",
+    element: <ParisBarcaItaly />
+  },
+  {
+    path: "rwanda-uganda",
+    element: <RwandaUganda />
+  },
+  {
+    path: "turkey",
+    element: <TurkeyTrip />
+  },
+  {
+    path: "kenya",
+    element: <KenyaSafaris />
+  },
+  {
+    path: "masai-mara",
+    element: <MasaaiMaraTrip />
+  },
+  {
+    path: "lake-nakuru-masai-mara",
+    element: <LakeNakuruMaraTrip />
+  },
+  {
+    path: "nairobi-samburu-masaai-mara",
+    element: <NairobiSamburuMaraTrip />
+  },
+  {
+    path: "amboseli-tsavo-west",
+    element: <AmboseliTsavoWestTrip />
+  },
+  {
+    path: "nairobi-amboseli-mara",
+    element: <NairobiAmboseliMaraTrip />
+  },
+  {
+    path: "nrb-amboseli-nakuru-mt-kenya-masaai-mara",
+    element: <NairobiAmboseliMtKenyaLakeNakuruMasaaiMaraTrip />
+  },
+  {
+    path: "nairobi-amboseli-lewa-mara",
+    element: <NairobiAmboseliLewaMaraTrip />
+  },
+  {
+    path: "four-days",
+    element: <FourDayKenyaSafari />
+  },
+  {
+    path: "kenya-safari",
+    element: <MasaaiMaraTrip />
+  },
+  {
+    path: "mara-lake-nakuru",
+    element: <MasaaiMaraTsavo />
+  },
+  {
+    path: "nakuru-aberdare",
+    element: <Abderdares />
+  },
+  {
+    path: "olpajeta",
+    element: <OlPajeta />
+  },
+  {
+    path: "giant-safari",
+    element: <NairobiTsavoEast />
+  },
+  {
+    path: "highlight-safari",
+    element: <NairobiOlPajeta />
+  },
+  {
+    path: "bush-beach-safari",
+    element: <BushAndBeachSafari />
+  },
+  {
+    path: "about",
+    element: <About />
+  },
+  {
+    path: "contact",
+    element: <ContactPage />
+  },
+  {
+    path: "gallery",
+    element: <Gallery />
+  },
+  {
+    path: "blog",
+    element: <BlogPage />
+  },
+  {
+    path: "blog-detail/:id",
+    element: <BlogDetail />
+  },
+  {
+    path: "blog-update/:id",
+    element: <UpdateBlogPost />
+  },
+  {
+    path: "blog-list",
+    element: <BlogList />
+  },
+  {
+    path: "coast",
+    element: <KenyaCostalBeaches />
+  },
+  {
+    path: "zanzibar",
+    element: <ZanzibarTours />
+  },
+  {
+    path: "admin",
+    element: <AdminDashBoard />
+  },
+  {
+    path: "signup",
+    element: <Signup />
+  },
+  {
+    path: "login",
+    element: <LoginForm />
+  },
+  {
+    path: "photo-upload",
+    element: <UploadPhoto />
+  }
+])
+export default router;

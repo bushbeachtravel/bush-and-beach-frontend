@@ -6,12 +6,12 @@ import EditorJS from "@editorjs/editorjs";
 import { useNavigate, useParams } from "react-router-dom";
 import { Button, Typography } from "@material-tailwind/react";
 
-import { updateBlogPostAsync, fetchBlogPostAsync } from "../../app/blogSlice";
-import { currentUserAsync } from "../../app/authenticationSlice";
+import { updateBlogPostAsync, fetchBlogPostAsync } from "@state-management/blogSlice";
+import { currentUserAsync } from "@state-management/authenticationSlice";
 import { EDITOR_JS_TOOLS } from "../../../tools";
-import NavigationMenu from "../home-page/NavigationMenu";
+import NavigationMenu from "@home-page/NavigationMenu";
 import Editor from "./Editor";
-import "../../assets/styles/Blog.css";
+import "@styling/Blog.css";
 
 
 const UpdateBlogPost = () => {

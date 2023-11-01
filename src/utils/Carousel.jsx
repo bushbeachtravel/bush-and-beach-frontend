@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import PropTypes from 'prop-types';
 import { Typography } from "@material-tailwind/react";
 
-import '../assets/styles/Kenya.css';
+import '@styling/Kenya.css';
 
 const SafariCarousel = ({ images, title }) => {
 

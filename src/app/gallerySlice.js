@@ -3,10 +3,10 @@ import { uploadPhoto, fetchPhotos } from "./galleryApi";
 
 export const uploadPhotoAsync = createAsyncThunk(
   'photo/upoloadPhoto',
-    async (data) => {
-      const response = await uploadPhoto(data);
-      return response.data;
-    }
+  async (data) => {
+    const response = await uploadPhoto(data);
+    return response.data;
+  }
 );
 
 export const fetchPhotosAsync = createAsyncThunk(
@@ -27,17 +27,20 @@ const gallerySlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
+      // Uploading photos
       .addCase(uploadPhotoAsync.pending, (state) => {
-        state.status = 'loading';
+        state.uploadStatus = 'loading';
       })
       .addCase(uploadPhotoAsync.fulfilled, (state, action) => ({
         ...state,
-        photos: action.payload
-      }))
+        photos: action.payload,
+      })
+      )
       .addCase(uploadPhotoAsync.rejected, (state, action) => {
-        state.status = 'failed';
         state.error = action.error;
       })
+
+      // Fetching photos
       .addCase(fetchPhotosAsync.pending, (state) => {
         state.status = 'loading';
       })
@@ -47,7 +50,7 @@ const gallerySlice = createSlice({
         status: 'success',
       }))
       .addCase(fetchPhotosAsync.rejected, (state, action) => {
-        state.status = 'failed';
+        state.status = 'rejected';
         state.error = action.error;
       })
   }

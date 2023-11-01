@@ -1,6 +1,5 @@
 import { memo, useEffect, useRef } from "react";
 import EditorJS from "@editorjs/editorjs";
-// import Editor from '@stfy/react-editor.js'
 import PropTypes from 'prop-types';
 import { EDITOR_JS_TOOLS } from "../../../tools";
 

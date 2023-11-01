@@ -6,8 +6,8 @@ import {
   Collapse
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
-import '../../assets/styles/HomePage.css';
-import '../../assets/styles/HomeNav.css';
+import '@styling/HomePage.css';
+import '@styling/HomeNav.css';
 
 
 const NavigationMenu = () => {
