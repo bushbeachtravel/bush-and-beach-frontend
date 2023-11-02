@@ -10,6 +10,7 @@ import About from '@home-page/About';
 import Gallery from '@home-page/GalleryComponent';
 import ContactPage from '@home-page/Contact';
 import UploadPhoto from '@home-page/UploadPhoto';
+import CareersPage from "@home-page/Careers";
 
 // Internation travel
 import InternationalTours from '@international/InternationalTours';
@@ -227,6 +228,10 @@ const router = createBrowserRouter([
   {
     path: "photo-upload",
     element: <UploadPhoto />
+  },
+  {
+    path: "career",
+    element: <CareersPage />
   }
 ])
 export default router;
