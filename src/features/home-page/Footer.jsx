@@ -1,6 +1,6 @@
 import { Typography } from "@material-tailwind/react";
 import {
-  FaTwitter, FaFacebook, FaInstagramSquare,
+  FaFacebook, FaInstagramSquare,
   FaLinkedin
 } from 'react-icons/fa'
 import { Link } from "react-router-dom";
@@ -61,9 +61,6 @@ const Footer = () => {
             >
               <FaFacebook />
             </Typography>
-            {/* <Typography as="a" href="#" className="opacity-80 transition-opacity hover:opacity-100">
-              <FaTwitter />
-            </Typography> */}
             <Typography
               as="a"
               href="https://instagram.com/bushnbeach_officialke?igshid=MzMyNGUyNmU2YQ=="
