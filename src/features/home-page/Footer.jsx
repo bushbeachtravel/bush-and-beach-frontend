@@ -53,16 +53,31 @@ const Footer = () => {
             Rights Reserved.
           </Typography>
           <div className="flex gap-4 text-blue-gray-900 sm:justify-center">
-            <Typography as="a" href="#" className="opacity-80 transition-opacity hover:opacity-100">
+            <Typography
+              as="a"
+              href="https://www.facebook.com/www.beachtravel.co.ke?mibextid=ZbWKwL"
+              className="opacity-80 transition-opacity hover:opacity-100"
+              target="_blank"
+            >
               <FaFacebook />
             </Typography>
-            <Typography as="a" href="#" className="opacity-80 transition-opacity hover:opacity-100">
+            {/* <Typography as="a" href="#" className="opacity-80 transition-opacity hover:opacity-100">
               <FaTwitter />
-            </Typography>
-            <Typography as="a" href="#" className="opacity-80 transition-opacity hover:opacity-100">
+            </Typography> */}
+            <Typography
+              as="a"
+              href="https://instagram.com/bushnbeach_officialke?igshid=MzMyNGUyNmU2YQ=="
+              className="opacity-80 transition-opacity hover:opacity-100"
+              target="_blank"
+            >
               <FaInstagramSquare />
             </Typography>
-            <Typography as="a" href="#" className="opacity-80 transition-opacity hover:opacity-100">
+            <Typography
+              as="a"
+              href="https://www.linkedin.com/in/bush-beach-b35b95299/"
+              className="opacity-80 transition-opacity hover:opacity-100"
+              target="_blank"
+            >
               <FaLinkedin />
             </Typography>
           </div>
