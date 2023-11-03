@@ -127,7 +127,7 @@ const ContactPage = () => {
                   Email
                 </Typography>
                 <Typography variant="small" className="font-poppins font-bold">
-                  <Link to="mailto:sales@milantours.com">sales@milantours.com</Link>
+                  <Link to="mailto:info@beachtravel.co.ke">info@beachtravel.co.ke</Link>
                 </Typography>
               </div>
             </li>
@@ -142,7 +142,7 @@ const ContactPage = () => {
                   Website
                 </Typography>
                 <Typography variant="small" className="font-poppins font-bold">
-                  <Link to="https://kennankole.me/bush-and-beach-frontend/" target="_blank">bushandbeach.com</Link>
+                  <Link to="https://bushandbeachtravel.co.ke/" target="_blank">bushandbeachtravel.co.ke</Link>
 
                 </Typography>
               </div>
