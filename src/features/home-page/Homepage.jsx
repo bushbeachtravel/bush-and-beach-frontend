@@ -13,7 +13,7 @@ export const HomePage = () => {
       <Carousel
         className="carousel"
         transition={{ duration: 2 }}
-        autoplay={false}
+        autoplay={true}
         autoplayinterval={5000}
         loop={true}
       >
@@ -44,7 +44,7 @@ export const HomePage = () => {
                   {carousel.para}
                 </Typography>
                 <div className="flex justify-center gap-2">
-                  <Button size="lg" className="carousel-btn font-poppins">
+                  <Button size="lg" className="carousel-btn font-poppins" color="blue">
                     <Link to={carousel.urlPath.toLowerCase()}>
                       Explore
                     </Link>
