@@ -47,7 +47,7 @@ const SafariCard = ({ tourDestination }) => (
           </Typography>
         </CardBody>
         <CardFooter className="pt-0">
-          <Button className="font-poppins">
+          <Button className="font-poppins" color="blue">
             <Link to={`/${items.url}`}>
               Details
             </Link>

@@ -107,7 +107,7 @@ const About = () => {
               <ul>
                 {leftServices.map((item, index) => (
                   <li key={index} className="flex items-center gap-2 p-3">
-                    <IconButton className="rounded-full">
+                    <IconButton className="rounded-full" color="blue">
                       <FaCheckToSlot size={20} color="white" />
                     </IconButton>
                     <Typography variant="paragraph" color="white" className="font-poppins">
@@ -121,7 +121,7 @@ const About = () => {
               <ul>
                 {rightServices.map((item, index) => (
                   <li key={index} className="flex items-center gap-2 p-3">
-                    <IconButton className="rounded-full">
+                    <IconButton className="rounded-full" color="blue">
                       <FaCheckToSlot size={20} color="white" />
                     </IconButton>
                     <Typography variant="" color="white" className="font-poppins">
@@ -137,7 +137,7 @@ const About = () => {
               Contact Us Today!!
             </Typography>
             <div className="flex items-center gap-5 py-2">
-              <IconButton className="rounded-full">
+              <IconButton className="rounded-full" color="blue">
                 <FaPhone color="white" size={25} />
               </IconButton>
               <Typography variant="small" color="white" className="font-poppins font-bold">
@@ -145,7 +145,7 @@ const About = () => {
               </Typography>
             </div>
             <div className="flex items-center gap-5 py-2">
-              <IconButton className="rounded-full">
+              <IconButton className="rounded-full" color="blue">
                 <FaPaperPlane size={20} />
               </IconButton>
               <Typography variant="small" color="white" className="font-poppins font-bold">
