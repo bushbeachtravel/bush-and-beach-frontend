@@ -172,6 +172,7 @@ const RequisitionForm = () => {
         <Button
           type="submit"
           disabled={!isValid}
+          color="blue"
         >
           Send requisition
         </Button>

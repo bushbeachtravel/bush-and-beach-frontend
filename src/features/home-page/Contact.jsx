@@ -88,7 +88,7 @@ const ContactPage = () => {
             </Typography>
             <li className="flex items-center gap-6">
               <div>
-                <IconButton className="rounded-full">
+                <IconButton className="rounded-full" color="blue">
                   <FaLocationDot size={20} />
                 </IconButton>
               </div>
@@ -107,7 +107,7 @@ const ContactPage = () => {
             </li>
             <li className="flex items-center gap-6">
               <div>
-                <IconButton className="rounded-full">
+                <IconButton className="rounded-full" color="blue">
                   <FaPhone size={20} />
                 </IconButton>
               </div>
@@ -122,7 +122,7 @@ const ContactPage = () => {
             </li>
             <li className="flex items-center gap-6">
               <div>
-                <IconButton className="rounded-full">
+                <IconButton className="rounded-full" color="blue">
                   <FaPaperPlane size={20} />
                 </IconButton>
               </div>
@@ -130,14 +130,14 @@ const ContactPage = () => {
                 <Typography variant="small" className="font-poppins font-bold">
                   Email
                 </Typography>
-                <Typography variant="small" className="font-poppins font-bold">
+                <Typography variant="small" className="font-poppins font-bold" color="blue">
                   <Link to="mailto:info@beachtravel.co.ke">info@beachtravel.co.ke</Link>
                 </Typography>
               </div>
             </li>
             <li className="flex items-center gap-6">
               <div>
-                <IconButton className="rounded-full">
+                <IconButton className="rounded-full" color="blue">
                   <BiWorld size={20} />
                 </IconButton>
               </div>
@@ -153,7 +153,7 @@ const ContactPage = () => {
             </li>
             <li className="flex items-center gap-6">
               <div>
-                <IconButton className="rounded-full">
+                <IconButton className="rounded-full" color="blue">
                   <BsMailbox size={20} />
                 </IconButton>
               </div>
