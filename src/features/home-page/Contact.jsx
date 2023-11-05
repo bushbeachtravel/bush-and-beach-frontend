@@ -130,7 +130,7 @@ const ContactPage = () => {
                 <Typography variant="small" className="font-poppins font-bold">
                   Email
                 </Typography>
-                <Typography variant="small" className="font-poppins font-bold" color="blue">
+                <Typography variant="small" className="font-poppins font-bold">
                   <Link to="mailto:info@beachtravel.co.ke">info@beachtravel.co.ke</Link>
                 </Typography>
               </div>
