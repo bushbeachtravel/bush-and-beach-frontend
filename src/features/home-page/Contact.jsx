@@ -97,7 +97,11 @@ const ContactPage = () => {
                   Address
                 </Typography>
                 <Typography variant="small" className="font-poppins font-bold">
-                  Suraj Plaza (4th Floor) Limuru Road, Nairobi Kenya
+                  Ambank house, 12th floor
+                  University way.
+                </Typography>
+                <Typography variant="small" className="font-poppins font-bold">
+                  Nairobi,kenya
                 </Typography>
               </div>
             </li>
@@ -112,7 +116,7 @@ const ContactPage = () => {
                   Phone
                 </Typography>
                 <Typography variant="small" className="font-poppins font-bold">
-                  +254780269465
+                  +254710611729
                 </Typography>
               </div>
             </li>
