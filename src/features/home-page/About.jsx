@@ -141,7 +141,7 @@ const About = () => {
                 <FaPhone color="white" size={25} />
               </IconButton>
               <Typography variant="small" color="white" className="font-poppins font-bold">
-                +254780269465
+                +254710611729
               </Typography>
             </div>
             <div className="flex items-center gap-5 py-2">
@@ -149,7 +149,7 @@ const About = () => {
                 <FaPaperPlane size={20} />
               </IconButton>
               <Typography variant="small" color="white" className="font-poppins font-bold">
-                sales@milantours.com
+                <Link to="mailto:info@beachtravel.co.ke">info@beachtravel.co.ke</Link>
               </Typography>
             </div>
           </div>

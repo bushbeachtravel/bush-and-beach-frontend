@@ -162,7 +162,7 @@ const ContactPage = () => {
                   P.O Box
                 </Typography>
                 <Typography variant="small" className="font-poppins font-bold">
-                  67833 - 00200 Nairobi, Kenya
+                7720-00200. Nairobi Kenya
                 </Typography>
               </div>
             </li>
